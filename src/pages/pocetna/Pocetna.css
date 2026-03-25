@@ -1,0 +1,235 @@
+/* ===== HERO SEKCIJA ===== */
+.pocetna-hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 56px); /* puna visina ekrana minus navbar */
+  overflow: hidden;
+}
+
+.pocetna-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* slika pokriva cijeli prostor bez deformacije */
+  object-position: center;
+  display: block;
+}
+
+/* Tamni overlay za bolju čitljivost teksta */
+.pocetna-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+}
+
+/* Tekst na slici */
+.pocetna-hero__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 90%;
+  max-width: 780px;
+}
+
+.pocetna-hero__badge {
+  display: inline-block;
+  background-color: rgba(88, 129, 87, 0.85);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.35rem 1.1rem;
+  border-radius: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.pocetna-hero__title {
+  font-size: clamp(1.6rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.55);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.pocetna-hero__subtitle {
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  opacity: 0.92;
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+/* Bedž iznad naslova */
+.pocetna-hero__badge {
+  display: inline-block;
+  background-color: rgba(88, 129, 87, 0.85);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Pills ispod teksta */
+.pocetna-hero__pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.pocetna-hero__pills span {
+  background-color: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.3rem 0.85rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 576px) {
+  .pocetna-hero {
+    height: 60vw;
+    min-height: 260px;
+  }
+}
+
+/* ===== STATS BAR ===== */
+.stats-bar {
+  width: 100%;
+  background-color: #344e41;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.stats-bar__stavka {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 2.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  min-width: 160px;
+  flex: 1;
+  max-width: 240px;
+}
+
+.stats-bar__stavka:last-child {
+  border-right: none;
+}
+
+.stats-bar__ikona {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.stats-bar__vrijednost {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.stats-bar__label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a3b18a;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+.stats-bar__ikona svg {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .stats-bar__stavka {
+    flex: 1 1 45%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.1rem 1rem;
+  }
+}
+
+/* ===== O HAN PIJESKU ===== */
+.o-han-pijesku {
+  width: 100%;
+  background-color: #eaf3de;
+  padding: 4.5rem 1.5rem;
+}
+
+.o-han-pijesku__wrap {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.o-han-pijesku__badge {
+  display: inline-block;
+  background-color: #eaf3de;
+  color: #3a5a40;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 1.1rem;
+}
+
+.o-han-pijesku__naslov {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 1rem;
+}
+
+.o-han-pijesku__tekst {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #5f5e5a;
+  margin-bottom: 2rem;
+}
+
+.o-han-pijesku__btn {
+  display: inline-block;
+  background-color: #588157;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  transition: background-color 0.22s ease, transform 0.22s ease;
+}
+
+.o-han-pijesku__btn:hover {
+  background-color: #3a5a40;
+  transform: translateY(-2px);
+  color: #ffffff;
+  text-decoration: none;
+}

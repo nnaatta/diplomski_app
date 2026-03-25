@@ -1,0 +1,12 @@
+.moj_navbar{
+    background-color: #588157;
+}
+.nav-link{
+  color: white;
+}
+.navbar-brand img {
+  height: 40px;       
+  width: auto;        
+  display: inline-block;
+  margin-right: 8px;  
+}

@@ -1,0 +1,73 @@
+/* ===== STATISTIKE POJAS ===== */
+.oto-stat {
+  background-color: #f8f7f2;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding: 3.5rem 2rem;
+}
+
+/* ===== JEDNA STAVKA ===== */
+.oto-stat__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+/* ===== KRUG ===== */
+.oto-stat__krug {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #a3b18a;
+  background-color: #344e41a8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.oto-stat__item:hover .oto-stat__krug {
+  background-color: #344e41;
+  transform: scale(1.06);
+}
+
+/* ===== BROJ ===== */
+.oto-stat__broj {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+/* ===== OPIS ===== */
+.oto-stat__opis {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a3b18a;
+  text-align: center;
+  margin: 0;
+  max-width: 120px;
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 576px) {
+  .oto-stat {
+    gap: 1.5rem;
+    padding: 2.5rem 1rem;
+  }
+
+  .oto-stat__krug {
+    width: 100px;
+    height: 100px;
+  }
+
+  .oto-stat__broj {
+    font-size: 1.4rem;
+  }
+}

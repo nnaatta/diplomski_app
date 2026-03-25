@@ -1,0 +1,407 @@
+/* ===== SEKCIJA ===== */
+.OTO_section {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.OTO_hero {
+  background-color: #344e41;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.OTO_hero::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.04);
+  top: -100px;
+  right: -80px;
+}
+
+.OTO_hero::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.04);
+  bottom: -80px;
+  left: 5%;
+}
+
+.OTO_hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.OTO_hero p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  opacity: 0.82;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== GLAVNI TEKST ===== */
+.OTO_tekst {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.OTO_tekst_misija,
+.OTO_tekst_vizija,
+.OTO_tekst_rad {
+  padding: 2rem 2rem 2rem 2.25rem;
+  border-left: 4px solid #a3b18a;
+  margin-bottom: 2.5rem;
+  background-color: #f8f7f2;
+  border-radius: 0 10px 10px 0;
+}
+
+.OTO_tekst_misija h2,
+.OTO_tekst_vizija h2,
+.OTO_tekst_rad h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.OTO_tekst_misija p,
+.OTO_tekst_vizija p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+.OTO_tekst_rad ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.OTO_tekst_rad ul li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #5f5e5a;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.OTO_tekst_rad ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #588157;
+}
+
+/* ===== GALERIJA ===== */
+.OTO_galerija {
+  background-color: #f8f7f2;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.OTO_galerija_naslov {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 0.5rem;
+}
+
+.OTO_galerija_podnaslov {
+  font-size: 0.95rem;
+  color: #888780;
+  margin-bottom: 2.5rem;
+}
+
+.OTO_galerija_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.OTO_galerija_item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid #e4e0d8;
+  background-color: #ffffff;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.OTO_galerija_item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(88, 129, 87, 0.12);
+}
+
+.OTO_galerija_slika_wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.OTO_galerija_slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.OTO_galerija_item:hover .OTO_galerija_slika {
+  transform: scale(1.05);
+}
+
+.OTO_galerija_placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #a3b18a 0%, #588157 50%, #344e41 100%);
+}
+
+.OTO_galerija_opis {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #344e41;
+  text-align: center;
+  padding: 0.75rem 0.75rem 0.85rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ===== PARTNERI ===== */
+.OTO_partneri {
+  background-color: #ffffff;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.OTO_partneri_naslov {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 2.5rem;
+}
+
+.OTO_partneri_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.OTO_partner {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  background-color: #fff;
+}
+
+.OTO_partner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(88, 129, 87, 0.13);
+  border-color: #a3b18a;
+}
+
+.OTO_partner_logo {
+  width: 100%;
+  height: 120px;
+  background-color: #f8f7f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid #e4e0d8;
+}
+
+.OTO_partner_logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.OTO_partner_logo img[src=""],
+.OTO_partner_logo img:not([src]) {
+  display: none;
+}
+
+.OTO_partner_logo:has(img[src=""]) {
+  background-color: #eaf3de;
+}
+
+.OTO_partner_naziv {
+  padding: 0.85rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #344e41;
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ===== KONTAKT ===== */
+.OTO_kontakt {
+  background-color: #f8f7f2;
+  padding: 4rem 1.5rem;
+}
+
+.OTO_kontakt_naslov {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.OTO_kontakt_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.OTO_kontakt_osoba {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 14px;
+}
+
+.OTO_kontakt_osoba img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #a3b18a;
+  margin-bottom: 0.5rem;
+  background-color: #eaf3de;
+}
+
+.OTO_kontakt_osoba .ime {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #344e41;
+}
+
+.OTO_kontakt_osoba .titula {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888780;
+}
+
+.OTO_kontakt_kartica {
+  background-color: #344e41;
+  color: white;
+  border-radius: 14px;
+  padding: 2rem 2.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.OTO_kontakt_kartica address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.OTO_kontakt_kartica address h2 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a3b18a;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.OTO_kontakt_kartica address p {
+  font-size: 0.88rem;
+  color: #dad7cd;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 768px) {
+  .OTO_galerija_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .OTO_tekst {
+    padding: 2.5rem 1rem;
+  }
+
+  .OTO_tekst_misija,
+  .OTO_tekst_vizija,
+  .OTO_tekst_rad {
+    padding: 1.5rem 1.25rem 1.5rem 1.5rem;
+  }
+
+  .OTO_kontakt_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .OTO_partner {
+    width: 150px;
+  }
+
+  .OTO_partner_logo {
+    height: 100px;
+  }
+
+  .OTO_galerija_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .OTO_galerija_slika_wrap {
+    height: 220px;
+  }
+}

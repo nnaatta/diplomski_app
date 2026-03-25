@@ -1,0 +1,277 @@
+/* ===== SEKCIJA ===== */
+.smjestaj-section {
+  width: 100%;
+}
+
+.smjestaj-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.smjestaj-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.smjestaj-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.smjestaj-hero__tekst {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffffff;
+  width: 90%;
+}
+
+.smjestaj-hero__tekst h1 {
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.smjestaj-hero__tekst p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  opacity: 0.88;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+/* ===== UVODNI TEKST ===== */
+.smjestaj-tekst {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1.5rem;
+  text-align: center;
+}
+
+.smjestaj-tekst p {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+/* ===== FILTERI ===== */
+.smjestaj-filteri {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.5rem 1.5rem 2.5rem;
+}
+
+.smjestaj-filter {
+  background-color: #ffffff;
+  color: #5f5e5a;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 2rem;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.smjestaj-filter:hover {
+  border-color: #a3b18a;
+  color: #344e41;
+}
+
+.smjestaj-filter--aktivan {
+  background-color: #588157;
+  color: #ffffff;
+  border-color: #588157;
+}
+
+.smjestaj-filter--aktivan:hover {
+  background-color: #3a5a40;
+  border-color: #3a5a40;
+  color: #ffffff;
+}
+
+/* ===== KARTICE SEKCIJA ===== */
+.smjestaj-kartice {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+
+.smjestaj-kartice__naslov {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #888780;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* ===== GRID ===== */
+.smjestaj-kartice__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+/* ===== JEDNA KARTICA ===== */
+.smjestaj-kartica {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.smjestaj-kartica:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(88, 129, 87, 0.14);
+  border-color: #a3b18a;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== SLIKA ===== */
+.smjestaj-kartica__slika-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.smjestaj-kartica__slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.smjestaj-kartica:hover .smjestaj-kartica__slika {
+  transform: scale(1.05);
+}
+
+/* Placeholder dok nema slike */
+.smjestaj-kartica__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #a3b18a 0%, #588157 50%, #344e41 100%);
+}
+
+/* Tag kategorije na slici */
+.smjestaj-kartica__tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: rgba(52, 78, 65, 0.88);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(4px);
+}
+
+/* ===== TEKST DIJELA KARTICE ===== */
+.smjestaj-kartica__tekst {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.5rem 1.5rem;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+/* ===== ZVJEZDICE ===== */
+.smjestaj-kartica__zvjezdice {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 0.25rem;
+}
+
+.zvjezdica--aktivna {
+  color: #e8a838;
+  font-size: 0.95rem;
+}
+
+.zvjezdica--neaktivna {
+  color: #d3d1c7;
+  font-size: 0.95rem;
+}
+
+/* ===== NAZIV ===== */
+.smjestaj-kartica__naziv {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* ===== LOKACIJA ===== */
+.smjestaj-kartica__lokacija {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: #888780;
+  margin-top: 0.1rem;
+}
+
+.smjestaj-kartica__lokacija svg {
+  color: #588157;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+/* ===== CTA ===== */
+.smjestaj-kartica__cta {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #588157;
+  transition: letter-spacing 0.2s ease;
+}
+
+.smjestaj-kartica:hover .smjestaj-kartica__cta {
+  letter-spacing: 0.08em;
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 900px) {
+  .smjestaj-kartice__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .smjestaj-kartice__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .smjestaj-kartice {
+    padding: 0 1rem 3rem;
+  }
+}

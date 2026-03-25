@@ -1,0 +1,570 @@
+/* ===== SEKCIJA ===== */
+.detalji {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.detalji__hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.detalji__hero-slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.detalji__hero-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #a3b18a 0%, #588157 50%, #344e41 100%);
+}
+
+.detalji__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.detalji__hero-sadrzaj {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Nazad link */
+.detalji__nazad {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+  transition: color 0.2s ease;
+  align-self: flex-start;
+}
+
+.detalji__nazad:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Tag */
+.detalji__tag {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: rgba(88, 129, 87, 0.85);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.85rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(4px);
+}
+
+/* Naziv */
+.detalji__naziv {
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  line-height: 1.2;
+}
+
+/* Zvjezdice */
+.detalji__zvjezdice {
+  display: flex;
+  gap: 3px;
+}
+
+.zvjezdica--aktivna {
+  color: #e8a838;
+  font-size: 1rem;
+}
+
+.zvjezdica--neaktivna {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+}
+
+/* Lokacija */
+.detalji__lokacija {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===== GLAVNI GRID ===== */
+.detalji__grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  align-items: start;
+}
+
+/* ===== BLOK ===== */
+.detalji__blok {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid #e4e0d8;
+}
+
+.detalji__blok:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.detalji__blok-naslov {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 1rem;
+  letter-spacing: 0.01em;
+}
+
+/* Opis */
+.detalji__opis {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #5f5e5a;
+  margin: 0 0 0.75rem;
+}
+
+.detalji__opis--kurziv {
+  font-style: italic;
+  color: #888780;
+}
+
+/* ===== KAPACITET ===== */
+.detalji__kapacitet {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.detalji__kapacitet-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f7f2;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 12px;
+  padding: 1.25rem 2rem;
+  min-width: 120px;
+}
+
+.detalji__kapacitet-broj {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #344e41;
+  line-height: 1;
+}
+
+.detalji__kapacitet-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #888780;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+/* ===== SADRŽAJI ===== */
+.detalji__sadrzaji {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.detalji__sadrzaj-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: #5f5e5a;
+  background-color: #f8f7f2;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+}
+
+.detalji__sadrzaj-ikona {
+  color: #588157;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+/* ===== DESNA KOLONA ===== */
+.detalji__desno {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 76px;
+}
+
+/* ===== KONTAKT KARTICA ===== */
+.detalji__kontakt-kartica {
+  background-color: #344e41;
+  border-radius: 16px;
+  padding: 2rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detalji__kontakt-naslov {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.25rem;
+}
+
+.detalji__kontakt-tekst {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.detalji__kontakt-tel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #588157;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.detalji__kontakt-tel:hover {
+  background-color: #3a5a40;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.detalji__kontakt-tel--secondary {
+  background-color: rgba(255, 255, 255, 0.12);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.detalji__kontakt-tel--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.detalji__kontakt-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 0.25rem 0;
+}
+
+.detalji__kontakt-to {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+/* ===== MAPA ===== */
+.detalji__mapa-wrap {
+  background-color: #f8f7f2;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1.5px solid #e4e0d8;
+}
+
+.detalji__mapa {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 220px;
+  margin-top: 1rem;
+}
+
+.detalji__mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ===== NIJE PRONAĐEN ===== */
+.detalji__nije-pronadjen {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  color: #344e41;
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 900px) {
+  .detalji__grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .detalji__desno {
+    position: static;
+  }
+
+  .detalji__hero {
+    height: 320px;
+  }
+}
+
+@media (max-width: 576px) {
+  .detalji__sadrzaji {
+    grid-template-columns: 1fr;
+  }
+
+  .detalji__hero {
+    height: 260px;
+  }
+
+  .detalji__hero-sadrzaj {
+    bottom: 1.5rem;
+  }
+}
+
+/* ===== GALERIJA ===== */
+.galerija {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.galerija__glavna {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  grid-row: span 2;
+  height: 340px;
+}
+
+.galerija__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.galerija__mala {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  height: 167px;
+}
+
+.galerija__slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.galerija__glavna:hover .galerija__slika,
+.galerija__mala:hover .galerija__slika {
+  transform: scale(1.04);
+}
+
+.galerija__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease;
+}
+
+.galerija__overlay span {
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  background: rgba(0,0,0,0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+.galerija__glavna:hover .galerija__overlay {
+  background: rgba(0,0,0,0.2);
+}
+
+.galerija__glavna:hover .galerija__overlay span {
+  opacity: 1;
+}
+
+.galerija__vise {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.galerija__placeholder {
+  height: 340px;
+  background: linear-gradient(135deg, #a3b18a 0%, #588157 50%, #344e41 100%);
+  border-radius: 12px;
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.93);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lightbox__zatvori {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+  z-index: 2;
+}
+
+.lightbox__zatvori:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.lightbox__brojac {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.lightbox__slika-wrap {
+  max-width: 90vw;
+  max-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__slika {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+
+.lightbox__strelica {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+  z-index: 2;
+}
+
+.lightbox__strelica:hover {
+  background: rgba(88,129,87,0.7);
+}
+
+.lightbox__strelica--lijevo { left: 1.5rem; }
+.lightbox__strelica--desno { right: 1.5rem; }
+
+/* Thumbnail traka na dnu */
+.lightbox__thumbnails {
+  display: flex;
+  gap: 6px;
+  padding: 0.5rem;
+  overflow-x: auto;
+  max-width: 90vw;
+}
+
+.lightbox__thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.lightbox__thumbnail:hover {
+  opacity: 0.8;
+}
+
+.lightbox__thumbnail--aktivan {
+  opacity: 1;
+  border-color: #a3b18a;
+}

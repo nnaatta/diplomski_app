@@ -1,0 +1,344 @@
+/* ===== SEKCIJA ===== */
+.ff { width: 100%; }
+
+/* ===== SPLIT SCREEN ===== */
+.ff__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 56px);
+}
+
+.ff__split-pola {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex 0.5s ease;
+}
+
+/* Hover — proširuje stranu */
+.ff__split:hover .ff__split-pola {
+  flex: 0.85;
+}
+.ff__split .ff__split-pola:hover {
+  flex: 1.15;
+}
+
+/* Pozadine */
+.ff__split-pola--flora {
+  background: linear-gradient(160deg, #a3b18a 0%, #588157 50%, #344e41 100%);
+}
+.ff__split-pola--fauna {
+  background: linear-gradient(160deg, #d4a373 0%, #8b5e3c 50%, #4a2c1a 100%);
+}
+
+/* Overlay */
+.ff__split-overlay {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s ease;
+}
+.ff__split-overlay--flora {
+  background: rgba(20, 50, 25, 0.45);
+}
+.ff__split-overlay--fauna {
+  background: rgba(50, 25, 10, 0.45);
+}
+.ff__split-pola:hover .ff__split-overlay {
+  opacity: 0.6;
+}
+
+/* Vertikalna linija između */
+.ff__split-pola--flora::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background-color: rgba(255,255,255,0.25);
+}
+
+/* Tekst */
+.ff__split-tekst {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.3s ease;
+}
+.ff__split-pola:hover .ff__split-tekst {
+  transform: scale(1.04);
+}
+
+.ff__split-ikona {
+  font-size: 3rem;
+  line-height: 1;
+}
+.ff__split-naslov {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+.ff__split-opis {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  opacity: 0.88;
+  max-width: 280px;
+  line-height: 1.5;
+  margin: 0;
+}
+.ff__split-dugme {
+  display: inline-block;
+  background-color: rgba(255,255,255,0.18);
+  border: 1.5px solid rgba(255,255,255,0.5);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  margin-top: 0.25rem;
+  backdrop-filter: blur(4px);
+  transition: background-color 0.2s ease;
+}
+.ff__split-pola:hover .ff__split-dugme {
+  background-color: rgba(255,255,255,0.3);
+}
+
+/* ===== ZAJEDNIČKI BEDŽ ===== */
+.ff__bedz {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
+}
+.ff__bedz--zeleni {
+  background-color: #eaf3de;
+  color: #3a5a40;
+}
+.ff__bedz--smedi {
+  background-color: #f5ebe0;
+  color: #7c4a1e;
+}
+
+/* ===== FLORA/FAUNA HERO POJAS ===== */
+.ff__hero {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ff__hero--flora {
+  background: linear-gradient(160deg, #a3b18a 0%, #588157 50%, #344e41 100%);
+}
+.ff__hero--fauna {
+  background: linear-gradient(160deg, #d4a373 0%, #8b5e3c 50%, #4a2c1a 100%);
+}
+.ff__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+.ff__hero-tekst {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ff__hero-tekst h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.ff__hero-tekst p {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* ===== BLOK — tekst + slika ===== */
+.ff__blok {
+  background-color: #ffffff;
+  padding: 4rem 1.5rem;
+}
+.ff__blok--alt {
+  background-color: #f8f7f2;
+}
+
+.ff__blok-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+.ff__blok-grid--obrnuto {
+  direction: rtl;
+}
+.ff__blok-grid--obrnuto > * {
+  direction: ltr;
+}
+
+.ff__blok-tekst {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.ff__blok-tekst h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0;
+}
+.ff__blok-tekst p {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+/* Placeholder slike */
+.ff__blok-placeholder {
+  border-radius: 14px;
+  overflow: hidden;
+  height: 340px;
+}
+.ff__blok-placeholder--bilje {
+  background: linear-gradient(135deg, #c8e6c9 0%, #66bb6a 50%, #2e7d32 100%);
+}
+.ff__blok-placeholder--ptice {
+  background: linear-gradient(135deg, #b3e5fc 0%, #4fc3f7 50%, #0277bd 100%);
+}
+.ff__blok-placeholder--ribolov {
+  background: linear-gradient(135deg, #80deea 0%, #00bcd4 50%, #006064 100%);
+  border-radius: 14px;
+  height: 340px;
+}
+
+/* ===== NASLOV WRAP za kartice sekcije ===== */
+.ff__blok-naslov-wrap {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+.ff__blok-naslov-wrap h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 0.5rem;
+}
+.ff__blok-podnaslov {
+  font-size: 0.93rem;
+  color: #888780;
+  margin: 0;
+}
+
+/* ===== VRSTE GRID — kartice sa slikama ===== */
+.ff__vrste-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ff__vrsta {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid #e4e0d8;
+  background-color: #ffffff;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.ff__vrsta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+}
+
+.ff__vrsta--zelena {
+  border-top: 3px solid #588157;
+}
+
+.ff__vrsta--smeda {
+  border-top: 3px solid #8b5e3c;
+}
+
+.ff__vrsta-slider {
+  width: 100%;
+}
+
+.ff__vrsta-tekst {
+  padding: 1rem 1.1rem 1.25rem;
+}
+
+.ff__vrsta-naziv {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0 0 0.4rem;
+}
+
+.ff__vrsta--smeda .ff__vrsta-naziv {
+  color: #4a2c1a;
+}
+
+.ff__vrsta-opis {
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 900px) {
+  .ff__blok-grid,
+  .ff__blok-grid--obrnuto {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+  .ff__vrste-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ff__split {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: calc(100vh - 56px);
+  }
+  .ff__split-pola--flora::after {
+    display: none;
+  }
+  .ff__split:hover .ff__split-pola,
+  .ff__split .ff__split-pola:hover {
+    flex: 1;
+  }
+  .ff__vrste-grid {
+    grid-template-columns: 1fr;
+  }
+  .ff__hero {
+    height: 220px;
+  }
+}

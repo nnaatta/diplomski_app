@@ -1,0 +1,179 @@
+/* ===== SEKCIJA ===== */
+.top-atrakcije {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 4rem 1.5rem;
+}
+ 
+/* ===== HEADER ===== */
+.top-atrakcije__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+ 
+.top-atrakcije__naslov {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+ 
+.top-atrakcije__podnaslov {
+  font-size: 0.95rem;
+  color: #888780;
+  margin: 0;
+}
+ 
+/* ===== GRID – kartice slažu vertikalno ===== */
+.top-atrakcije__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+ 
+/* ===== KARTICA – horizontalni layout ===== */
+.top-atrakcija {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: #fff;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+  min-height: 180px;
+}
+ 
+.top-atrakcija:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(88, 129, 87, 0.13);
+  border-color: #a3b18a;
+  text-decoration: none;
+  color: inherit;
+}
+ 
+/* ===== ISTAKNUTA (srednja) kartica ===== */
+.top-atrakcija--istaknuta {
+  background-color: #588157;
+  border-color: #588157;
+  color: #ffffff;
+}
+ 
+.top-atrakcija--istaknuta:hover {
+  background-color: #4a6f49;
+  border-color: #4a6f49;
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(88, 129, 87, 0.28);
+}
+ 
+.top-atrakcija--istaknuta .top-atrakcija__opis {
+  color: rgba(255, 255, 255, 0.82);
+}
+ 
+.top-atrakcija--istaknuta .top-atrakcija__tag {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+ 
+.top-atrakcija--istaknuta .top-atrakcija__cta {
+  color: #dad7cd;
+}
+ 
+/* ===== SLIKA ===== */
+.top-atrakcija__slika-wrap {
+  width: 38%;
+  flex-shrink: 0;
+  overflow: hidden;
+  background-color: #d8e2d3; /* placeholder dok nema slike */
+}
+ 
+.top-atrakcija__slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+ 
+.top-atrakcija:hover .top-atrakcija__slika {
+  transform: scale(1.06);
+}
+ 
+/* ===== TEKST ===== */
+.top-atrakcija__tekst {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.75rem 2rem;
+  gap: 0.5rem;
+}
+ 
+/* ===== TAG ===== */
+.top-atrakcija__tag {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #eaf3de;
+  color: #3a5a40;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+}
+ 
+/* ===== NASLOV ===== */
+.top-atrakcija__naslov {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0.25rem 0 0;
+  color: inherit;
+  letter-spacing: 0.01em;
+}
+ 
+/* ===== OPIS ===== */
+.top-atrakcija__opis {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #5f5e5a;
+  margin: 0;
+}
+ 
+/* ===== CTA ===== */
+.top-atrakcija__cta {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #588157;
+  transition: letter-spacing 0.2s ease;
+}
+ 
+.top-atrakcija:hover .top-atrakcija__cta {
+  letter-spacing: 0.09em;
+}
+ 
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 600px) {
+  .top-atrakcija {
+    flex-direction: column;
+    min-height: unset;
+  }
+ 
+  .top-atrakcija__slika-wrap {
+    width: 100%;
+    height: 200px;
+  }
+ 
+  .top-atrakcija__tekst {
+    padding: 1.25rem 1.25rem;
+  }
+}

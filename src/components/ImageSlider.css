@@ -1,0 +1,109 @@
+/* ===== IMAGE SLIDER ===== */
+.img-slider {
+  position: relative;
+  width: 100%;
+  height: var(--slider-visina, 460px);
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* Slika */
+.img-slider__slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Placeholder dok nema slike */
+.img-slider__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #a3b18a 0%, #588157 40%, #344e41 100%);
+}
+
+/* Overlay sa opisom */
+.img-slider__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem 2rem 4rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.img-slider__opis {
+  color: #fff;
+  font-size: 0.95rem;
+  font-style: italic;
+  opacity: 0.9;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+/* Strelice */
+.img-slider__strelica {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  z-index: 5;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.img-slider__strelica:hover {
+  background-color: rgba(88, 129, 87, 0.8);
+  border-color: transparent;
+}
+
+.img-slider__strelica--lijevo { left: 1rem; }
+.img-slider__strelica--desno { right: 1rem; }
+
+/* Progress bars */
+.img-slider__progress {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+  z-index: 5;
+}
+
+.img-slider__bar {
+  width: 32px;
+  height: 3px;
+  border-radius: 2px;
+  border: none;
+  background-color: rgba(255,255,255,0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.img-slider__bar--aktivan {
+  background-color: #fff;
+  width: 48px;
+}
+
+/* Responzivno */
+@media (max-width: 600px) {
+  .img-slider {
+    height: 260px !important; /* override visina prop na mobilnom */
+    border-radius: 10px;
+  }
+}
