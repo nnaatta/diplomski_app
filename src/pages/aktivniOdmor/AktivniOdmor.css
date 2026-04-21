@@ -1,0 +1,341 @@
+/* ===== SEKCIJA ===== */
+.AO_section {
+  width: 100%;
+}
+
+
+.AO_hero {
+  background-color: #344e41;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.AO_hero::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.04);
+  top: -100px;
+  right: -80px;
+}
+
+.AO_hero::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.04);
+  bottom: -80px;
+  left: 5%;
+}
+
+.AO_hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.AO_hero p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  opacity: 0.82;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== LEGENDA TEŽINA ===== */
+.AO_legenda {
+  background: #fff;
+  border-bottom: 1px solid #e4e0d8;
+  padding: 11px 24px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.AO_legenda__naslov {
+  font-size: 10px;
+  color: #9CA3AF;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.AO_legenda__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #5f5e5a;
+  font-weight: 500;
+}
+
+.AO_legenda__kvadrat {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.AO_legenda__kvadrat--lako      { background: #22C55E; }
+.AO_legenda__kvadrat--srednje   { background: #3B82F6; }
+.AO_legenda__kvadrat--tesko     { background: #EF4444; }
+.AO_legenda__kvadrat--ekstremno { background: #1C1C1C; }
+
+/* ===== GLAVNI SADRŽAJ ===== */
+.AO_main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* ===== SEKCIJA ===== */
+.AO_sekcija {
+  margin-bottom: 3.5rem;
+}
+
+.AO_sekcija__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid;
+}
+
+.AO_sekcija__lijevo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.AO_sekcija__ikona {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1.5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.AO_sekcija__naziv {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.AO_sekcija__broj {
+  font-size: 0.8rem;
+  color: #888780;
+  margin-top: 2px;
+  display: block;
+}
+
+/* ===== FILTERI ===== */
+.AO_filteri {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.AO_filter {
+  padding: 5px 13px;
+  border-radius: 20px;
+  border: 1.5px solid #e4e0d8;
+  background: #fff;
+  color: #888780;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.AO_filter:hover {
+  border-color: #a3b18a;
+  color: #344e41;
+}
+
+.AO_filter--aktivan {
+  color: #fff;
+  border-color: transparent;
+}
+
+.AO_filter--aktivan.AO_filter--sve      { background: #588157; }
+.AO_filter--aktivan.AO_filter--lako     { background: #22C55E; }
+.AO_filter--aktivan.AO_filter--srednje  { background: #3B82F6; }
+.AO_filter--aktivan.AO_filter--tesko    { background: #EF4444; }
+.AO_filter--aktivan.AO_filter--ekstremno{ background: #1C1C1C; }
+
+/* ===== LISTA REDOVA ===== */
+.AO_lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== RED STAZE ===== */
+.AO_red {
+  background: #fff;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 10px;
+  padding: 16px 20px 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.AO_red::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 10px 0 0 10px;
+  transition: width 0.16s ease;
+}
+
+.AO_red:hover {
+  border-color: #a3b18a;
+  box-shadow: 0 4px 16px rgba(52, 78, 65, 0.1);
+  transform: translateX(3px);
+}
+
+.AO_red:hover::before {
+  width: 5px;
+}
+
+/* Boja lijeve linije po tipu sekcije */
+.AO_sekcija--pjesacka      .AO_red::before { background: #5C8B3F; }
+.AO_sekcija--planinska     .AO_red::before { background: #C0392B; }
+.AO_sekcija--biciklisticka .AO_red::before { background: #1A6FA8; }
+
+/* Boja km po tipu sekcije */
+.AO_sekcija--pjesacka      .AO_red__km { color: #5C8B3F; }
+.AO_sekcija--planinska     .AO_red__km { color: #C0392B; }
+.AO_sekcija--biciklisticka .AO_red__km { color: #1A6FA8; }
+
+.AO_red__naziv {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #344e41;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.AO_red__desno {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.AO_red__km {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  min-width: 64px;
+  text-align: right;
+}
+
+.AO_red__km-jed {
+  font-size: 11px;
+  font-weight: 400;
+  color: #9CA3AF;
+  margin-left: 2px;
+}
+
+.AO_red__arrow {
+  font-size: 18px;
+  color: #d1d5db;
+  transition: color 0.16s ease, transform 0.16s ease;
+  line-height: 1;
+}
+
+.AO_red:hover .AO_red__arrow {
+  color: #888780;
+  transform: translateX(2px);
+}
+
+/* ===== BADGE TEŽINE ===== */
+.AO_badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.AO_badge--lako      { background: #f0f7ea; color: #3a6b20; }
+.AO_badge--srednje   { background: #eaf2fa; color: #1a5a8a; }
+.AO_badge--tesko     { background: #faedea; color: #8a2a1a; }
+.AO_badge--ekstremno { background: #f0f0f0; color: #1c1c1c; }
+
+/* ===== PRAZNO STANJE ===== */
+.AO_prazan {
+  text-align: center;
+  padding: 2.5rem;
+  color: #9CA3AF;
+  font-size: 0.9rem;
+  background: #f8f7f2;
+  border-radius: 10px;
+  border: 1.5px dashed #e4e0d8;
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 768px) {
+  .AO_sekcija__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .AO_main {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .AO_red {
+    padding: 14px 14px 14px 20px;
+  }
+
+  .AO_badge {
+    display: none;
+  }
+
+  .AO_red__km {
+    font-size: 1.1rem;
+    min-width: auto;
+  }
+}

@@ -20,18 +20,19 @@ import slika6 from "../../assets/ZdravstveniTurizam/slika6.jpg";
 import slika7 from "../../assets/ZdravstveniTurizam/slika7.jpg";
 import slika8 from "../../assets/ZdravstveniTurizam/slika8.jpg";
 import slika9 from "../../assets/ZdravstveniTurizam/slika9.jpg";
-
-
-
-
-
-
-
-
+import slika10 from "../../assets/ZdravstveniTurizam/slika10.jpg";
+import slika11 from "../../assets/ZdravstveniTurizam/slika11.jpg";
+import slika12 from "../../assets/ZdravstveniTurizam/slika12.jpg";
+import slika13 from "../../assets/oHP.jpg";
 
 import ImageSlider from "../../components/ImageSlider";
 
 const slajdovi = [
+  {
+    slika: slika12,
+    opis: "12 slika",
+  },
+
   {
     slika: slika5,
     opis: "5 slika",
@@ -41,8 +42,12 @@ const slajdovi = [
     opis: "prva slika",
   },
   {
+    slika: slika13,
+    opis: "13 slika",
+  },
+  {
     slika: heroSlika,
-    opis: "druga slika"
+    opis: "druga slika",
   },
   {
     slika: slika3,
@@ -67,6 +72,14 @@ const slajdovi = [
   {
     slika: slika9,
     opis: "9 slika",
+  },
+  {
+    slika: slika10,
+    opis: "10 slika",
+  },
+  {
+    slika: slika11,
+    opis: "11 slika",
   },
 ];
 
@@ -105,7 +118,7 @@ function ZdravstveniTurizam() {
         <div className="ZT_hero__overlay" />
         <div className="ZT_hero__tekst">
           <span className="ZT_hero__bedz">Vazdušna banja</span>
-          <h1 className="ZT_hero__naslov">Udahni pravi planinski zrak</h1>
+          <h1 className="ZT_hero__naslov">Udahni pravi planinski vazduh</h1>
           <p className="ZT_hero__podnaslov">
             Han Pijesak — mjesto gdje priroda liječi, a planinski vazduh
             obnavlja tijelo i dušu.
@@ -140,7 +153,6 @@ function ZdravstveniTurizam() {
         </div>
       </div>
 
-      {/* 3. ZAŠTO — bijela, 2 kolone */}
       <div className="ZT_zasto" id="zasto">
         <div className="ZT_zasto__objasnjenje">
           <span className="ZT_bedz--zeleni">Zvanično proglašenje</span>
@@ -197,14 +209,15 @@ function ZdravstveniTurizam() {
         </div>
       </div>
 
-      
-<div className="ZT_slider">
-  <h2 className="ZT_slider__naslov">Han Pijesak u slikama</h2>
-  <p className="ZT_slider__podnaslov">Priroda koja poziva na odmor i obnovu</p>
-  <div className="ZT_slider__wrap">
-    <ImageSlider slajdovi={slajdovi} visina="460px" interval={4000} />
-  </div>
-</div>
+      <div className="ZT_slider">
+        <h2 className="ZT_slider__naslov">Han Pijesak u slikama</h2>
+        <p className="ZT_slider__podnaslov">
+          Priroda koja poziva na odmor i obnovu
+        </p>
+        <div className="ZT_slider__wrap">
+          <ImageSlider slajdovi={slajdovi} visina="460px" interval={4000} />
+        </div>
+      </div>
 
       {/* 5. KVALITET VAZDUHA — krem, jedna ploča */}
       <div className="ZT_kvalitet">

@@ -1,0 +1,409 @@
+/* ================================================
+   HAN PIJESAK DANAS — glavne stilovi
+   ================================================ */
+
+/* ===== SEKCIJA WRAPPER ===== */
+.hpd {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.hpd__hero {
+  background: linear-gradient(160deg, #3a5a40 0%, #344e41 60%, #2d4236 100%);
+  color: #ffffff;
+  padding: 3.5rem 2rem 3rem;
+  text-align: center;
+}
+
+.hpd__hero-natpis {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 0.75rem;
+}
+
+.hpd__hero-naslov {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hpd__hero-podnaslov {
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  opacity: 0.72;
+  margin: 0;
+}
+
+/* ===== SEPARATOR ===== */
+.hpd__separator {
+  height: 1px;
+  background-color: #e4e0d8;
+  margin: 0 2rem;
+}
+
+/* ===== SEKCIJA ===== */
+.hpd__sekcija {
+  padding: 3.5rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hpd__sekcija--alt {
+  background-color: #f8f7f2;
+  max-width: 100%;
+  padding: 3.5rem calc((100% - 1100px) / 2 + 2rem);
+}
+
+/* ===== SEKCIJA HEADER ===== */
+.hpd__sekcija-header {
+  margin-bottom: 2.5rem;
+}
+
+.hpd__bedz {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.hpd__bedz--zeleni {
+  background-color: #eaf3de;
+  color: #3a5a40;
+}
+
+.hpd__bedz--zlatni {
+  background-color: #faeeda;
+  color: #633806;
+}
+
+.hpd__sekcija-naslov {
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  font-weight: 700;
+  color: #344e41;
+  margin: 0 0 0.4rem;
+}
+
+.hpd__sekcija-podnaslov {
+  font-size: 0.92rem;
+  color: #888780;
+  margin: 0;
+}
+
+/* ===== BLOK (tekst + foto) ===== */
+.hpd__blok {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.hpd__blok:last-child {
+  margin-bottom: 0;
+}
+
+.hpd__blok--obrnuto {
+  direction: rtl;
+}
+
+.hpd__blok--obrnuto > * {
+  direction: ltr;
+}
+
+.hpd__blok-naslov {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0 0 0.6rem;
+}
+
+.hpd__blok-opis {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+/* ===== NAGLASCI (Naglasak komponenta) ===== */
+.hpd__naglasci {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* Override Naglasak komponente unutar hpd konteksta */
+.hpd__naglasci .naglasak-item {
+  background-color: #f0f4ee;
+  border: 1.5px solid #d4e0cc;
+  border-radius: 10px;
+  padding: 0.75rem 1.1rem;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.hpd__naglasci .broj {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #344e41;
+  line-height: 1;
+}
+
+.hpd__naglasci .tekst {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b8f71;
+  margin-top: 0;
+  text-align: center;
+}
+
+/* ===== FOTO PLACEHOLDER ===== */
+.hpd__foto {
+  border-radius: 14px;
+  overflow: hidden;
+  height: 320px;
+}
+
+/* Zamijeniti pozadine slikama: */
+.hpd__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+.hpd_slike{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.hpd__foto--mjesto {
+  background: linear-gradient(160deg, #a3b18a 0%, #588157 50%, #344e41 100%);
+}
+
+.hpd__foto--planine {
+  background: linear-gradient(160deg, #b8c9a3 0%, #4a7c59 50%, #2d4a38 100%);
+}
+
+.hpd__foto--klima {
+  background: linear-gradient(160deg, #90c4e8 0%, #4a90c4 50%, #2e6b9e 100%);
+}
+
+.hpd__foto--voda {
+  background: linear-gradient(160deg, #80deea 0%, #26c6da 50%, #00838f 100%);
+}
+
+/* ===== TURIZAM ===== */
+.hpd__turizam-uvod {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: #5f5e5a;
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.hpd__turizam-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* ===== INSTITUCIJE ===== */
+.hpd__inst-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* Biblioteka — zauzima dvije kolone */
+.hpd__inst-glavna {
+  grid-column: span 2;
+  background-color: #f0f4ee;
+  border: 1.5px solid #d4e0cc;
+  border-radius: 14px;
+  border-top: 4px solid #588157;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hpd__inst-nagrada {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: #faeeda;
+  color: #633806;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.85rem;
+  border-radius: 2rem;
+  width: fit-content;
+}
+
+.hpd__inst-naslov {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0;
+}
+
+.hpd__inst-godina {
+  font-size: 0.78rem;
+  color: #888780;
+  margin: 0;
+}
+
+.hpd__inst-tekst {
+  font-size: 0.87rem;
+  line-height: 1.8;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+.hpd__inst-statistike {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.hpd__inst-stat {
+  flex: 1;
+  background-color: #e4eede;
+  border-radius: 10px;
+  padding: 0.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hpd__inst-stat-broj {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #344e41;
+  line-height: 1;
+}
+
+.hpd__inst-stat-lab {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6b8f71;
+}
+
+/* Desna kolona — Pogled i Obrazovanje složeni vertikalno */
+.hpd__inst-desna {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hpd__inst-manja {
+  background-color: #f8f7f2;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 14px;
+  border-top: 4px solid #a3b18a;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hpd__inst-manja-naslov {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0;
+}
+
+.hpd__inst-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.hpd__inst-lista li {
+  font-size: 0.82rem;
+  color: #5f5e5a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hpd__inst-lista li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #588157;
+  flex-shrink: 0;
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 900px) {
+  .hpd__blok,
+  .hpd__blok--obrnuto {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 2rem;
+  }
+
+  .hpd__turizam-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hpd__inst-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hpd__inst-glavna {
+    grid-column: span 1;
+  }
+
+  .hpd__sekcija--alt {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hpd__hero {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .hpd__sekcija {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hpd__turizam-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hpd__inst-statistike {
+    flex-direction: column;
+  }
+
+  .hpd__foto {
+    height: 220px;
+  }
+}

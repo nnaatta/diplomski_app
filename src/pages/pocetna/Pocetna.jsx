@@ -56,7 +56,7 @@ function StatsBar() {
       label:      greska ? 'prognoza nedostupna' : opis || 'trenutna temperatura',
       ikona:      greska ? '🌡️' : ikona,
     },
-    { vrijednost: '3.670', label: 'stanovnika' },
+    { vrijednost: '3.530', label: 'stanovnika' },
   ];
 
   return (
@@ -83,7 +83,7 @@ function OHanPijesku() {
           Okružen je visovima Velikim Žepom 1.537 m, Javornikom 1.219 m, Studenom Gorom 1.149 m i Trešnjevcem 1.245 m, a bujne četinarske i listopadne šume doprinijele su da ovo mjesto postane poznata klimatska i vazdušna banja, jer po količini ozona zauzima jedno od najznačajnijih mjesta u Evropi.
           Ovo je i zvanično potvrđeno početkom novembra 2023. godine, kada je cijelo područje opštine Han Pijesak proglašeno za vazdušnu banju.
         </p>
-        <a href="/han-pijesak-danas" className="o-han-pijesku__btn">
+        <a href="/o-han-pijesku/danas" className="o-han-pijesku__btn">
           Saznaj više o Han Pijesku →
         </a>
       </div>

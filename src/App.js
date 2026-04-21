@@ -14,6 +14,13 @@ import Gastronomija from "./pages/gastronomija/Gastronomija";
 import ZdravstveniTurizam from "./pages/zdravstveniTurizam/ZdravstveniTurizam";
 import FloraFauna from "./pages/floraFauna/FloraFauna";
 import VjerskiObjekti from "./pages/vjerskiObjekti/VjerskiObjekti";
+import OHP from "./pages/oHP/OHP";
+import HanPijesakDanas from "./pages/oHP/HanPijesakDanas";
+import HPIstorija from "./pages/oHP/HPIstorija";
+import AktivniOdmor from "./pages/aktivniOdmor/AktivniOdmor";
+import StazaDetalji from "./pages/aktivniOdmor/StazaDetakji";
+import LovRibolov from "./pages/lovRibolov/LovIRibolov";
+import SportRekreacija from "./pages/sportIRekreacija/SportRekreacija";
 
 
 function App() {
@@ -32,8 +39,22 @@ function App() {
              <Route path="/zdravstveni-turizam"  element={<ZdravstveniTurizam />} />
              <Route path="/flora-i-fauna"        element={<FloraFauna />} />
             <Route path="/vjerski-objekti"      element={<VjerskiObjekti />} />
-            {/*<Route path="/istorija"             element={<Istorija />} />
-            <Route path="/han-pijesak-danas"    element={<HanPijesakDanas />} />
+            <Route path="/o-han-pijesku"      element={<OHP />} />
+            <Route path="/o-han-pijesku/danas"    element={<HanPijesakDanas />} />
+            <Route path="/o-han-pijesku/istorija"    element={<HPIstorija />} />
+            <Route path="/aktivni-odmor"    element={<AktivniOdmor />} />
+            <Route path="/aktivni-odmor/:id" element={<StazaDetalji />} />
+            <Route path="/lov-i-ribolov" element={<LovRibolov />} />
+            <Route path="/sport-i-rekreacija" element={<SportRekreacija />} />
+
+
+
+
+
+
+
+
+            {/*
             <Route path="/kultura-i-tradicija"  element={<KulturaTradicija />} />
             <Route path="/znamenitosti"         element={<Znamenitosti />} />
             <Route path="/atrakcije"            element={<Atrakcije />} />

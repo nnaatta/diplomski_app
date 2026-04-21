@@ -15,38 +15,39 @@ function MyFooter() {
             <h5>Linkovi</h5>
             <div className="footer-links">
               <div>
-                <h6>O Han Pijesku</h6>
+                <h6>Istraži</h6>
                 <ul className="list-unstyled">
-                  <li><a href="#istorija">Istorija</a></li>
-                  <li><a href="#HP_danas">Han Pijesak danas</a></li>
-                  <li><a href="#kultura_tradicija">Kultura i tradicija</a></li>
+                  <li><a href="/znamenitosti">Znamenitosti</a></li>
+                  <li><a href="/atrakcije">Atrakcije</a></li>
+                  <li><a href="/vjerski-objekti">Vjerski objekti</a></li>
+                  <li><a href="/flora-i-fauna">Flora i fauna</a></li>
+                  <li><a href="#zdravstveni-turizam">Zdravstveni turizam</a></li>
                 </ul>
               </div>
               <div>
-                <h6>Istraži</h6>
+                <h6>Aktivnosti</h6>
                 <ul className="list-unstyled">
-                  <li><a href="#znamenitosti">Znamenitosti</a></li>
-                  <li><a href="#atrakcije">Atrakcije</a></li>
-                  <li><a href="#vjerski_objekti">Vjerski objekti</a></li>
-                  <li><a href="#flora_fauna">Flora i fauna</a></li>
-                  <li><a href="#zdravstveni_t">Zdravstveni turizam</a></li>
+                  <li><a href="/aktivni-odmor">Aktivni odmor</a></li>
+                  <li><a href="/sport-rekreacija">Sport i rekreacija</a></li>
+                  <li><a href="/lov-i-ribolov">Lov i ribolov</a></li>
                 </ul>
               </div>
               <div>
                 <h6>Servisi</h6>
                 <ul className="list-unstyled">
-                  <li><a href="#smještaj">Smještaj</a></li>
-                  <li><a href="#gastronomija">Gastronomija</a></li>
-                  <li><a href="#manifestacije">Manifestacije</a></li>
+                  <li><a href="/smještaj">Smještaj</a></li>
+                  <li><a href="/gastronomija">Gastronomija</a></li>
+                  <li><a href="/manifestacije">Manifestacije</a></li>
                 </ul>
               </div>
               <div>
                 <h6>Ostalo</h6>
                 <ul className="list-unstyled">
-                  <li><a href="#o_TO">O Turističkoj org.</a></li>
-                  <li><a href="blog">Blog</a></li>
-                  <li><a href="galerija">Galerija</a></li>
-                  <li><a href="kontakt">Kontakt</a></li>
+                  <li><a href="/o-to">O Turističkoj org.</a></li>
+                  <li><a href="o-Han-Pijesku">O Han Pijesku</a></li>
+                  <li><a href="/blog">Blog</a></li>
+                  <li><a href="/galerija">Galerija</a></li>
+                  <li><a href="/kontakt">Kontakt</a></li>
                 </ul>
               </div>
             </div>

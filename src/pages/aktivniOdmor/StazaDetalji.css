@@ -1,0 +1,335 @@
+/* ===== SEKCIJA ===== */
+.SD_section {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.SD_hero {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  background-color: #344e41;
+}
+
+.SD_hero__slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.SD_hero:hover .SD_hero__slika {
+  transform: scale(1.02);
+}
+
+/* Placeholder ako nema slike */
+.SD_hero__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #344e41 0%, #588157 50%, #a3b18a 100%);
+}
+
+/* Tamni overlay da naslov bude čitljiv */
+.SD_hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.28) 50%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+}
+
+.SD_hero__sadrzaj {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2.5rem 2rem;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.SD_hero__tip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+.SD_hero__tip--pjesacka      { background: rgba(92, 139, 63, 0.85);  color: #fff; }
+.SD_hero__tip--planinska     { background: rgba(192, 57, 43, 0.85);  color: #fff; }
+.SD_hero__tip--biciklisticka { background: rgba(26, 111, 168, 0.85); color: #fff; }
+
+.SD_hero__naziv {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== INFO BAR ===== */
+.SD_infobar {
+  background: #fff;
+  border-bottom: 1px solid #e4e0d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+
+.SD_infobar__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1.4rem 2.5rem;
+}
+
+.SD_infobar__ikona {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.SD_infobar__item div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.SD_infobar__vrijednost {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #344e41;
+  line-height: 1.2;
+}
+
+.SD_infobar__labela {
+  font-size: 0.72rem;
+  color: #888780;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.SD_infobar__badge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.SD_infobar__badge--lako      { background: #f0f7ea; color: #3a6b20; }
+.SD_infobar__badge--srednje   { background: #eaf2fa; color: #1a5a8a; }
+.SD_infobar__badge--tesko     { background: #faedea; color: #8a2a1a; }
+.SD_infobar__badge--ekstremno { background: #f0f0f0; color: #1c1c1c; }
+
+.SD_infobar__separator {
+  width: 1px;
+  height: 40px;
+  background: #e4e0d8;
+  flex-shrink: 0;
+}
+
+/* ===== SADRŽAJ ===== */
+.SD_sadrzaj {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* ===== OPIS ===== */
+.SD_opis {
+  padding: 2rem 2rem 2rem 2.25rem;
+  border-left: 4px solid #a3b18a;
+  margin-bottom: 3rem;
+  background-color: #f8f7f2;
+  border-radius: 0 10px 10px 0;
+}
+
+.SD_opis__naslov {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+}
+
+.SD_opis__tekst {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+/* ===== GALERIJA ===== */
+.SD_galerija {
+  margin-bottom: 3rem;
+}
+
+.SD_galerija__naslov {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+.SD_galerija__grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Grid po broju slika */
+.SD_galerija__grid--1 { grid-template-columns: 1fr; }
+.SD_galerija__grid--2 { grid-template-columns: 1fr 1fr; }
+.SD_galerija__grid--3 { grid-template-columns: repeat(3, 1fr); }
+
+.SD_galerija__item {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1.5px solid #e4e0d8;
+  aspect-ratio: 4 / 3;
+  background-color: #f8f7f2;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.SD_galerija__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(52, 78, 65, 0.12);
+}
+
+.SD_galerija__slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.SD_galerija__item:hover .SD_galerija__slika {
+  transform: scale(1.04);
+}
+
+/* ===== MAPA ===== */
+.SD_mapa {
+  margin-bottom: 3rem;
+}
+
+.SD_mapa__naslov {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #344e41;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+.SD_mapa__wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid #e4e0d8;
+  box-shadow: 0 4px 16px rgba(52, 78, 65, 0.08);
+}
+
+.SD_mapa__iframe {
+  width: 100%;
+  height: 480px;
+  display: block;
+  border: none;
+}
+
+/* ===== NAZAD DUGME ===== */
+.SD_nazad {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1.75rem;
+  background: #344e41;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease, transform 0.18s ease;
+  letter-spacing: 0.02em;
+}
+
+.SD_nazad:hover {
+  background: #2d4237;
+  transform: translateX(-3px);
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 768px) {
+  .SD_hero {
+    height: 360px;
+  }
+
+  .SD_infobar__item {
+    padding: 1.1rem 1.5rem;
+  }
+
+  .SD_galerija__grid--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .SD_hero {
+    height: 280px;
+  }
+
+  .SD_hero__sadrzaj {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .SD_sadrzaj {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .SD_infobar {
+    padding: 0 1rem;
+  }
+
+  .SD_infobar__item {
+    padding: 1rem 1rem;
+  }
+
+  .SD_infobar__separator {
+    display: none;
+  }
+
+  .SD_galerija__grid--2,
+  .SD_galerija__grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .SD_mapa__iframe {
+    height: 340px;
+  }
+
+  .SD_opis {
+    padding: 1.5rem 1.25rem 1.5rem 1.5rem;
+  }
+}

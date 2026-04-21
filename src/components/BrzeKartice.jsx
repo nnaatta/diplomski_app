@@ -9,7 +9,7 @@ const kartice = [
     ikona: <IoSearch/>,
     naslov: 'Istraži destinaciju',
     opis: 'Upoznaj Han Pijesak — istoriju, kulturu i sve što ovo mjesto čini posebnim.',
-    link: '/han-pijesak-danas',
+    link: '/o-han-pijesku',
     cta: 'Saznaj više',
   },
   {

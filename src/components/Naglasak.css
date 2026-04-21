@@ -1,0 +1,27 @@
+
+.naglasak_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #d3e2b9;
+  border-radius: 12px;
+  padding: 1.25rem 2rem;
+  min-width: 120px;
+}
+
+.broj {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #344e41;
+  line-height: 1;
+}
+
+.tekst {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #888780;
+  margin-top: 0.4rem;
+  text-align: center;
+}

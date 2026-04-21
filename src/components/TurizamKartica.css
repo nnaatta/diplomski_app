@@ -1,0 +1,36 @@
+/* ===== TURIZAM KARTICA ===== */
+.turizam-kartica {
+  background-color: #ffffff;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.turizam-kartica:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.turizam-kartica__ikona {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.turizam-kartica__naziv {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0;
+}
+
+.turizam-kartica__opis {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: #5f5e5a;
+  margin: 0;
+}

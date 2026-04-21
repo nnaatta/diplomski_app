@@ -3,9 +3,7 @@ import './ImageSlider.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 
 // ===== PROPS =====
-// slajdovi — niz objekata { slika, opis }
-// visina  — visina slidera u px ili css vrijednost (default: '460px')
-// interval — brzina auto-playa u ms (default: 4000)
+
 
 function ImageSlider({ slajdovi = [], visina = '460px', interval = 4000 }) {
   const [aktivan, setAktivan] = useState(0);

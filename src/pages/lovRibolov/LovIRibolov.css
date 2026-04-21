@@ -1,0 +1,427 @@
+/* ================================================
+   LOV I RIBOLOV
+   ================================================ */
+
+.lr {
+  width: 100%;
+}
+
+/* ===== HERO — usklađen sa OTO stilom ===== */
+.lr__hero {
+  background-color: #344e41;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.lr__hero::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.04);
+  top: -100px;
+  right: -80px;
+}
+
+.lr__hero::after {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.04);
+  bottom: -80px;
+  left: 5%;
+}
+
+.lr__hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.lr__hero p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  opacity: 0.82;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== TABOVI ===== */
+.lr__tabovi {
+  display: flex;
+  border-bottom: 2px solid #e4e0d8;
+  background-color: #ffffff;
+  position: sticky;
+  top: 56px; /* visina navbara — prilagodi ako treba */
+  z-index: 10;
+}
+
+.lr__tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #888780;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.lr__tab:hover {
+  color: #344e41;
+  background-color: #f8f7f2;
+}
+
+.lr__tab--aktivan {
+  color: #344e41;
+  border-bottom-color: #588157;
+}
+
+.lr__tab-ikona {
+  font-size: 1.1rem;
+}
+
+/* ===== SEKCIJE ===== */
+.lr__sekcija {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.lr__sekcija--alt {
+  background-color: #f8f7f2;
+  max-width: 100%;
+  padding: 3rem calc((100% - 1100px) / 2 + 2rem);
+}
+
+.lr__sekcija-unutra {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.lr__sekcija-header {
+  margin-bottom: 2rem;
+}
+
+.lr__sekcija-naslov {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: #344e41;
+  margin: 0 0 0.3rem;
+}
+
+.lr__sekcija-podnaslov {
+  font-size: 0.9rem;
+  color: #888780;
+  margin: 0;
+}
+
+/* ===== BEDŽEVI ===== */
+.lr__bedz {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.9rem;
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.lr__bedz--lov {
+  background-color: #eaf3de;
+  color: #3a5a40;
+}
+
+.lr__bedz--riba {
+  background-color: #e6f0f8;
+  color: #1a4a6b;
+}
+
+/* ===== KARTICA UDRUŽENJA ===== */
+.lr__drustvo-kartica {
+  background-color: #ffffff;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 16px;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.lr__drustvo-logo {
+  width: 130px;
+  height: 130px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.lr__drustvo-logo--lov {
+  background-color: #f0f4ee;
+  border: 1.5px solid #d4e0cc;
+  color: #3a5a40;
+}
+
+.lr__drustvo-logo--riba {
+  background-color: #e8f2f8;
+  border: 1.5px solid #b8d4e8;
+  color: #1a4a6b;
+}
+
+.lr__drustvo-logo-ikona {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.lr__drustvo-logo-tekst {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.lr__drustvo-naslov {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0 0 0.2rem;
+}
+
+.lr__drustvo-godina {
+  font-size: 0.75rem;
+  color: #888780;
+  margin: 0 0 0.75rem;
+}
+
+.lr__drustvo-tekst {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+/* ===== BLOK tekst + foto ===== */
+.lr__blok {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.lr__blok--obrnuto {
+  direction: rtl;
+}
+
+.lr__blok--obrnuto > * {
+  direction: ltr;
+}
+
+.lr__blok-tekst {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+.lr__foto {
+  border-radius: 14px;
+  height: 260px;
+  overflow: hidden;
+}
+
+.lr__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.lr__foto--lov {
+  background: linear-gradient(135deg, #8fa870 0%, #2d4a1e 100%);
+}
+
+.lr__foto--riba {
+  background: linear-gradient(135deg, #7ab0d4 0%, #1a4a6b 100%);
+}
+
+/* ===== INFO KARTICE ===== */
+.lr__info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.lr__info-kartica {
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  border: 1.5px solid transparent;
+}
+
+.lr__info-kartica--zelena {
+  background-color: #f0f4ee;
+  border-color: #d4e0cc;
+}
+
+.lr__info-kartica--plava {
+  background-color: #e8f2f8;
+  border-color: #b8d4e8;
+}
+
+.lr__info-ikona {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.lr__info-naziv {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0 0 0.3rem;
+}
+
+.lr__info-tekst {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+/* ===== PRAVILA RIBOLOVA ===== */
+.lr__pravila {
+  background-color: #ffffff;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.lr__pravila-naslov {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0 0 0.75rem;
+}
+
+.lr__pravila-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.lr__pravila-stavka {
+  font-size: 0.85rem;
+  color: #5f5e5a;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.lr__pravila-stavka::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #4a90c4;
+  flex-shrink: 0;
+}
+
+/* ===== CITAT ===== */
+.lr__citat {
+  background-color: #344e41;
+  border-left: 4px solid #a3b18a;
+  border-radius: 0 12px 12px 0;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.lr__citat-tekst {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #ffffff;
+  font-style: italic;
+  opacity: 0.92;
+  margin: 0;
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 900px) {
+  .lr__blok,
+  .lr__blok--obrnuto {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 1.5rem;
+  }
+
+  .lr__info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lr__sekcija--alt {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .lr__hero {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .lr__tab {
+    font-size: 0.82rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .lr__drustvo-kartica {
+    grid-template-columns: 1fr;
+  }
+
+  .lr__drustvo-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .lr__sekcija {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .lr__info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lr__foto {
+    height: 200px;
+  }
+}
