@@ -1,0 +1,459 @@
+/* ===== SEKCIJA ===== */
+.DVR_section { width: 100%; }
+
+/* ===== ZAJEDNIČKI ===== */
+.DVR_wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.DVR_bedz--zeleni {
+  display: inline-block;
+  background-color: #eaf3de;
+  color: #3a5a40;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  margin-bottom: 0.75rem;
+}
+.DVR_bedz--centar {
+  display: block;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.DVR_naslov {
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: #344e41;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.DVR_podnaslov {
+  font-size: 0.95rem;
+  color: #888780;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== HERO ===== */
+.DVR_hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.DVR_hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.DVR_hero__img--placeholder {
+  background: linear-gradient(135deg, #2a1a0a 0%, #4e3420 40%, #7a5c3a 80%, #b8a070 100%);
+}
+.DVR_hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(30,20,10,0.2) 0%, rgba(30,20,10,0.7) 100%);
+}
+.DVR_hero__tekst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 90%;
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.DVR_hero__bedz {
+  display: inline-block;
+  background-color: rgba(88,129,87,0.85);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.35rem 1.1rem;
+  border-radius: 2rem;
+}
+.DVR_hero__naslov {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+.DVR_hero__podnaslov {
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  opacity: 0.88;
+  margin: 0;
+  max-width: 560px;
+}
+.DVR_hero__nazad {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: rgba(0,0,0,0.25);
+  padding: 0.45rem 1rem;
+  border-radius: 2rem;
+  transition: background-color 0.18s, color 0.18s;
+}
+.DVR_hero__nazad:hover {
+  background-color: rgba(0,0,0,0.45);
+  color: #fff;
+}
+
+/* ===== O DVORCU ===== */
+.DVR_o-dvorcu {
+  background-color: #f8f7f2;
+  padding: 5rem 1.5rem;
+}
+.DVR_o-dvorcu__grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 4rem;
+  align-items: start;
+}
+.DVR_o-dvorcu__tekst {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.DVR_o-dvorcu__naslov {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+.DVR_o-dvorcu__tekst p {
+  font-size: 0.93rem;
+  line-height: 1.85;
+  color: #5f5e5a;
+  margin: 0;
+}
+.DVR_o-dvorcu__info-kolona {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.DVR_info-stavka {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e4e0d8;
+}
+.DVR_info-stavka:last-child { border-bottom: none; }
+.DVR_info-stavka__labela {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #888780;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.DVR_info-stavka__vrijednost {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #344e41;
+}
+
+/* ===== HISTORIJA — TIMELINE ===== */
+.DVR_historija {
+  background-color: #fff;
+  padding: 5rem 1.5rem;
+}
+.DVR_timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.DVR_timeline__nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.DVR_timeline__nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #e4e0d8;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.18s;
+  min-width: 100px;
+  text-align: center;
+}
+.DVR_timeline__nav-btn:hover {
+  border-color: #a3b18a;
+  background-color: #f8f7f2;
+}
+.DVR_timeline__nav-btn--aktivan {
+  background-color: #344e41;
+  border-color: #344e41;
+}
+.DVR_timeline__nav-godina {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #888780;
+  letter-spacing: 0.06em;
+}
+.DVR_timeline__nav-btn--aktivan .DVR_timeline__nav-godina { color: #a3b18a; }
+.DVR_timeline__nav-naslov {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #344e41;
+}
+.DVR_timeline__nav-btn--aktivan .DVR_timeline__nav-naslov { color: #fff; }
+
+.DVR_timeline__sadrzaj {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  background-color: #f8f7f2;
+  border: 1.5px solid #e4e0d8;
+  border-radius: 14px;
+  overflow: hidden;
+  align-items: stretch;
+}
+.DVR_timeline__slika-wrap {
+  height: 300px;
+  overflow: hidden;
+}
+.DVR_timeline__slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.DVR_timeline__slika-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #c8b898 0%, #8a7050 50%, #5a4030 100%);
+}
+.DVR_timeline__info {
+  padding: 2.5rem 2.5rem 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.DVR_timeline__godina {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #588157;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.DVR_timeline__naslov {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #344e41;
+  margin: 0;
+  line-height: 1.3;
+}
+.DVR_timeline__tekst {
+  font-size: 0.92rem;
+  line-height: 1.85;
+  white-space: pre-line;
+  color: #5f5e5a;
+  margin: 0;
+}
+
+/* ===== BUDUĆNOST ===== */
+.DVR_buducnost {
+  background-color: #344e41;
+  padding: 5rem 1.5rem;
+}
+.DVR_buducnost .DVR_naslov { color: #fff; }
+.DVR_buducnost .DVR_podnaslov { color: #a3b18a; }
+.DVR_buducnost .DVR_bedz--zeleni {
+  background-color: rgba(163,177,138,0.2);
+  color: #a3b18a;
+}
+.DVR_buducnost__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.DVR_buducnost__stavka {
+  background-color: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.22s, background-color 0.22s, border-color 0.22s;
+}
+.DVR_buducnost__stavka:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255,255,255,0.12);
+  border-color: rgba(163,177,138,0.5);
+}
+.DVR_buducnost__ikona { font-size: 2rem; display: block; margin-bottom: 0.25rem; }
+.DVR_buducnost__naziv {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+.DVR_buducnost__opis {
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+}
+
+/* ===== GALERIJA ===== */
+.DVR_galerija {
+  background-color: #f8f7f2;
+  padding: 5rem 1.5rem;
+}
+.DVR_galerija__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 260px 200px;
+  gap: 1rem;
+}
+.DVR_galerija__item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid #e4e0d8;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+.DVR_galerija__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(52,78,65,0.14);
+}
+.DVR_galerija__item--velika { grid-column: span 2; }
+.DVR_galerija__slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s;
+}
+.DVR_galerija__item:hover .DVR_galerija__slika { transform: scale(1.05); }
+.DVR_galerija__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #c8b898 0%, #8a7050 50%, #5a4030 100%);
+}
+.DVR_galerija__opis {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.6rem 1rem;
+  background: rgba(20,10,5,0.55);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* ===== CTA ===== */
+.DVR_cta {
+  background-color: #588157;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+.DVR_cta__naslov {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.DVR_cta__tekst {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+}
+.DVR_cta__dugmad {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.DVR_cta__btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 2.25rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: transform 0.22s, background-color 0.22s;
+}
+.DVR_cta__btn:hover { transform: translateY(-2px); }
+.DVR_cta__btn--primarni { background-color: #fff; color: #344e41; }
+.DVR_cta__btn--primarni:hover { background-color: #eaf3de; }
+.DVR_cta__btn--sekundarni {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.6);
+}
+.DVR_cta__btn--sekundarni:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-color: #fff;
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 1024px) {
+  .DVR_buducnost__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .DVR_o-dvorcu__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .DVR_timeline__sadrzaj {
+    grid-template-columns: 1fr;
+  }
+  .DVR_timeline__slika-wrap { height: 220px; }
+  .DVR_timeline__info { padding: 1.5rem 2rem 2rem; }
+  .DVR_galerija__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+  }
+  .DVR_galerija__item--velika { grid-column: span 2; }
+}
+@media (max-width: 576px) {
+  .DVR_hero { height: 85vh; }
+  .DVR_buducnost__grid { grid-template-columns: 1fr; }
+  .DVR_timeline__nav-btn { min-width: 80px; padding: 0.5rem 0.75rem; }
+  .DVR_galerija__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 180px);
+  }
+  .DVR_galerija__item--velika { grid-column: span 1; }
+}

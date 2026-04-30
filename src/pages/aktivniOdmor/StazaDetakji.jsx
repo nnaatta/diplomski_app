@@ -1,8 +1,11 @@
 import "./StazaDetalji.css";
 import { useParams, useNavigate } from "react-router-dom";
+import { FaWalking, FaMountain } from "react-icons/fa";
+import { IoMdBicycle } from "react-icons/io";
+import { AiFillThunderbolt } from "react-icons/ai";
+import { GiRoad } from "react-icons/gi";
 
-// IMPORTUJ ISTI ARRAY staze (ili ga prebaci u poseban fajl pa importuj)
-import { staze } from "./AktivniOdmor"; // ili gdje već stoji
+import { staze } from "./AktivniOdmor";
 
 const tezineLabele = {
   lako: "Lako",
@@ -18,9 +21,9 @@ const tipLabele = {
 };
 
 const tipEmoji = {
-  pjesacka: "🥾",
-  planinska: "⛰️",
-  biciklisticka: "🚵",
+  pjesacka: <FaWalking />,
+  planinska: <FaMountain />,
+  biciklisticka: <IoMdBicycle />,
 };
 
 export default function StazaDetalji() {
@@ -34,10 +37,13 @@ export default function StazaDetalji() {
 
   return (
     <section className="SD_section">
-
       <div className="SD_hero">
         {staza.hero_slika ? (
-          <img src={staza.hero_slika} alt={staza.naziv} className="SD_hero__slika" />
+          <img
+            src={staza.hero_slika}
+            alt={staza.naziv}
+            className="SD_hero__slika"
+          />
         ) : (
           <div className="SD_hero__placeholder" />
         )}
@@ -53,7 +59,9 @@ export default function StazaDetalji() {
 
       <div className="SD_infobar">
         <div className="SD_infobar__item">
-          <span className="SD_infobar__ikona">📏</span>
+          <span className="SD_infobar__ikona">
+            <GiRoad />
+          </span>
           <div>
             <span className="SD_infobar__vrijednost">{staza.duzina} km</span>
             <span className="SD_infobar__labela">Dužina</span>
@@ -63,9 +71,13 @@ export default function StazaDetalji() {
         <div className="SD_infobar__separator" />
 
         <div className="SD_infobar__item">
-          <span className="SD_infobar__ikona">⚡</span>
+          <span className="SD_infobar__ikona">
+            <AiFillThunderbolt />
+          </span>
           <div>
-            <span className={`SD_infobar__badge SD_infobar__badge--${staza.tezina}`}>
+            <span
+              className={`SD_infobar__badge SD_infobar__badge--${staza.tezina}`}
+            >
               {tezineLabele[staza.tezina]}
             </span>
             <span className="SD_infobar__labela">Težina</span>
@@ -77,7 +89,9 @@ export default function StazaDetalji() {
         <div className="SD_infobar__item">
           <span className="SD_infobar__ikona">{tipEmoji[staza.tip]}</span>
           <div>
-            <span className="SD_infobar__vrijednost">{tipLabele[staza.tip]}</span>
+            <span className="SD_infobar__vrijednost">
+              {tipLabele[staza.tip]}
+            </span>
             <span className="SD_infobar__labela">Vrsta</span>
           </div>
         </div>
@@ -88,10 +102,14 @@ export default function StazaDetalji() {
           <h2>O stazi</h2>
           <p>{staza.opis || "Opis nije dodat."}</p>
         </div>
-        
-          {staza.mapa_url && (
+
+        {staza.mapa_url && (
           <div className="SD_mapa">
             <h2 className="SD_mapa__naslov">Mapa staze</h2>
+            <p className="SD_mapa__tekst">
+              Klikom na destinaciju iz menija prikazaće se putanja i kratak opis
+              odabrane lokacije.
+            </p>
             <div className="SD_mapa__wrap">
               <iframe
                 src={staza.mapa_url}

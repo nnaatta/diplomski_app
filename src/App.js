@@ -21,6 +21,13 @@ import AktivniOdmor from "./pages/aktivniOdmor/AktivniOdmor";
 import StazaDetalji from "./pages/aktivniOdmor/StazaDetakji";
 import LovRibolov from "./pages/lovRibolov/LovIRibolov";
 import SportRekreacija from "./pages/sportIRekreacija/SportRekreacija";
+import Manifestacije from "./pages/manifestacije/Manifestacije";
+import Atrakcije from "./pages/atrakcije/Atrakcije";
+import Znamenitosti from "./pages/znamenitosti/Znamenitosti";
+import DvoracKaradjordjevica from "./pages/znamenitosti/DvoracKaradjordjevica";
+import Blog from "./pages/blog/Blog";
+import DetaljiBlog from "./pages/blog/DetaljiBlog";
+import Galerija from "./pages/galerija/Galerija";
 
 
 function App() {
@@ -46,6 +53,20 @@ function App() {
             <Route path="/aktivni-odmor/:id" element={<StazaDetalji />} />
             <Route path="/lov-i-ribolov" element={<LovRibolov />} />
             <Route path="/sport-i-rekreacija" element={<SportRekreacija />} />
+            <Route path="/manifestacije" element={<Manifestacije />} />
+            <Route path="/atrakcije" element={<Atrakcije />} />
+            <Route path="/znamenitosti" element={<Znamenitosti />} />
+            <Route path="/znamenitosti/dvorac-karadjordjevica" element={<DvoracKaradjordjevica />} />
+            <Route path="/blog" element={<Blog/>} />
+            <Route path="/blog/:slug" element={<DetaljiBlog/>} />
+            <Route path="/galerija" element={<Galerija/>} />
+
+
+
+            
+
+
+
 
 
 

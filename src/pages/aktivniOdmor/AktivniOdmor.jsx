@@ -3,13 +3,14 @@ import "./AktivniOdmor.css";
 import { FaWalking, FaMountain } from "react-icons/fa";
 import { IoMdBicycle } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import skakavca from "../../assets/Vodopad-Skakavac2.jpg"
 
 export const staze = [
   { id: 1, naziv: "Uspon na Veliki Žep", duzina: 5.6, tip: "pjesacka", tezina: "srednje" },
   { id: 2, naziv: "Srpsko vojničko groblje Vrani Kamen", duzina: 11.5, tip: "pjesacka", tezina: "tesko" },
   { id: 3, naziv: "Pješačka staza Han Kram – Vidikovac Feredže", duzina: 1.9, tip: "pjesacka", tezina: "lako" },
   { id: 4, naziv: "Krivače – Veliki Žep", duzina: 3.5, tip: "pjesacka", tezina: "lako" },
-  { id: 5, naziv: "Žeravice – vodopad Skakavac", duzina: 2.5, tip: "pjesacka", tezina: "lako" , opis:"Staza je jako lagana, dužine oko 2,5 km u jednom pravcu (od kojih je 2 km makadamski put). Staza počinje u mjestu Podžeravice, gdje se sa regionalnog puta Han Pijesak – Olovo skreće desno. Ide se oko 2 km kamionskim putem uz rijeku Varošnicu – do kraja puta. Posljednjih 500 m staza vodi kroz šumu uz potok Skakavac, na čijem se kraju nalazi istoimeni, impozantni vodopad.", mapa_url:"https://imap.bts.ba/#"},
+  { id: 5, naziv: "Žeravice – vodopad Skakavac", duzina: 2.5, tip: "pjesacka", tezina: "lako" , opis:"Staza je jako lagana, dužine oko 2,5 km u jednom pravcu (od kojih je 2 km makadamski put). Staza počinje u mjestu Podžeravice, gdje se sa regionalnog puta Han Pijesak – Olovo skreće desno. Ide se oko 2 km kamionskim putem uz rijeku Varošnicu – do kraja puta. Posljednjih 500 m staza vodi kroz šumu uz potok Skakavac, na čijem se kraju nalazi istoimeni, impozantni vodopad.", mapa_url:"https://imap.bts.ba/#", hero_slika: skakavca},
   { id: 6, naziv: "Planinski kamp Jazavčije rupe – Vrh Veliko Igrište (1406 m) – Dolovi – Planinski kamp Jazavčije", duzina: 12, tip: "planinska", tezina: "tesko" },
   { id: 7, naziv: "Restoran „Pogled“ – Vidikovci Strmca – Restoran „Pogled“", duzina: 7, tip: "planinska", tezina: "lako" },
   { id: 8, naziv: "Karaula – vidikovac Žeženica", duzina: 0.5, tip: "planinska", tezina: "lako" },

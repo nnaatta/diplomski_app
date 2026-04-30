@@ -1,21 +1,26 @@
 import React, { useState } from "react";
 import "./LovIRibolov.css";
+import { GiDeer, GiPolarBear, GiForest } from "react-icons/gi";
+import { IoFishSharp } from "react-icons/io5";
+import { FaAward } from "react-icons/fa";
+import { LuCalendarDays,  LuWaves } from "react-icons/lu";
+import rijeke from "../../assets/rijeke.jpg"
 
 const lovInfoKartice = [
   {
-    ikona: "🌲",
+    ikona: <GiForest/>,
     naziv: "Šumska lovišta",
     tekst:
       "Bogati šumski kompleksi Javora — prirodno stanište krupne i sitne divljači.",
   },
   {
-    ikona: "🦌",
+    ikona: <GiPolarBear/>,
     naziv: "Krupna divljač",
     tekst:
       "Srna, jelen, divlja svinja i druge vrste krupne divljači karakteristične za ovo područje.",
   },
   {
-    ikona: "🏆",
+    ikona: <FaAward/>,
     naziv: "Lovni turizam",
     tekst:
       "Razvijen komercijalni lov i lovnoturistička ponuda za domaće i strane goste.",
@@ -24,19 +29,19 @@ const lovInfoKartice = [
 
 const ribolovInfoKartice = [
   {
-    ikona: "🐟",
+    ikona: <IoFishSharp/>,
     naziv: "Potočna pastrmka",
     tekst:
       "Jedina vrsta ribe u vodama — minimalna dužina za zadržavanje 25 cm.",
   },
   {
-    ikona: "📅",
+    ikona: <LuCalendarDays/>,
     naziv: "Sezona ribolova",
     tekst:
       "1. marta — 30. septembra · Isključivo na vještačke mamce.",
   },
   {
-    ikona: "🌊",
+    ikona: <LuWaves/>,
     naziv: "Dva sliva",
     tekst:
       "Sliv rijeke Bosne (mušičarenje) i sliv Drine (varaličarenje).",
@@ -71,14 +76,14 @@ function LovRibolov() {
           className={`lr__tab ${aktivniTab === "lov" ? "lr__tab--aktivan" : ""}`}
           onClick={() => setAktivniTab("lov")}
         >
-          <span className="lr__tab-ikona">🦌</span>
+          <span className="lr__tab-ikona"><GiDeer/></span>
           Lovačko udruženje
         </button>
         <button
           className={`lr__tab ${aktivniTab === "ribolov" ? "lr__tab--aktivan" : ""}`}
           onClick={() => setAktivniTab("ribolov")}
         >
-          <span className="lr__tab-ikona">🎣</span>
+          <span className="lr__tab-ikona"><IoFishSharp/></span>
           Ribolovno društvo
         </button>
       </div>
@@ -232,7 +237,7 @@ function LovRibolov() {
                   rijeke Drina pripada i vodotok „Rijeka" koja je ponornica.
                 </p>
                 <div className="lr__foto lr__foto--riba">
-                  {/* <img src="..." alt="Ribolovne vode Han Pijesak" /> */}
+                  <img src={rijeke} alt="rijeke" />
                 </div>
               </div>
 

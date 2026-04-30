@@ -10,14 +10,14 @@ const atrakcije = [
     naslov: 'Dvorac Karađorđevića',
     opis: 'Izgrađen početkom 20. vijeka, dvorac Karađorđevića svjedoči o bogatoj istoriji ovog kraja i vremenu kada je Han Pijesak bio omiljeno utočište kraljevske porodice. Danas fascinira svojom arhitekturom i pogledom na romanijsku prirodu.',
     tag: 'Istorija',
-    link: '/istorija/dvoracKaradjordjevica',
+    link: '/znamenitosti/dvorac-karadjordjevica',
   },
   {
     slika: vodopadSlika,
     naslov: 'Vodopad Skakavac',
     opis: 'Okružen gustom šumom i netaknutom prirodom, Vodopad Skakavac je jedno od najljepših prirodnih čuda ovog kraja. Savršena polazna tačka za planinske šetnje i izlete koji ostavljaju neizbrisiv utisak.',
     tag: 'Priroda',
-    link: '/atraktivnosti/vodopadSkakavac',
+    link: '/atrakcije/vodopadSkakavac',
     istaknuta: true,
   },
   {

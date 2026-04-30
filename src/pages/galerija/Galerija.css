@@ -1,0 +1,295 @@
+.GAL_section { width: 100%; min-height: 100vh; background: #f8f7f2; }
+
+/* ── HERO ── */
+.GAL_hero {
+  background-color: #344e41;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.GAL_hero::before {
+  content: '';
+  position: absolute;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  top: -100px; right: -80px;
+}
+.GAL_hero::after {
+  content: '';
+  position: absolute;
+  width: 250px; height: 250px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  bottom: -80px; left: 5%;
+}
+.GAL_hero h1 {
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  position: relative; z-index: 1;
+}
+.GAL_hero p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  opacity: 0.82;
+  margin: 0;
+  position: relative; z-index: 1;
+}
+
+/* ── KONTROLE ── */
+.GAL_kontrole {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem 2.5rem 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.GAL_filteri {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.GAL_filter {
+  padding: 0.5rem 1.1rem;
+  border-radius: 20px;
+  border: 1.5px solid #e4e0d8;
+  background: #fff;
+  color: #888780;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.GAL_filter:hover { border-color: #a3b18a; color: #344e41; }
+.GAL_filter--aktivan {
+  background: #344e41;
+  border-color: #344e41;
+  color: #fff;
+}
+.GAL_brojac {
+  font-size: 0.82rem;
+  color: #888780;
+  font-weight: 500;
+}
+
+/* ── SCROLL ANIMACIJA ── */
+.GAL_reveal {
+  opacity: 0;
+  transform: scale(0.96) translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.GAL_revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* ── MASONRY-ISH GRID ── */
+.GAL_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 6px;
+  padding: 0 6px 6px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ── ITEM ── */
+.GAL_item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.GAL_item--velika {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.GAL_item__slika {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.GAL_item__slika-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.GAL_item:hover .GAL_item__slika {
+  transform: scale(1.07);
+}
+
+/* Hover overlay */
+.GAL_item__hover {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20,40,20,0.82) 0%, rgba(20,40,20,0.1) 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem 1.1rem;
+  gap: 0.3rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.GAL_item:hover .GAL_item__hover { opacity: 1; }
+
+.GAL_item__kat {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(88,129,87,0.85);
+  color: #fff;
+  padding: 0.2rem 0.7rem;
+  border-radius: 2rem;
+  width: fit-content;
+}
+.GAL_item__opis {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+}
+.GAL_item__lupa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  font-size: 1.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.GAL_item:hover .GAL_item__lupa {
+  opacity: 0.7;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ── LIGHTBOX ── */
+.GAL_lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,20,10,0.93);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.22s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.GAL_lightbox__zatvori {
+  position: absolute;
+  top: 1.25rem; right: 1.5rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1.1rem;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.18s;
+  z-index: 10;
+}
+.GAL_lightbox__zatvori:hover { background: rgba(255,255,255,0.22); }
+
+.GAL_lightbox__nav {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1.8rem;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.18s;
+  z-index: 10;
+  line-height: 1;
+}
+.GAL_lightbox__nav:hover { background: rgba(255,255,255,0.22); }
+.GAL_lightbox__nav--lijevo { left: 1.5rem; }
+.GAL_lightbox__nav--desno { right: 1.5rem; }
+
+.GAL_lightbox__sadrzaj {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 860px;
+  width: 90%;
+  animation: zoomIn 0.25s ease;
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+.GAL_lightbox__slika {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+}
+.GAL_lightbox__info {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+.GAL_lightbox__kat {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(88,129,87,0.8);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+}
+.GAL_lightbox__opis {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.78);
+  font-weight: 500;
+}
+
+/* ── RESPONZIVNO ── */
+@media (max-width: 1024px) {
+  .GAL_grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .GAL_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+  .GAL_kontrole { padding: 1.5rem 1.25rem 1rem; }
+}
+@media (max-width: 480px) {
+  .GAL_grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 150px;
+    gap: 4px;
+    padding: 0 4px 4px;
+  }
+  .GAL_item--velika { grid-column: span 2; }
+  .GAL_lightbox__nav { width: 38px; height: 38px; font-size: 1.4rem; }
+  .GAL_lightbox__nav--lijevo { left: 0.5rem; }
+  .GAL_lightbox__nav--desno  { right: 0.5rem; }
+}

@@ -1,21 +1,31 @@
 import React from "react";
 import "./SportRekreacija.css";
 import { Link } from "react-router-dom";
+import { FaWalking, FaMountain, FaSkiing } from "react-icons/fa";
+import { IoMdBicycle } from "react-icons/io";
+import { GiFishingHook, GiPathDistance, GiMountainRoad } from "react-icons/gi";
+import { TbAerialLift } from "react-icons/tb";
+import { BsThermometerSnow } from "react-icons/bs";
 
 import PedVisocnikLogo from "../../assets/PedVisocnikLogo.jpg";
-import vis1 from "../../assets/sportRekreacija/vis1.jpg"
-import vis2 from "../../assets/sportRekreacija/vis2.jpg"
-import vis3 from "../../assets/sportRekreacija/vis3.jpg"
-import vis4 from "../../assets/sportRekreacija/vis4.jpg"
+import vis1 from "../../assets/sportRekreacija/vis1.jpg";
+import vis2 from "../../assets/sportRekreacija/vis2.jpg";
+import vis3 from "../../assets/sportRekreacija/vis3.jpg";
+import vis4 from "../../assets/sportRekreacija/vis4.jpg";
 import psuJavor from "../../assets/psuJavor.jpg";
-import javor1 from "../../assets/sportRekreacija/javor1.jpg"
-import javor2 from "../../assets/sportRekreacija/javor2.jpg"
-import javor3 from "../../assets/sportRekreacija/javor3.jpg"
-import javor4 from "../../assets/sportRekreacija/javor4.jpg"
-import zokLogo from "../../assets/sportRekreacija/zokLogo.jpg"
-
-
-
+import javor1 from "../../assets/sportRekreacija/javor1.jpg";
+import javor2 from "../../assets/sportRekreacija/javor2.jpg";
+import javor3 from "../../assets/sportRekreacija/javor3.jpg";
+import javor4 from "../../assets/sportRekreacija/javor4.jpg";
+import zokLogo from "../../assets/sportRekreacija/zokLogo.jpg";
+import omladinaclogo from "../../assets/sportRekreacija/fkOmladinacLogo.jpg";
+import cosLogo from "../../assets/COSPogledLogp.png";
+import kkLogo from "../../assets/sportRekreacija/kkHP.jpg";
+import ig1 from "../../assets/sportRekreacija/igrista1.jpg";
+import ig2 from "../../assets/sportRekreacija/igrista2.jpg";
+import ig3 from "../../assets/sportRekreacija/igrista3.jpg";
+import ig4 from "../../assets/sportRekreacija/igrista4.jpg";
+import ig5 from "../../assets/sportRekreacija/igrista5.jpg";
 
 
 
@@ -24,7 +34,7 @@ import zokLogo from "../../assets/sportRekreacija/zokLogo.jpg"
 const organizacije = [
   {
     naziv: "PSU Visočnik",
-    logo: PedVisocnikLogo, 
+    logo: PedVisocnikLogo,
     opis: "Planinarsko sportsko udruženje Visočnik organizuje pohode, takmičenja i edukacije u planinarenju. Aktivni tokom cijele godine na stazama Javora i okolnih planina.",
     slike: [vis1, vis2, vis3, vis4], // planinaranje1, planinaranje2...
     slikeOpisi: [
@@ -39,12 +49,7 @@ const organizacije = [
     logo: psuJavor, // psuJavorLogo
     opis: "Udruženje posvećeno promociji planinarstva i aktivnog boravka u prirodi. Organizuju godišnje pohode i saradnju sa školama i turističkom organizacijom.",
     slike: [javor1, javor2, javor3, javor4],
-    slikeOpisi: [
-      "Veliki Žep",
-      "Trebević",
-      "Komić",
-      "Velika Sikira",
-    ],
+    slikeOpisi: ["Veliki Žep", "Trebević", "Komić", "Velika Sikira"],
   },
   {
     naziv: "OK Han Pijesak",
@@ -53,32 +58,41 @@ const organizacije = [
     slike: [null, null, null, null],
     slikeOpisi: ["Pohod u šumi", "Vršni uspon", "Rekreacija", "Takmičenje"],
   },
+
   {
-    naziv: "Centar za omladinu i sport Pogled",
-    logo: null, // cosLogo
-    opis: "COS Pogled pruža mogućnosti za sport i rekreaciju mladima opštine Han Pijesak. Organizuje sportske programe, turnire i rekreativne aktivnosti tokom cijele godine.",
-    slike: [null, null, null, null],
-    slikeOpisi: ["Sportski program", "Turnir", "Rekreacija", "Mladi sportisti"],
-  },
-  {
-    naziv: "FK Han Pijesak",
-    logo: null,
+    naziv: "FK Omladinac Han Pijesak",
+    logo: omladinaclogo,
     opis: "Fudbalski klub sa dugom tradicijom koji okuplja mlade i iskusne igrače opštine. Aktivno učestvuje u regionalnim ligama i organizuje lokalne turnire.",
     slike: [null, null, null, null],
     slikeOpisi: ["Utakmica", "Trening", "Turnir", "Tim"],
   },
+  {
+    naziv: "KK Han Pijesak",
+    logo: kkLogo,
+    opis: "Fudbalski klub sa dugom tradicijom koji okuplja mlade i iskusne igrače opštine. Aktivno učestvuje u regionalnim ligama i organizuje lokalne turnire.",
+    slike: [null, null, null, null],
+    slikeOpisi: ["Utakmica", "Trening", "Turnir", "Tim"],
+  },
+  {
+    naziv: "Centar za omladinu i sport Pogled",
+    logo: cosLogo,
+    opis: "COS Pogled pruža mogućnosti za sport i rekreaciju mladima opštine Han Pijesak. Organizuje sportske i kulturne programe, turnire i rekreativne aktivnosti tokom cijele godine.",
+    slike: [null, null, null, null],
+    slikeOpisi: ["Sportski program", "Turnir", "Rekreacija", "Mladi sportisti"],
+  },
 ];
 
 const skiInfo = [
-  { ikona: "⛰️", vrijednost: "1.400 m", labela: "Maks. nadmorska visina" },
-  { ikona: "📏", vrijednost: "3 km", labela: "Ukupna dužina staza" },
-  { ikona: "🎿", vrijednost: "2", labela: "Ski staze" },
-  { ikona: "🚡", vrijednost: "1", labela: "Ski lift" },
-  { ikona: "❄️", vrijednost: "Dec — Mar", labela: "Sezona" },
-  { ikona: "🏔️", vrijednost: "Romanija", labela: "Planinski masiv" },
+  { ikona: <FaMountain/>, vrijednost: "1.400 m", labela: "Maks. nadmorska visina" },
+  { ikona: <GiMountainRoad/>, vrijednost: "3 km", labela: "Ukupna dužina staza" },
+  { ikona: <GiPathDistance/>, vrijednost: "9 km", labela: "Udaljenost od Han Pijeska" },
+  { ikona: <FaSkiing/>, vrijednost: "2", labela: "Ski staze" },
+  { ikona: <TbAerialLift/>, vrijednost: "1", labela: "Ski lift" },
+  { ikona: <BsThermometerSnow/>, vrijednost: "Dec — Mar", labela: "Sezona" },
+ 
 ];
 
-const skiSlike = [null, null, null, null, null]; // javor1, javor2...
+const skiSlike = [ig1, ig2, ig3, ig4, ig5]; // javor1, javor2...
 const skiSlikeOpisi = [
   "Ski staza",
   "Ski lift",
@@ -164,11 +178,7 @@ function SportRekreacija() {
     <section className="SR_section">
       {/* ── 1. HERO ── */}
       <div className="SR_hero">
-        {/* <img src={heroSlika} alt="Sport i rekreacija" className="SR_hero__img" /> */}
-        <div className="SR_hero__img SR_hero__img--placeholder" />
-        <div className="SR_hero__overlay" />
-        <div className="SR_hero__tekst">
-          <span className="SR_hero__bedz">Aktivni turizam</span>
+        
           <h1 className="SR_hero__naslov">Sport i rekreacija u Han Pijesku</h1>
           <p className="SR_hero__podnaslov">
             Planine, šume i čist planinski vazduh — savršeni uslovi za sport,
@@ -177,7 +187,7 @@ function SportRekreacija() {
           <a href="#uvod" className="SR_hero__dugme">
             Istraži aktivnosti ↓
           </a>
-        </div>
+        
       </div>
 
       {/* ── 2. UVOD ── */}
@@ -205,22 +215,22 @@ function SportRekreacija() {
         <div className="SR_uvod__kartice">
           {[
             {
-              ikona: "🥾",
+              ikona: <FaWalking />,
               naziv: "Planinarenje i pješačenje",
               opis: "15+ označenih staza za sve nivoe",
             },
             {
-              ikona: "🚵",
+              ikona: <IoMdBicycle />,
               naziv: "Biciklizam",
               opis: "MTB i rekreativne rute kroz šume",
             },
             {
-              ikona: "⛷️",
+              ikona: <FaSkiing />,
               naziv: "Zimski sportovi",
               opis: "Skijanje na obroncima Javora",
             },
             {
-              ikona: "🎣",
+              ikona: <GiFishingHook />,
               naziv: "Lov i ribolov",
               opis: "Bogati reviri uz rijeke i jezera",
             },
@@ -255,17 +265,26 @@ function SportRekreacija() {
         </div>
       </div>
 
-      {/* ── 4. SKI CENTAR JAVOR ── */}
+      {/* ── 4. SKI CENTAR IGRISTA ── */}
       <div className="SR_ski">
         <div className="SR_ski__wrap">
           <span className="SR_bedz--zeleni SR_bedz--centar">
             Zimski sportovi
           </span>
-          <h2 className="SR_ski__naslov">Ski centar Javor</h2>
+          <h2 className="SR_ski__naslov">Ski centar Igrišta</h2>
           <p className="SR_ski__podnaslov">
-            Na obroncima Romanije, ski centar Javor nudi idealne uslove za
-            skijanje i zimsku rekreaciju. Savršeno mjesto za porodični odmor,
-            početnike i iskusne skijaše koji traže mir planinske prirode.
+            Ski centar Igrista, smješten u neposrednoj blizini Han Pijeska,
+            predstavlja jedno od najatraktivnijih mjesta za zimski turizam u
+            ovom dijelu Republike Srpske. Okružen netaknutom prirodom, gustim
+            šumama i planinskim pejzažima, ovaj centar pruža idealne uslove za
+            skijanje, sankanje i boravak na svježem planinskom vazduhu. 
+            
+            Centar raspolaže uređenim ski-stazama srednje dužine, pogodnim kako za
+            početnike, tako i za rekreativne skijaše. Staze su blagog do
+            umjerenog nagiba, što ih čini sigurnim i prijatnim za vožnju, dok
+            prirodni snijeg i uređena podloga omogućavaju kvalitetno skijanje
+            tokom sezone. Idealno je mjesto za opušten zimski odmor, daleko od
+            gužve i buke većih ski centara.
           </p>
 
           {/* Info kartice */}
@@ -295,7 +314,7 @@ function SportRekreacija() {
                 ) : (
                   <div className="SR_ski__slika-placeholder" />
                 )}
-                <span className="SR_ski__slika-opis">{skiSlikeOpisi[i]}</span>
+                
               </div>
             ))}
           </div>
