@@ -243,8 +243,8 @@
   align-items: stretch;
 }
 .DVR_timeline__slika-wrap {
-  height: 300px;
   overflow: hidden;
+  min-height: 300px;
 }
 .DVR_timeline__slika {
   width: 100%;
@@ -288,11 +288,11 @@
 
 /* ===== BUDUĆNOST ===== */
 .DVR_buducnost {
-  background-color: #344e41;
+  background-color: #a3b18a;
   padding: 5rem 1.5rem;
 }
 .DVR_buducnost .DVR_naslov { color: #fff; }
-.DVR_buducnost .DVR_podnaslov { color: #a3b18a; }
+.DVR_buducnost .DVR_podnaslov { color: #344e41; }
 .DVR_buducnost .DVR_bedz--zeleni {
   background-color: rgba(163,177,138,0.2);
   color: #a3b18a;
@@ -381,20 +381,20 @@
 
 /* ===== CTA ===== */
 .DVR_cta {
-  background-color: #588157;
+  background-color: #f8f7f2;
   padding: 5rem 1.5rem;
   text-align: center;
 }
 .DVR_cta__naslov {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 700;
-  color: #fff;
+  color: #344e41;
   margin-bottom: 1rem;
 }
 .DVR_cta__tekst {
   font-size: 0.98rem;
   line-height: 1.8;
-  color: rgba(255,255,255,0.85);
+  color: #344e41;
   max-width: 560px;
   margin: 0 auto 2.5rem;
 }
@@ -415,10 +415,10 @@
   transition: transform 0.22s, background-color 0.22s;
 }
 .DVR_cta__btn:hover { transform: translateY(-2px); }
-.DVR_cta__btn--primarni { background-color: #fff; color: #344e41; }
+.DVR_cta__btn--primarni { background-color: #344e41; color: #fff; }
 .DVR_cta__btn--primarni:hover { background-color: #eaf3de; }
 .DVR_cta__btn--sekundarni {
-  background-color: transparent;
+  background-color: #344e41ba;
   color: #fff;
   border: 2px solid rgba(255,255,255,0.6);
 }

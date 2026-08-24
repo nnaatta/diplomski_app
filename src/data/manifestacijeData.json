@@ -1,0 +1,152 @@
+{
+  "organizatori": [
+    {
+      "logoKey": "opstinaLogo",
+      "naziv": "Opština Han Pijesak",
+      "naziv_en": "Han Pijesak Municipality",
+      "opis": "Glavni pokrovitelj i podrška organizaciji većine manifestacija u opštini. Aktivno učestvuje u razvoju kulturnih i turističkih događaja i unapređenju lokalne zajednice.",
+      "opis_en": "The main sponsor and supporter of most events in the municipality. Actively participates in the development of cultural and tourist events and the improvement of the local community."
+    },
+    {
+      "logoKey": "toLogo",
+      "naziv": "JU Turistička organizacija opštine Han Pijesak",
+      "naziv_en": "Tourist Organization of Han Pijesak Municipality",
+      "opis": "Glavni organizator turističkih i kulturnih manifestacija na prostoru opštine. Koordinira sve događaje i promoviše Han Pijesak kao destinaciju.",
+      "opis_en": "The main organizer of tourist and cultural events in the municipality. Coordinates all events and promotes Han Pijesak as a destination."
+    },
+    {
+      "logoKey": "biblLogo",
+      "naziv": "JU Narodna biblioteka \"Branko Čučak\"",
+      "naziv_en": "Public Library \"Branko Čučak\"",
+      "opis": "Kulturna ustanova koja promoviše književnost i obrazovanje kroz razne programe i događaje. Organizator je poznatih književnih susreta i kulturnih manifestacija.",
+      "opis_en": "A cultural institution that promotes literature and education through various programs and events. It is the organizer of well-known literary gatherings and cultural events."
+    },
+    {
+      "logoKey": "cosLogo",
+      "naziv": "JU Centar za omladinu i sport Pogled",
+      "naziv_en": "Youth and Sports Centre Pogled",
+      "opis": "Glavni nosilac kulturnih i sportskih aktivnosti u opštini. Organizuje brojne manifestacije, događaje i okupljanja tokom cijele godine.",
+      "opis_en": "The main driver of cultural and sports activities in the municipality. Organizes numerous events and gatherings throughout the year."
+    },
+    {
+      "logoKey": "visLogo",
+      "naziv": "PSU Visočnik",
+      "naziv_en": "Mountaineering Society Visočnik",
+      "opis": "Organizacija posvećena očuvanju prirode i promociji ekološke svijesti. Aktivno učestvuje u organizaciji planinarskih i edukativnih manifestacija.",
+      "opis_en": "An organization dedicated to nature conservation and promoting environmental awareness. Actively participates in organizing hiking and educational events."
+    },
+    {
+      "logoKey": "javorLogo",
+      "naziv": "PSU Javor Sunčana planina",
+      "naziv_en": "Mountaineering Society Javor Sunny Mountain",
+      "opis": "Društvo koje promoviše planinarenje, boravak u prirodi i aktivan turizam. Učestvuje u organizaciji sportskih i rekreativnih događaja.",
+      "opis_en": "A society that promotes hiking, time in nature and active tourism. Participates in organizing sports and recreational events."
+    },
+    {
+      "logoKey": "kudLogo",
+      "naziv": "KUD \"Sveti Pantelejmon\"",
+      "naziv_en": "Cultural and Arts Society \"Sveti Pantelejmon\"",
+      "opis": "Kulturno-umjetničko društvo koje njeguje tradiciju, folklor i običaje ovog kraja. Organizuje nastupe i događaje koji čuvaju kulturno nasljeđe.",
+      "opis_en": "A cultural and arts society that nurtures the tradition, folklore and customs of this region. Organizes performances and events that preserve the cultural heritage."
+    },
+    {
+      "logoKey": "vrticLogo",
+      "naziv": "Vrtić Diana Budisavljević",
+      "naziv_en": "Kindergarten \"Diana Budisavljević\"",
+      "opis": "Predškolska ustanova koja aktivno učestvuje u organizaciji lokalnih događaja i manifestacija. Posebno doprinosi kroz tematske bazare i kreativne aktivnosti.",
+      "opis_en": "A pre-school institution that actively participates in organizing local events. Makes a special contribution through themed fairs and creative activities."
+    }
+  ],
+  "tradicionalneManifestacije": [
+    {
+      "naslov": "Čučkovi književni susreti",
+      "naslov_en": "Čučak Literary Gatherings",
+      "opis": "Kulturna manifestacija posvećena književnosti koja okuplja pisce, pjesnike i ljubitelje knjige.",
+      "opis_en": "A cultural event dedicated to literature that brings together writers, poets and book lovers.",
+      "period": "Mart",
+      "period_en": "March",
+      "slikeKeys": ["cd1", "cd5", "cd3", "cd4", "cd2", "cd6"]
+    },
+    {
+      "naslov": "Slet planinara Han Pijesak",
+      "naslov_en": "Han Pijesak Hikers' Gathering",
+      "opis": "Tradicionalno okupljanje planinara i ljubitelja prirode iz regiona.",
+      "opis_en": "A traditional gathering of hikers and nature lovers from the region.",
+      "period": "April",
+      "period_en": "April",
+      "slikeKeys": ["slet4", "slet2", "slet3", "slet1"]
+    },
+    {
+      "naslov": "Vidovdanske svečanosti",
+      "naslov_en": "Vidovdan Celebrations",
+      "opis": "Jedna od najznačajnijih manifestacija u opštini koja uključuje kulturne programe i likovno saborovanje.",
+      "opis_en": "One of the most significant events in the municipality, featuring cultural programs and an art gathering.",
+      "period": "Kraj juna svake godine",
+      "period_en": "End of June each year",
+      "slikeKeys": ["vid1", "vid2", "vid3", "vid4", "vid5", "vid6"]
+    },
+    {
+      "naslov": "Paljenje petrovdanskih lila",
+      "naslov_en": "Lighting of the Petrovdan Bonfires",
+      "opis": "Stari narodni običaj koji simbolizuje očuvanje tradicije i zajedništva.",
+      "opis_en": "An old folk custom symbolizing the preservation of tradition and community.",
+      "period": "11. jul",
+      "period_en": "July 11",
+      "slikeKeys": ["lile5", "lile1", "lile3", "lile6", "lile4", "lile2"]
+    },
+    {
+      "naslov": "MTB Javor",
+      "naslov_en": "MTB \"Javor\"",
+      "opis": "Sportska manifestacija koja okuplja bicikliste i ljubitelje adrenalinskih aktivnosti.",
+      "opis_en": "A sports event that brings together cyclists and adrenaline activity enthusiasts.",
+      "period": "Avgust",
+      "period_en": "August",
+      "slikeKeys": ["mtb5", "mtb4", "mtb3", "mtb1", "mtb2"]
+    },
+    {
+      "naslov": "Dan i krsna slava opštine Han Pijesak",
+      "naslov_en": "Day and Patron Saint's Day of Han Pijesak Municipality",
+      "opis": "Centralni događaj u opštini koji se obilježava kroz kulturne, vjerske i zabavne aktivnosti.",
+      "opis_en": "The central event in the municipality, marked through cultural, religious and entertainment activities.",
+      "period": "9. avgust",
+      "period_en": "August 9",
+      "slikeKeys": ["op1", "op2", "op3"]
+    },
+    {
+      "naslov": "Gulašijada",
+      "naslov_en": "Goulash Festival",
+      "opis": "Gastro manifestacija koja promoviše tradicionalnu kuhinju i druženje na otvorenom.",
+      "opis_en": "A gastro event that promotes traditional cuisine and outdoor socializing.",
+      "period": "Septembar",
+      "period_en": "September",
+      "slikeKeys": ["g1", "g6", "g3", "g4", "g2", "g5"]
+    },
+    {
+      "naslov": "Godišnji koncerti",
+      "naslov_en": "Annual Concerts",
+      "opis": "Kulturna manifestacija posvećena očuvanju narodnih običaja, igre i pjesme.",
+      "opis_en": "A cultural event dedicated to preserving folk customs, dance and song.",
+      "period": "Tokom godine",
+      "period_en": "Throughout the year",
+      "slikeKeys": ["dj2", "dj3", "dj4", "dj5", "dj6"]
+    },
+    {
+      "naslov": "Putevima šumadijske divizije – Vrani kamen",
+      "naslov_en": "Following the Šumadija Division – Vrani Kamen",
+      "opis": "Memorijalno-planinarska manifestacija koja njeguje istorijsko nasljeđe i kulturu sjećanja.",
+      "opis_en": "A memorial and hiking event that nurtures the historical heritage and culture of remembrance.",
+      "period": "Septembar",
+      "period_en": "September",
+      "slikeKeys": ["vk1", "vk4", "vk3", "vk2"]
+    },
+    {
+      "naslov": "Bazari u organizaciji vrtića",
+      "naslov_en": "Kindergarten Fairs",
+      "opis": "Događaji koji se organizuju uoči različitih praznika u toku godine, sa prodajnim i zabavnim sadržajem.",
+      "opis_en": "Events organized ahead of various holidays throughout the year, with sales and entertainment content.",
+      "period": "Tokom godine",
+      "period_en": "Throughout the year",
+      "slikeKeys": ["b1", "b2", "b3", "b4", "b5", "b6"]
+    }
+  ]
+}

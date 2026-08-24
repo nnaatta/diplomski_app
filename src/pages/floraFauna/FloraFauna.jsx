@@ -1,5 +1,6 @@
 import React from "react";
 import "./FloraFauna.css";
+import { useTranslation } from "react-i18next";
 import ImageSlider from "../../components/ImageSlider";
 import pozadinaFlora from "../../assets/floraFauna/flora1.jpg";
 import pozadinaFauna from "../../assets/floraFauna/pozadinaFauna.jpg";
@@ -42,167 +43,109 @@ import orao from "../../assets/floraFauna/orao.jpg";
 import vidra from "../../assets/floraFauna/vidra.jpg";
 import lasica from "../../assets/floraFauna/lasica.jpg";
 
+import podaci from "../../data/floraFaunaData.json";
 
+// Mapiranje ključeva slika na importovane slike
+const slike = {
+  smrca, jela, bukva, bijeliBor, hrast, srijemus, kantarion, hajduckaTrava,
+  majcinaDusica, malina, kupina, glog, smreka, kicica, tisa, bozikovina,
+  jarebika, panciceva, jelenak, vrganj, lisicarka, bukovaca, smrcak, redusa,
+  krasnica, srndac, srna, svinja, zec, zmijar, sova, djetlic, pastrmka, rak,
+  vuk, orao, vidra, lasica, pozadinaFauna,
+};
 
-
-
-
-// ===== FLORA PODACI =====
-const sumskaEkosistemSlike = [
-  { slika: smrca, opis: "Smrca" },
-  { slika: jela, opis: "jela" },
-  { slika: bijeliBor, opis: "bijeli bor" },
-  { slika: hrast, opis: "hrast" },
-  { slika: bukva, opis: "bukva" },
-];
-
-const ljekovitoBiljeSlike = [
-  { slika: kantarion, opis: "Kantarion" },
-  { slika: srijemus, opis: "srijemus" },
-  { slika: hajduckaTrava, opis: "hajduckaTrava" },
-  { slika: majcinaDusica, opis: "majcinaDusica" },
-  { slika: malina, opis: "malina" },
-  { slika: kupina, opis: "kupina" },
-  { slika: glog, opis: "glog" },
-  { slika: smreka, opis: "smreka" },
-  { slika: kicica, opis: "kicica" },
-];
-
-const gljiveSlike = [
-  { slika: vrganj, opis: "Vrganj — kralj romanijskih šuma" },
-  { slika: lisicarka, opis: "Lisičarka — zlatna delikatesa šume" },
-  { slika: smrcak, opis: "smrcak" },
-  { slika: bukovaca, opis: "bukovaca" },
-  { slika: krasnica, opis: "krasnica" },
-  { slika: redusa, opis: "redusa" },
-];
-
-const zasticeneBiljke = [
-  {
-    naziv: "Tisa",
-    opis: "Dugovječna i rijetka vrsta četinara koja raste sporo i može doživjeti nekoliko stotina godina. Zbog prekomjerne eksploatacije u prošlosti danas je zaštićena, a njeno prisustvo ukazuje na očuvane šumske uslove.",
-    slike: [{ slika: tisa, opis: "Tisa — zaštićena vrsta četinara" }],
-  },
-  {
-    naziv: "Božikovina",
-    opis: "Zimzelena biljka prepoznatljiva po tamnozelenim listovima i crvenim bobicama. Osim estetske vrijednosti, značajna je kao indikator očuvanih staništa i često se povezuje s tradicijom.",
-    slike: [{ slika: bozikovina, opis: "Božikovina sa crvenim bobicama" }],
-  },
-  {
-    naziv: "Jarebika",
-    opis: "Drvenasta vrsta poznata po crvenim plodovima bogatim vitaminima. Ima važnu ulogu u ishrani ptica i doprinosi očuvanju biodiverziteta šumskih ekosistema.",
-    slike: [{ slika: jarebika, opis: "Jarebika u jesen" }],
-  },
-  {
-    naziv: "Pančićeva omorika",
-    opis: "Endemska vrsta Balkana i jedna od najznačajnijih biljnih vrsta u regionu. Odlikuje se uskim, elegantnim rastom i velikom otpornošću, a njeno prisustvo ima posebnu naučnu vrijednost.",
-    slike: [{ slika: panciceva, opis: "Pančićeva omorika — balkanski endem" }],
-  },
-  {
-    naziv: "Jelenski jezik",
-    opis: "Rijetka vrsta paprati koja raste u sjenovitim i vlažnim šumskim predjelima. Njeno prisustvo ukazuje na stabilne mikroklimatske uslove i visok kvalitet prirodnog staništa.",
-    slike: [{ slika: jelenak, opis: "Jelenski jezik u šumi" }],
-  },
-];
-
-// ===== FAUNA PODACI =====
-const divljacSlike = [
-  { slika: srndac, opis: "srndac" },
-  { slika: srna, opis: "Srna u prirodnom staništu" },
-  { slika: svinja, opis: "Divlja svinja na Romaniji" },
-  { slika: zec, opis: "zec" },
-];
-
-const pticeSlike = [
-  { slika: zmijar, opis: "Planinski orao nad Romanijom" },
-  { slika: sova, opis: "sova u četinarskoj šumi" },
-  { slika: djetlic, opis: "Djetlić na stablu bora" },
-];
-
-const ribolovSlike = [
-  { slika: pastrmka, opis: "pastrmka" },
-  { slika: rak, opis: "rak" },
-];
-
-const zasticeneZivotinje = [
-  {
-    naziv: "Mrki medvjed",
-    opis: "Najveći predator i strogo zaštićena vrsta. Prisustvo medvjeda u ovim šumama svjedoči o zdravom i nenarušenom ekosistemu planine.",
-    slike: [{ slika: pozadinaFauna, opis: "Mrki medvjed" }],
-  },
-  {
-    naziv: "Sivi vuk",
-    opis: "Zaštićena vrsta čije prisustvo svjedoči o zdravom ekosistemu. Vukovi igraju ključnu ulogu u regulaciji populacija divljači.",
-    slike: [{ slika: vuk, opis: "Sivi vuk" }],
-  },
-  {
-    naziv: "Planinski orao",
-    opis: "Rijetka ptica grabljivica koja se gnijezdi na stijenama Javor planine. Jedna od najimpresivnijih ptica ovog kraja, simbol slobode i snage.",
-    slike: [{ slika: orao, opis: "Planinski " }],
-  },
-  {
-    naziv: "Vidra",
-    opis: "Zaštićena vrsta koja živi uz rijeke i potoke Han Pijeska. Prisustvo vidre pouzdani je pokazatelj čistoće vodotoka.",
-    slike: [{ slika: vidra, opis: "Vidra" }],
-  },
-  {
-    naziv: "Velika lasica - hermelin",
-    opis: "Mala, okretna grabljivica poznata po tome što zimi mijenja smeđe krzno u bijelo radi lakšeg prikrivanja u snijegu.",
-    slike: [{ slika: lasica, opis: "lasiva" }],
-  },
-];
+// Pretvori podatke iz JSON-a (slikaKey) u objekte koje ImageSlider očekuje (slika, opis)
+function pripremiSlajdove(niz, lang) {
+  return niz.map(s => ({
+    slika: slike[s.slikaKey],
+    opis: lang === 'en' ? s.opis_en : s.opis,
+  }));
+}
 
 function FloraFauna() {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
+
+  const sumskaEkosistemSlike = pripremiSlajdove(podaci.sumskaEkosistemSlike, lang);
+  const ljekovitoBiljeSlike  = pripremiSlajdove(podaci.ljekovitoBiljeSlike, lang);
+  const gljiveSlike          = pripremiSlajdove(podaci.gljiveSlike, lang);
+  const divljacSlike         = pripremiSlajdove(podaci.divljacSlike, lang);
+  const pticeSlike           = pripremiSlajdove(podaci.pticeSlike, lang);
+  const ribolovSlike         = pripremiSlajdove(podaci.ribolovSlike, lang);
+
+  const zasticeneBiljke = podaci.zasticeneBiljke.map(b => ({
+    naziv: lang === 'en' ? b.naziv_en : b.naziv,
+    opis: lang === 'en' ? b.opis_en : b.opis,
+    slike: pripremiSlajdove(b.slike, lang),
+  }));
+
+  const zasticeneZivotinje = podaci.zasticeneZivotinje.map(z => ({
+    naziv: lang === 'en' ? z.naziv_en : z.naziv,
+    opis: lang === 'en' ? z.opis_en : z.opis,
+    slike: pripremiSlajdove(z.slike, lang),
+  }));
+
   return (
     <section className="ff">
-      {/* ===== SPLIT SCREEN ===== */}
-      <div className="ff__split">
-        <a
-          href="#flora"
-          className="ff__split-pola ff__split-pola--flora"
-          style={{
-            backgroundImage: `url(${pozadinaFlora})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="ff__split-overlay ff__split-overlay--flora" />
-          <div className="ff__split-tekst">
-            <h2 className="ff__split-naslov">Flora</h2>
-            <p className="ff__split-opis">
-              Šume, ljekovito bilje i zaštićene biljne vrste planine Javor
-            </p>
-            <span className="ff__split-dugme">Istraži floru →</span>
-          </div>
-        </a>
-        <a
-          href="#fauna"
-          className="ff__split-pola ff__split-pola--fauna"
-          style={{
-            backgroundImage: `url(${pozadinaFauna})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="ff__split-overlay ff__split-overlay--fauna" />
-          <div className="ff__split-tekst">
-            <h2 className="ff__split-naslov">Fauna</h2>
-            <p className="ff__split-opis">
-              Divljač, ptice i zaštićene životinjske vrste planine Javor
-            </p>
-            <span className="ff__split-dugme">Istraži faunu →</span>
-          </div>
-        </a>
-      </div>
+   {/* ===== SPLIT SCREEN ===== */}
+<div className="ff__split">
+
+  <a
+    href="#flora"
+    className="ff__split-pola ff__split-pola--flora"
+    style={{
+      backgroundImage: `url(${pozadinaFlora})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    <div className="ff__split-overlay ff__split-overlay--flora" />
+    <div className="ff__split-tekst">
+      <h2 className="ff__split-naslov">
+        {t("flora_fauna.flora_naslov")}
+      </h2>
+      <p className="ff__split-opis">
+        {t("flora_fauna.flora_opis")}
+      </p>
+      <span className="ff__split-dugme">
+        {t("flora_fauna.flora_dugme")}
+      </span>
+    </div>
+  </a>
+
+  <a
+    href="#fauna"
+    className="ff__split-pola ff__split-pola--fauna"
+    style={{
+      backgroundImage: `url(${pozadinaFauna})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    <div className="ff__split-overlay ff__split-overlay--fauna" />
+    <div className="ff__split-tekst">
+      <h2 className="ff__split-naslov">
+        {t("flora_fauna.fauna_naslov")}
+      </h2>
+      <p className="ff__split-opis">
+        {t("flora_fauna.fauna_opis")}
+      </p>
+      <span className="ff__split-dugme">
+        {t("flora_fauna.fauna_dugme")}
+      </span>
+    </div>
+  </a>
+
+</div>
 
       {/* ==================== FLORA ==================== */}
       <div id="flora" className="ff__sekcija">
         <div className="ff__hero ff__hero--flora">
           <div className="ff__hero-overlay" />
           <div className="ff__hero-tekst">
-            <span className="ff__bedz ff__bedz--zeleni">Flora</span>
-            <h1>Biljni svijet Han Pijeska</h1>
-            <p>Bogata i raznovrsna flora Javor planine</p>
+            <span className="ff__bedz ff__bedz--zeleni">{t('flora_fauna.flora_hero_bedz')}</span>
+            <h1>{t('flora_fauna.flora_hero_naslov')}</h1>
+            <p>{t('flora_fauna.flora_hero_podnaslov')}</p>
           </div>
         </div>
 
@@ -211,21 +154,11 @@ function FloraFauna() {
           <div className="ff__blok-grid">
             <div className="ff__blok-tekst">
               <span className="ff__bedz ff__bedz--zeleni">
-                Šumski ekosistem
+                {t('flora_fauna.sume_bedz')}
               </span>
-              <h2>Šume Han Pijeska</h2>
-              <p>
-                Više od 70% teritorije opštine Han Pijesak pokriveno je šumama,
-                što ovaj kraj čini jednim od najšumovitijih u Bosni i
-                Hercegovini. Dominiraju mješovite četinarsko-lišćarske šume u
-                kojima prevladavaju smrča, jela, bijeli bor, bukva i hrast.
-              </p>
-              <p>
-                Četinarske šume igraju ključnu ulogu u kvalitetu vazduha —
-                oslobađaju fitoncide, prirodne antibiotike koji pozitivno
-                djeluju na zdravlje čovjeka i doprinose statusu Han Pijeska kao
-                vazdušne banje.
-              </p>
+              <h2>{t('flora_fauna.sume_naslov')}</h2>
+              <p>{t('flora_fauna.sume_p1')}</p>
+              <p>{t('flora_fauna.sume_p2')}</p>
             </div>
             <ImageSlider
               slajdovi={sumskaEkosistemSlike}
@@ -244,19 +177,10 @@ function FloraFauna() {
               interval={5000}
             />
             <div className="ff__blok-tekst">
-              <span className="ff__bedz ff__bedz--zeleni">Ljekovito bilje</span>
-              <h2>Ljekovito i samoniklo bilje</h2>
-              <p>
-                Planinska flora Han Pijeska bogata je ljekovitim i samoraslim
-                biljkama koje su generacijama korišćene u narodnoj medicini.
-                Čist vazduh, planinska klima i netaknuto tlo stvaraju idealne
-                uslove za rast bilja izuzetnih ljekovitih svojstava.
-              </p>
-              <p>
-                Najpoznatije ljekovite biljke ovog kraja su kantarion, divlji
-                luk - srijemuš, hajdučka trava, majčina dušica, divlja malina,
-                divlja kupina, glog, smreka, kičica.
-              </p>
+              <span className="ff__bedz ff__bedz--zeleni">{t('flora_fauna.ljekovito_bedz')}</span>
+              <h2>{t('flora_fauna.ljekovito_naslov')}</h2>
+              <p>{t('flora_fauna.ljekovito_p1')}</p>
+              <p>{t('flora_fauna.ljekovito_p2')}</p>
             </div>
           </div>
         </div>
@@ -265,19 +189,11 @@ function FloraFauna() {
           <div className="ff__blok-grid">
             <div className="ff__blok-tekst">
               <span className="ff__bedz ff__bedz--zeleni">
-                Gljive i lišajevi
+                {t('flora_fauna.gljive_bedz')}
               </span>
-              <h2>Gljive i lišajevi </h2>
-              <p>
-                Šume Javor planine su pravi raj za ljubitelje gljiva.
-                Zahvaljujući vlažnoj planinskoj klimi i bogatom šumskom tlu,
-                ovdje rastu mnoge jestive vrste — vrganj, lisičarka, smrčak,
-                bukovača, jestiva krasnica, reduša su neke od poznatih delicija.
-              </p>
-              <p>
-                Berba gljiva popularna je aktivnost počev od proljeća pa sve do
-                rane jeseni kada su šume najplodnije.
-              </p>
+              <h2>{t('flora_fauna.gljive_naslov')}</h2>
+              <p>{t('flora_fauna.gljive_p1')}</p>
+              <p>{t('flora_fauna.gljive_p2')}</p>
             </div>
             <ImageSlider
               slajdovi={gljiveSlike}
@@ -291,11 +207,10 @@ function FloraFauna() {
       {/* Rijetke i zaštićene biljne vrste */}
       <div className="ff__blok">
         <div className="ff__blok-naslov-wrap">
-          <span className="ff__bedz ff__bedz--zeleni">Zaštićene vrste</span>
-          <h2>Rijetke i zaštićene biljne vrste</h2>
+          <span className="ff__bedz ff__bedz--zeleni">{t('flora_fauna.biljke_bedz')}</span>
+          <h2>{t('flora_fauna.biljke_naslov')}</h2>
           <p className="ff__blok-podnaslov">
-            Han Pijesak je stanište nekoliko rijetkih i zakonski zaštićenih
-            biljnih vrsta
+            {t('flora_fauna.biljke_podnaslov')}
           </p>
         </div>
         <div className="ff__vrste-grid">
@@ -318,9 +233,9 @@ function FloraFauna() {
         <div className="ff__hero ff__hero--fauna">
           <div className="ff__hero-overlay" />
           <div className="ff__hero-tekst">
-            <span className="ff__bedz ff__bedz--smedi">Fauna</span>
-            <h1>Životinjski svijet Han Pijeska</h1>
-            <p>Bogata fauna romanijskih šuma i planina</p>
+            <span className="ff__bedz ff__bedz--smedi">{t('flora_fauna.fauna_hero_bedz')}</span>
+            <h1>{t('flora_fauna.fauna_hero_naslov')}</h1>
+            <p>{t('flora_fauna.fauna_hero_podnaslov')}</p>
           </div>
         </div>
 
@@ -328,19 +243,10 @@ function FloraFauna() {
         <div className="ff__blok">
           <div className="ff__blok-grid">
             <div className="ff__blok-tekst">
-              <span className="ff__bedz ff__bedz--smedi">Divljač</span>
-              <h2>Krupna i sitna divljač</h2>
-              <p>
-                Šume Han Pijeska dom su bogatoj populaciji krupne i sitne
-                divljači. Srndać, srna, divlja svinja i zec samo su neke od
-                vrsta koje nastanjuju romanijsko planinsko područje. Prisustvo
-                ovako bogate faune svjedoči o zdravom i nenarušenom ekosistemu.
-              </p>
-              <p>
-                Lov je regulisan propisima, a Lovačko udruženje "Studena Gora"
-                brine o zaštiti i upravljanju populacijama divljači na području
-                opštine Han Pijesak.
-              </p>
+              <span className="ff__bedz ff__bedz--smedi">{t('flora_fauna.divljac_bedz')}</span>
+              <h2>{t('flora_fauna.divljac_naslov')}</h2>
+              <p>{t('flora_fauna.divljac_p1')}</p>
+              <p>{t('flora_fauna.divljac_p2')}</p>
             </div>
             <ImageSlider
               slajdovi={divljacSlike}
@@ -355,18 +261,10 @@ function FloraFauna() {
           <div className="ff__blok-grid ff__blok-grid--obrnuto">
             <ImageSlider slajdovi={pticeSlike} visina="360px" interval={5000} />
             <div className="ff__blok-tekst">
-              <span className="ff__bedz ff__bedz--smedi">Ptice</span>
-              <h2>Planinske ptice</h2>
-              <p>
-                Područje planine Javor stanište je brojnih ptica, od kojih su
-                mnoge rijetke i zaštićene. Šume i planinski vrhovi idealno su
-                gnijezdilište za planinske oraše, šumske sove, djetliće i ptice
-                grabljivice.
-              </p>
-              <p>
-                Posmatranje ptica postaje sve popularnija aktivnost — tiha šuma
-                i čist vazduh pružaju savršene uslove za birdwatching.
-              </p>
+              <span className="ff__bedz ff__bedz--smedi">{t('flora_fauna.ptice_bedz')}</span>
+              <h2>{t('flora_fauna.ptice_naslov')}</h2>
+              <p>{t('flora_fauna.ptice_p1')}</p>
+              <p>{t('flora_fauna.ptice_p2')}</p>
             </div>
           </div>
         </div>
@@ -375,21 +273,10 @@ function FloraFauna() {
         <div className="ff__blok">
           <div className="ff__blok-grid">
             <div className="ff__blok-tekst">
-              <span className="ff__bedz ff__bedz--smedi">Ribolov</span>
-              <h2>Rijeke i planinski potoci</h2>
-              <p>
-                Vode sa ovog područja pripadaju slivovima rijeke Bosne i Drine.
-                Rječice sliva rijeke Bosne su pogodne za mušičarenje, dok su
-                rječice drinskog sliva pogodnije za varaličarenje. To su brze,
-                kristalno čiste planinske rječice i potoci. Ove vode, koje su
-                bogate kiseonikom i hranom, prirodno su stanište potočne
-                pastrmke i njom su isključivo naseljene. Ima dosta i potočnog
-                raka, koji dijeli životni prostor sa pastrmkom.
-              </p>
-              <p>
-                Ribolovci iz cijelog regiona dolaze zbog izvrsnih ribolovnih
-                uslova i mira koji pruža planinska priroda.
-              </p>
+              <span className="ff__bedz ff__bedz--smedi">{t('flora_fauna.ribolov_bedz')}</span>
+              <h2>{t('flora_fauna.ribolov_naslov')}</h2>
+              <p>{t('flora_fauna.ribolov_p1')}</p>
+              <p>{t('flora_fauna.ribolov_p2')}</p>
             </div>
             <ImageSlider
               slajdovi={ribolovSlike}
@@ -402,11 +289,10 @@ function FloraFauna() {
         {/* Zaštićene životinjske vrste */}
         <div className="ff__blok ff__blok--alt">
           <div className="ff__blok-naslov-wrap">
-            <span className="ff__bedz ff__bedz--smedi">Zaštićene vrste</span>
-            <h2>Zaštićene životinjske vrste</h2>
+            <span className="ff__bedz ff__bedz--smedi">{t('flora_fauna.zivotinje_bedz')}</span>
+            <h2>{t('flora_fauna.zivotinje_naslov')}</h2>
             <p className="ff__blok-podnaslov">
-              Han Pijesak je stanište nekoliko strogo zaštićenih životinjskih
-              vrsta
+              {t('flora_fauna.zivotinje_podnaslov')}
             </p>
           </div>
           <div className="ff__vrste-grid">

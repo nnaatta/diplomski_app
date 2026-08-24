@@ -1,76 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./AktivniOdmor.css";
 import { FaWalking, FaMountain } from "react-icons/fa";
 import { IoMdBicycle } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
-import skakavca from "../../assets/Vodopad-Skakavac2.jpg"
+import { useTranslation } from "react-i18next";
+import { API_URL } from '../adminPage/context/AuthContext';
+import { tf } from '../../utils/translateField';
 
-export const staze = [
-  { id: 1, naziv: "Uspon na Veliki Žep", duzina: 5.6, tip: "pjesacka", tezina: "srednje" },
-  { id: 2, naziv: "Srpsko vojničko groblje Vrani Kamen", duzina: 11.5, tip: "pjesacka", tezina: "tesko" },
-  { id: 3, naziv: "Pješačka staza Han Kram – Vidikovac Feredže", duzina: 1.9, tip: "pjesacka", tezina: "lako" },
-  { id: 4, naziv: "Krivače – Veliki Žep", duzina: 3.5, tip: "pjesacka", tezina: "lako" },
-  { id: 5, naziv: "Žeravice – vodopad Skakavac", duzina: 2.5, tip: "pjesacka", tezina: "lako" , opis:"Staza je jako lagana, dužine oko 2,5 km u jednom pravcu (od kojih je 2 km makadamski put). Staza počinje u mjestu Podžeravice, gdje se sa regionalnog puta Han Pijesak – Olovo skreće desno. Ide se oko 2 km kamionskim putem uz rijeku Varošnicu – do kraja puta. Posljednjih 500 m staza vodi kroz šumu uz potok Skakavac, na čijem se kraju nalazi istoimeni, impozantni vodopad.", mapa_url:"https://imap.bts.ba/#", hero_slika: skakavca},
-  { id: 6, naziv: "Planinski kamp Jazavčije rupe – Vrh Veliko Igrište (1406 m) – Dolovi – Planinski kamp Jazavčije", duzina: 12, tip: "planinska", tezina: "tesko" },
-  { id: 7, naziv: "Restoran „Pogled“ – Vidikovci Strmca – Restoran „Pogled“", duzina: 7, tip: "planinska", tezina: "lako" },
-  { id: 8, naziv: "Karaula – vidikovac Žeženica", duzina: 0.5, tip: "planinska", tezina: "lako" },
-  { id: 9, naziv: "Han Pijesak – Visočnik (1250 m) – Han Kram", duzina: 12, tip: "planinska", tezina: "srednje" },
-  { id: 10, naziv: "Kusace – Veliki Žep", duzina: 5, tip: "planinska", tezina: "tesko" },
-  { id: 11, naziv: "Staza Visit Javor", duzina: 41.55, tip: "biciklisticka", tezina: "srednje" },
-  { id: 12, naziv: "Staza Wild beauty", duzina: 30, tip: "biciklisticka", tezina: "tesko" },
-  { id: 13, naziv: "Staza Black river and Royal mountain", duzina: 38, tip: "biciklisticka", tezina: "srednje" },
-  { id: 14, naziv: "Staza Javor – Sunčana planina", duzina: 15, tip: "biciklisticka", tezina: "lako" },
-  { id: 15, naziv: "Staza Crna rijeka – zabranjena zona", duzina: 20, tip: "biciklisticka", tezina: "lako" },
-];
-
-const tipConfig = {
-  pjesacka: {
-    label: "Pješačke staze",
-    emoji: <FaWalking />,
-    light: "#EBF3E4",
-    border: "#A8CB84",
-  },
-  planinska: {
-    label: "Planinarske staze",
-    emoji: <FaMountain />,
-    light: "#FAEAE8",
-    border: "#E8978F",
-  },
-  biciklisticka: {
-    label: "Biciklističke staze",
-    emoji: <IoMdBicycle />,
-    light: "#E5F2FB",
-    border: "#7BBDE0",
-  },
+// Mapiranje tip_sadrzaja.naziv -> interni ključ
+const NAZIV_NA_TIP = {
+  'Pješačka staza':      'pjesacka',
+  'Pješačke staze':      'pjesacka',
+  'Planinska tura':      'planinska',
+  'Planinarske staze':   'planinska',
+  'Biciklistička ruta':  'biciklisticka',
+  'Biciklističke staze': 'biciklisticka',
 };
 
-const tezineRed = ["sve", "lako", "srednje", "tesko", "ekstremno"];
+const tezineRed = ["sve", "laka", "srednja", "teska"];
 
-const tezineLabele = {
-  sve: "Sve",
-  lako: "Lako",
-  srednje: "Srednje",
-  tesko: "Teško",
-  ekstremno: "Ekstremno",
-};
+function slikaUrl(url) {
+  if (!url) return null;
+  if (url.startsWith('http')) return url;
+  const base = API_URL.replace(/\/api.*$/, '');
+  return base + url;
+}
 
 function StazaRed({ staza }) {
   const navigate = useNavigate();
-
-  const openDetalji = () => {
-    navigate(`/aktivni-odmor/${staza.id}`);
-  };
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
 
   return (
-    <div className="AO_red" onClick={openDetalji}>
-      <span className="AO_red__naziv">{staza.naziv}</span>
+    <div className="AO_red" onClick={() => navigate(`/aktivni-odmor/${staza.id}`)}>
+      <span className="AO_red__naziv">{tf(staza, 'naslov', lang)}</span>
       <div className="AO_red__desno">
         <span className={`AO_badge AO_badge--${staza.tezina}`}>
-          {tezineLabele[staza.tezina]}
+          {t(`aktivni_odmor.${staza.tezina}`, staza.tezina)}
         </span>
         <div className="AO_red__km">
-          {staza.duzina}
-          <span className="AO_red__km-jed"> km</span>
+          {staza.duzina_staze}
+          <span className="AO_red__km-jed"> {t('aktivni_odmor.km')}</span>
         </div>
         <span className="AO_red__arrow">›</span>
       </div>
@@ -78,12 +48,35 @@ function StazaRed({ staza }) {
   );
 }
 
-function StazaSekcija({ tip }) {
+function StazaSekcija({ tip, staze }) {
   const [aktivniFilter, setAktivniFilter] = useState("sve");
+  const { t } = useTranslation();
+
+  const tipConfig = {
+    pjesacka: {
+      label: t('aktivni_odmor.tip_pjesacka'),
+      emoji: <FaWalking />,
+      light: "#EBF3E4",
+      border: "#A8CB84",
+    },
+    planinska: {
+      label: t('aktivni_odmor.tip_planinska'),
+      emoji: <FaMountain />,
+      light: "#FAEAE8",
+      border: "#E8978F",
+    },
+    biciklisticka: {
+      label: t('aktivni_odmor.tip_biciklisticka'),
+      emoji: <IoMdBicycle />,
+      light: "#E5F2FB",
+      border: "#7BBDE0",
+    },
+  };
+
   const cfg = tipConfig[tip];
 
   const filtrirane = staze.filter(
-    (s) => s.tip === tip && (aktivniFilter === "sve" || s.tezina === aktivniFilter)
+    (s) => aktivniFilter === "sve" || s.tezina === aktivniFilter
   );
 
   return (
@@ -98,22 +91,20 @@ function StazaSekcija({ tip }) {
           </div>
           <div>
             <h2 className="AO_sekcija__naziv">{cfg.label}</h2>
-            <span className="AO_sekcija__broj">
-              {staze.filter((s) => s.tip === tip).length} staza
-            </span>
+            <span className="AO_sekcija__broj">{staze.length} {t('aktivni_odmor.broj_staza')}</span>
           </div>
         </div>
 
         <div className="AO_filteri">
-          {tezineRed.map((t) => {
-            const aktivan = aktivniFilter === t;
+          {tezineRed.map((tez) => {
+            const aktivan = aktivniFilter === tez;
             return (
               <button
-                key={t}
-                className={`AO_filter${aktivan ? ` AO_filter--aktivan AO_filter--${t}` : ""}`}
-                onClick={() => setAktivniFilter(t)}
+                key={tez}
+                className={`AO_filter${aktivan ? ` AO_filter--aktivan AO_filter--${tez}` : ""}`}
+                onClick={() => setAktivniFilter(tez)}
               >
-                {tezineLabele[t]}
+                {t(`aktivni_odmor.${tez}`)}
               </button>
             );
           })}
@@ -122,7 +113,7 @@ function StazaSekcija({ tip }) {
 
       <div className="AO_lista">
         {filtrirane.length === 0 ? (
-          <div className="AO_prazan">Nema staza za odabrani filter.</div>
+          <div className="AO_prazan">{t('aktivni_odmor.nema_filter')}</div>
         ) : (
           filtrirane.map((s) => <StazaRed key={s.id} staza={s} />)
         )}
@@ -132,41 +123,63 @@ function StazaSekcija({ tip }) {
 }
 
 export default function AktivniOdmor() {
+  const [staze, setStaze]     = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [greska, setGreska]   = useState(null);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    fetch(`${API_URL}/turisticki-sadrzaji?aktivan=1&per_page=100`)
+      .then(r => r.json())
+      .then(data => setStaze(data.data ?? []))
+      .catch(() => setGreska(t('aktivni_odmor.greska_ucitavanje')))
+      .finally(() => setLoading(false));
+  }, [t]);
+
+  // Grupiši staze po tipu koristeći tip_sadrzaja.naziv
+  const poTipu = (tip) =>
+    staze.filter(s => {
+      const naziv = s.tip_sadrzaja?.naziv ?? '';
+      return NAZIV_NA_TIP[naziv] === tip;
+    });
+
+  const tipoviRed = ['pjesacka', 'planinska', 'biciklisticka'];
+
+  if (loading) return <div className="AO_section"><div className="smjestaj-loading">{t('aktivni_odmor.ucitavanje')}</div></div>;
+  if (greska)  return <div className="AO_section"><div className="smjestaj-greska">{greska}</div></div>;
+
   return (
     <section className="AO_section">
       <div className="AO_hero">
-        <h1>Aktivni odmor</h1>
-        <p>Istražite prirodne ljepote Han Pijeska pješice, planinarenjem ili na biciklu</p>
+        <h1>{t('aktivni_odmor.naslov')}</h1>
+        <p>{t('aktivni_odmor.podnaslov')}</p>
       </div>
 
       <div className="AO_legenda">
-        <span className="AO_legenda__naslov">Težina:</span>
-
+        <span className="AO_legenda__naslov">{t('aktivni_odmor.tezina_label')}</span>
         <div className="AO_legenda__item">
-          <div className="AO_legenda__kvadrat AO_legenda__kvadrat--lako" />
-          Lako
+          <div className="AO_legenda__kvadrat AO_legenda__kvadrat--laka" />
+          {t('aktivni_odmor.laka')}
         </div>
-
         <div className="AO_legenda__item">
-          <div className="AO_legenda__kvadrat AO_legenda__kvadrat--srednje" />
-          Srednje
+          <div className="AO_legenda__kvadrat AO_legenda__kvadrat--srednja" />
+          {t('aktivni_odmor.srednja')}
         </div>
-
         <div className="AO_legenda__item">
-          <div className="AO_legenda__kvadrat AO_legenda__kvadrat--tesko" />
-          Teško
-        </div>
-
-        <div className="AO_legenda__item">
-          <div className="AO_legenda__kvadrat AO_legenda__kvadrat--ekstremno" />
-          Ekstremno
+          <div className="AO_legenda__kvadrat AO_legenda__kvadrat--teska" />
+          {t('aktivni_odmor.teska')}
         </div>
       </div>
 
       <main className="AO_main">
-        <StazaSekcija tip="pjesacka" />
-        <StazaSekcija tip="planinska" />
-        <StazaSekcija tip="biciklisticka" />
+        {tipoviRed.map(tip => {
+          const stavke = poTipu(tip);
+          if (stavke.length === 0) return null;
+          return <StazaSekcija key={tip} tip={tip} staze={stavke} />;
+        })}
+        {staze.length === 0 && (
+          <div className="AO_prazan">{t('aktivni_odmor.nema_staza')}</div>
+        )}
       </main>
     </section>
   );

@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class blogSlike extends Model
 {
+
+    protected $table = 'blog_slike';
+    
     protected $fillable = [
 
         'id',

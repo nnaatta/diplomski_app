@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import "./Atrakcije.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import skakavac from "../../assets/Vodopad-Skakavac.jpg"
 import varosnica from "../../assets/rijeke.jpg"
 import pecina from "../../assets/komnicaPecina.jpg"
 import vazdusnaBanja from "../../assets/vazdusnaBanja.jpg";
 import vidikovac from "../../assets/ZdravstveniTurizam/slika11.jpg";
+import atrakcijeHero from "../../assets/atrakcijeHero.jpg";
 
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FaWalking, FaMountain, FaRegCompass, FaSnowflake, FaHandHoldingHeart  } from "react-icons/fa";
@@ -14,122 +16,30 @@ import { GiRiver, GiAmericanFootballHelmet, GiForest } from "react-icons/gi";
 import { CiRuler } from "react-icons/ci";
 import { MdPhotoCamera } from "react-icons/md";
 
+import podaci from "../../data/atrakcijeData.json";
 
-// ── Mock podaci ──────────────────────────────────────────────────────────────
+// Mapiranje slika
+const slike = {
+  skakavac, varosnica, pecina, vazdusnaBanja, vidikovac,
+};
 
-const atrakcije = [
-  {
-    id: 1,
-    naziv: "Vodopad Skakavac",
-    slika: skakavac,
-    opis:
-      "Vodopad Skakavac, smješten u selu Žeravice kod Han Pijeska, predstavlja jednu od najimpresivnijih prirodnih atrakcija Romanijskog kraja. Nastao je djelovanjem vode kroz naslage sedrenih stijena, formirajući jedinstvenu travertinsku strukturu koja podsjeća na prirodni kameni baldahin. Okružen gustom četinarskom šumom i netaknutim planinskim pejzažem, pruža poseban osjećaj mira, svježine i povezanosti s prirodom. Zahvaljujući uređenoj planinarskoj stazi, lokalitet je danas pristupačan posjetiocima i predstavlja nezaobilaznu destinaciju za ljubitelje prirode, fotografije i aktivnog odmora.",
-    tip: "Prirodna atrakcija",
-    slug: "vodopad-skakavac",
-    gradijent:
-      "linear-gradient(135deg, #a3c4a8 0%, #588157 50%, #2a5a30 100%)",
-    detalji: [
-      { ikona: <FaMapLocationDot/>, labela: "Lokacija", vrijednost: "Žeravice" },
-      { ikona: <FaWalking/>, labela: "Pristup", vrijednost: "Planinarska staza" },
-      { ikona: <LuWaves/>, labela: "Posebnost", vrijednost: "Travertinski slap" },
-    ],
-  },
+// Mapiranje ikona
+const ikone = {
+  map: <FaMapLocationDot/>,
+  walking: <FaWalking/>,
+  waves: <LuWaves/>,
+  ruler: <CiRuler/>,
+  river: <GiRiver/>,
+  helmet: <GiAmericanFootballHelmet/>,
+  compass: <FaRegCompass/>,
+  snowflake: <FaSnowflake/>,
+  forest: <GiForest/>,
+  heart: <FaHandHoldingHeart/>,
+  camera: <MdPhotoCamera/>,
+  mountain: <FaMountain/>,
+};
 
-  {
-    id: 2,
-    naziv: "Kanjon rijeke Varošnice",
-    slika: varosnica,
-    opis:
-      "Kanjon rijeke Varošnice, dug približno četiri kilometra, predstavlja jedan od najupečatljivijih prirodnih pejzaža opštine Han Pijesak. Duboko usječene stijene, bistri planinski tokovi i bogata vegetacija stvaraju ambijent netaknute divljine koji ostavlja snažan utisak na posjetioce. Posebnu atraktivnost lokalitetu daje spoj rijeke Varošnice sa potokom Skakavac, kao i prisustvo snažnih izvora koji ovom prostoru daju dodatnu hidrološku i ekološku vrijednost. Kanjon je idealno mjesto za planinarenje, istraživanje prirode i uživanje u autentičnoj planinskoj atmosferi.",
-    tip: "Prirodna atrakcija",
-    slug: "kanjon-varosnice",
-    gradijent:
-      "linear-gradient(135deg, #7ecbd4 0%, #3a8fa3 50%, #1a4a6a 100%)",
-    detalji: [
-      { ikona: <FaMapLocationDot/>, labela: "Lokacija", vrijednost: "Varošnica" },
-      { ikona: <CiRuler/>, labela: "Dužina", vrijednost: "oko 4 km" },
-      { ikona: <GiRiver/>, labela: "Ambijent", vrijednost: "Kanjon i izvori" },
-    ],
-  },
-
-  {
-    id: 3,
-    naziv: "Pećinski kompleks Komnica",
-    slika: pecina,
-    opis:
-      "Pećine Mala i Velika Komnica, smještene u blizini izletišta Komnica unutar vrha Veliki Žep, predstavljaju jedan od najmističnijih prirodnih lokaliteta Han Pijeska. Istraživanja speleologa pokazala su da Velika Komnica dostiže dužinu veću od 3 kilometra, dok istraživanja Male Komnice još uvijek nisu u potpunosti završena. Kompleks karakterišu podzemni hodnici, impresivne stijenske formacije i bogata geološka prošlost koja ga čini izuzetno vrijednim prirodnim fenomenom. Zbog zahtjevnog pristupa, pećine su dostupne isključivo uz odgovarajuću opremu i stručno vođstvo.",
-    tip: "Prirodna atrakcija",
-    slug: "pecine-komnica",
-    gradijent:
-      "linear-gradient(135deg, #b8a8c8 0%, #6a5888 50%, #2a1a48 100%)",
-    detalji: [
-      { ikona: <FaMapLocationDot/>, labela: "Lokacija", vrijednost: "Komnica" },
-      { ikona: <GiAmericanFootballHelmet/>, labela: "Oprema", vrijednost: "Obavezna" },
-      { ikona: <FaRegCompass/>, labela: "Pristup", vrijednost: "Uz stručnog vodiča" },
-    ],
-  },
-
-  {
-  id: 4,
-  naziv: "Vazdušna banja Han Pijesak",
-  slika: vazdusnaBanja,
-  opis:
-    "Han Pijesak je decenijama poznat po izuzetno čistom planinskom vazduhu i visokoj koncentraciji ozona, zbog čega je još početkom 20. vijeka prepoznat kao prirodna vazdušna banja. Spoj guste četinarske šume, planinske klime i netaknute prirode stvara ambijent koji pogoduje odmoru, rekreaciji i oporavku organizma. Upravo zbog ovih prirodnih karakteristika ovo područje ima snažan potencijal za razvoj zdravstvenog i wellness turizma.",
-  tip: "Prirodna atrakcija",
-  slug: "vazdusna-banja",
-  gradijent:
-    "linear-gradient(135deg, #cce8cc 0%, #74a57f 50%, #355e3b 100%)",
-  detalji: [
-    { ikona: <FaSnowflake/>, labela: "Posebnost", vrijednost: "Visoka koncentracija ozona" },
-    { ikona: <GiForest/>, labela: "Ambijent", vrijednost: "Četinarske šume" },
-    { ikona: <FaHandHoldingHeart/>, labela: "Potencijal", vrijednost: "Zdravstveni turizam" },
-  ],
-},
-
-  {
-    id: 5,
-    naziv: "Vidikovci Javora",
-    slika: vidikovac,
-    opis:
-      "Prirodni vidikovci Romanijskog područja pružaju spektakularne panoramske poglede na planinske lance, šumska prostranstva i doline istočne Bosne. Smješteni na uzvišenim tačkama, predstavljaju idealna mjesta za predah, fotografisanje i uživanje u pejzažu koji se mijenja kroz sva godišnja doba. Posebno su atraktivni u rano jutro i predvečerje, kada svjetlost dodatno naglašava reljef i prirodne kontraste krajolika. Ovi lokaliteti predstavljaju spoj mira, širine prostora i autentične ljepote Romanije.",
-    tip: "Vidikovac",
-    slug: "romanijski-vidikovci",
-    gradijent:
-      "linear-gradient(135deg, #d6e4f0 0%, #6c91bf 50%, #2d5d7b 100%)",
-    detalji: [
-      { ikona: <FaMapLocationDot/>, labela: "Područje", vrijednost: "Romanija" },
-      { ikona: <MdPhotoCamera/>, labela: "Idealno za", vrijednost: "Fotografiju" },
-      { ikona: <FaMountain/>, labela: "Doživljaj", vrijednost: "Panoramski pogled" },
-    ],
-  },
-];
-
-const prirodniSpomenici = [
-  {
-    naziv: "Maljava breza",
-    latinskiNaziv: "Betula pubescens",
-    opis:
-      "Maljava breza predstavlja rijetku planinsku vrstu breze koja je prepoznatljiva po nježnim, blago dlakavim listovima i prilagođenosti hladnijim klimatskim uslovima. Na području Han Pijeska ima poseban značaj kao zaštićeni prirodni lokalitet i vrijedan dio biljnog biodiverziteta ovog kraja.",
-    ikona: "🌳",
-    boja: "#588157",
-  },
-  {
-    naziv: "Zelena duglazija",
-    latinskiNaziv: "Pseudotsuga menziesii",
-    opis:
-      "Grupa zelene duglazije na području Gornjeg Ljeskovca predstavlja vrijedan dendrološki lokalitet i zanimljiv primjer vrste koja se uspješno prilagodila planinskim uslovima Han Pijeska. Impozantna visina, snažno stablo i gusta krošnja čine ovu vrstu upečatljivim dijelom lokalnog pejzaža.",
-    ikona: "🌲",
-    boja: "#3a7a50",
-  },
-  {
-    naziv: "Pančićeva omorika",
-    latinskiNaziv: "Picea omorika",
-    opis:
-      "Pančićeva omorika jedna je od najrjeđih i najznačajnijih endemskih vrsta četinara Balkana. Poznata po elegantnom, uskom obliku krošnje i izuzetnoj otpornosti, predstavlja dragocjen dio prirodnog nasljeđa i simbol bogatstva flore ovog područja.",
-    ikona: "🌿",
-    boja: "#2a5a3a",
-  },
-];
+const { atrakcije, prirodniSpomenici } = podaci;
 
 // ── Scroll reveal hook ────────────────────────────────────────────────────────
 
@@ -152,7 +62,13 @@ function useReveal() {
 
 function AtrakcijaPar({ atrakcija, index }) {
   const ref = useReveal();
+  const { i18n } = useTranslation();
+  const lang = i18n.language;
   const jeParno = index % 2 === 0; // parno = slika lijevo, neparno = slika desno
+
+  const naziv = lang === 'en' ? atrakcija.naziv_en : atrakcija.naziv;
+  const opis  = lang === 'en' ? atrakcija.opis_en  : atrakcija.opis;
+  const tip   = lang === 'en' ? atrakcija.tip_en   : atrakcija.tip;
 
   return (
     <div
@@ -163,12 +79,12 @@ function AtrakcijaPar({ atrakcija, index }) {
       <div className="ATR_par__slika-strana">
         <div className="ATR_par__slika-okvir">
           <img
-            src={atrakcija.slika}
+            src={slike[atrakcija.slikaKey]}
             className="ATR_par__slika-placeholder"
-            
+            alt={naziv}
           />
           <div className="ATR_par__slika-overlay" />
-          <span className="ATR_par__tip">{atrakcija.tip}</span>
+          <span className="ATR_par__tip">{tip}</span>
           {/* Dekorativni krug */}
           <div className={`ATR_par__dekor${jeParno ? " ATR_par__dekor--desno" : " ATR_par__dekor--lijevo"}`} />
         </div>
@@ -177,25 +93,22 @@ function AtrakcijaPar({ atrakcija, index }) {
       {/* Tekst */}
       <div className="ATR_par__tekst-strana">
         <span className="ATR_par__broj">0{atrakcija.id}</span>
-        <h2 className="ATR_par__naziv">{atrakcija.naziv}</h2>
-        <p className="ATR_par__opis">{atrakcija.opis}</p>
+        <h2 className="ATR_par__naziv">{naziv}</h2>
+        <p className="ATR_par__opis">{opis}</p>
 
         {/* Info detalji */}
         <div className="ATR_par__detalji">
           {atrakcija.detalji.map((d, i) => (
             <div key={i} className="ATR_par__detalj">
-              <span className="ATR_par__detalj-ikona">{d.ikona}</span>
+              <span className="ATR_par__detalj-ikona">{ikone[d.ikona]}</span>
               <div>
-                <span className="ATR_par__detalj-labela">{d.labela}</span>
-                <span className="ATR_par__detalj-vrijednost">{d.vrijednost}</span>
+                <span className="ATR_par__detalj-labela">{lang === 'en' ? d.labela_en : d.labela}</span>
+                <span className="ATR_par__detalj-vrijednost">{lang === 'en' ? d.vrijednost_en : d.vrijednost}</span>
               </div>
             </div>
           ))}
         </div>
 
-        <Link to={`/atrakcije/${atrakcija.slug}`} className="ATR_par__dugme">
-          Saznaj više →
-        </Link>
       </div>
     </div>
   );
@@ -205,6 +118,12 @@ function AtrakcijaPar({ atrakcija, index }) {
 
 function SpomenikKartica({ s, index }) {
   const ref = useReveal();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
+
+  const naziv = lang === 'en' ? s.naziv_en : s.naziv;
+  const opis  = lang === 'en' ? s.opis_en  : s.opis;
+
   return (
     <div
       ref={ref}
@@ -214,15 +133,15 @@ function SpomenikKartica({ s, index }) {
       <div className="ATR_spm__glava" style={{ background: `${s.boja}18`, borderColor: `${s.boja}40` }}>
         <span className="ATR_spm__ikona">{s.ikona}</span>
         <div className="ATR_spm__header-info">
-          <h3 className="ATR_spm__naziv">{s.naziv}</h3>
+          <h3 className="ATR_spm__naziv">{naziv}</h3>
           <span className="ATR_spm__latinski">{s.latinskiNaziv}</span>
         </div>
         <div className="ATR_spm__linija" style={{ background: s.boja }} />
       </div>
       <div className="ATR_spm__tijelo">
-        <p className="ATR_spm__opis">{s.opis}</p>
+        <p className="ATR_spm__opis">{opis}</p>
         <span className="ATR_spm__bedz" style={{ background: `${s.boja}18`, color: s.boja }}>
-          Zaštićena vrsta
+          {t('atrakcije.zasticena_vrsta')}
         </span>
       </div>
     </div>
@@ -232,31 +151,32 @@ function SpomenikKartica({ s, index }) {
 // ── Glavna stranica ───────────────────────────────────────────────────────────
 
 function Atrakcije() {
+  const { t } = useTranslation();
+
   return (
     <section className="ATR_section">
 
       {/* ── 1. HERO ── */}
       <div className="ATR_hero">
-        <div className="ATR_hero__img ATR_hero__img--placeholder" />
+        <img src={atrakcijeHero} className="ATR_hero__img ATR_hero__img--placeholder" alt="" />
         <div className="ATR_hero__overlay" />
         <div className="ATR_hero__tekst">
-          <span className="ATR_hero__bedz">Prirodne ljepote</span>
-          <h1 className="ATR_hero__naslov">Atrakcije</h1>
+          <span className="ATR_hero__bedz">{t('atrakcije.bedz_hero')}</span>
+          <h1 className="ATR_hero__naslov">{t('atrakcije.naslov')}</h1>
           <p className="ATR_hero__podnaslov">
-            Han Pijesak krije netaknutu prirodu — vodopade, kanjone i pećine
-            koje čekaju da ih otkrijete.
+            {t('atrakcije.podnaslov')}
           </p>
-          <a href="#atrakcije" className="ATR_hero__dugme">Istraži ↓</a>
+          <a href="#atrakcije" className="ATR_hero__dugme">{t('atrakcije.istrazi')}</a>
         </div>
       </div>
 
       {/* ── 2. ATRAKCIJE — naizmjenični layout ── */}
       <div className="ATR_lista-sekcija" id="atrakcije">
         <div className="ATR_lista-wrap">
-          <span className="ATR_bedz--zeleni ATR_bedz--centar">Prirodne atrakcije</span>
-          <h2 className="ATR_naslov">Otkrijte prirodu Han Pijeska</h2>
+          <span className="ATR_bedz--zeleni ATR_bedz--centar">{t('atrakcije.bedz_atrakcije')}</span>
+          <h2 className="ATR_naslov">{t('atrakcije.sekcija_naslov')}</h2>
           <p className="ATR_podnaslov">
-            Vodopadi, kanjoni i pećine — svaki kutak opštine krije nešto posebno
+            {t('atrakcije.sekcija_podnaslov')}
           </p>
           <div className="ATR_lista">
             {atrakcije.map((a, i) => (
@@ -269,10 +189,10 @@ function Atrakcije() {
       {/* ── 3. PRIRODNI SPOMENICI ── */}
       <div className="ATR_spm-sekcija">
         <div className="ATR_lista-wrap">
-          <span className="ATR_bedz--zeleni ATR_bedz--centar">Botaničke vrijednosti</span>
-          <h2 className="ATR_naslov">Prirodni spomenici</h2>
+          <span className="ATR_bedz--zeleni ATR_bedz--centar">{t('atrakcije.bedz_botanika')}</span>
+          <h2 className="ATR_naslov">{t('atrakcije.spomenici_naslov')}</h2>
           <p className="ATR_podnaslov">
-            Rijetke i zaštićene biljne vrste koje rastu na prostoru opštine Han Pijesak
+            {t('atrakcije.spomenici_podnaslov')}
           </p>
           <div className="ATR_spm-grid">
             {prirodniSpomenici.map((s, i) => (
@@ -284,12 +204,12 @@ function Atrakcije() {
 
       {/* ── 4. CTA ── */}
       <div className="ATR_cta">
-        <h2 className="ATR_cta__naslov">Istražite kulturno nasljeđe</h2>
+        <h2 className="ATR_cta__naslov">{t('atrakcije.cta_naslov')}</h2>
         <p className="ATR_cta__tekst">
-          Pored prirodnih ljepota, Han Pijesak čuva bogato istorijsko i kulturno nasljeđe.
+          {t('atrakcije.cta_tekst')}
         </p>
         <Link to="/znamenitosti" className="ATR_cta__btn ATR_cta__btn--primarni">
-          Pogledaj znamenitosti
+          {t('atrakcije.cta_btn')}
         </Link>
       </div>
 

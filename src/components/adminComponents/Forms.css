@@ -1,0 +1,455 @@
+/* ===== FORME ===== */
+.form-group { margin-bottom: 1.25rem; }
+
+.form-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #344e41;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.01em;
+}
+
+.form-label span {
+  color: #c0392b;
+  margin-left: 2px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.62rem 0.9rem;
+  border: 1.5px solid #d4e6c3;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: 'DM Sans', sans-serif;
+  color: #2c3e2d;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-control:focus {
+  border-color: #588157;
+  box-shadow: 0 0 0 3px rgba(88,129,87,0.12);
+}
+
+.form-control:hover:not(:focus) {
+  border-color: #a3b18a;
+}
+
+/* Select custom arrow */
+select.form-control {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23588157' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.2rem;
+  cursor: pointer;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ===== CHECKBOX POGODNOSTI ===== */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  padding: 0.75rem;
+  background: #f9fcf7;
+  border: 1.5px solid #d4e6c3;
+  border-radius: 6px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.83rem;
+  font-weight: 500;
+  color: #2c3e2d;
+  cursor: pointer;
+  padding: 0.3rem 0.65rem;
+  border-radius: 2rem;
+  border: 1.5px solid #d4e6c3;
+  background: #ffffff;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.checkbox-label:hover {
+  border-color: #588157;
+  background: #eaf3de;
+  color: #344e41;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: #588157;
+  width: 14px; height: 14px;
+  cursor: pointer;
+}
+
+/* ===== SEPARATOR U FORMI ===== */
+.form-separator {
+  border: none;
+  border-top: 1px solid #d4e6c3;
+  margin: 1.25rem 0;
+}
+
+/* ===== FORM SECTION NASLOV ===== */
+.form-section-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #6b7c6c;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.form-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #d4e6c3;
+}
+
+/* ===== FIELD SA INLINE DODAVANJEM ===== */
+.field-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.field-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.field-row .btn-add-inline {
+  margin-bottom: 0;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+}
+/* ================================================================
+   UPLOAD SEKCIJA — zajednički
+================================================================ */
+.upload-section {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1.5px solid #d4e6c3;
+}
+
+.upload-section__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #6b7c6c;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.upload-section__title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #d4e6c3;
+}
+
+.upload-dropzone {
+  border: 2px dashed #a3b18a;
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  background: #f9fcf7;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.upload-dropzone:hover,
+.upload-dropzone.drag-over {
+  border-color: #588157;
+  background: #eaf3de;
+}
+.upload-dropzone__icon  { font-size: 2rem; margin-bottom: 0.4rem; }
+.upload-dropzone__text  { font-size: 0.88rem; font-weight: 600; color: #344e41; margin-bottom: 0.2rem; }
+.upload-dropzone__hint  { font-size: 0.75rem; color: #6b7c6c; }
+
+.upload-hint-text {
+  font-size: 0.75rem;
+  color: #6b7c6c;
+  margin: 0.75rem 0 0.4rem;
+}
+
+/* ── Više slika — grid preview ── */
+.upload-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.upload-preview__item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid #d4e6c3;
+  aspect-ratio: 1;
+  background: #f0f0f0;
+  transition: border-color 0.2s ease;
+}
+.upload-preview__item img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.upload-preview__item.glavna {
+  border-color: #588157;
+  box-shadow: 0 0 0 2px rgba(88,129,87,0.25);
+}
+.upload-preview__item--new        { border-color: #93c5fd; }
+.upload-preview__item--new.glavna { border-color: #588157; }
+
+.upload-preview__actions {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+.upload-preview__item:hover .upload-preview__actions { opacity: 1; }
+
+.upload-preview__btn {
+  background: rgba(255,255,255,0.92);
+  border: none;
+  border-radius: 50%;
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.15s, transform 0.1s;
+}
+.upload-preview__btn:hover             { background: #fff; transform: scale(1.1); }
+.upload-preview__btn--delete:hover     { background: #fce4e4; color: #c0392b; }
+.upload-preview__btn:disabled          { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+/* ── Bedževi ── */
+.badge {
+  position: absolute;
+  top: 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 2px 5px;
+  border-radius: 3px;
+  pointer-events: none;
+  line-height: 1.4;
+}
+.badge--glavna { left: 4px; background: #588157; color: #fff; }
+.badge--nova   { right: 4px; background: #3b82f6; color: #fff; }
+
+/* ── Jedna slika — single preview ── */
+.upload-single-preview {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #d4e6c3;
+  background: #f0f0f0;
+  max-width: 320px;
+}
+.upload-single-preview img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.upload-single-preview__actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  background: #f9fcf7;
+  border-top: 1px solid #d4e6c3;
+}
+
+/* ── Misc ── */
+.required-star { color: #e74c3c; }
+.form-error-box {
+  background: #fce4e4;
+  border: 1px solid rgba(192,57,43,0.2);
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  color: #c0392b;
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+}
+
+/* ================================================================
+   CHIP UNOS (preporuke hrane)
+================================================================ */
+.chip-input-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #d8edcb;
+  color: #344e41;
+  border: 1px solid #a3b18a;
+  border-radius: 20px;
+  padding: 0.25rem 0.65rem 0.25rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.chip__remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  color: #588157;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.chip__remove:hover { color: #c0392b; }
+
+.chip-add-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.chip-add-row .form-control { flex: 1; }
+
+/* ================================================================
+   RADIO CHECKBOXOVI U REDU (tezina staze)
+================================================================ */
+.checkbox-group--row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+.checkbox-group--row .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+/* ================================================================
+   RESPONSIVNOST
+================================================================ */
+
+/* Forma grid: 2 kolone na desktopu, 1 na mobilnom */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Upload grid — 2 kolone na mobilnom umjesto 4+ */
+  .upload-preview {
+    grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+  }
+
+  /* Chip add row — u kolonu */
+  .chip-add-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Forma grupe — manji margin */
+  .form-group { margin-bottom: 0.75rem; }
+
+  /* Modal — fullscreen na mobilnom */
+  .modal-box {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 12px 12px 0 0 !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+
+  /* Table — horizontalni scroll */
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Search bar — u kolonu */
+  .search-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .search-bar .btn { width: 100%; }
+
+  /* Nested modali */
+  .nested-modal-box {
+    max-width: 100% !important;
+    margin: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-single-preview { max-width: 100%; }
+
+  .checkbox-group--row {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+
+/* ================================================================
+   TABELA — spriječi prelijevanje sadržaja van ćelija
+================================================================ */
+.table-wrap td {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Status badge — ostaje u ćeliji */
+.table-wrap td .badge-status {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}

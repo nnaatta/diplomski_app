@@ -243,6 +243,7 @@
   to   { opacity: 1; transform: scale(1);    }
 }
 .GAL_lightbox__slika {
+  object-fit: contain;
   width: 100%;
   aspect-ratio: 16 / 10;
   border-radius: 10px;

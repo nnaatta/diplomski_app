@@ -1,0 +1,128 @@
+/* ===== SEARCH BAR ===== */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.search-input-wrap {
+  position: relative;
+  flex: 1;
+}
+
+.search-input-wrap input {
+  width: 100%;
+  padding: 0.6rem 0.9rem 0.6rem 2.4rem;
+  border: 1.5px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color var(--transition);
+  background: var(--clr-white);
+  color: var(--clr-text);
+}
+
+.search-input-wrap input:focus { border-color: var(--clr-mid); }
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--clr-muted);
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+/* ===== TABELA ===== */
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+thead th {
+  background-color: var(--clr-pale);
+  color: var(--clr-dark);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--clr-border);
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--clr-border);
+  color: var(--clr-text);
+  vertical-align: middle;
+}
+
+tbody tr:hover { background-color: #f9fcf7; }
+tbody tr:last-child td { border-bottom: none; }
+/* ===== TABELA — spriječi prelijevanje ===== */
+tbody td {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Status kolona — ne trunciraj badge */
+tbody td:has(.badge) {
+  overflow: visible;
+  white-space: normal;
+}
+
+/* ===== BADGE STATUS ===== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.badge-active {
+  background: #d8edcb;
+  color: #344e41;
+  border: 1px solid #a3b18a;
+}
+
+.badge-inactive {
+  background: #f5e6e6;
+  color: #922b21;
+  border: 1px solid #e8b4b4;
+}
+
+.badge-draft {
+  background: #fef9e7;
+  color: #7d6608;
+  border: 1px solid #f7dc6f;
+}
+
+/* ===== RESPONSIVNOST ===== */
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar .btn {
+    width: 100%;
+  }
+
+  tbody td {
+    max-width: 140px;
+  }
+}

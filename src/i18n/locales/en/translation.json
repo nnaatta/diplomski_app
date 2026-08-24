@@ -1,0 +1,899 @@
+{
+  "nav": {
+    "pocetna": "Home",
+    "o_to": "About TO",
+    "o_han_pijesku": "About Han Pijesak",
+    "istrazi": "Explore",
+    "znamenitosti": "Landmarks",
+    "atrakcije": "Attractions",
+    "vjerski_objekti": "Religious Sites",
+    "flora_fauna": "Flora and Fauna",
+    "zdravstveni_turizam": "Health Tourism",
+    "aktivnosti": "Activities",
+    "aktivni_odmor": "Active Vacation",
+    "sport_rekreacija": "Sports and Recreation",
+    "lov_ribolov": "Hunting and Fishing",
+    "turisticki_servisi": "Tourist Services",
+    "smjestaj": "Accommodation",
+    "gastronomija": "Gastronomy",
+    "manifestacije": "Events",
+    "blog": "Blog",
+    "galerija": "Gallery",
+    "kontakt": "Contact"
+  },
+  "footer": {
+    "linkovi": "Links",
+    "istrazi": "Explore",
+    "znamenitosti": "Landmarks",
+    "atrakcije": "Attractions",
+    "vjerski_objekti": "Religious Sites",
+    "flora_fauna": "Flora and Fauna",
+    "zdravstveni_turizam": "Health Tourism",
+    "aktivnosti": "Activities",
+    "aktivni_odmor": "Active Vacation",
+    "sport_rekreacija": "Sports and Recreation",
+    "lov_ribolov": "Hunting and Fishing",
+    "servisi": "Services",
+    "smjestaj": "Accommodation",
+    "gastronomija": "Gastronomy",
+    "manifestacije": "Events",
+    "ostalo": "Other",
+    "o_to": "About the Tourist Org.",
+    "o_han_pijesku": "About Han Pijesak",
+    "blog": "Blog",
+    "galerija": "Gallery",
+    "kontakt": "Contact",
+    "kontakt_naslov": "Contact",
+    "to_naziv": "Tourist Organization of the Han Pijesak Municipality",
+    "mapa": "Map",
+    "copyright": "All rights reserved."
+  },"aktivni_odmor": {
+  "naslov": "Active Vacation",
+  "podnaslov": "Explore the natural beauty of Han Pijesak on foot, by hiking or by bike",
+  "tezina_label": "Difficulty:",
+  "sve": "All",
+  "laka": "Easy",
+  "srednja": "Medium",
+  "teska": "Hard",
+  "tip_pjesacka": "Hiking Trails",
+  "tip_planinska": "Mountain Trails",
+  "tip_biciklisticka": "Bike Trails",
+  "broj_staza": "trails",
+  "nema_filter": "No trails for the selected filter.",
+  "nema_staza": "No trails added.",
+  "ucitavanje": "Loading...",
+  "greska_ucitavanje": "Error loading trails.",
+  "km": "km",
+  "tip_pjesacka_detalji": "Hiking Trail",
+  "tip_planinska_detalji": "Mountain Tour",
+  "tip_biciklisticka_detalji": "Bike Route",
+  "nije_pronadjena": "Trail not found",
+  "nije_pronadjena_greska": "Trail not found.",
+  "nazad": "← Back to trails",
+  "duzina": "Length",
+  "tezina": "Difficulty",
+  "vrsta": "Type",
+  "o_stazi": "About the trail",
+  "opis_nije_dodat": "No description added.",
+  "mapa_staze": "Trail Map",
+  "mapa_tekst": "Select the desired location from the menu to display the route and detailed trail description."
+}, "blog": {
+  "naslov": "Blog",
+  "podnaslov": "News, guides and stories from Han Pijesak",
+  "ucitavanje": "Loading...",
+  "greska_ucitavanje": "Error loading blog.",
+  "nema_objava": "No posts in this category.",
+  "istaknuti_post": "Featured post",
+  "citaj_vise": "Read more →",
+  "default_autor": "TO Han Pijesak",
+  "sve": "All",
+  "ostalo": "Other"
+},
+"detalji_blog": {
+  "ucitavanje": "Loading...",
+  "nije_pronadjen": "Post not found",
+  "nije_pronadjen_greska": "Post not found.",
+  "nazad": "← Back to blog",
+  "nazad_blog": "← Blog"
+},"manifestacije": {
+  "bedz_hero": "Cultural and Sports Life",
+  "naslov": "Events",
+  "podnaslov": "Cultural, sports and tourist events that enrich the life of the Han Pijesak municipality throughout the year.",
+  "pogledaj_dogadjaje": "View Events ↓",
+
+  "bedz_organizatori": "Who's Behind the Events",
+  "organizatori_naslov": "Event Organizers",
+  "organizatori_podnaslov": "Institutions and organizations that shape the cultural and sports life of Han Pijesak",
+
+  "bedz_predstojeci": "What's Coming Up",
+  "predstojeci_naslov": "Upcoming Events",
+  "predstojeci_podnaslov": "Select a date on the calendar or browse all upcoming events",
+  "ucitavanje_dogadjaja": "Loading events...",
+  "nema_dogadjaja": "No events for the selected date.",
+  "prikazi_sve": "Show all events",
+
+  "bedz_tradicionalne": "Every Year",
+  "tradicionalne_naslov": "Traditional Events",
+  "tradicionalne_podnaslov": "Recurring events that mark the rhythm of life in Han Pijesak",
+
+  "cta_naslov": "Visit Han Pijesak",
+  "cta_tekst": "Plan your visit during one of our events and experience the authentic atmosphere of a mountain municipality.",
+  "cta_smjestaj": "Find Accommodation",
+  "cta_kontakt": "Contact Us",
+
+  "datum": "Date:",
+  "do": "To:",
+  "lokacija": "Location:",
+  "vrijeme": "Time:",
+  "kontakt": "Contact:",
+
+  "ponisti_filter": "✕ Clear filter",
+  "dan_dogadjaj": "Day with event",
+  "danas": "Today",
+  "prethodne_slike": "Previous images",
+  "sljedece_slike": "Next images",
+  "pozicija": "Position",
+
+  "dani": ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+  "mjeseci": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+},"gastronomija": {
+  "naslov": "Gastronomy",
+  "podnaslov": "Discover the authentic flavors of Han Pijesak's mountain cuisine",
+  "uvod": "The gastronomy of Han Pijesak reflects a rich mountain tradition and a love for authentic home cooking. Dishes prepared from fresh, local ingredients, with the aroma of wood smoke and mountain air, make every meal an unforgettable experience.",
+  "restorani_naslov": "Restaurants",
+  "ucitavanje": "Loading...",
+  "greska_ucitavanje": "Error loading restaurants.",
+  "sadrzaji": "Amenities",
+  "preporucujemo": "We recommend",
+  "kontakt": "Contact",
+  "instagram": "Instagram",
+  "facebook": "Facebook",
+  "kajmak_bedz": "🏆 Protected product",
+  "kajmak_oznaka": "Geographical origin",
+  "kajmak_naslov": "Romanija skorup-kajmak",
+  "kajmak_opis_1": "Less than two kilometers from the Han Pijesak–Karaula road, hidden in untouched Romanija nature, lies one of the most prized culinary treasures of the region — the famous <strong>Romanija skorup-kajmak</strong>. This unique dairy product is made using a special local technique passed down through generations, with smoking as a key part of the process, giving it its distinctive and unrepeatable flavor.",
+  "kajmak_opis_2": "In early February 2017, the Institute for Intellectual Property of Bosnia and Herzegovina officially recognized the designation of origin <em>\"Romanija skorup-kajmak\"</em> and entered it into the register of designations of origin.",
+  "kajmak_opis_3": "The association also received a certificate from the World Intellectual Property Organization (WIPO), recognizing protection of the skorup-kajmak in <strong>29 countries worldwide</strong>, including 9 European Union member states.",
+  "kajmak_cert_1": "Protected designation of origin since 2017",
+  "kajmak_cert_2": "WIPO certificate — protected in 29 countries",
+  "kajmak_cert_3": "Traditional smoking technique",
+  "kajmak_cert_4": "Product of the Romanija mountain",
+  "kajmak_poziv": "Visit Han Pijesak and try this authentic mountain specialty — a true souvenir you can take home.",
+  "spec_naslov": "Flavors you must experience",
+  "spec_podnaslov": "We recommend you definitely try the following local specialties:",
+  "specijaliteti": [
+    { "naziv": "Veal under the sač", "opis": "Traditionally prepared veal slow-cooked under a sač lid — tender, juicy and aromatic." },
+    { "naziv": "Homemade cicvara", "opis": "A traditional mountain dish made from cornmeal, kajmak and young cheese — a classic taste of Romanija." },
+    { "naziv": "Homemade cheese and kajmak", "opis": "Fresh mountain cheese and kajmak from local farm milk — the true taste of Romanija." },
+    { "naziv": "Pork knuckle", "opis": "Slow-roasted pork knuckle with a crispy crust and juicy meat — a specialty of rich homemade flavor." },
+    { "naziv": "Spit-roasted meat", "opis": "A whole suckling pig or lamb roasted on a spit — an essential specialty of every celebration." },
+    { "naziv": "Homemade honey", "opis": "Honey from the pastures of Romanija, rich in the aromas of mountain flowers — an ideal souvenir." }
+  ]
+},"smjestaj": {
+  "naslov": "Accommodation",
+  "podnaslov": "Find the perfect place to stay in the heart of the mountain air resort",
+  "uvod": "Han Pijesak offers authentic accommodation in the heart of mountain nature — from log cabins to modern villas, each property offers a unique getaway in clean mountain air.",
+  "sve": "All",
+  "ucitavanje": "Loading...",
+  "greska_ucitavanje": "Error loading data.",
+  "naslov_ponuda_one": "Currently available — {{count}} property",
+  "naslov_ponuda_other": "Currently available — {{count}} properties",
+  "pogledaj_detalje": "View details →",
+  "tip_fallback": "Accommodation",
+  "lokacija_fallback": "Han Pijesak"
+},
+"smjestaj_detalji": {
+  "ucitavanje": "Loading...",
+  "nije_pronadjen_naslov": "Property not found",
+  "nije_pronadjen_greska": "Property not found.",
+  "nazad": "← Back to accommodation",
+  "tip_fallback": "Accommodation",
+  "lokacija_fallback": "Han Pijesak",
+  "fotografije": "Photos",
+  "o_objektu": "About the property",
+  "opis_nedostupan": "No description available.",
+  "kapacitet": "Capacity",
+  "spavace_sobe": "Bedrooms",
+  "lezajevi": "Beds",
+  "sadrzaji": "Amenities",
+  "rezervacija_naslov": "Booking and contact",
+  "rezervacija_tekst": "For booking or additional information, contact the owner directly:",
+  "ili_kontaktirajte_to": "Or contact the Tourist Organization:",
+  "lokacija_naslov": "Location",
+  "lokacija_iframe_title": "Location — {{naziv}}",
+  "pogledaj_sve_slike": "View all photos ({{count}})",
+  "glavna_slika": "Main photo",
+  "slika": "Photo {{br}}",
+  "thumbnail": "Thumbnail {{br}}",
+  "zatvori": "Close",
+  "prethodna": "Previous",
+  "sljedeca": "Next"
+},"atrakcije": {
+  "bedz_hero": "Natural Beauty",
+  "naslov": "Attractions",
+  "podnaslov": "Han Pijesak hides untouched nature — waterfalls, canyons and caves waiting to be discovered.",
+  "istrazi": "Explore ↓",
+  "bedz_atrakcije": "Natural Attractions",
+  "sekcija_naslov": "Discover the Nature of Han Pijesak",
+  "sekcija_podnaslov": "Waterfalls, canyons and caves — every corner of the municipality hides something special",
+  "bedz_botanika": "Botanical Heritage",
+  "spomenici_naslov": "Natural Monuments",
+  "spomenici_podnaslov": "Rare and protected plant species growing in the Han Pijesak municipality",
+  "zasticena_vrsta": "Protected species",
+  "cta_naslov": "Explore the Cultural Heritage",
+  "cta_tekst": "In addition to its natural beauty, Han Pijesak preserves a rich historical and cultural heritage.",
+  "cta_btn": "View landmarks"
+},"flora_fauna": {
+  "flora_naslov": "Flora",
+  "flora_opis": "Forests, medicinal herbs and protected plant species of Mount Javor",
+  "flora_dugme": "Explore flora →",
+  "fauna_naslov": "Fauna",
+  "fauna_opis": "Game, birds and protected animal species of Mount Javor",
+  "fauna_dugme": "Explore fauna →",
+
+  "flora_hero_bedz": "Flora",
+  "flora_hero_naslov": "The Plant World of Han Pijesak",
+  "flora_hero_podnaslov": "The rich and diverse flora of Mount Javor",
+
+  "sume_bedz": "Forest Ecosystem",
+  "sume_naslov": "The Forests of Han Pijesak",
+  "sume_p1": "More than 70% of the territory of the Han Pijesak municipality is covered by forests, making it one of the most forested areas in Bosnia and Herzegovina. Mixed coniferous-deciduous forests dominate, with spruce, fir, white pine, beech and oak prevailing.",
+  "sume_p2": "Coniferous forests play a key role in air quality — they release phytoncides, natural antibiotics that have a positive effect on human health and contribute to Han Pijesak's status as a climatic health resort.",
+
+  "ljekovito_bedz": "Medicinal Herbs",
+  "ljekovito_naslov": "Medicinal and Wild Herbs",
+  "ljekovito_p1": "The mountain flora of Han Pijesak is rich in medicinal and wild-growing plants that have been used in folk medicine for generations. Clean air, a mountain climate and untouched soil create ideal conditions for plants with exceptional medicinal properties.",
+  "ljekovito_p2": "The best-known medicinal plants of this region are St. John's wort, wild garlic, yarrow, wild thyme, wild raspberry, wild blackberry, hawthorn, juniper and dogwood.",
+
+  "gljive_bedz": "Mushrooms and Lichens",
+  "gljive_naslov": "Mushrooms and Lichens",
+  "gljive_p1": "The forests of Mount Javor are a true paradise for mushroom lovers. Thanks to the humid mountain climate and rich forest soil, many edible species grow here — porcini, chanterelle, morel, oyster mushroom, edible parasol and Lactarius are some of the well-known delicacies.",
+  "gljive_p2": "Mushroom picking is a popular activity from spring through to early autumn, when the forests are most productive.",
+
+  "biljke_bedz": "Protected Species",
+  "biljke_naslov": "Rare and Protected Plant Species",
+  "biljke_podnaslov": "Han Pijesak is home to several rare and legally protected plant species",
+
+  "fauna_hero_bedz": "Fauna",
+  "fauna_hero_naslov": "The Animal World of Han Pijesak",
+  "fauna_hero_podnaslov": "The rich fauna of the Romanija forests and mountains",
+
+  "divljac_bedz": "Game",
+  "divljac_naslov": "Large and Small Game",
+  "divljac_p1": "The forests of Han Pijesak are home to a rich population of large and small game. Roe deer, wild boar and hare are just some of the species inhabiting the Romanija mountain area. The presence of such rich fauna testifies to a healthy and undisturbed ecosystem.",
+  "divljac_p2": "Hunting is regulated by law, and the \"Studena Gora\" Hunting Association takes care of protecting and managing game populations in the Han Pijesak municipality.",
+
+  "ptice_bedz": "Birds",
+  "ptice_naslov": "Mountain Birds",
+  "ptice_p1": "The area of Mount Javor is home to numerous birds, many of which are rare and protected. The forests and mountain peaks are ideal nesting grounds for mountain eagles, owls, woodpeckers and birds of prey.",
+  "ptice_p2": "Birdwatching is becoming an increasingly popular activity — the quiet forest and clean air provide perfect conditions for it.",
+
+  "ribolov_bedz": "Fishing",
+  "ribolov_naslov": "Rivers and Mountain Streams",
+  "ribolov_p1": "The waters of this area belong to the Bosna and Drina river basins. The streams of the Bosna basin are suitable for fly fishing, while those of the Drina basin are more suitable for spin fishing. These are fast, crystal-clear mountain streams. Rich in oxygen and food, these waters are the natural habitat of brown trout, which exclusively populate them. There is also a significant population of stream crayfish, which share their habitat with the trout.",
+  "ribolov_p2": "Anglers from across the region come here for the excellent fishing conditions and the peace offered by the mountain nature.",
+
+  "zivotinje_bedz": "Protected Species",
+  "zivotinje_naslov": "Protected Animal Species",
+  "zivotinje_podnaslov": "Han Pijesak is home to several strictly protected animal species"
+},"lov_ribolov": {
+  "hero_natpis": "Explore",
+  "hero_naslov": "Hunting and Fishing",
+  "hero_podnaslov": "Natural abundance for hunting and fishing enthusiasts",
+
+  "tab_lov": "Hunting Association",
+  "tab_ribolov": "Fishing Association",
+
+  "lov_bedz": "Hunting Association",
+  "lov_logo_tekst": "Association logo",
+  "lov_naslov": "HA \"Studena Gora\" Han Pijesak",
+  "lov_godina": "Founded in 1956 · Member of the RS Hunting Federation",
+  "lov_tekst": "An association in which hunters voluntarily gather to protect and breed game, develop and improve hunting and hunting tourism, preserve nature and the environment, and engage in sport hunting and personal recreation. The association has achieved great success in all areas of hunting.",
+
+  "lovište_bedz": "About the Hunting Ground",
+  "lovište_naslov": "Han Pijesak — Home to Rich Wildlife",
+  "lovište_podnaslov": "Favorable terrain, suitable climate and forest resources",
+  "lovište_tekst": "Favorable terrain, a suitable climate and rich forest resources are the main factors that make Han Pijesak an exceptional hunting ground. The hunting association researches and plans game culling so that life in nature remains balanced and numerous animal species are protected from natural extinction.",
+  "lovište_alt": "Han Pijesak hunting ground",
+
+  "turizam_bedz": "Hunting Tourism",
+  "turizam_naslov": "Hunting as a Tourist Attraction",
+  "turizam_tekst": "Hunting tourism is clearly distinct from other forms of tourism, yet at the same time complementary to many other activities. The hunting association strives to adapt its tourist offer to hunting seasons, so that interested hunter-tourists stay on after the hunt and discover the other beauties of the Han Pijesak municipality.",
+  "turizam_alt": "Hunting tourism",
+  "citat": "Today, hunting is gaining a new role — recognized above all as protectors of the natural environment, hunters play a major role in preserving biodiversity and improving wildlife populations.",
+
+  "riba_bedz": "Fishing Association",
+  "riba_logo_tekst": "Association logo",
+  "riba_naslov": "SFA \"Pištica\" Han Pijesak",
+  "riba_godina": "Founded in 1961 · Independent since 2002",
+  "riba_tekst": "The association has independently managed the fishing waters of the Han Pijesak municipality since 2002, when it separated from the \"Studena Gora\" hunting association. The waters of this area belong to the Bosna and Drina river basins.",
+
+  "vode_bedz": "Fishing Waters",
+  "vode_naslov": "Crystal-clear Mountain Streams",
+  "vode_tekst": "These are fast, crystal-clear mountain streams, rich in oxygen and food — the natural habitat of brown trout. The streams of the Bosna basin are suitable for fly fishing, while those of the Drina basin are more suitable for spin fishing. There is also a significant population of stream crayfish, sharing their habitat with the trout. The Drina basin also includes the \"Rijeka\" watercourse, which is a sinking river.",
+  "vode_alt": "Rivers",
+
+  "pravila_naslov": "Fishing Rules",
+
+  "lov_kartice": [
+    { "naziv": "Forest Hunting Grounds", "tekst": "The rich forest complexes of Javor — a natural habitat for large and small game." },
+    { "naziv": "Big Game", "tekst": "Roe deer, deer, wild boar and other big game species characteristic of this area." },
+    { "naziv": "Hunting Tourism", "tekst": "A developed commercial hunting and hunting-tourism offer for domestic and foreign guests." }
+  ],
+
+  "ribolov_kartice": [
+    { "naziv": "Brown Trout", "tekst": "The only fish species in these waters — minimum retention length 25 cm." },
+    { "naziv": "Fishing Season", "tekst": "March 1 — September 30 · Artificial lures only." },
+    { "naziv": "Two River Basins", "tekst": "The Bosna river basin (fly fishing) and the Drina basin (spin fishing)." }
+  ],
+
+  "pravila_lista": [
+    "Fishing with artificial lures only",
+    "Minimum fish retention length: 25 cm",
+    "Season: March 1 — September 30",
+    "Fishing license required"
+  ]
+},"ohp": {
+  "danas_naslov": "Han Pijesak Today",
+  "danas_opis": "Geography, climate, tourism and institutions",
+  "istorija_naslov": "Han Pijesak Through History",
+  "istorija_opis": "Centuries of rich past, culture and tradition",
+  "istrazi": "Explore →"
+},
+
+"hpd": {
+  "hero_natpis": "About Han Pijesak",
+  "hero_naslov": "Han Pijesak Today",
+
+  "o_bedz": "About Han Pijesak",
+  "o_naslov": "About Han Pijesak",
+  "o_opis": "Han Pijesak is an urban settlement and the seat of the municipality of the same name, located in the eastern part of Republika Srpska, Bosnia and Herzegovina. It is situated at the watershed of the Stupčanica and Žepa rivers, at an altitude of 1,100 metres, making it the highest-altitude settlement in Republika Srpska. The settlement has a population of 2,018, while the total municipal population is 3,530. The municipality covers an area of around 330–335.8 km² and is among the smaller municipalities, with about 25 inhabited places that are mostly small and scattered across the mountain terrain.",
+  "naglasak_visina": "altitude",
+  "naglasak_stanovnici": "residents",
+  "naglasak_povrsina": "area",
+
+  "geo_bedz": "Geography",
+  "geo_naslov": "Geography",
+  "geo_opis": "This area belongs to the inner Dinarides and has pronounced characteristics of a hilly-mountainous region, where altitudes above 1,000 metres dominate. Han Pijesak is surrounded by mountain peaks — Veliki Žep (1,537 m), Javornik (1,219 m), Studena Gora (1,149 m) and Trešnjevac (1,245 m) — as well as vast coniferous and deciduous forests. Thanks to its exceptionally clean air and high ozone concentration, the area has been recognised as one of the most significant climatic and air health resorts in Europe, and in early November 2023 the entire municipal area was officially declared a climatic health resort. This represents a strong foundation for the development of health and recreational tourism.",
+
+  "klima_bedz": "Climate and Water",
+  "klima_naslov": "Climate",
+  "klima_opis": "The climatic characteristics of this area are determined by its high altitude, geographic latitude and continentality. This area is a meeting point of polar and subtropical air masses, resulting in a mountain climate with a mild continental influence. A greater number of windy days is characteristic, with northern and southern winds dominating. Such natural conditions contribute to the exceptional air quality and make a stay in this area particularly beneficial for health.",
+  "voda_naslov": "Water Resources",
+  "voda_opis": "The municipal area is also characterised by significant water resources. Han Pijesak sits on the watershed between the Drina and Bosna river basins. In the Drina basin lies the Rijeka stream, formed from multiple springs, while in the Bosna basin several streams rise — Bjesnica, Krivača, Varošnica and Pištica — which join in the village of Pjenovac to form the Stupčanica river. A special natural attraction is the canyon of the Varošnica river, about 4 kilometres long, and the springs near it. Additional value is given to the area by the Skakavac stream, which over a short stretch of about 600 metres overcomes an elevation difference of more than 200 metres, creating a unique natural setting.",
+
+  "turizam_bedz": "Tourism",
+  "turizam_naslov": "Different Forms of Tourism",
+  "turizam_uvod": "Han Pijesak is located on an important main road connecting it with centres in Republika Srpska, the Federation of BiH and beyond, contributing to its accessibility and tourist appeal. The natural characteristics of the area enable the development of various forms of tourism.",
+  "turizam_kartice": [
+    { "naziv": "Winter Tourism", "opis": "Skiing and winter sports on Mount Javor" },
+    { "naziv": "Mountain Tourism", "opis": "Hiking trails, viewpoints and untouched nature for hiking enthusiasts." },
+    { "naziv": "Hunting and Fishing", "opis": "Rich hunting grounds and fishing waters in the municipal surroundings." },
+    { "naziv": "Cycling", "opis": "Cycling trails through untouched nature for mountain biking enthusiasts" },
+    { "naziv": "Health Tourism", "opis": "Climatic health resort and climate tourism thanks to the exceptional air quality." },
+    { "naziv": "Weekend Tourism", "opis": "Nature retreats, log cabins and accommodation in a peaceful setting." }
+  ],
+
+  "kultura_bedz": "Culture and Education",
+  "kultura_naslov": "Institutions",
+  "kultura_podnaslov": "Education and culture with roots in the early 20th century",
+  "bib_nagrada": "★ Best Library in RS — 2022",
+  "bib_naslov": "Public Library \"Branko Čučak\"",
+  "bib_godina": "Founded in 1923 · Aleksandra Karađorđevića St. 2",
+  "bib_tekst": "The Public Library \"Branko Čučak\" in Han Pijesak is located at Aleksandra Karađorđevića Street 2, in the building of the former Sokol Hall, which was gifted to the people by King Alexander in the 1930s. The library holds a rich collection of over 33,000 books from various fields, as well as valuable collections and bequests, including the Branko Čučak bequest, part of the personal library of academician Rajko Kuzmanović, and special collections and artistic content. It also contains a memorial room dedicated to the Karađorđević royal family, as well as significant documentary and photographic material. With a tradition dating back to 1923, the library today represents an important cultural centre, recognised beyond the local community, with its work marked by numerous promotions, workshops and events, including the \"Čučak Literary Gatherings\". It was named the best library in Republika Srpska for 2022.",
+  "bib_knjiga": "books",
+  "bib_osnivanje": "year of founding",
+  "bib_tradicija": "years of tradition",
+  "cos_naslov": "Culture and Sports Centre \"Pogled\"",
+  "cos_godina": "Founded in 2001",
+  "cos_tekst": "The key institution for organising cultural and sports events in the municipality, with a cinema hall of 250 seats and a sports hall.",
+  "cos_lista": ["Cinema hall — 250 seats", "Sports hall", "Creative workshops and photo club", "Gallery space"],
+  "obr_naslov": "Education",
+  "obr_godina": "Since 1908",
+  "obr_tekst": "The development of education began in 1908 with the opening of a primary school. The Secondary School Centre, established in 1964, includes a grammar school, forestry school and transport school.",
+  "obr_lista": ["Primary school since 1908", "Grammar school", "Forestry school", "Transport school"]
+},
+
+"hpi": {
+  "hero_natpis": "About Han Pijesak",
+  "hero_naslov": "Han Pijesak Through History",
+  "hero_podnaslov": "From the Ottoman caravan route to the modern era",
+  "sidebar_naslov": "Historical Periods"
+},"pocetna": {
+  "hero_naslov": "Welcome to Han Pijesak - the Climatic Health Resort!",
+
+  "stats_visina_v": "1,100 m",
+  "stats_visina_l": "altitude",
+  "stats_staze_v": "50+ km",
+  "stats_staze_l": "hiking trails",
+  "stats_stanovnici_v": "3,530",
+  "stats_stanovnici_l": "residents",
+  "stats_nedostupno": "forecast unavailable",
+  "stats_temp": "current temperature",
+
+  "vrijeme": {
+    "0": "Clear",
+    "1": "Mostly clear",
+    "2": "Partly cloudy",
+    "3": "Cloudy",
+    "45": "Fog",
+    "48": "Fog",
+    "51": "Drizzle",
+    "53": "Drizzle",
+    "61": "Rain",
+    "63": "Rain",
+    "71": "Snow",
+    "73": "Snow",
+    "75": "Snow",
+    "80": "Showers",
+    "95": "Thunderstorm",
+    "varijabilno": "Variable"
+  },
+
+  "ohp_badge": "Discover",
+  "ohp_naslov": "The Climatic Health Resort",
+  "ohp_tekst": "Han Pijesak is situated at an altitude of 1,100 m, making it the highest-altitude settlement in Republika Srpska. It is surrounded by the peaks of Veliki Žep (1,537 m), Javornik (1,219 m), Studena Gora (1,149 m) and Trešnjevac (1,245 m), and its lush coniferous and deciduous forests have made it a well-known climatic and air health resort — it ranks among the most significant places in Europe in terms of ozone levels. This was officially confirmed in early November 2023, when the entire Han Pijesak municipal area was declared a climatic health resort.",
+  "ohp_btn": "Learn more about Han Pijesak →",
+
+  "video_naslov": "Promotional Video",
+  "video_opis": "Watch a short preview of the natural beauty and tourist attractions of Han Pijesak."
+},"o_to": {
+  "hero_naslov": "About the Tourist Organization of the Han Pijesak Municipality",
+  "hero_podnaslov": "Learn more about our work and activities",
+
+  "stat_2023_opis": "Year founded",
+  "stat_sajmovi_opis": "Trade fair appearances",
+  "stat_rast_opis": "Tourism growth",
+  "stat_turisti_opis": "Tourists in 2024",
+
+  "misija_naslov": "Mission",
+  "misija_tekst": "The Tourist Organization of the Han Pijesak municipality was established in 2023 as the youngest public institution in the municipality, and began operating in 2024. Its core goal is to promote Han Pijesak as a tourist destination, develop the local tourism offer and position the municipality as a recognizable climatic health resort on the tourist map of Bosnia and Herzegovina.",
+
+  "vizija_naslov": "Vision",
+  "vizija_tekst": "Han Pijesak as an attractive, sustainable and recognizable mountain destination, offering visitors a unique blend of clean mountain air, untouched nature, rich cultural heritage and authentic hospitality — all year round.",
+
+  "rad_naslov": "What We Do",
+  "rad_stavka_1": "Promoting Han Pijesak at regional tourism fairs",
+  "rad_stavka_2": "Organizing and supporting cultural and tourist events",
+  "rad_stavka_3": "Categorizing accommodation facilities",
+  "rad_stavka_4": "Producing tourist materials and brochures",
+  "rad_stavka_5": "Cooperating with hiking and sports associations",
+  "rad_stavka_6": "Education and development of tourism capacity",
+
+  "galerija_naslov": "Our Activities",
+  "galerija_podnaslov": "See how TO Han Pijesak actively promotes the destination",
+  "galerija_opis_1": "Heritage Fair, Novi Sad 2026",
+  "galerija_opis_2": "Tourism Fair, Belgrade 2026",
+  "galerija_opis_3": "Hiking trip — Skakavac",
+  "galerija_opis_4": "Cultural-tourist event",
+  "galerija_opis_5": "Tourism Fair, Novi Sad 2024",
+  "galerija_opis_6": "Tourism Fair, Banja Luka 2026",
+
+  "partneri_naslov": "Our Partners",
+  "partner_opstina": "Han Pijesak Municipality",
+  "partner_cos": "Pogled Youth and Sports Center",
+  "partner_psu_visocnik": "MTA Visočnik",
+  "partner_gorstak": "Gorštak",
+  "partner_psu_javor": "MTA Javor - Sunny Mountain",
+
+  "kontakt_naslov": "Contact Us",
+  "kontakt_alt": "contact person",
+  "kontakt_ime": "Svjetlana Tomović",
+  "kontakt_titula": "Director",
+  "kontakt_kartica_naslov": "Contact",
+  "kontakt_adresa": "Address: Aleksandra Karađorđevića no. 4",
+  "kontakt_telefon": "Phone: +387 66 787 850",
+  "kontakt_email": "Email: tohanpijesak@gmail.com"
+},"brze_kartice": {
+  "kartica1_naslov": "Explore the Destination",
+  "kartica1_opis": "Discover Han Pijesak — its history, culture and everything that makes this place special.",
+  "kartica1_cta": "Learn more",
+  "kartica2_naslov": "Find Accommodation",
+  "kartica2_opis": "From mountain lodges to private apartments — find the perfect place to relax.",
+  "kartica2_cta": "Browse accommodation",
+  "kartica3_naslov": "Upcoming Events",
+  "kartica3_opis": "Festivals, events and tradition — don't miss what Han Pijesak has in store.",
+  "kartica3_cta": "View programme"
+},
+
+"top_atrakcije": {
+  "naslov": "Top Attractions",
+  "podnaslov": "Discover why Han Pijesak captivates everyone who visits",
+  "cta": "Find out more →",
+  "atrakcije": [
+    {
+      "naslov": "Karađorđević Castle",
+      "opis": "Built in the early 20th century, the Karađorđević Castle testifies to the rich history of this region and the time when Han Pijesak was the favourite retreat of the royal family. Today it fascinates visitors with its architecture and views of the Romanija landscape.",
+      "tag": "History"
+    },
+    {
+      "naslov": "Skakavac Waterfall",
+      "opis": "Surrounded by dense forest and untouched nature, the Skakavac Waterfall is one of the most beautiful natural wonders of the area. The perfect starting point for mountain walks and excursions that leave a lasting impression.",
+      "tag": "Nature"
+    },
+    {
+      "naslov": "Climatic Health Resort",
+      "opis": "Thanks to its unique climate and clean mountain air, Han Pijesak proudly bears the title of climatic health resort. The ideal destination for rest and recovery — clean air and a mild mountain climate await you throughout the year.",
+      "tag": "Health"
+    }
+  ]
+},"sport_rekreacija": {
+  "hero_naslov": "Sports and Recreation in Han Pijesak",
+  "hero_podnaslov": "Mountains, forests and clean mountain air — perfect conditions for sports, recreation and active holidays all year round.",
+  "hero_dugme": "Explore activities ↓",
+
+  "uvod_bedz": "Natural Conditions",
+  "uvod_naslov": "Han Pijesak — a natural arena for sport",
+  "uvod_p1": "Situated at an altitude of around 1,100 metres, Han Pijesak offers exceptional natural conditions for sport and recreation throughout the year. Vast mountain forests and clean air make this area ideal for anyone seeking an active break in nature.",
+  "uvod_p2": "From skiing in winter to hiking and cycling in summer — the nature of Han Pijesak offers diverse opportunities for all age groups, supported by local sports organisations.",
+  "uvod_p3": "Clean mountain air, minimal noise and untouched nature make sport and recreation here a special and unforgettable experience.",
+
+  "uvod_kartice": [
+    { "naziv": "Hiking and Walking", "opis": "15+ marked trails for all levels" },
+    { "naziv": "Cycling", "opis": "MTB and recreational routes through the forests" },
+    { "naziv": "Winter Sports", "opis": "Skiing on the slopes of Javor" },
+    { "naziv": "Hunting and Fishing", "opis": "Rich game areas along rivers and lakes" }
+  ],
+
+  "org_bedz": "Local Sports Clubs",
+  "org_naslov": "Sports Organisations",
+  "org_podnaslov": "Han Pijesak has a rich sporting tradition through its active clubs and associations",
+
+  "org_lista": [
+    {
+      "naziv": "MTA Visočnik",
+      "opis": "The Visočnik Mountain Sports Association organises hikes, competitions and hiking education. Active all year on the trails of Javor and surrounding mountains.",
+      "slikeOpisi": ["Vrani Kamen 2025", "Musala - Roof of the Balkans", "Across the Romanija peaks", "Bregoč, summit of Zelengora"]
+    },
+    {
+      "naziv": "MTA Javor — Sunny Mountain",
+      "opis": "An association dedicated to promoting mountaineering and active time in nature. They organise annual hikes and cooperate with schools and the tourist organisation.",
+      "slikeOpisi": ["Veliki Žep", "Trebević", "Komić", "Velika Sikira"]
+    },
+    {
+      "naziv": "OK Han Pijesak",
+      "opis": "The Gorštak Sports Association is active in the field of mountain sports and recreation. Particularly known for organising hikes for all age groups.",
+      "slikeOpisi": ["Forest hike", "Summit ascent", "Recreation", "Competition"]
+    },
+    {
+      "naziv": "FK Omladinac Han Pijesak",
+      "opis": "A football club with a long tradition that brings together young and experienced players from the municipality. Actively participates in regional leagues and organises local tournaments.",
+      "slikeOpisi": []
+    },
+    {
+      "naziv": "KK Han Pijesak",
+      "opis": "Han Pijesak Basketball Club brings together young athletes and promotes basketball in the municipality. Actively participates in regional competitions.",
+      "slikeOpisi": []
+    },
+    {
+      "naziv": "Taekwondo Club Ozon Han Pijesak",
+      "opis": "Taekwondo Club Ozon Han Pijesak brings together young athletes and promotes a healthy lifestyle through training, discipline and sportsmanship. The club regularly participates in domestic and regional competitions, representing Han Pijesak and achieving notable results in taekwondo.",
+      "slikeOpisi": []
+    },
+    {
+      "naziv": "KUD \"Sveti Pantelejmon\"",
+      "opis": "A cultural and artistic society that nurtures the tradition, folklore and customs of the region. It organises performances and events that preserve the cultural heritage.",
+      "slikeOpisi": []
+    }
+  ],
+
+  "ski_bedz": "Winter Sports",
+  "ski_naslov": "Igrišta Ski Centre",
+  "ski_podnaslov": "The Igrišta Ski Centre, located in the immediate vicinity of Han Pijesak, is one of the most attractive destinations for winter tourism in this part of Republika Srpska. Surrounded by untouched nature, dense forests and mountain scenery, the centre offers ideal conditions for skiing, sledging and time in fresh mountain air. The centre features well-maintained ski slopes of moderate length, suitable for both beginners and recreational skiers. The slopes have a gentle to moderate gradient, making them safe and enjoyable to ski, while natural snow and well-groomed surfaces ensure quality skiing throughout the season. It is the ideal place for a relaxed winter holiday, far from the crowds and noise of larger ski resorts.",
+
+  "ski_info": [
+    { "vrijednost": "1,400 m", "labela": "Max. altitude" },
+    { "vrijednost": "3 km", "labela": "Total slope length" },
+    { "vrijednost": "9 km", "labela": "Distance from Han Pijesak" },
+    { "vrijednost": "2", "labela": "Ski slopes" },
+    { "vrijednost": "1", "labela": "Ski lift" },
+    { "vrijednost": "Dec — Mar", "labela": "Season" }
+  ],
+
+  "ski_slike_opisi": ["Ski slope", "Ski lift", "Winter panorama", "Skiers on the slope", "Night skiing"],
+
+  "dogadjaji_bedz": "Traditional Events",
+  "dogadjaji_naslov": "Sporting Events",
+  "dogadjaji_podnaslov": "Competitions and events that bring together athletes and nature lovers throughout the year",
+
+  "dogadjaji": [
+    { "naziv": "Volleyball matches throughout the year", "opis": "Volleyball matches held throughout the year, featuring clubs from various parts of the country.", "period": "Throughout the year" },
+    { "naziv": "Local football tournament", "opis": "A traditional summer small-sided football tournament bringing together teams from Han Pijesak and neighbouring municipalities.", "period": "July — August" },
+    { "naziv": "Hiking trip — Skakavac", "opis": "An organised hike to one of the most beautiful excursion sites in the area, led by experienced mountaineers.", "period": "April" },
+    { "naziv": "MTB", "opis": "A recreational tour along the municipality's marked cycling trails, open to all ages.", "period": "August — September" }
+  ],
+
+  "cta_naslov": "Experience active nature",
+  "cta_tekst": "Han Pijesak awaits you all year round — find accommodation, choose an activity and set off on an adventure in the heart of Romanija.",
+  "cta_staze": "View trails",
+  "cta_kontakt": "Contact us"
+},"vjerski_objekti": {
+  "hero_naslov": "Religious Sites",
+  "hero_podnaslov": "in the Han Pijesak municipality",
+
+  "uvod_naslov": "The Religious Heritage of Han Pijesak",
+  "uvod_tekst": "The Han Pijesak area is characterized by a rich, if modest in number, religious heritage that bears witness to a long history and the coexistence of different cultures and faiths. The municipality is home to Orthodox and Islamic religious sites, as well as significant religious landmarks of historical and cultural value.",
+
+  "pogledaj_na_mapi": "View on map",
+
+  "objekat_1_naziv": "Church of Saint Panteleimon the Great Martyr",
+  "objekat_1_tip": "Orthodox religious site",
+  "objekat_1_opis": "The Church of Saint Panteleimon the Great Martyr is a Serbian Orthodox church located in Han Pijesak, in the Republic of Srpska. It belongs to the Diocese of Zvornik and Tuzla and serves as the seat of the parish. The original church in Han Pijesak was built in 1923, with King Alexander I Karađorđević personally serving as its godfather — he frequently stayed at his residence in Han Pijesak. The old church was bombed and destroyed by the Ustasha forces in 1942; only three bells survived. Construction of the new single-nave church began in 1972 and was completed in 1979.",
+  "objekat_1_alt_1": "Church of Saint Panteleimon — Han Pijesak",
+  "objekat_1_alt_2": "Church of Saint Panteleimon",
+
+  "objekat_2_naziv": "Church of Saints Constantine and Helena",
+  "objekat_2_tip": "Orthodox religious site",
+  "objekat_2_opis": "Between the First and Second World Wars, the village of Džimrije had a log church dedicated to Saints Constantine and Helena. Restoration and construction of the new church began in July 2000 and was completed in 2002. The land for the church was donated by the Mandić family from Han Pijesak. The church was consecrated by Bishop Vasilije of Zvornik-Tuzla and Bishop Longin of America, on the eve of the church's patron saint day on 2 June 2002.",
+  "objekat_2_alt_1": "Church in Džimrije",
+
+  "objekat_3_naziv": "Pjenovac Monastery",
+  "objekat_3_tip": "Orthodox religious site",
+  "objekat_3_opis": "The monastery at Pjenovac is dedicated to the Beheading of Saint John the Baptist. It was built from early May 2001 to early June 2002. Construction was funded by believers and businesses from the Han Pijesak municipality and municipalities across the Republic of Srpska, as well as members of the diaspora. The iconostasis, icons and frescoes were created by academic painter Milan Nikolić from Šabac. Near the present-day monastery stood a small monastery that was destroyed with the arrival of the Ottomans.",
+  "objekat_3_alt_1": "Pjenovac Monastery",
+  "objekat_3_alt_2": "Pjenovac Monastery — detail",
+
+  "objekat_4_naziv": "Mosque in Nevačka",
+  "objekat_4_tip": "Islamic religious site",
+  "objekat_4_opis": "One of the oldest Islamic buildings in the area dates back to the 19th century. Following destruction during the wartime events, the mosque was restored and today serves its purpose once again, standing as an important symbol of return and the renewal of life in this region.",
+  "objekat_4_alt_1": "Mosque in Nevačka"
+},"zdravstveni_turizam": {
+  "hero_bedz": "Climatic Health Resort",
+  "hero_naslov": "Breathe the True Mountain Air",
+  "hero_podnaslov": "Han Pijesak — a place where nature heals and mountain air restores body and soul.",
+  "hero_dugme": "Explore more ↓",
+
+  "stat_sume": "of the area covered by forest",
+  "stat_visina": "elevation above sea level",
+  "stat_proglasenje": "year of designation as a climatic health resort",
+  "stat_centar": "average elevation of the town centre",
+
+  "zasto_bedz": "Official Designation",
+  "zasto_naslov": "Why is Han Pijesak a Climatic Health Resort?",
+  "zasto_p1": "The official designation of Han Pijesak as a climatic health resort was issued in 2023 by the Government of the Republic of Srpska — based on years of expert analyses and institutional assessments.",
+  "zasto_p2": "The key reasons include the presence of a natural therapeutic factor, a long-standing reputation as a climatic spa, and scientifically confirmed data on air and climate quality. Systematic measurements conducted over 100 years ago established that this area possessed qualities unmatched by any other mountain location in the Austro-Hungarian Empire at the time.",
+  "zasto_akcenat": "Year of official designation by the Government of the RS",
+
+  "institucije_bedz": "Scientific Confirmation",
+  "institucije_naslov": "Institutions Involved",
+  "institucija_1": "Institute for Protection and Ecology of the Republic of Srpska",
+  "institucija_2": "Ministry of Agriculture, Forestry and Water Management of the RS",
+  "institucija_3": "Republic Hydrometeorological Institute of the RS",
+  "institucija_4": "Institute for Public Health of the Republic of Srpska",
+  "institucije_napomena": "Through reports and expert opinions, these institutions confirmed that Han Pijesak possesses the climatic and air quality characteristics suitable for the treatment and prevention of disease.",
+
+  "slider_naslov": "Han Pijesak in Pictures",
+  "slider_podnaslov": "Nature that invites rest and renewal",
+  "slajd_1_opis": "Han Pijesak — winter landscape",
+  "slajd_2_opis": "Mountain nature of Han Pijesak",
+  "slajd_3_opis": "Han Pijesak climatic health resort",
+  "slajd_4_opis": "Han Pijesak — panorama",
+  "slajd_5_opis": "Forests of Han Pijesak",
+  "slajd_6_opis": "Han Pijesak — summer",
+  "slajd_7_opis": "Mountain landscape",
+  "slajd_8_opis": "Han Pijesak — autumn",
+  "slajd_9_opis": "Nature of Han Pijesak",
+  "slajd_10_opis": "Han Pijesak — spring",
+  "slajd_11_opis": "Walking paths of Han Pijesak",
+  "slajd_12_opis": "Han Pijesak — viewpoint",
+  "slajd_13_opis": "Han Pijesak — town centre",
+
+  "kvalitet_bedz": "Air Purity",
+  "kvalitet_naslov": "Air Quality in Han Pijesak",
+  "kvalitet_uvod": "The Han Pijesak area is characterized by a minimal presence of pollutants — the result of a complete absence of heavy industry and a great distance from urban centres.",
+  "kvalitet_sume_naslov": "Forests",
+  "kvalitet_sume_tekst": "The dominance of coniferous forests — pine, fir and spruce — releases phytoncides, biologically active substances with proven antibacterial effects that strengthen the immune system and reduce respiratory complaints.",
+  "kvalitet_ozon_naslov": "Ozone",
+  "kvalitet_ozon_tekst": "Han Pijesak is recognized as an area with elevated ozone concentration in the lower layers of the atmosphere, which gives the air its freshness and purity and has a positive effect on the respiratory system.",
+  "kvalitet_kiseonik_naslov": "Oxygen",
+  "kvalitet_kiseonik_tekst": "At an altitude of 1,100 m, with dense vegetation, the air is rich in oxygen and exceptionally pleasant to breathe — it improves lung function and contributes to physical endurance.",
+
+  "uticaj_naslov": "Health Benefits",
+  "uticaj_podnaslov": "Scientifically confirmed benefits of staying in a mountain climatic health resort",
+  "uticaj_1_naslov": "Respiratory System",
+  "uticaj_1_opis": "Staying in Han Pijesak has an exceptionally beneficial effect on the respiratory system. Clean air, increased oxygen concentration and the presence of phytoncides from coniferous forests contribute to easier breathing and reduced irritation of the airways. These conditions are particularly beneficial for people with asthma, bronchitis and allergies.",
+  "uticaj_2_naslov": "Circulation",
+  "uticaj_2_opis": "The mountain altitude of around 1,100 metres stimulates the cardiovascular system. The body naturally adapts to these conditions, leading to improved circulation and more efficient distribution of oxygen throughout the body. Regular stays can help strengthen the heart and increase physical endurance.",
+  "uticaj_3_naslov": "Stress Reduction",
+  "uticaj_3_opis": "The natural environment of Han Pijesak, combined with peace, quiet and the absence of urban influences, has a powerful calming effect on the body. Spending time in the forest and fresh air lowers stress hormone levels, promotes relaxation and restores a sense of inner balance.",
+  "uticaj_4_naslov": "Sleep Quality",
+  "uticaj_4_opis": "Fresh mountain air and a natural daily rhythm have a positive effect on sleep quality. Higher oxygen levels in the body contribute to deeper and more peaceful sleep, while the absence of noise and pollution allows for complete rest and a refreshed feeling upon waking.",
+  "uticaj_5_naslov": "Immune System",
+  "uticaj_5_opis": "Thanks to the combination of clean air, phytoncides and a favourable climate, staying in Han Pijesak strengthens the immune system. The body fights infections more effectively, while the natural conditions stimulate its resilience and regeneration.",
+  "uticaj_6_naslov": "Mental Health",
+  "uticaj_6_opis": "Contact with nature has a direct positive impact on mental health. Time spent in a green environment reduces anxiety, improves mood and increases concentration. Han Pijesak provides ideal conditions for a mental reset and an escape from everyday stress.",
+
+  "aktivnosti_naslov": "Activities in Nature",
+  "aktivnosti_podnaslov": "Discover everything Han Pijesak has to offer",
+  "aktivnost_1_naziv": "Hiking",
+  "aktivnost_1_opis": "Trails through the Romanija forest for all fitness levels — from easy walks to demanding ascents.",
+  "aktivnost_2_naziv": "Cycling",
+  "aktivnost_2_opis": "Over 40 km of marked cycling trails through the unspoiled nature of Han Pijesak.",
+  "aktivnost_3_naziv": "Forest Walks",
+  "aktivnost_3_opis": "Enjoy peaceful walks through coniferous forests rich in phytoncides and fresh air.",
+  "aktivnost_4_naziv": "Rest in Nature",
+  "aktivnost_4_opis": "Han Pijesak offers ideal conditions for complete rest and recovery in an unspoiled mountain setting.",
+  "saznaj_vise": "Find out more →",
+
+  "cta_naslov": "Visit Han Pijesak",
+  "cta_tekst": "The mountain climatic health resort awaits you throughout the year — find accommodation and start planning an unforgettable stay in the heart of Romanija.",
+  "cta_smjestaj": "Find accommodation",
+  "cta_kontakt": "Contact us"
+},"znamenitosti": {
+  "hero_naslov": "Landmarks of the Han Pijesak Municipality",
+  "hero_podnaslov": "Discover the historical and cultural heritage that preserves centuries of the past",
+
+  "dvorac_alt": "Karađorđević Palace",
+  "dvorac_tip_badge": "Royal Residence",
+  "dvorac_bedz": "Most significant site",
+  "dvorac_naslov": "Karađorđević Palace",
+  "dvorac_opis_1": "An imposing royal residence built between 1919 and 1924 for King Alexander Karađorđević. Situated at an altitude of 1,100 metres, the palace was renowned for the exceptional quality of its mountain air and the tranquility it offered the royal family.",
+  "dvorac_opis_2": "After decades of neglect and a fire in 2005, the building is currently undergoing restoration that will return it to its former glory and open it to visitors as a cultural and tourist centre.",
+  "dvorac_dugme": "Learn more about the palace →",
+
+  "ostale_bedz": "Historical Sites",
+  "ostale_naslov": "Other Landmarks",
+  "ostale_podnaslov": "Han Pijesak preserves traces of different civilisations and eras — each site carries its own unique story",
+
+  "z1_naziv": "Boračko Brdo Memorial Ossuary",
+  "z1_tip": "Memorial complex",
+  "z1_opis": "The Boračko Brdo Memorial Ossuary is one of the most significant memorial sites in the Han Pijesak area. It holds the remains of 256 fallen fighters of the National Liberation War, giving this place a special historical and symbolic significance. The monumental form of the memorial testifies to an era when such complexes were built as places of collective remembrance and respect for the victims of war. Situated on an elevated position, the ossuary offers a peaceful atmosphere that invites reflection and pays tribute.",
+
+  "z2_naziv": "Serbian Military Cemetery Vrani Kamen",
+  "z2_tip": "Memorial site",
+  "z2_opis": "The Vrani Kamen site is home to one of the most significant military cemeteries from the First World War in the Mount Javor area. It is believed that around 1,000 soldiers of the Šumadija Division Second Levy, who fell during the fighting in 1914, are buried here. This place is a silent monument to courage, sacrifice and the historical heritage of this region. Surrounded by unspoiled nature and mountain scenery, the cemetery today holds special memorial and spiritual significance.",
+
+  "z3_naziv": "Underground Military Facility G3",
+  "z3_tip": "Military-historical site",
+  "z3_opis": "The underground military facility G3, located at the Mala Igrišta peak, is one of the most intriguing sites in the Han Pijesak area. Built in the 1950s as part of the secret military infrastructure of the former Yugoslavia, it served as a communications and command hub. The system of underground passages and rooms extends an estimated 500 to 700 metres, lending the facility a particularly mysterious character. Today it is a fascinating destination for enthusiasts of military history, adventure and the exploration of hidden locations.",
+
+  "z4_naziv": "Grave of Jovan Tandarić",
+  "z4_tip": "Historical memorial site",
+  "z4_opis": "The grave of Jovan Tandarić, better known as Jovo Tandarija, is located in the village of Bobica and is a unique site connected to the hajduk history of the Romanija region. Jovan Tandarić is considered the last hajduk of this area, a man whose name has been preserved in local traditions and folk tales. His life symbolises the spirit of freedom, resistance and the legendary hajduk tradition for which Romanija is widely known. Today the site represents a fusion of history, legend and the collective memory of the Romanija region.",
+
+  "z5_naziv": "Old Town of Pošijak",
+  "z5_tip": "Historical site",
+  "z5_opis": "The Old Town of Pošijak is one of the oldest known fortifications in the Han Pijesak area and an important witness to the medieval history of the region. It is believed to have been built between the 11th and 12th centuries at a strategically important location near Pjenovac. Its position allowed surveillance of a wide area and control of key routes through the mountainous terrain of eastern Bosnia. Although only the remains of the former fortification survive today, the site still carries a strong historical imprint and attracts lovers of archaeology, history and cultural heritage.",
+
+  "z6_naziv": "Stećak Necropoles",
+  "z6_tip": "Cultural-historical heritage",
+  "z6_opis": "The stećak necropoles at the Pokajnica (Mramorje) and Podgroblje (Luka) sites in the village of Nevačka represent one of the most significant medieval heritage sites of the Han Pijesak municipality. A total of 37 stećci — medieval tombstones characteristic of Bosnia and Herzegovina — are found at these sites. These monumental stone markers bear witness to the life, beliefs and artistic expression of the medieval population. Due to their cultural and historical value, the necropoles have been declared a national monument of Bosnia and Herzegovina.",
+
+  "film_bedz": "Did You Know",
+  "film_naslov": "Han Pijesak on the Big Screen",
+  "film_p1": "Few people know that Han Pijesak served as the backdrop for one of the most celebrated Yugoslav war films — Partizanska eskadrila (The Partisan Squadron), filmed in 1979.",
+  "film_p2": "The film depicted the struggle of partisan pilots during the Second World War, and the unspoiled nature and terrain around Han Pijesak provided the perfect setting for epic action scenes. The mountains, forests and open spaces of the municipality were ideal for filming aerial sequences.",
+  "film_p3": "Partizanska eskadrila remains one of the most expensive and ambitious Yugoslav film productions of its era, and Han Pijesak takes pride in having been part of that history.",
+  "film_detalj_film_labela": "Film",
+  "film_detalj_film_vrijednost": "Partizanska eskadrila",
+  "film_detalj_godina_labela": "Year",
+  "film_detalj_godina_vrijednost": "1979",
+  "film_detalj_zanr_labela": "Genre",
+  "film_detalj_zanr_vrijednost": "War / Action",
+  "film_detalj_lokacija_labela": "Filming location",
+  "film_detalj_lokacija_vrijednost": "Han Pijesak and surroundings",
+  "film_poster_naziv": "Partizanska\neskadrila"
+},
+
+"dvorac": {
+  "hero_alt": "Karađorđević Palace",
+  "hero_bedz": "Royal Residence",
+  "hero_naslov": "Karađorđević Palace",
+  "hero_podnaslov": "An imposing testament to the royal past of Han Pijesak, built between 1919 and 1924 for King Alexander.",
+  "hero_nazad": "← Landmarks",
+
+  "o_bedz": "About the building",
+  "o_naslov": "History and Significance",
+  "o_p1": "Karađorđević Palace is one of the most significant historical buildings in the Han Pijesak municipality. Built between 1919 and 1924 as a summer residence for King Alexander Karađorđević, the palace was renowned for the exceptional quality of its mountain air and its high ozone concentration.",
+  "o_p2": "Situated at an altitude of around 1,100 metres, it offered the perfect setting for rest and affairs of state, far from the bustle of the city. During its golden era it was the centre of the social and diplomatic life of the Kingdom of Yugoslavia.",
+  "o_p3": "After the Second World War it changed its purpose and was used by Josip Broz Tito. The tragic fire of 2005 destroyed much of the original interior, but the walls still bear witness to the building's former grandeur.",
+
+  "info_izgradnja_labela": "Year of construction",
+  "info_izgradnja_vrijednost": "1919–1924",
+  "info_narucilac_labela": "Commissioned by",
+  "info_narucilac_vrijednost": "King Alexander Karađorđević",
+  "info_visina_labela": "Altitude",
+  "info_visina_vrijednost": "~1,100 m",
+  "info_stil_labela": "Architectural style",
+  "info_stil_vrijednost": "Austro-Hungarian Romanticism",
+  "info_znacaj_labela": "Tourist significance",
+  "info_znacaj_vrijednost": "Cultural-historical monument",
+
+  "hist_bedz": "Through the centuries",
+  "hist_naslov": "History of the Palace",
+  "hist_podnaslov": "One hundred years of turbulent history through wars, rulers and change",
+
+  "hist_1_godina": "1919–1924",
+  "hist_1_naslov": "Construction of the Palace",
+  "hist_1_tekst": "In the late 19th and early 20th centuries, the Han Pijesak area attracted the attention of Austro-Hungarian experts who conducted measurements of air quality. They established that the region had an exceptionally high concentration of ozone, leading it to be regarded as a natural climatic health resort and an ideal place for rest and recovery.\n\nBased on these findings, a decision was made to build a royal residence in the area. Construction of the palace began in 1919 on the orders of King Alexander Karađorđević and was completed just two years later.\n\nBy 1924 the wider complex with accompanying buildings had been completed, creating a representative space for the royal family and senior state officials.",
+
+  "hist_2_godina": "1920–1941",
+  "hist_2_naslov": "The Golden Era",
+  "hist_2_tekst": "In the interwar period the palace was one of the most important gathering places for the political and social elite of the kingdom. King Alexander Karađorđević frequently stayed here with his family, using the palace both for rest and for conducting affairs of state.\n\nThe residence was visited by numerous ministers, generals and foreign dignitaries. Among the notable guests were Mustafa Kemal Atatürk and Turkish Prime Minister İsmet İnönü, which speaks to the international significance of the location.\n\nDuring this period the palace was a symbol of prestige, political power and the development of Han Pijesak as an elite destination.",
+
+  "hist_3_godina": "1941–1945",
+  "hist_3_naslov": "The Second World War",
+  "hist_3_tekst": "During the Second World War the palace took on an entirely different role and found itself at the centre of wartime events. During the April War of 1941, King Peter II Karađorđević stayed at the palace during the royal withdrawal, along with his entourage and part of the state apparatus.\n\nDue to its significance and location, the building soon became a target for enemy forces. The location of the palace was discovered, and a German air attack followed.\n\nIn these dramatic circumstances the royal family was forced to make a hasty departure, using a secret exit and tunnel in the immediate vicinity of the palace. After the escape they continued towards safer territory.\n\nThe palace suffered significant damage during the war, and its original function as a royal residence came to a complete end.",
+
+  "hist_4_godina": "1945–1991",
+  "hist_4_naslov": "The Tito Era",
+  "hist_4_tekst": "After the end of the war the palace was restored in 1946 and adapted to the new social and political circumstances. During the period of socialist Yugoslavia it was given a new purpose and became known as 'Tito's Palace'.\n\nAlthough it no longer served a royal function, the palace retained a certain significance as a representative building. It was used for stays by political and military officials, as well as for rest and occasional meetings.\n\nOver time the significance of the palace began to wane. Changes in society and insufficient investment in upkeep led to the gradual neglect of the building.\n\nAlthough formally still in use, it lost much of its former glory and the prestigious role it had played in previous eras.",
+
+  "hist_5_godina": "2005",
+  "hist_5_naslov": "The Fire",
+  "hist_5_tekst": "One of the darkest moments in the history of the palace occurred in 2005, when a major fire engulfed the complex. In the blaze the building was almost entirely destroyed, and a large part of its structure and interior was irretrievably lost.\n\nThe fire left a deep mark not only on the building itself, but also in the consciousness of the local community. The palace, which had for decades been a symbol of the history and identity of the region, was reduced to ruins.\n\nAfter the fire the building remained neglected and without adequate protection for many years, but despite this its historical significance and potential for restoration were preserved.",
+
+  "hist_6_godina": "2020–present",
+  "hist_6_naslov": "The Restoration Begins",
+  "hist_6_tekst": "In recent years a process of restoration has been initiated with the aim of returning the palace to its former appearance and significance. Work is being carried out under the supervision of institutions for the protection of cultural and historical heritage.\n\nThe reconstruction has been designed to follow the original appearance from the Karađorđević era as faithfully as possible, with minimal adaptations to modern standards.\n\nIt is planned that the palace will serve multiple purposes, including a museum, representative apartments, a wine cellar and an events space.\n\nThe restoration of this complex represents an important step in the preservation of cultural heritage and a significant opportunity for the development of tourism in the region.",
+
+  "bud_bedz": "Restoration and development",
+  "bud_naslov": "Today and the Future",
+  "bud_podnaslov": "The palace is entering a new era — planned facilities that will transform it into a cultural and tourist centre for the region",
+  "bud_1_naziv": "Museum",
+  "bud_1_opis": "A permanent exhibition on the history of the palace and the Karađorđević royal family.",
+  "bud_2_naziv": "Wine Cellar",
+  "bud_2_opis": "A tasting centre for local wines and spirits in an authentic setting.",
+  "bud_3_naziv": "Apartments",
+  "bud_3_opis": "Luxury accommodation in the restored wings of the palace for a truly special experience.",
+  "bud_4_naziv": "Events Space",
+  "bud_4_opis": "A grand hall for conferences, weddings and cultural events.",
+
+  "cta_naslov": "Visit Han Pijesak",
+  "cta_tekst": "Plan your visit and immerse yourself in the rich history of this mountain municipality.",
+  "cta_smjestaj": "Find accommodation",
+  "cta_nazad": "← All landmarks"
+},"kontakt": {
+  "hero_naslov": "Contact Us",
+  "hero_podnaslov": "We are here to answer all your questions",
+
+  "info_naslov": "Contact Details",
+  "adresa": "Aleksandra Karađorđevića 4, Han Pijesak",
+  "telefon": "+387 66 787 850",
+  "email": "tohanpijesak@gmail.com",
+
+  "radno_naslov": "Working Hours",
+  "radno_vrijeme": [
+    { "dan": "Monday – Friday", "vrijeme": "07:00 – 15:00" },
+    { "dan": "Saturday",        "vrijeme": "Closed" },
+    { "dan": "Sunday",          "vrijeme": "Closed" }
+  ],
+  "zatvoreno": "Closed",
+  "mapa_title": "Location of the Han Pijesak Tourist Organization",
+
+  "forma_naslov": "Send Us a Message",
+  "ime_label": "Full Name",
+  "ime_placeholder": "e.g. Maria Petrović",
+  "email_label": "Email Address",
+  "email_placeholder": "e.g. maria@email.com",
+  "telefon_label": "Phone Number",
+  "telefon_placeholder": "e.g. +387 61 123 456",
+  "tip_label": "Enquiry Type",
+  "tip_placeholder": "-- Select enquiry type --",
+  "tipovi_upita": [
+    "General Enquiry",
+    "Accommodation",
+    "Events",
+    "Mountain Tourism",
+    "Health Tourism",
+    "Media and Press",
+    "Other"
+  ],
+  "naslov_label": "Message Subject",
+  "naslov_placeholder": "Brief description of your message",
+  "poruka_label": "Message",
+  "poruka_placeholder": "Write your message here...",
+  "dugme_posalji": "Send Message →",
+
+  "validacija_ime": "Full name is required.",
+  "validacija_email": "Email address is required.",
+  "validacija_email_format": "Email address is not valid.",
+  "validacija_tip": "Please select an enquiry type.",
+  "validacija_naslov": "Message subject is required.",
+  "validacija_poruka": "Message cannot be empty.",
+
+  "uspjeh_naslov": "Message Sent!",
+  "uspjeh_tekst": "Thank you for your message. We will get back to you as soon as possible.",
+  "uspjeh_dugme": "Send Another Message"
+}
+}

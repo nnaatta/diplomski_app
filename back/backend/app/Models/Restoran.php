@@ -3,64 +3,56 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Restoran extends Model
 {
+    protected $table = 'restorani';
+
     protected $fillable = [
-
-        'id',
-        'naziv',
-        'opis',
-        'hrana_preporuka',
-        'radno_vrijeme',
-        'aktivan',
-        'lokacija_id',
-        'kontakt_osoba_id',
-
-
+        'naziv', 'opis', 'radno_vrijeme', 'aktivan',
+        'lokacija_id', 'kontakt_osoba_id',
     ];
+
     protected $casts = [
-        'aktivan' => 'boolean'
+        'aktivan' => 'boolean',
     ];
 
-    public function lokacija() {
-
-
-        return $this->belongsTo(Lokacija::class, 'lokacija_id');
-        
-        
+    // BelongsToMany — pivot restoran_slike ima glavna i aktivan
+    public function slike(): BelongsToMany
+    {
+        return $this->belongsToMany(Slika::class, 'restoran_slike', 'restoran_id', 'slika_id')
+                    ->withPivot('glavna', 'aktivan')
+                    ->withTimestamps()
+                    ->orderByPivot('glavna', 'desc');
     }
 
-    public function kontakt_osoba() {
-
-
-         return $this->belongsTo(Kontakt_osoba::class, 'kontakt_osoba_id');
-        
-        
+    // FIX: restoran_pogodnosti NEMA timestamps — ukloniti withTimestamps()
+    public function pogodnosti(): BelongsToMany
+    {
+        return $this->belongsToMany(
+            Pogodnosti::class,
+            'restoran_pogodnosti',
+            'restoran_id',
+            'pogodnost_id'
+        );
+        // NE koristimo withTimestamps() jer tabela nema created_at/updated_at
     }
 
-     public function restoran_pogodnosti() {
-
-
-         return $this->hasMany(Restoran_pogodnosti::class, 'restoran_id');
-        
-        
-    }
-    public function pogodnosti() {
-    return $this->belongsToMany(
-        Pogodnosti::class,      
-        'restoran_pogodnosti',  
-        'restoran_id',          
-        'pogodnost_id'          
-    );
-}
-
-    public function restoran_slike() {
-
-
-         return $this->hasMany(restoranSlike::class, 'restoran_id');
-        
-        
+    public function preporukeHrane(): HasMany
+    {
+        return $this->hasMany(PreporukaHrane::class, 'restoran_id');
     }
 
+    public function lokacija(): BelongsTo
+    {
+        return $this->belongsTo(Lokacija::class);
+    }
+
+    public function kontaktOsoba(): BelongsTo
+    {
+        return $this->belongsTo(Kontakt_osoba::class, 'kontakt_osoba_id');
+    }
 }

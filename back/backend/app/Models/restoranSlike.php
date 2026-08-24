@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class restoranSlike extends Model
 {
+    protected $table = 'restoran_slike';
+    
     protected $fillable = [
 
         'id',

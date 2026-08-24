@@ -1,0 +1,118 @@
+{
+  "atrakcije": [
+    {
+      "id": 1,
+      "naziv": "Vodopad Skakavac",
+      "naziv_en": "Skakavac Waterfall",
+      "slikaKey": "skakavac",
+      "opis": "Vodopad Skakavac, smješten u selu Žeravice kod Han Pijeska, predstavlja jednu od najimpresivnijih prirodnih atrakcija Romanijskog kraja. Nastao je djelovanjem vode kroz naslage sedrenih stijena, formirajući jedinstvenu travertinsku strukturu koja podsjeća na prirodni kameni baldahin. Okružen gustom četinarskom šumom i netaknutim planinskim pejzažem, pruža poseban osjećaj mira, svježine i povezanosti s prirodom. Zahvaljujući uređenoj planinarskoj stazi, lokalitet je danas pristupačan posjetiocima i predstavlja nezaobilaznu destinaciju za ljubitelje prirode, fotografije i aktivnog odmora.",
+      "opis_en": "The Skakavac Waterfall, located in the village of Žeravice near Han Pijesak, is one of the most impressive natural attractions of the Romanija region. It was formed by water flowing through layers of travertine rock, creating a unique structure resembling a natural stone canopy. Surrounded by dense coniferous forest and untouched mountain scenery, it offers a special sense of peace, freshness and connection with nature. Thanks to a well-maintained hiking trail, the site is now accessible to visitors and is a must-see destination for lovers of nature, photography and active recreation.",
+      "tip": "Prirodna atrakcija",
+      "tip_en": "Natural Attraction",
+      "slug": "vodopad-skakavac",
+      "gradijent": "linear-gradient(135deg, #a3c4a8 0%, #588157 50%, #2a5a30 100%)",
+      "detalji": [
+        { "ikona": "map", "labela": "Lokacija", "labela_en": "Location", "vrijednost": "Žeravice", "vrijednost_en": "Žeravice" },
+        { "ikona": "walking", "labela": "Pristup", "labela_en": "Access", "vrijednost": "Planinarska staza", "vrijednost_en": "Hiking trail" },
+        { "ikona": "waves", "labela": "Posebnost", "labela_en": "Highlight", "vrijednost": "Travertinski slap", "vrijednost_en": "Travertine waterfall" }
+      ]
+    },
+    {
+      "id": 2,
+      "naziv": "Kanjon rijeke Varošnice",
+      "naziv_en": "Varošnica River Canyon",
+      "slikaKey": "varosnica",
+      "opis": "Kanjon rijeke Varošnice, dug približno četiri kilometra, predstavlja jedan od najupečatljivijih prirodnih pejzaža opštine Han Pijesak. Duboko usječene stijene, bistri planinski tokovi i bogata vegetacija stvaraju ambijent netaknute divljine koji ostavlja snažan utisak na posjetioce. Posebnu atraktivnost lokalitetu daje spoj rijeke Varošnice sa potokom Skakavac, kao i prisustvo snažnih izvora koji ovom prostoru daju dodatnu hidrološku i ekološku vrijednost. Kanjon je idealno mjesto za planinarenje, istraživanje prirode i uživanje u autentičnoj planinskoj atmosferi.",
+      "opis_en": "The canyon of the Varošnica River, about four kilometers long, is one of the most striking natural landscapes in the Han Pijesak municipality. Deeply carved rocks, clear mountain streams and rich vegetation create an atmosphere of untouched wilderness that leaves a strong impression on visitors. The site is made even more attractive by the confluence of the Varošnica River with the Skakavac stream, as well as the presence of powerful springs that add hydrological and ecological value to the area. The canyon is an ideal place for hiking, exploring nature and enjoying the authentic mountain atmosphere.",
+      "tip": "Prirodna atrakcija",
+      "tip_en": "Natural Attraction",
+      "slug": "kanjon-varosnice",
+      "gradijent": "linear-gradient(135deg, #7ecbd4 0%, #3a8fa3 50%, #1a4a6a 100%)",
+      "detalji": [
+        { "ikona": "map", "labela": "Lokacija", "labela_en": "Location", "vrijednost": "Varošnica", "vrijednost_en": "Varošnica" },
+        { "ikona": "ruler", "labela": "Dužina", "labela_en": "Length", "vrijednost": "oko 4 km", "vrijednost_en": "approx. 4 km" },
+        { "ikona": "river", "labela": "Ambijent", "labela_en": "Setting", "vrijednost": "Kanjon i izvori", "vrijednost_en": "Canyon and springs" }
+      ]
+    },
+    {
+      "id": 3,
+      "naziv": "Pećinski kompleks Komnica",
+      "naziv_en": "Komnica Cave Complex",
+      "slikaKey": "pecina",
+      "opis": "Pećine Mala i Velika Komnica, smještene u blizini izletišta Komnica unutar vrha Veliki Žep, predstavljaju jedan od najmističnijih prirodnih lokaliteta Han Pijeska. Istraživanja speleologa pokazala su da Velika Komnica dostiže dužinu veću od 3 kilometra, dok istraživanja Male Komnice još uvijek nisu u potpunosti završena. Kompleks karakterišu podzemni hodnici, impresivne stijenske formacije i bogata geološka prošlost koja ga čini izuzetno vrijednim prirodnim fenomenom. Zbog zahtjevnog pristupa, pećine su dostupne isključivo uz odgovarajuću opremu i stručno vođstvo.",
+      "opis_en": "The Mala and Velika Komnica caves, located near the Komnica excursion site within the Veliki Žep peak, represent one of the most mysterious natural sites in Han Pijesak. Speleological research has shown that Velika Komnica extends for more than 3 kilometers, while exploration of Mala Komnica is still ongoing. The complex is characterized by underground passages, impressive rock formations and a rich geological history that makes it an extremely valuable natural phenomenon. Due to the demanding access, the caves are accessible only with appropriate equipment and expert guidance.",
+      "tip": "Prirodna atrakcija",
+      "tip_en": "Natural Attraction",
+      "slug": "pecine-komnica",
+      "gradijent": "linear-gradient(135deg, #b8a8c8 0%, #6a5888 50%, #2a1a48 100%)",
+      "detalji": [
+        { "ikona": "map", "labela": "Lokacija", "labela_en": "Location", "vrijednost": "Komnica", "vrijednost_en": "Komnica" },
+        { "ikona": "helmet", "labela": "Oprema", "labela_en": "Equipment", "vrijednost": "Obavezna", "vrijednost_en": "Required" },
+        { "ikona": "compass", "labela": "Pristup", "labela_en": "Access", "vrijednost": "Uz stručnog vodiča", "vrijednost_en": "With expert guide" }
+      ]
+    },
+    {
+      "id": 4,
+      "naziv": "Vazdušna banja Han Pijesak",
+      "naziv_en": "Han Pijesak Climatic Spa",
+      "slikaKey": "vazdusnaBanja",
+      "opis": "Han Pijesak je decenijama poznat po izuzetno čistom planinskom vazduhu i visokoj koncentraciji ozona, zbog čega je još početkom 20. vijeka prepoznat kao prirodna vazdušna banja. Spoj guste četinarske šume, planinske klime i netaknute prirode stvara ambijent koji pogoduje odmoru, rekreaciji i oporavku organizma. Upravo zbog ovih prirodnih karakteristika ovo područje ima snažan potencijal za razvoj zdravstvenog i wellness turizma.",
+      "opis_en": "For decades, Han Pijesak has been known for its exceptionally clean mountain air and high ozone concentration, which led to it being recognized as a natural climatic health resort as early as the beginning of the 20th century. The combination of dense coniferous forest, mountain climate and untouched nature creates an environment that promotes rest, recreation and recovery. Thanks to these natural characteristics, the area has strong potential for the development of health and wellness tourism.",
+      "tip": "Prirodna atrakcija",
+      "tip_en": "Natural Attraction",
+      "slug": "vazdusna-banja",
+      "gradijent": "linear-gradient(135deg, #cce8cc 0%, #74a57f 50%, #355e3b 100%)",
+      "detalji": [
+        { "ikona": "snowflake", "labela": "Posebnost", "labela_en": "Highlight", "vrijednost": "Visoka koncentracija ozona", "vrijednost_en": "High ozone concentration" },
+        { "ikona": "forest", "labela": "Ambijent", "labela_en": "Setting", "vrijednost": "Četinarske šume", "vrijednost_en": "Coniferous forests" },
+        { "ikona": "heart", "labela": "Potencijal", "labela_en": "Potential", "vrijednost": "Zdravstveni turizam", "vrijednost_en": "Health tourism" }
+      ]
+    },
+    {
+      "id": 5,
+      "naziv": "Vidikovci Javora",
+      "naziv_en": "Javor Viewpoints",
+      "slikaKey": "vidikovac",
+      "opis": "Prirodni vidikovci Romanijskog područja pružaju spektakularne panoramske poglede na planinske lance, šumska prostranstva i doline istočne Bosne. Smješteni na uzvišenim tačkama, predstavljaju idealna mjesta za predah, fotografisanje i uživanje u pejzažu koji se mijenja kroz sva godišnja doba. Posebno su atraktivni u rano jutro i predvečerje, kada svjetlost dodatno naglašava reljef i prirodne kontraste krajolika. Ovi lokaliteti predstavljaju spoj mira, širine prostora i autentične ljepote Romanije.",
+      "opis_en": "The natural viewpoints of the Romanija area offer spectacular panoramic views of mountain ranges, forests and the valleys of eastern Bosnia. Located at elevated points, they are ideal places to rest, take photographs and enjoy a landscape that changes through every season. They are especially attractive in the early morning and at dusk, when the light further highlights the relief and natural contrasts of the landscape. These sites combine peace, open space and the authentic beauty of Romanija.",
+      "tip": "Vidikovac",
+      "tip_en": "Viewpoint",
+      "slug": "romanijski-vidikovci",
+      "gradijent": "linear-gradient(135deg, #d6e4f0 0%, #6c91bf 50%, #2d5d7b 100%)",
+      "detalji": [
+        { "ikona": "map", "labela": "Područje", "labela_en": "Area", "vrijednost": "Romanija", "vrijednost_en": "Romanija" },
+        { "ikona": "camera", "labela": "Idealno za", "labela_en": "Ideal for", "vrijednost": "Fotografiju", "vrijednost_en": "Photography" },
+        { "ikona": "mountain", "labela": "Doživljaj", "labela_en": "Experience", "vrijednost": "Panoramski pogled", "vrijednost_en": "Panoramic view" }
+      ]
+    }
+  ],
+  "prirodniSpomenici": [
+    {
+      "naziv": "Maljava breza",
+      "naziv_en": "Downy Birch",
+      "latinskiNaziv": "Betula pubescens",
+      "opis": "Maljava breza predstavlja rijetku planinsku vrstu breze koja je prepoznatljiva po nježnim, blago dlakavim listovima i prilagođenosti hladnijim klimatskim uslovima. Na području Han Pijeska ima poseban značaj kao zaštićeni prirodni lokalitet i vrijedan dio biljnog biodiverziteta ovog kraja.",
+      "opis_en": "The downy birch is a rare mountain birch species recognizable by its soft, slightly hairy leaves and adaptation to colder climates. In the Han Pijesak area it has special significance as a protected natural site and a valuable part of the region's plant biodiversity.",
+      "ikona": "🌳",
+      "boja": "#588157"
+    },
+    {
+      "naziv": "Zelena duglazija",
+      "naziv_en": "Green Douglas Fir",
+      "latinskiNaziv": "Pseudotsuga menziesii",
+      "opis": "Grupa zelene duglazije na području Gornjeg Ljeskovca predstavlja vrijedan dendrološki lokalitet i zanimljiv primjer vrste koja se uspješno prilagodila planinskim uslovima Han Pijeska. Impozantna visina, snažno stablo i gusta krošnja čine ovu vrstu upečatljivim dijelom lokalnog pejzaža.",
+      "opis_en": "The group of green Douglas firs in the Gornji Ljeskovac area represents a valuable dendrological site and an interesting example of a species that has successfully adapted to the mountain conditions of Han Pijesak. Their impressive height, sturdy trunk and dense crown make this species a striking part of the local landscape.",
+      "ikona": "🌲",
+      "boja": "#3a7a50"
+    },
+    {
+      "naziv": "Pančićeva omorika",
+      "naziv_en": "Pančić's Spruce",
+      "latinskiNaziv": "Picea omorika",
+      "opis": "Pančićeva omorika jedna je od najrjeđih i najznačajnijih endemskih vrsta četinara Balkana. Poznata po elegantnom, uskom obliku krošnje i izuzetnoj otpornosti, predstavlja dragocjen dio prirodnog nasljeđa i simbol bogatstva flore ovog područja.",
+      "opis_en": "Pančić's spruce is one of the rarest and most significant endemic conifer species of the Balkans. Known for its elegant, narrow crown shape and exceptional resilience, it represents a precious part of the natural heritage and a symbol of the richness of the region's flora.",
+      "ikona": "🌿",
+      "boja": "#2a5a3a"
+    }
+  ]
+}

@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Blog_post extends Model
 {
+
+    protected $table = 'blog_postovi';
+    
     protected $fillable = [
 
         'id',

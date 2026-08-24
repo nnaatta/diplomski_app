@@ -3,10 +3,13 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { useTranslation } from "react-i18next";
 import "./Navbar.css";
 import logo from "../assets/logoTO.png";
 
 function MyNavbar() {
+  const { t, i18n } = useTranslation();
+
   return (
     <Navbar expand="lg" className="moj_navbar" fixed="top">
       <Container>
@@ -17,67 +20,87 @@ function MyNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={NavLink} to="/">
-              Početna
+              {t("nav.pocetna")}
             </Nav.Link>
             <Nav.Link as={NavLink} to="/o-to">
-              O TO
+              {t("nav.o_to")}
             </Nav.Link>
 
             <Nav.Link as={NavLink} to="/o-Han-Pijesku">
-              O Han Pijesku
+              {t("nav.o_han_pijesku")}
             </Nav.Link>
 
-            <NavDropdown title="Istraži" id="dropdown-istrazi">
+            <NavDropdown title={t("nav.istrazi")} id="dropdown-istrazi">
               <NavDropdown.Item as={NavLink} to="/znamenitosti">
-                Znamenitosti
+                {t("nav.znamenitosti")}
               </NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/atrakcije">
-                Atrakcije
+                {t("nav.atrakcije")}
               </NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/vjerski-objekti">
-                Vjerski objekti
+                {t("nav.vjerski_objekti")}
               </NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/flora-i-fauna">
-                Flora i fauna
+                {t("nav.flora_fauna")}
               </NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/zdravstveni-turizam">
-                Zdravstveni turizam
+                {t("nav.zdravstveni_turizam")}
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="Aktivnosti" id="dropdown-aktivnosti">
+            <NavDropdown title={t("nav.aktivnosti")} id="dropdown-aktivnosti">
               <NavDropdown.Item as={NavLink} to="/aktivni-odmor">
-                Aktivni odmor
+                {t("nav.aktivni_odmor")}
               </NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/sport-i-rekreacija">
-                Sport i rekreacija
+                {t("nav.sport_rekreacija")}
               </NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/lov-i-ribolov">
-                Lov i ribolov
+                {t("nav.lov_ribolov")}
               </NavDropdown.Item>
             </NavDropdown>
 
-            <NavDropdown title="Turistički servisi" id="dropdown-servisi">
+            <NavDropdown
+              title={t("nav.turisticki_servisi")}
+              id="dropdown-servisi"
+            >
               <NavDropdown.Item as={NavLink} to="/smjestaj">
-                Smještaj
+                {t("nav.smjestaj")}
               </NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/gastronomija">
-                Gastronomija
+                {t("nav.gastronomija")}
               </NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/manifestacije">
-                Manifestacije
+                {t("nav.manifestacije")}
               </NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link as={NavLink} to="/blog">
-              Blog
+              {t("nav.blog")}
             </Nav.Link>
             <Nav.Link as={NavLink} to="/galerija">
-              Galerija
+              {t("nav.galerija")}
             </Nav.Link>
             <Nav.Link as={NavLink} to="/kontakt">
-              Kontakt
+              {t("nav.kontakt")}
             </Nav.Link>
+
+            {/* Jezik dugmici */}
+            {/* Jezik switcher */}
+            <div className="lang-switcher">
+              <button
+                className={i18n.language === "sr" ? "active" : ""}
+                onClick={() => i18n.changeLanguage("sr")}
+              >
+                SR
+              </button>
+              <button
+                className={i18n.language === "en" ? "active" : ""}
+                onClick={() => i18n.changeLanguage("en")}
+              >
+                EN
+              </button>
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>

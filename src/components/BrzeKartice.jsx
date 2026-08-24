@@ -1,35 +1,37 @@
 import React from 'react';
 import './BrzeKartice.css';
-import { IoSearch } from "react-icons/io5";
+import { useTranslation } from 'react-i18next';
+import { IoSearch, IoCalendarOutline } from "react-icons/io5";
 import { RiHome4Line } from "react-icons/ri";
-import { IoCalendarOutline } from "react-icons/io5";
-
-const kartice = [
-  {
-    ikona: <IoSearch/>,
-    naslov: 'Istraži destinaciju',
-    opis: 'Upoznaj Han Pijesak — istoriju, kulturu i sve što ovo mjesto čini posebnim.',
-    link: '/o-han-pijesku',
-    cta: 'Saznaj više',
-  },
-  {
-    ikona: <RiHome4Line/>,
-    naslov: 'Pronađi smještaj',
-    opis: 'Od planinarskih domova do privatnih apartmana — nađi savršeno mjesto za odmor.',
-    link: '/smjestaj',
-    cta: 'Pregledaj smještaj',
-    istaknuta: true,
-  },
-  {
-    ikona: <IoCalendarOutline/>,
-    naslov: 'Predstojeći događaji',
-    opis: 'Festivali, manifestacije i tradicija — ne propusti ono što Han Pijesak priprema.',
-    link: '/manifestacije',
-    cta: 'Pogledaj program',
-  },
-];
 
 function BrzeKartice() {
+  const { t } = useTranslation();
+
+  const kartice = [
+    {
+      ikona: <IoSearch />,
+      naslov: t('brze_kartice.kartica1_naslov'),
+      opis: t('brze_kartice.kartica1_opis'),
+      link: '/o-han-pijesku',
+      cta: t('brze_kartice.kartica1_cta'),
+    },
+    {
+      ikona: <RiHome4Line />,
+      naslov: t('brze_kartice.kartica2_naslov'),
+      opis: t('brze_kartice.kartica2_opis'),
+      link: '/smjestaj',
+      cta: t('brze_kartice.kartica2_cta'),
+      istaknuta: true,
+    },
+    {
+      ikona: <IoCalendarOutline />,
+      naslov: t('brze_kartice.kartica3_naslov'),
+      opis: t('brze_kartice.kartica3_opis'),
+      link: '/manifestacije',
+      cta: t('brze_kartice.kartica3_cta'),
+    },
+  ];
+
   return (
     <section className="brze-kartice">
       <div className="brze-kartice__grid">

@@ -70,7 +70,7 @@ function Lightbox({ slika, onZatvori, onPrethodna, onSljedeca }) {
       >‹</button>
 
       <div className="GAL_lightbox__sadrzaj" onClick={(e) => e.stopPropagation()}>
-        <div className="GAL_lightbox__slika" style={{ background: grad }} />
+        {slika.url ? <img src={slika.url} alt={slika.opis} className="GAL_lightbox__slika" /> : <div className="GAL_lightbox__slika" style={{ background: grad }} />}
         <div className="GAL_lightbox__info">
           <span className="GAL_lightbox__kat">{slika.kategorija}</span>
           <span className="GAL_lightbox__opis">{slika.opis}</span>

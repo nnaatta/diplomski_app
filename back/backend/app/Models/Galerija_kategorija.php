@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Galerija_kategorija extends Model
 {
+
+    protected $table = 'galerija_kategorije';
+
     protected $fillable = [
 
         'id',

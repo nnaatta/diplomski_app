@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Poruka extends Model
 {
+
+    protected $table = 'poruke';
+    
     protected $fillable = [
 
         'id',

@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Slika extends Model
 {
+
+    protected $table = 'slike';
+    
     protected $fillable = [
 
         'id',
@@ -41,5 +44,14 @@ class Slika extends Model
          return $this->hasMany(blogSlike::class, 'slika_id');
         
         
+    }
+
+    public function turisticki_sadrzaji() {
+        return $this->hasMany(Turisticki_sadrzaj::class);
+    }
+
+
+    public function dogadjaji() {
+        return $this->hasMany(Dogadjaj::class);
     }
 }

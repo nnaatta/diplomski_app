@@ -1,0 +1,117 @@
+{
+  "sumskaEkosistemSlike": [
+    { "slikaKey": "smrca", "opis": "Smrča", "opis_en": "Spruce" },
+    { "slikaKey": "jela", "opis": "Jela", "opis_en": "Fir" },
+    { "slikaKey": "bijeliBor", "opis": "Bijeli bor", "opis_en": "White pine" },
+    { "slikaKey": "hrast", "opis": "Hrast", "opis_en": "Oak" },
+    { "slikaKey": "bukva", "opis": "Bukva", "opis_en": "Beech" }
+  ],
+  "ljekovitoBiljeSlike": [
+    { "slikaKey": "kantarion", "opis": "Kantarion", "opis_en": "St. John's Wort" },
+    { "slikaKey": "srijemus", "opis": "Srijemuš", "opis_en": "Wild garlic" },
+    { "slikaKey": "hajduckaTrava", "opis": "Hajdučka trava", "opis_en": "Hajdučka trava (Achillea)" },
+    { "slikaKey": "majcinaDusica", "opis": "Majčina dušica", "opis_en": "Wild thyme" },
+    { "slikaKey": "malina", "opis": "Malina", "opis_en": "Raspberry" },
+    { "slikaKey": "kupina", "opis": "Kupina", "opis_en": "Blackberry" },
+    { "slikaKey": "glog", "opis": "Glog", "opis_en": "Hawthorn" },
+    { "slikaKey": "smreka", "opis": "Smreka", "opis_en": "Juniper" },
+    { "slikaKey": "kicica", "opis": "Kičica", "opis_en": "Dogwood" }
+  ],
+  "gljiveSlike": [
+    { "slikaKey": "vrganj", "opis": "Vrganj — kralj romanijskih šuma", "opis_en": "Porcini — king of the Romanija forests" },
+    { "slikaKey": "lisicarka", "opis": "Lisičarka — zlatna delikatesa šume", "opis_en": "Chanterelle — the forest's golden delicacy" },
+    { "slikaKey": "smrcak", "opis": "Smrčak", "opis_en": "Morel" },
+    { "slikaKey": "bukovaca", "opis": "Bukovača", "opis_en": "Oyster mushroom" },
+    { "slikaKey": "krasnica", "opis": "Krasnica", "opis_en": "Krasnica (Macrolepiota)" },
+    { "slikaKey": "redusa", "opis": "Reduša", "opis_en": "Reduša (Lactarius)" }
+  ],
+  "zasticeneBiljke": [
+    {
+      "naziv": "Tisa",
+      "naziv_en": "Yew",
+      "opis": "Dugovječna i rijetka vrsta četinara koja raste sporo i može doživjeti nekoliko stotina godina. Zbog prekomjerne eksploatacije u prošlosti danas je zaštićena, a njeno prisustvo ukazuje na očuvane šumske uslove.",
+      "opis_en": "A long-living and rare conifer species that grows slowly and can live for several hundred years. Due to excessive exploitation in the past, it is now protected, and its presence indicates well-preserved forest conditions.",
+      "slike": [{ "slikaKey": "tisa", "opis": "Tisa — zaštićena vrsta četinara", "opis_en": "Yew — a protected conifer species" }]
+    },
+    {
+      "naziv": "Božikovina",
+      "naziv_en": "Holly",
+      "opis": "Zimzelena biljka prepoznatljiva po tamnozelenim listovima i crvenim bobicama. Osim estetske vrijednosti, značajna je kao indikator očuvanih staništa i često se povezuje s tradicijom.",
+      "opis_en": "An evergreen plant recognizable by its dark green leaves and red berries. Besides its aesthetic value, it is significant as an indicator of preserved habitats and is often associated with tradition.",
+      "slike": [{ "slikaKey": "bozikovina", "opis": "Božikovina sa crvenim bobicama", "opis_en": "Holly with red berries" }]
+    },
+    {
+      "naziv": "Jarebika",
+      "naziv_en": "Rowan",
+      "opis": "Drvenasta vrsta poznata po crvenim plodovima bogatim vitaminima. Ima važnu ulogu u ishrani ptica i doprinosi očuvanju biodiverziteta šumskih ekosistema.",
+      "opis_en": "A woody species known for its vitamin-rich red berries. It plays an important role in bird nutrition and contributes to preserving the biodiversity of forest ecosystems.",
+      "slike": [{ "slikaKey": "jarebika", "opis": "Jarebika u jesen", "opis_en": "Rowan in autumn" }]
+    },
+    {
+      "naziv": "Pančićeva omorika",
+      "naziv_en": "Pančić's Spruce",
+      "opis": "Endemska vrsta Balkana i jedna od najznačajnijih biljnih vrsta u regionu. Odlikuje se uskim, elegantnim rastom i velikom otpornošću, a njeno prisustvo ima posebnu naučnu vrijednost.",
+      "opis_en": "An endemic Balkan species and one of the most significant plant species in the region. It is characterized by a narrow, elegant growth and great resilience, and its presence has special scientific value.",
+      "slike": [{ "slikaKey": "panciceva", "opis": "Pančićeva omorika — balkanski endem", "opis_en": "Pančić's spruce — a Balkan endemic" }]
+    },
+    {
+      "naziv": "Jelenski jezik",
+      "naziv_en": "Hart's-tongue Fern",
+      "opis": "Rijetka vrsta paprati koja raste u sjenovitim i vlažnim šumskim predjelima. Njeno prisustvo ukazuje na stabilne mikroklimatske uslove i visok kvalitet prirodnog staništa.",
+      "opis_en": "A rare fern species that grows in shaded and humid forest areas. Its presence indicates stable microclimatic conditions and a high-quality natural habitat.",
+      "slike": [{ "slikaKey": "jelenak", "opis": "Jelenski jezik u šumi", "opis_en": "Hart's-tongue fern in the forest" }]
+    }
+  ],
+  "divljacSlike": [
+    { "slikaKey": "srndac", "opis": "Srndać", "opis_en": "Roe deer (buck)" },
+    { "slikaKey": "srna", "opis": "Srna u prirodnom staništu", "opis_en": "Roe deer in its natural habitat" },
+    { "slikaKey": "svinja", "opis": "Divlja svinja na Romaniji", "opis_en": "Wild boar in Romanija" },
+    { "slikaKey": "zec", "opis": "Zec", "opis_en": "Hare" }
+  ],
+  "pticeSlike": [
+    { "slikaKey": "zmijar", "opis": "Planinski orao nad Romanijom", "opis_en": "Mountain eagle over Romanija" },
+    { "slikaKey": "sova", "opis": "Sova u četinarskoj šumi", "opis_en": "Owl in the coniferous forest" },
+    { "slikaKey": "djetlic", "opis": "Djetlić na stablu bora", "opis_en": "Woodpecker on a pine tree" }
+  ],
+  "ribolovSlike": [
+    { "slikaKey": "pastrmka", "opis": "Pastrmka", "opis_en": "Trout" },
+    { "slikaKey": "rak", "opis": "Rak", "opis_en": "Crayfish" }
+  ],
+  "zasticeneZivotinje": [
+    {
+      "naziv": "Mrki medvjed",
+      "naziv_en": "Brown Bear",
+      "opis": "Najveći predator i strogo zaštićena vrsta. Prisustvo medvjeda u ovim šumama svjedoči o zdravom i nenarušenom ekosistemu planine.",
+      "opis_en": "The largest predator and a strictly protected species. The presence of bears in these forests testifies to a healthy and undisturbed mountain ecosystem.",
+      "slike": [{ "slikaKey": "pozadinaFauna", "opis": "Mrki medvjed", "opis_en": "Brown bear" }]
+    },
+    {
+      "naziv": "Sivi vuk",
+      "naziv_en": "Grey Wolf",
+      "opis": "Zaštićena vrsta čije prisustvo svjedoči o zdravom ekosistemu. Vukovi igraju ključnu ulogu u regulaciji populacija divljači.",
+      "opis_en": "A protected species whose presence testifies to a healthy ecosystem. Wolves play a key role in regulating game populations.",
+      "slike": [{ "slikaKey": "vuk", "opis": "Sivi vuk", "opis_en": "Grey wolf" }]
+    },
+    {
+      "naziv": "Planinski orao",
+      "naziv_en": "Golden Eagle",
+      "opis": "Rijetka ptica grabljivica koja se gnijezdi na stijenama Javor planine. Jedna od najimpresivnijih ptica ovog kraja, simbol slobode i snage.",
+      "opis_en": "A rare bird of prey that nests on the rocks of Mount Javor. One of the most impressive birds in the region, a symbol of freedom and strength.",
+      "slike": [{ "slikaKey": "orao", "opis": "Planinski orao", "opis_en": "Golden eagle" }]
+    },
+    {
+      "naziv": "Vidra",
+      "naziv_en": "Otter",
+      "opis": "Zaštićena vrsta koja živi uz rijeke i potoke Han Pijeska. Prisustvo vidre pouzdani je pokazatelj čistoće vodotoka.",
+      "opis_en": "A protected species that lives along the rivers and streams of Han Pijesak. The presence of otters is a reliable indicator of water cleanliness.",
+      "slike": [{ "slikaKey": "vidra", "opis": "Vidra", "opis_en": "Otter" }]
+    },
+    {
+      "naziv": "Velika lasica - hermelin",
+      "naziv_en": "Stoat (Ermine)",
+      "opis": "Mala, okretna grabljivica poznata po tome što zimi mijenja smeđe krzno u bijelo radi lakšeg prikrivanja u snijegu.",
+      "opis_en": "A small, agile predator known for changing its brown fur to white in winter for better camouflage in the snow.",
+      "slike": [{ "slikaKey": "lasica", "opis": "Lasica", "opis_en": "Stoat" }]
+    }
+  ]
+}

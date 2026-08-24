@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lokacija extends Model
 {
+    protected $table = 'lokacije';
+
     protected $fillable = [
 
         'id',

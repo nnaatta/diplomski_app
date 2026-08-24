@@ -1,72 +1,34 @@
 import React, { useState } from "react";
 import "./LovIRibolov.css";
+import { useTranslation } from "react-i18next";
 import { GiDeer, GiPolarBear, GiForest } from "react-icons/gi";
 import { IoFishSharp } from "react-icons/io5";
 import { FaAward } from "react-icons/fa";
 import { LuCalendarDays,  LuWaves } from "react-icons/lu";
-import rijeke from "../../assets/rijeke.jpg"
+import rijeke from "../../assets/stupcanica.jpg"
+import lov1 from "../../assets/lov1.jpg"
+import lov2 from "../../assets/lov2.jpg"
 
-const lovInfoKartice = [
-  {
-    ikona: <GiForest/>,
-    naziv: "Šumska lovišta",
-    tekst:
-      "Bogati šumski kompleksi Javora — prirodno stanište krupne i sitne divljači.",
-  },
-  {
-    ikona: <GiPolarBear/>,
-    naziv: "Krupna divljač",
-    tekst:
-      "Srna, jelen, divlja svinja i druge vrste krupne divljači karakteristične za ovo područje.",
-  },
-  {
-    ikona: <FaAward/>,
-    naziv: "Lovni turizam",
-    tekst:
-      "Razvijen komercijalni lov i lovnoturistička ponuda za domaće i strane goste.",
-  },
-];
-
-const ribolovInfoKartice = [
-  {
-    ikona: <IoFishSharp/>,
-    naziv: "Potočna pastrmka",
-    tekst:
-      "Jedina vrsta ribe u vodama — minimalna dužina za zadržavanje 25 cm.",
-  },
-  {
-    ikona: <LuCalendarDays/>,
-    naziv: "Sezona ribolova",
-    tekst:
-      "1. marta — 30. septembra · Isključivo na vještačke mamce.",
-  },
-  {
-    ikona: <LuWaves/>,
-    naziv: "Dva sliva",
-    tekst:
-      "Sliv rijeke Bosne (mušičarenje) i sliv Drine (varaličarenje).",
-  },
-];
-
-const ribolovPravila = [
-  "Ribolov isključivo na vještačke mamce",
-  "Minimalna dužina ribe za zadržavanje: 25 cm",
-  "Sezona: 1. marta — 30. septembra",
-  "Obavezna ribolovna dozvola",
-];
+const lovIkone = [<GiForest/>, <GiPolarBear/>, <FaAward/>];
+const ribolovIkone = [<IoFishSharp/>, <LuCalendarDays/>, <LuWaves/>];
 
 function LovRibolov() {
+  const { t } = useTranslation();
   const [aktivniTab, setAktivniTab] = useState("lov");
+
+  const lovInfoKartice = t('lov_ribolov.lov_kartice', { returnObjects: true });
+  const ribolovInfoKartice = t('lov_ribolov.ribolov_kartice', { returnObjects: true });
+  const ribolovPravila = t('lov_ribolov.pravila_lista', { returnObjects: true });
 
   return (
     <section className="lr">
 
       {/* ===== HERO ===== */}
       <div className="lr__hero">
-        <p className="lr__hero-natpis">Istraži</p>
-        <h1 className="lr__hero-naslov">Lov i ribolov</h1>
+        <p className="lr__hero-natpis">{t('lov_ribolov.hero_natpis')}</p>
+        <h1 className="lr__hero-naslov">{t('lov_ribolov.hero_naslov')}</h1>
         <p className="lr__hero-podnaslov">
-          Bogatstvo prirode  za ljubitelje lova i ribolova
+          {t('lov_ribolov.hero_podnaslov')}
         </p>
       </div>
 
@@ -77,14 +39,14 @@ function LovRibolov() {
           onClick={() => setAktivniTab("lov")}
         >
           <span className="lr__tab-ikona"><GiDeer/></span>
-          Lovačko udruženje
+          {t('lov_ribolov.tab_lov')}
         </button>
         <button
           className={`lr__tab ${aktivniTab === "ribolov" ? "lr__tab--aktivan" : ""}`}
           onClick={() => setAktivniTab("ribolov")}
         >
           <span className="lr__tab-ikona"><IoFishSharp/></span>
-          Ribolovno društvo
+          {t('lov_ribolov.tab_ribolov')}
         </button>
       </div>
 
@@ -97,22 +59,18 @@ function LovRibolov() {
             <div className="lr__drustvo-kartica">
               <div className="lr__drustvo-logo lr__drustvo-logo--lov">
                 <span className="lr__drustvo-logo-ikona">🦌</span>
-                <span className="lr__drustvo-logo-tekst">Logo udruženja</span>
+                <span className="lr__drustvo-logo-tekst">{t('lov_ribolov.lov_logo_tekst')}</span>
               </div>
               <div className="lr__drustvo-info">
-                <span className="lr__bedz lr__bedz--lov">Lovačko udruženje</span>
+                <span className="lr__bedz lr__bedz--lov">{t('lov_ribolov.lov_bedz')}</span>
                 <h2 className="lr__drustvo-naslov">
-                  LU „Studena gora" Han Pijesak
+                  {t('lov_ribolov.lov_naslov')}
                 </h2>
                 <p className="lr__drustvo-godina">
-                  Osnovano 1956. godine · Član Lovačkog saveza RS
+                  {t('lov_ribolov.lov_godina')}
                 </p>
                 <p className="lr__drustvo-tekst">
-                  Udruženje građana u kome se dobrovoljno okupljaju lovci radi
-                  zaštite i uzgoja divljači, razvoja i unapređenja lovstva i
-                  lovnog turizma, očuvanja prirode i životne sredine, sportskog
-                  lova i lične rekreacije. Udruženje niže velike uspjehe u svim
-                  oblastima lovstva.
+                  {t('lov_ribolov.lov_tekst')}
                 </p>
               </div>
             </div>
@@ -122,33 +80,28 @@ function LovRibolov() {
           <div className="lr__sekcija lr__sekcija--alt">
             <div className="lr__sekcija-unutra">
               <div className="lr__sekcija-header">
-                <span className="lr__bedz lr__bedz--lov">O lovištu</span>
+                <span className="lr__bedz lr__bedz--lov">{t('lov_ribolov.lovište_bedz')}</span>
                 <h2 className="lr__sekcija-naslov">
-                  Javor — stanište bogate divljači
+                  {t('lov_ribolov.lovište_naslov')}
                 </h2>
                 <p className="lr__sekcija-podnaslov">
-                  Povoljna konfiguracija zemljišta, odgovarajuća klima i šumska
-                  bogatstva
+                  {t('lov_ribolov.lovište_podnaslov')}
                 </p>
               </div>
 
               <div className="lr__blok">
                 <p className="lr__blok-tekst">
-                  Povoljna konfiguracija zemljišta, odgovarajuća klima i šumska
-                  bogatstva su osnovni činioci koji Han Pijesak čine izuzetnim
-                  lovištem. Lovačko udruženje istražuje i planira odstrjel
-                  divljači, ne bi li život u prirodi imao ravnotežu, a brojne
-                  životinjske vrste bile sačuvane od prirodnog istrebljenja.
+                  {t('lov_ribolov.lovište_tekst')}
                 </p>
                 <div className="lr__foto lr__foto--lov">
-                  {/* <img src="..." alt="Lovište Han Pijesak" /> */}
+                   <img src={lov1} alt={t('lov_ribolov.lovište_alt')} /> 
                 </div>
               </div>
 
               <div className="lr__info-grid">
-                {lovInfoKartice.map((k) => (
+                {lovInfoKartice.map((k, i) => (
                   <div key={k.naziv} className="lr__info-kartica lr__info-kartica--zelena">
-                    <span className="lr__info-ikona">{k.ikona}</span>
+                    <span className="lr__info-ikona">{lovIkone[i]}</span>
                     <h3 className="lr__info-naziv">{k.naziv}</h3>
                     <p className="lr__info-tekst">{k.tekst}</p>
                   </div>
@@ -160,29 +113,22 @@ function LovRibolov() {
           {/* Lovni turizam */}
           <div className="lr__sekcija">
             <div className="lr__sekcija-header">
-              <span className="lr__bedz lr__bedz--lov">Lovni turizam</span>
-              <h2 className="lr__sekcija-naslov">Lov kao turistička atrakcija</h2>
+              <span className="lr__bedz lr__bedz--lov">{t('lov_ribolov.turizam_bedz')}</span>
+              <h2 className="lr__sekcija-naslov">{t('lov_ribolov.turizam_naslov')}</h2>
             </div>
 
             <div className="lr__blok lr__blok--obrnuto">
               <p className="lr__blok-tekst">
-                Lovni turizam je jasno diferenciran od ostalih oblika turizma,
-                ali u isto vrijeme komplementaran je sa mnogim drugim
-                djelatnostima. Lovačko udruženje nastoji da svoju turističku
-                ponudu prilagodi lovnim periodima, kako bi se zainteresovani
-                lovci-turisti zadržali i nakon lova te upoznali ostale ljepote
-                opštine Han Pijesak.
+                {t('lov_ribolov.turizam_tekst')}
               </p>
               <div className="lr__foto lr__foto--lov">
-                {/* <img src="..." alt="Lovni turizam" /> */}
+                <img src={lov2} alt={t('lov_ribolov.turizam_alt')} /> 
               </div>
             </div>
 
             <div className="lr__citat">
               <p className="lr__citat-tekst">
-                Danas lovstvo dobija novu ulogu — prepoznati prije svega kao
-                zaštitnici prirodne sredine, lovci imaju veliku ulogu u očuvanju
-                biodiverziteta i unapređenju populacije divljači.
+                {t('lov_ribolov.citat')}
               </p>
             </div>
           </div>
@@ -197,21 +143,18 @@ function LovRibolov() {
           {/* Kartica društva */}
           <div className="lr__sekcija">
             <div className="lr__drustvo-kartica">
-              <div className="lr__drustvo-logo lr__drustvo-logo--riba">
-                <span className="lr__drustvo-logo-ikona">🎣</span>
-                <span className="lr__drustvo-logo-tekst">Logo društva</span>
+             <div className="lr__drustvo-logo lr__drustvo-logo--riba">
+               <span className="lr__drustvo-logo-ikona">🎣</span>
+                <span className="lr__drustvo-logo-tekst">{t('lov_ribolov.riba_logo_tekst')}</span>
               </div>
               <div className="lr__drustvo-info">
-                <span className="lr__bedz lr__bedz--riba">Ribolovno društvo</span>
-                <h2 className="lr__drustvo-naslov">SRD „Pištica" Han Pijesak</h2>
+                <span className="lr__bedz lr__bedz--riba">{t('lov_ribolov.riba_bedz')}</span>
+                <h2 className="lr__drustvo-naslov">{t('lov_ribolov.riba_naslov')}</h2>
                 <p className="lr__drustvo-godina">
-                  Osnovano 1961. · Samostalno od 2002. godine
+                  {t('lov_ribolov.riba_godina')}
                 </p>
                 <p className="lr__drustvo-tekst">
-                  Društvo samostalno gazduje ribolovnim vodama opštine Han
-                  Pijesak od 2002. godine, kada se izdvojilo iz lovačkog
-                  udruženja „Studena Gora". Vode ovog područja pripadaju
-                  slivovima rijeke Bosne i Drine.
+                  {t('lov_ribolov.riba_tekst')}
                 </p>
               </div>
             </div>
@@ -221,30 +164,25 @@ function LovRibolov() {
           <div className="lr__sekcija lr__sekcija--alt">
             <div className="lr__sekcija-unutra">
               <div className="lr__sekcija-header">
-                <span className="lr__bedz lr__bedz--riba">Ribolovne vode</span>
+                <span className="lr__bedz lr__bedz--riba">{t('lov_ribolov.vode_bedz')}</span>
                 <h2 className="lr__sekcija-naslov">
-                  Kristalno čiste planinske rječice
+                  {t('lov_ribolov.vode_naslov')}
                 </h2>
               </div>
 
               <div className="lr__blok">
                 <p className="lr__blok-tekst">
-                  To su brze, kristalno čiste planinske rječice i potoci, bogate
-                  kiseonikom i hranom — prirodno stanište potočne pastrmke.
-                  Rječice sliva rijeke Bosne su pogodne za mušičarenje, dok su
-                  rječice drinskog sliva pogodnije za varaličarenje. Ima dosta i
-                  potočnog raka, koji dijeli životni prostor sa pastrmkom. Slivu
-                  rijeke Drina pripada i vodotok „Rijeka" koja je ponornica.
+                  {t('lov_ribolov.vode_tekst')}
                 </p>
                 <div className="lr__foto lr__foto--riba">
-                  <img src={rijeke} alt="rijeke" />
+                  <img src={rijeke} alt={t('lov_ribolov.vode_alt')} />
                 </div>
               </div>
 
               <div className="lr__info-grid">
-                {ribolovInfoKartice.map((k) => (
+                {ribolovInfoKartice.map((k, i) => (
                   <div key={k.naziv} className="lr__info-kartica lr__info-kartica--plava">
-                    <span className="lr__info-ikona">{k.ikona}</span>
+                    <span className="lr__info-ikona">{ribolovIkone[i]}</span>
                     <h3 className="lr__info-naziv">{k.naziv}</h3>
                     <p className="lr__info-tekst">{k.tekst}</p>
                   </div>
@@ -252,7 +190,7 @@ function LovRibolov() {
               </div>
 
               <div className="lr__pravila">
-                <h3 className="lr__pravila-naslov">Pravila ribolova</h3>
+                <h3 className="lr__pravila-naslov">{t('lov_ribolov.pravila_naslov')}</h3>
                 <ul className="lr__pravila-lista">
                   {ribolovPravila.map((p) => (
                     <li key={p} className="lr__pravila-stavka">{p}</li>

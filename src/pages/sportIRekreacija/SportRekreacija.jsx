@@ -1,8 +1,9 @@
 import React from "react";
 import "./SportRekreacija.css";
 import { Link } from "react-router-dom";
-import { FaWalking, FaMountain, FaSkiing } from "react-icons/fa";
-import { IoMdBicycle } from "react-icons/io";
+import { useTranslation } from "react-i18next";
+import { FaWalking, FaMountain, FaSkiing, FaVolleyballBall } from "react-icons/fa";
+import { IoMdBicycle, IoMdFootball } from "react-icons/io";
 import { GiFishingHook, GiPathDistance, GiMountainRoad } from "react-icons/gi";
 import { TbAerialLift } from "react-icons/tb";
 import { BsThermometerSnow } from "react-icons/bs";
@@ -19,129 +20,81 @@ import javor3 from "../../assets/sportRekreacija/javor3.jpg";
 import javor4 from "../../assets/sportRekreacija/javor4.jpg";
 import zokLogo from "../../assets/sportRekreacija/zokLogo.jpg";
 import omladinaclogo from "../../assets/sportRekreacija/fkOmladinacLogo.jpg";
-import cosLogo from "../../assets/COSPogledLogp.png";
 import kkLogo from "../../assets/sportRekreacija/kkHP.jpg";
+import kudLogo from "../../assets/manifestacije/kudLogo.jpg";
 import ig1 from "../../assets/sportRekreacija/igrista1.jpg";
 import ig2 from "../../assets/sportRekreacija/igrista2.jpg";
 import ig3 from "../../assets/sportRekreacija/igrista3.jpg";
 import ig4 from "../../assets/sportRekreacija/igrista4.jpg";
 import ig5 from "../../assets/sportRekreacija/igrista5.jpg";
+import tk1 from "../../assets/sportRekreacija/tk1.jpg";
+import tk2 from "../../assets/sportRekreacija/tk2.jpg";
+import tk3 from "../../assets/sportRekreacija/tk3.jpg";
+import tk4 from "../../assets/sportRekreacija/tk4.jpg";
+import tkLogo from "../../assets/sportRekreacija/tkLogo.jpg";
+import fk1 from "../../assets/sportRekreacija/fk1.jpg";
+import fk2 from "../../assets/sportRekreacija/fk2.jpg";
+import kk1 from "../../assets/sportRekreacija/kk1.jpg";
+import kk2 from "../../assets/sportRekreacija/kk2.jpg";
+import kk3 from "../../assets/sportRekreacija/kk3.jpg";
+import kud1 from "../../assets/sportRekreacija/kud1.jpg";
+import kud2 from "../../assets/sportRekreacija/kud2.jpg";
+import kud3 from "../../assets/sportRekreacija/kud3.jpg";
+import kud4 from "../../assets/sportRekreacija/kud4.jpg";
 
-
-
-
-
-const organizacije = [
-  {
-    naziv: "PSU Visočnik",
-    logo: PedVisocnikLogo,
-    opis: "Planinarsko sportsko udruženje Visočnik organizuje pohode, takmičenja i edukacije u planinarenju. Aktivni tokom cijele godine na stazama Javora i okolnih planina.",
-    slike: [vis1, vis2, vis3, vis4], // planinaranje1, planinaranje2...
-    slikeOpisi: [
-      "Vrani Kamen 2025 ",
-      "Musala - krov Balkana",
-      "Vrhovima Romanije",
-      "Bregoč, vrh Zelengore",
-    ],
-  },
-  {
-    naziv: "PSU Javor — sunčana planina",
-    logo: psuJavor, // psuJavorLogo
-    opis: "Udruženje posvećeno promociji planinarstva i aktivnog boravka u prirodi. Organizuju godišnje pohode i saradnju sa školama i turističkom organizacijom.",
-    slike: [javor1, javor2, javor3, javor4],
-    slikeOpisi: ["Veliki Žep", "Trebević", "Komić", "Velika Sikira"],
-  },
-  {
-    naziv: "OK Han Pijesak",
-    logo: zokLogo, // gorstakLogo
-    opis: "Sportsko udruženje Gorštak aktivno djeluje u oblasti planinskih sportova i rekreacije. Posebno poznati po organizaciji pohoda za sve uzrasne kategorije.",
-    slike: [null, null, null, null],
-    slikeOpisi: ["Pohod u šumi", "Vršni uspon", "Rekreacija", "Takmičenje"],
-  },
-
-  {
-    naziv: "FK Omladinac Han Pijesak",
-    logo: omladinaclogo,
-    opis: "Fudbalski klub sa dugom tradicijom koji okuplja mlade i iskusne igrače opštine. Aktivno učestvuje u regionalnim ligama i organizuje lokalne turnire.",
-    slike: [null, null, null, null],
-    slikeOpisi: ["Utakmica", "Trening", "Turnir", "Tim"],
-  },
-  {
-    naziv: "KK Han Pijesak",
-    logo: kkLogo,
-    opis: "Fudbalski klub sa dugom tradicijom koji okuplja mlade i iskusne igrače opštine. Aktivno učestvuje u regionalnim ligama i organizuje lokalne turnire.",
-    slike: [null, null, null, null],
-    slikeOpisi: ["Utakmica", "Trening", "Turnir", "Tim"],
-  },
-  {
-    naziv: "Centar za omladinu i sport Pogled",
-    logo: cosLogo,
-    opis: "COS Pogled pruža mogućnosti za sport i rekreaciju mladima opštine Han Pijesak. Organizuje sportske i kulturne programe, turnire i rekreativne aktivnosti tokom cijele godine.",
-    slike: [null, null, null, null],
-    slikeOpisi: ["Sportski program", "Turnir", "Rekreacija", "Mladi sportisti"],
-  },
+// Slike po indeksu organizacije (redosljed mora odgovarati org_lista u translation.json)
+const orgSlike = [
+  [vis1, vis2, vis3, vis4],
+  [javor1, javor2, javor3, javor4],
+  [null, null, null, null],
+  [fk1, fk2],
+  [kk1, kk2, kk3],
+  [tk1, tk2, tk3, tk4],
+  [kud1, kud2, kud3, kud4],
 ];
 
-const skiInfo = [
-  { ikona: <FaMountain/>, vrijednost: "1.400 m", labela: "Maks. nadmorska visina" },
-  { ikona: <GiMountainRoad/>, vrijednost: "3 km", labela: "Ukupna dužina staza" },
-  { ikona: <GiPathDistance/>, vrijednost: "9 km", labela: "Udaljenost od Han Pijeska" },
-  { ikona: <FaSkiing/>, vrijednost: "2", labela: "Ski staze" },
-  { ikona: <TbAerialLift/>, vrijednost: "1", labela: "Ski lift" },
-  { ikona: <BsThermometerSnow/>, vrijednost: "Dec — Mar", labela: "Sezona" },
- 
+const orgLogoi = [
+  PedVisocnikLogo,
+  psuJavor,
+  zokLogo,
+  omladinaclogo,
+  kkLogo,
+  tkLogo,
+  kudLogo,
 ];
 
-const skiSlike = [ig1, ig2, ig3, ig4, ig5]; // javor1, javor2...
-const skiSlikeOpisi = [
-  "Ski staza",
-  "Ski lift",
-  "Zimska panorama",
-  "Skijaši na stazi",
-  "Noćno skijanje",
+const skiSlike = [ig1, ig2, ig3, ig4, ig5];
+
+const skiIkone = [
+  <FaMountain />,
+  <GiMountainRoad />,
+  <GiPathDistance />,
+  <FaSkiing />,
+  <TbAerialLift />,
+  <BsThermometerSnow />,
 ];
 
-const dogadjaji = [
-  {
-    naziv: "Ski takmičenja na Romaniji",
-    opis: "Godišnja takmičenja u alpskom skijanju za sve uzrasne kategorije na obroncima Romanije. Okuplaju takmičare iz cijele regije.",
-    period: "Januar — Mart",
-    ikona: "⛷️",
-  },
-  {
-    naziv: "Lokalni fudbalski turnir",
-    opis: "Tradicionalni ljetnji turnir u malom fudbalu koji okuplja ekipe iz Han Pijeska i okolnih opština.",
-    period: "Juli — Avgust",
-    ikona: "⚽",
-  },
-  {
-    naziv: "Planinarski pohod — Skakavac",
-    opis: "Organizovani pohod na jedno od najljepših izletišta u okolini, uz vođenje iskusnih planinara.",
-    period: "Maj i Septembar",
-    ikona: "🥾",
-  },
-  {
-    naziv: "Biciklistička tura Han Pijeska",
-    opis: "Rekreativna tura kroz označene biciklističke staze opštine, otvorena za sve uzraste.",
-    period: "Jun — Septembar",
-    ikona: "🚵",
-  },
-  {
-    naziv: "Ribolovačko takmičenje",
-    opis: "Sportski ribolov na rijekama opštine uz ocjenjivanje ulova i nagradni fond za pobjednike.",
-    period: "April — Oktobar",
-    ikona: "🎣",
-  },
+const uvodKarticaIkone = [
+  <FaWalking />,
+  <IoMdBicycle />,
+  <FaSkiing />,
+  <GiFishingHook />,
 ];
 
-function OrgCard({ org }) {
+const dogadjajiIkone = [
+  <FaVolleyballBall />,
+  <IoMdFootball />,
+  <FaWalking />,
+  <IoMdBicycle />,
+];
+
+function OrgCard({ org, logo, slike }) {
   return (
     <div className="SR_org">
-      {/* Logo + naziv */}
       <div className="SR_org__header">
         <div className="SR_org__logo">
-          {org.logo ? (
-            <img src={org.logo} alt={org.naziv} className="SR_org__logo-img" />
+          {logo ? (
+            <img src={logo} alt={org.naziv} className="SR_org__logo-img" />
           ) : (
             <span className="SR_org__logo-placeholder">🏆</span>
           )}
@@ -149,23 +102,21 @@ function OrgCard({ org }) {
         <h3 className="SR_org__naziv">{org.naziv}</h3>
       </div>
 
-      {/* Opis */}
       <p className="SR_org__opis">{org.opis}</p>
 
-      {/* Slike */}
       <div className="SR_org__slike">
-        {org.slike.map((slika, i) => (
+        {slike.map((slika, i) => (
           <div key={i} className="SR_org__slika-item">
             {slika ? (
               <img
                 src={slika}
-                alt={org.slikeOpisi[i]}
+                alt={org.slikeOpisi?.[i] || ""}
                 className="SR_org__slika"
               />
             ) : (
               <div className="SR_org__slika-placeholder" />
             )}
-            <span className="SR_org__slika-opis">{org.slikeOpisi[i]}</span>
+            <span className="SR_org__slika-opis">{org.slikeOpisi?.[i] || ""}</span>
           </div>
         ))}
       </div>
@@ -174,69 +125,39 @@ function OrgCard({ org }) {
 }
 
 function SportRekreacija() {
+  const { t } = useTranslation();
+
+  const orgLista = t("sport_rekreacija.org_lista", { returnObjects: true });
+  const skiInfo = t("sport_rekreacija.ski_info", { returnObjects: true });
+  const skiSlikeOpisi = t("sport_rekreacija.ski_slike_opisi", { returnObjects: true });
+  const uvodKartice = t("sport_rekreacija.uvod_kartice", { returnObjects: true });
+  const dogadjaji = t("sport_rekreacija.dogadjaji", { returnObjects: true });
+
   return (
     <section className="SR_section">
       {/* ── 1. HERO ── */}
       <div className="SR_hero">
-        
-          <h1 className="SR_hero__naslov">Sport i rekreacija u Han Pijesku</h1>
-          <p className="SR_hero__podnaslov">
-            Planine, šume i čist planinski vazduh — savršeni uslovi za sport,
-            rekreaciju i aktivni odmor tokom cijele godine.
-          </p>
-          <a href="#uvod" className="SR_hero__dugme">
-            Istraži aktivnosti ↓
-          </a>
-        
+        <h1 className="SR_hero__naslov">{t("sport_rekreacija.hero_naslov")}</h1>
+        <p className="SR_hero__podnaslov">{t("sport_rekreacija.hero_podnaslov")}</p>
+        <a href="#uvod" className="SR_hero__dugme">
+          {t("sport_rekreacija.hero_dugme")}
+        </a>
       </div>
 
       {/* ── 2. UVOD ── */}
       <div className="SR_uvod" id="uvod">
         <div className="SR_uvod__tekst">
-          <span className="SR_bedz--zeleni">Prirodni uslovi</span>
-          <h2>Han Pijesak — prirodna arena za sport</h2>
-          <p>
-            Smješten na nadmorskoj visini od oko 1.100 metara, Han Pijesak pruža
-            izuzetne prirodne uslove za sport i rekreaciju tokom cijele godine.
-            Prostrane planinske šume, čist vazduh čine ovo područje idealnim za
-            sve koji traže aktivan odmor u prirodi.
-          </p>
-          <p>
-            Od skijanja zimi do planinarenja i biciklizma ljeti — priroda Han
-            Pijeska nudi raznovrsne mogućnosti za sve uzrasne kategorije, uz
-            podršku lokalnih sportskih organizacija.
-          </p>
-          <p>
-            Čist planinski vazduh, minimalna buka i netaknuta priroda čine sport
-            i rekreaciju ovdje posebnim i nezaboravnim iskustvom.
-          </p>
+          <span className="SR_bedz--zeleni">{t("sport_rekreacija.uvod_bedz")}</span>
+          <h2>{t("sport_rekreacija.uvod_naslov")}</h2>
+          <p>{t("sport_rekreacija.uvod_p1")}</p>
+          <p>{t("sport_rekreacija.uvod_p2")}</p>
+          <p>{t("sport_rekreacija.uvod_p3")}</p>
         </div>
 
         <div className="SR_uvod__kartice">
-          {[
-            {
-              ikona: <FaWalking />,
-              naziv: "Planinarenje i pješačenje",
-              opis: "15+ označenih staza za sve nivoe",
-            },
-            {
-              ikona: <IoMdBicycle />,
-              naziv: "Biciklizam",
-              opis: "MTB i rekreativne rute kroz šume",
-            },
-            {
-              ikona: <FaSkiing />,
-              naziv: "Zimski sportovi",
-              opis: "Skijanje na obroncima Javora",
-            },
-            {
-              ikona: <GiFishingHook />,
-              naziv: "Lov i ribolov",
-              opis: "Bogati reviri uz rijeke i jezera",
-            },
-          ].map((k) => (
-            <div key={k.naziv} className="SR_uvod__kartica">
-              <span className="SR_uvod__kartica-ikona">{k.ikona}</span>
+          {uvodKartice.map((k, i) => (
+            <div key={i} className="SR_uvod__kartica">
+              <span className="SR_uvod__kartica-ikona">{uvodKarticaIkone[i]}</span>
               <div className="SR_uvod__kartica-info">
                 <strong className="SR_uvod__kartica-naziv">{k.naziv}</strong>
                 <span className="SR_uvod__kartica-opis">{k.opis}</span>
@@ -250,16 +171,18 @@ function SportRekreacija() {
       <div className="SR_organizacije">
         <div className="SR_organizacije__wrap">
           <span className="SR_bedz--zeleni SR_bedz--centar">
-            Lokalni sportski klubovi
+            {t("sport_rekreacija.org_bedz")}
           </span>
-          <h2 className="SR_organizacije__naslov">Sportske organizacije</h2>
-          <p className="SR_organizacije__podnaslov">
-            Han Pijesak ima bogatu sportsku tradiciju kroz aktivne klubove i
-            udruženja
-          </p>
+          <h2 className="SR_organizacije__naslov">{t("sport_rekreacija.org_naslov")}</h2>
+          <p className="SR_organizacije__podnaslov">{t("sport_rekreacija.org_podnaslov")}</p>
           <div className="SR_organizacije__lista">
-            {organizacije.map((org) => (
-              <OrgCard key={org.naziv} org={org} />
+            {orgLista.map((org, i) => (
+              <OrgCard
+                key={i}
+                org={org}
+                logo={orgLogoi[i]}
+                slike={orgSlike[i] || []}
+              />
             ))}
           </div>
         </div>
@@ -269,36 +192,21 @@ function SportRekreacija() {
       <div className="SR_ski">
         <div className="SR_ski__wrap">
           <span className="SR_bedz--zeleni SR_bedz--centar">
-            Zimski sportovi
+            {t("sport_rekreacija.ski_bedz")}
           </span>
-          <h2 className="SR_ski__naslov">Ski centar Igrišta</h2>
-          <p className="SR_ski__podnaslov">
-            Ski centar Igrista, smješten u neposrednoj blizini Han Pijeska,
-            predstavlja jedno od najatraktivnijih mjesta za zimski turizam u
-            ovom dijelu Republike Srpske. Okružen netaknutom prirodom, gustim
-            šumama i planinskim pejzažima, ovaj centar pruža idealne uslove za
-            skijanje, sankanje i boravak na svježem planinskom vazduhu. 
-            
-            Centar raspolaže uređenim ski-stazama srednje dužine, pogodnim kako za
-            početnike, tako i za rekreativne skijaše. Staze su blagog do
-            umjerenog nagiba, što ih čini sigurnim i prijatnim za vožnju, dok
-            prirodni snijeg i uređena podloga omogućavaju kvalitetno skijanje
-            tokom sezone. Idealno je mjesto za opušten zimski odmor, daleko od
-            gužve i buke većih ski centara.
-          </p>
+          <h2 className="SR_ski__naslov">{t("sport_rekreacija.ski_naslov")}</h2>
+          <p className="SR_ski__podnaslov">{t("sport_rekreacija.ski_podnaslov")}</p>
 
-          {/* Info kartice */}
           <div className="SR_ski__info">
-            {skiInfo.map((s) => (
-              <div key={s.labela} className="SR_ski__info-stavka">
-                <span className="SR_ski__info-ikona">{s.ikona}</span>
+            {skiInfo.map((s, i) => (
+              <div key={i} className="SR_ski__info-stavka">
+                <span className="SR_ski__info-ikona">{skiIkone[i]}</span>
                 <span className="SR_ski__info-vrijednost">{s.vrijednost}</span>
                 <span className="SR_ski__info-labela">{s.labela}</span>
               </div>
             ))}
           </div>
 
-          {/* Slike ski centra */}
           <div className="SR_ski__galerija">
             {skiSlike.map((slika, i) => (
               <div
@@ -308,13 +216,12 @@ function SportRekreacija() {
                 {slika ? (
                   <img
                     src={slika}
-                    alt={skiSlikeOpisi[i]}
+                    alt={skiSlikeOpisi[i] || ""}
                     className="SR_ski__slika"
                   />
                 ) : (
                   <div className="SR_ski__slika-placeholder" />
                 )}
-                
               </div>
             ))}
           </div>
@@ -325,18 +232,15 @@ function SportRekreacija() {
       <div className="SR_dogadjaji">
         <div className="SR_dogadjaji__wrap">
           <span className="SR_bedz--zeleni SR_bedz--centar">
-            Tradicionalne manifestacije
+            {t("sport_rekreacija.dogadjaji_bedz")}
           </span>
-          <h2 className="SR_dogadjaji__naslov">Sportski događaji</h2>
-          <p className="SR_dogadjaji__podnaslov">
-            Takmičenja i manifestacije koje tokom godine okupljaju sportiste i
-            ljubitelje prirode
-          </p>
+          <h2 className="SR_dogadjaji__naslov">{t("sport_rekreacija.dogadjaji_naslov")}</h2>
+          <p className="SR_dogadjaji__podnaslov">{t("sport_rekreacija.dogadjaji_podnaslov")}</p>
           <div className="SR_dogadjaji__lista">
             {dogadjaji.map((d, i) => (
-              <div key={d.naziv} className="SR_dogadjaj">
+              <div key={i} className="SR_dogadjaj">
                 <div className="SR_dogadjaj__lijevo">
-                  <span className="SR_dogadjaj__ikona">{d.ikona}</span>
+                  <span className="SR_dogadjaj__ikona">{dogadjajiIkone[i]}</span>
                   <span className="SR_dogadjaj__redni">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -354,20 +258,14 @@ function SportRekreacija() {
 
       {/* ── 6. CTA ── */}
       <div className="SR_cta">
-        <h2 className="SR_cta__naslov">Doživite aktivnu prirodu</h2>
-        <p className="SR_cta__tekst">
-          Han Pijesak vas čeka tokom cijele godine — pronađite smještaj,
-          odaberite aktivnost i krenite u avanturu u srcu Romanije.
-        </p>
+        <h2 className="SR_cta__naslov">{t("sport_rekreacija.cta_naslov")}</h2>
+        <p className="SR_cta__tekst">{t("sport_rekreacija.cta_tekst")}</p>
         <div className="SR_cta__dugmad">
-          <Link
-            to="/aktivni-odmor"
-            className="SR_cta__btn SR_cta__btn--primarni"
-          >
-            Pogledaj staze
+          <Link to="/aktivni-odmor" className="SR_cta__btn SR_cta__btn--primarni">
+            {t("sport_rekreacija.cta_staze")}
           </Link>
           <Link to="/kontakt" className="SR_cta__btn SR_cta__btn--sekundarni">
-            Kontaktirajte nas
+            {t("sport_rekreacija.cta_kontakt")}
           </Link>
         </div>
       </div>

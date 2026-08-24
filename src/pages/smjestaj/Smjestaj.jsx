@@ -1,26 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Smjestaj.css';
 import { FaLocationDot } from 'react-icons/fa6';
-import heroSlika from '../../assets/smjestajPozadina.jpg';
+import { useTranslation } from 'react-i18next';
 import heroSlika2 from '../../assets/smjestajPozadina2.jpg';
-
-import tamara from "../../assets/Smjestaj/Tamara.jpg";
-import romanija from "../../assets/Smjestaj/Romanija.jpg";
-import bracaKosoric from "../../assets/Smjestaj/BracaKosoric.jpg";
-import marija from "../../assets/Smjestaj/Marija.jpg";
-
-
-
-
-const smjestaji = [
-  { id: 1, naziv: 'Romanija — Brvnara za odmor', kategorija: 'Kuća za odmor', zvjezdice: 2, lokacija: 'Mrkalji, 5,6 km od centra', slika: romanija },
-  { id: 2, naziv: 'Vila Marija HP',              kategorija: 'Kuća za odmor', zvjezdice: 3, lokacija: '1,6 km od centra',           slika: marija },
-  { id: 3, naziv: 'Braća Kosorić',               kategorija: 'Kuća za odmor', zvjezdice: 2, lokacija: 'Kosovača, 3,2 km od centra', slika: bracaKosoric },
-  { id: 4, naziv: 'Tamara — Brvnara za odmor',   kategorija: 'Kuća za odmor', zvjezdice: 2, lokacija: '0,9 km od centra',           slika: tamara },
-];
-
-const filteri = ['Sve', 'Kuća za odmor', 'Apartman', 'Planinarski dom'];
+import { API_URL } from '../adminPage/context/AuthContext';
+import { tf } from '../../utils/translateField';
 
 function Zvjezdice({ broj }) {
   return (
@@ -33,71 +18,112 @@ function Zvjezdice({ broj }) {
 }
 
 function Smjestaj() {
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
+  const [smjestaji, setSmjestaji]         = useState([]);
+  const [tipovi, setTipovi]               = useState([]);
   const [aktivniFilter, setAktivniFilter] = useState('Sve');
+  const [loading, setLoading]             = useState(true);
+  const [greska, setGreska]               = useState(null);
+
+  useEffect(() => {
+    Promise.all([
+      fetch(`${API_URL}/smjestaji?aktivan=1&per_page=100`).then(r => r.json()),
+      fetch(`${API_URL}/tipovi-smjestaja`).then(r => r.json()),
+    ])
+      .then(([smjData, tipoviData]) => {
+        setSmjestaji(smjData.data ?? []);
+        setTipovi(tipoviData.data ?? tipoviData);
+      })
+      .catch(() => setGreska(t('smjestaj.greska_ucitavanje')))
+      .finally(() => setLoading(false));
+  }, [t]);
+
+  // Filter radi na sirovom (sr) nazivu tipa iz baze — to je stabilan ključ
+  const tipoviFilter = ['Sve', ...tipovi.map(tip => tip.naziv)];
 
   const filtrirani = aktivniFilter === 'Sve'
     ? smjestaji
-    : smjestaji.filter((s) => s.kategorija === aktivniFilter);
+    : smjestaji.filter(s => s.tip_smjestaja?.naziv === aktivniFilter);
+
+  // Pretvara relativni /storage/... URL u apsolutni
+  const slikaUrl = (url) => {
+    if (!url) return null;
+    if (url.startsWith('http')) return url;
+    const base = API_URL.replace(/\/api.*$/, '');
+    return base + url;
+  };
+
+  const glavnaSlika = (s) => {
+    const gl = s.slike?.find(sl => sl.glavna);
+    return slikaUrl(gl?.url ?? s.slike?.[0]?.url ?? null);
+  };
+
+  if (loading) return <div className="smjestaj-loading">{t('smjestaj.ucitavanje')}</div>;
+  if (greska)  return <div className="smjestaj-greska">{greska}</div>;
 
   return (
     <section className="smjestaj-section">
 
-      {/* Hero */}
       <div className="smjestaj-hero">
-  <img src={heroSlika2} alt="Smještaj Han Pijesak" className="smjestaj-hero__img" />
-  <div className="smjestaj-hero__overlay" />
-  <div className="smjestaj-hero__tekst">
-    <h1>Smještaj</h1>
-    <p>Pronađite savršeno mjesto za odmor u srcu vazdušne banje</p>
-  </div>
-</div>
+        <img src={heroSlika2} alt={t('smjestaj.naslov')} className="smjestaj-hero__img" />
+        <div className="smjestaj-hero__overlay" />
+        <div className="smjestaj-hero__tekst">
+          <h1>{t('smjestaj.naslov')}</h1>
+          <p>{t('smjestaj.podnaslov')}</p>
+        </div>
+      </div>
 
-      {/* Uvodni tekst */}
       <div className="smjestaj-tekst">
-        <p>Han Pijesak nudi autentičan smještaj u srcu planinske prirode — od brvnara do modernih vila, svaki objekat pruža jedinstven doživljaj odmora na čistom planinskom zraku.</p>
+        <p>{t('smjestaj.uvod')}</p>
       </div>
 
-      {/* Filteri */}
       <div className="smjestaj-filteri">
-        {filteri.map((f) => (
-          <button
-            key={f}
-            className={`smjestaj-filter${aktivniFilter === f ? ' smjestaj-filter--aktivan' : ''}`}
-            onClick={() => setAktivniFilter(f)}
-          >
-            {f}
-          </button>
-        ))}
+        {tipoviFilter.map((f) => {
+          const tip = tipovi.find(tp => tp.naziv === f);
+          const label = f === 'Sve' ? t('smjestaj.sve') : (tip ? tf(tip, 'naziv', lang) : f);
+          return (
+            <button
+              key={f}
+              className={`smjestaj-filter${aktivniFilter === f ? ' smjestaj-filter--aktivan' : ''}`}
+              onClick={() => setAktivniFilter(f)}
+            >
+              {label}
+            </button>
+          );
+        })}
       </div>
 
-      {/* Kartice */}
       <div className="smjestaj-kartice">
         <h2 className="smjestaj-kartice__naslov">
-          Trenutno u ponudi — {filtrirani.length} {filtrirani.length === 1 ? 'objekat' : 'objekta'}
+          {t('smjestaj.naslov_ponuda', { count: filtrirani.length })}
         </h2>
         <div className="smjestaj-kartice__grid">
-          {filtrirani.map((s) => (
-            <Link to={`/smjestaj/${s.id}`} key={s.id} className="smjestaj-kartica">
-              {/* Slika */}
-              <div className="smjestaj-kartica__slika-wrap">
-                {s.slika
-                  ? <img src={s.slika} alt={s.naziv} className="smjestaj-kartica__slika" />
-                  : <div className="smjestaj-kartica__placeholder" />
-                }
-                <span className="smjestaj-kartica__tag">{s.kategorija}</span>
-              </div>
-              {/* Tekst */}
-              <div className="smjestaj-kartica__tekst">
-                <Zvjezdice broj={s.zvjezdice} />
-                <h3 className="smjestaj-kartica__naziv">{s.naziv}</h3>
-                <span className="smjestaj-kartica__lokacija">
-                  <FaLocationDot />
-                  <span>{s.lokacija}</span>
-                </span>
-                <span className="smjestaj-kartica__cta">Pogledaj detalje →</span>
-              </div>
-            </Link>
-          ))}
+          {filtrirani.map((s) => {
+            const naziv = tf(s, 'naziv', lang);
+            const tipNaziv = s.tip_smjestaja ? tf(s.tip_smjestaja, 'naziv', lang) : t('smjestaj.tip_fallback');
+            const lokacijaNaziv = s.lokacija ? tf(s.lokacija, 'naziv', lang) : t('smjestaj.lokacija_fallback');
+            return (
+              <Link to={`/smjestaj/${s.id}`} key={s.id} className="smjestaj-kartica">
+                <div className="smjestaj-kartica__slika-wrap">
+                  {glavnaSlika(s)
+                    ? <img src={glavnaSlika(s)} alt={naziv} className="smjestaj-kartica__slika" />
+                    : <div className="smjestaj-kartica__placeholder" />
+                  }
+                  <span className="smjestaj-kartica__tag">{tipNaziv}</span>
+                </div>
+                <div className="smjestaj-kartica__tekst">
+                  <Zvjezdice broj={0} />
+                  <h3 className="smjestaj-kartica__naziv">{naziv}</h3>
+                  <span className="smjestaj-kartica__lokacija">
+                    <FaLocationDot />
+                    <span>{lokacijaNaziv}</span>
+                  </span>
+                  <span className="smjestaj-kartica__cta">{t('smjestaj.pogledaj_detalje')}</span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
 

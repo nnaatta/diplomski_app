@@ -1,12 +1,105 @@
-.moj_navbar{
-    background-color: #588157;
+.moj_navbar {
+  background-color: #588157;
 }
-.nav-link{
-  color: white;
+
+/* ── Svi linkovi bijeli ── */
+.moj_navbar .nav-link,
+.moj_navbar .navbar-nav .nav-link,
+.moj_navbar .dropdown-toggle {
+  color: #fff !important;
 }
+
+/* ── Hover ── */
+.moj_navbar .nav-link:hover,
+.moj_navbar .dropdown-toggle:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* ── Aktivna stranica — narandžasto-zlatna boja ── */
+.moj_navbar .nav-link.active,
+.moj_navbar .navbar-nav .nav-link.active {
+  color: #f4c542 !important;
+  font-weight: 600;
+}
+
+/* ── Hamburger ikona (mobile) ── */
+.moj_navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.moj_navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ── Padajući meni — zelena pozadina ── */
+.moj_navbar .dropdown-menu {
+  background-color: #4a7043;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* ── Stavke u padajućem meniju ── */
+.moj_navbar .dropdown-item {
+  color: #fff !important;
+  font-size: 0.9rem;
+  padding: 0.55rem 1.25rem;
+}
+
+.moj_navbar .dropdown-item:hover,
+.moj_navbar .dropdown-item:focus {
+  background-color: #3a5a40;
+  color: #fff !important;
+}
+
+/* ── Aktivna stavka u dropdownu ── */
+.moj_navbar .dropdown-item.active,
+.moj_navbar .dropdown-item:active {
+  background-color: #344e41;
+  color: #f4c542 !important;
+}
+
+/* ── Logo ── */
 .navbar-brand img {
-  height: 40px;       
-  width: auto;        
+  height: 40px;
+  width: auto;
   display: inline-block;
-  margin-right: 8px;  
+  margin-right: 8px;
+}
+/* ── Language switcher ── */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 1rem;
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+}
+
+.lang-switcher button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-switcher button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.lang-switcher button.active {
+  background-color: #f4c542;
+  color: #344e41;
+}
+
+@media (max-width: 991px) {
+  .lang-switcher {
+    margin: 0.75rem 0 0.25rem 0;
+  }
 }

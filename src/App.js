@@ -1,10 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import { AuthProvider } from "./pages/adminPage/context/AuthContext";
 
+// Admin
+import Admin from "./pages/adminPage/Admin";
+
+// Javni sajt
 import MyNavbar from "./navbar/NavBar";
 import MyFooter from "./footer/Footer";
-
-// Stranice
 import Pocetna from "./pages/pocetna/Pocetna";
 import OTO from "./pages/oTO/OTO";
 import Kontakt from "./pages/kontakt/Kontakt";
@@ -29,64 +32,55 @@ import Blog from "./pages/blog/Blog";
 import DetaljiBlog from "./pages/blog/DetaljiBlog";
 import Galerija from "./pages/galerija/Galerija";
 
-
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-wrapper">
-        <MyNavbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Pocetna />} />
-            <Route path="/o-to" element={<OTO />} />
-             <Route path="/kontakt"              element={<Kontakt />} />
-             <Route path="/smjestaj"             element={<Smjestaj />} />
-             <Route path="/smjestaj/:id" element={<SmjestajDetalji />} />
-             <Route path="/gastronomija"         element={<Gastronomija />} />
-             <Route path="/zdravstveni-turizam"  element={<ZdravstveniTurizam />} />
-             <Route path="/flora-i-fauna"        element={<FloraFauna />} />
-            <Route path="/vjerski-objekti"      element={<VjerskiObjekti />} />
-            <Route path="/o-han-pijesku"      element={<OHP />} />
-            <Route path="/o-han-pijesku/danas"    element={<HanPijesakDanas />} />
-            <Route path="/o-han-pijesku/istorija"    element={<HPIstorija />} />
-            <Route path="/aktivni-odmor"    element={<AktivniOdmor />} />
-            <Route path="/aktivni-odmor/:id" element={<StazaDetalji />} />
-            <Route path="/lov-i-ribolov" element={<LovRibolov />} />
-            <Route path="/sport-i-rekreacija" element={<SportRekreacija />} />
-            <Route path="/manifestacije" element={<Manifestacije />} />
-            <Route path="/atrakcije" element={<Atrakcije />} />
-            <Route path="/znamenitosti" element={<Znamenitosti />} />
-            <Route path="/znamenitosti/dvorac-karadjordjevica" element={<DvoracKaradjordjevica />} />
-            <Route path="/blog" element={<Blog/>} />
-            <Route path="/blog/:slug" element={<DetaljiBlog/>} />
-            <Route path="/galerija" element={<Galerija/>} />
+      <AuthProvider>
+        <Routes>
 
+          {/* Admin panel — bez navbara i footera */}
+          <Route path="/admin" element={<Admin />} />
 
+          {/* Javni sajt — sa navbarom i footerom */}
+          <Route
+            path="/*"
+            element={
+              <div className="app-wrapper">
+                <MyNavbar />
+                <main className="main-content">
+                  <Routes>
+                    <Route path="/" element={<Pocetna />} />
+                    <Route path="/o-to" element={<OTO />} />
+                    <Route path="/kontakt" element={<Kontakt />} />
+                    <Route path="/smjestaj" element={<Smjestaj />} />
+                    <Route path="/smjestaj/:id" element={<SmjestajDetalji />} />
+                    <Route path="/gastronomija" element={<Gastronomija />} />
+                    <Route path="/zdravstveni-turizam" element={<ZdravstveniTurizam />} />
+                    <Route path="/flora-i-fauna" element={<FloraFauna />} />
+                    <Route path="/vjerski-objekti" element={<VjerskiObjekti />} />
+                    <Route path="/o-han-pijesku" element={<OHP />} />
+                    <Route path="/o-han-pijesku/danas" element={<HanPijesakDanas />} />
+                    <Route path="/o-han-pijesku/istorija" element={<HPIstorija />} />
+                    <Route path="/aktivni-odmor" element={<AktivniOdmor />} />
+                    <Route path="/aktivni-odmor/:id" element={<StazaDetalji />} />
+                    <Route path="/lov-i-ribolov" element={<LovRibolov />} />
+                    <Route path="/sport-i-rekreacija" element={<SportRekreacija />} />
+                    <Route path="/manifestacije" element={<Manifestacije />} />
+                    <Route path="/atrakcije" element={<Atrakcije />} />
+                    <Route path="/znamenitosti" element={<Znamenitosti />} />
+                    <Route path="/znamenitosti/dvorac-karadjordjevica" element={<DvoracKaradjordjevica />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/:slug" element={<DetaljiBlog />} />
+                    <Route path="/galerija" element={<Galerija />} />
+                  </Routes>
+                </main>
+                <MyFooter />
+              </div>
+            }
+          />
 
-            
-
-
-
-
-
-
-
-
-
-
-
-            {/*
-            <Route path="/kultura-i-tradicija"  element={<KulturaTradicija />} />
-            <Route path="/znamenitosti"         element={<Znamenitosti />} />
-            <Route path="/atrakcije"            element={<Atrakcije />} />
-            <Route path="/manifestacije"        element={<Manifestacije />} />
-            <Route path="/blog"                 element={<Blog />} />
-            <Route path="/galerija"             element={<Galerija />} />
-           */}
-          </Routes>
-        </main>
-        <MyFooter />
-      </div>
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   );
 }

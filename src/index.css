@@ -24,8 +24,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* UKLONJENO: display: flex i place-items: center
+     Ovo je uzrokovalo da td elementi dobiju flex layout
+     i badge izlazio van tabele */
   min-width: 320px;
   min-height: 100vh;
 }
