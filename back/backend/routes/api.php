@@ -27,10 +27,12 @@ use App\Http\Controllers\SlikaController;
 */
 
 // autentifikacija
-Route::post('/login', [AuthController::class, 'login']);
+// throttle:6,1 = najviše 6 pokušaja prijave u minuti po IP adresi — sprječava brute-force pogađanje lozinke
+Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:6,1');
 
 // kontakt forma — turisti šalju poruke bez prijave
-Route::post('/poruke', [PorukaController::class, 'store']);
+// throttle:5,1 = najviše 5 poruka u minuti po IP adresi — sprječava spam/zatrpavanje mejla
+Route::post('/poruke', [PorukaController::class, 'store'])->middleware('throttle:5,1');
 
 // javni prikaz podataka — turisti pretražuju sadržaj
 Route::get('/smjestaji', [SmjestajController::class, 'index']);

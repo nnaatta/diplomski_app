@@ -10,14 +10,10 @@ class Slika extends Model
     protected $table = 'slike';
     
     protected $fillable = [
-
-        'id',
         'url',
         'alt_text',
         'opis',
         'aktivan',
-
-
     ];
 
     protected $casts = [

@@ -7,9 +7,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class SlikaController extends Controller
 {
+    /**
+     * Sve pivot tabele u kojima slika_id može biti referenciran.
+     */
+    private const PIVOT_TABELE = ['smjestaj_slike', 'restoran_slike', 'blog_slike', 'galerija_slike'];
+
     /**
      * Upload jedne ili više slika i poveži ih s entitetom.
      *
@@ -103,11 +109,15 @@ class SlikaController extends Controller
     }
 
     /**
-     * "Brisanje" slike:
-     * - Pivot entiteti (smjestaj, restoran, blog, galerija): postavi aktivan=0 na PIVOT zapisu
-     *   Slika ostaje u slike tabeli — može je koristiti drugi entitet
-     *   Ako je bila glavna — sljedeća aktivna postaje glavna
-     * - FK entiteti (dogadjaj, turisticki_sadrzaj): postavi slika_id=NULL na entitetu
+     * Brisanje slike:
+     * - Pivot entiteti (smjestaj, restoran, blog, galerija): briše se VEZA (pivot red).
+     *   Ako je bila glavna — sljedeća preostala postaje glavna.
+     * - FK entiteti (dogadjaj, turisticki_sadrzaj): postavi slika_id=NULL na entitetu.
+     *
+     * U OBA slučaja: nakon brisanja veze, provjeravamo da li slika_id postoji
+     * bilo gdje drugo u sistemu. Ako ne postoji nigdje — fizički fajl na disku
+     * i red u `slike` tabeli se TRAJNO brišu, da se prostor na disku i baza
+     * ne pune zauvijek neiskorišćenim slikama.
      */
     public function destroy(Request $request, int $id)
     {
@@ -141,13 +151,13 @@ class SlikaController extends Controller
                 ->where('slika_id', $id)
                 ->value('glavna');
 
-            // Postavi aktivan=0 na pivot zapisu (soft delete)
+            // Stvarno brišemo vezu (ne samo aktivan=0)
             DB::table($tabela)
                 ->where($kolona, $entId)
                 ->where('slika_id', $id)
-                ->update(['aktivan' => 0, 'glavna' => 0]);
+                ->delete();
 
-            // Ako je bila glavna — promoviši sljedeću aktivnu
+            // Ako je bila glavna — promoviši sljedeću preostalu
             if ($bilGlavna) {
                 $sljedeca = DB::table($tabela)
                     ->where($kolona, $entId)
@@ -162,6 +172,8 @@ class SlikaController extends Controller
                 }
             }
         }
+
+        $this->obrisiSlikuAkoOsirotjela($id);
 
         return response()->json(['success' => true]);
     }
@@ -224,5 +236,41 @@ class SlikaController extends Controller
             'galerija' => 'galerija_slike',
             default    => throw new \InvalidArgumentException("Nepoznat pivot tip: {$tip}"),
         };
+    }
+
+    /**
+     * Provjerava da li je slika i dalje referencirana bilo gdje u sistemu
+     * (bilo koja pivot tabela ili FK kolona). Ako nije — briše fizički fajl
+     * sa diska i red iz `slike` tabele. Koristi i CleanupOsiroteleSlike komanda.
+     */
+    public static function obrisiSlikuAkoOsirotjela(int $slikaId): void
+    {
+        foreach (self::PIVOT_TABELE as $tabela) {
+            if (DB::table($tabela)->where('slika_id', $slikaId)->exists()) {
+                return; // još uvijek se koristi negdje — ne diramo je
+            }
+        }
+
+        if (DB::table('dogadjaji')->where('slika_id', $slikaId)->exists()) {
+            return;
+        }
+
+        if (DB::table('turisticki_sadrzaji')->where('slika_id', $slikaId)->exists()) {
+            return;
+        }
+
+        $slika = Slika::find($slikaId);
+        if (!$slika) {
+            return;
+        }
+
+        // url je oblika ".../storage/slike/ime-fajla.jpg" — skidamo dio prije "storage/"
+        // da dobijemo putanju relativnu za 'public' disk (npr. "slike/ime-fajla.jpg")
+        $relativnaPutanja = Str::after($slika->url, '/storage/');
+        if ($relativnaPutanja && Storage::disk('public')->exists($relativnaPutanja)) {
+            Storage::disk('public')->delete($relativnaPutanja);
+        }
+
+        $slika->delete();
     }
 }
