@@ -418,7 +418,7 @@ function QuickAddPreporukeHrane({ preporuke, onClose, onSave }) {
    UPLOAD UTILS
 ================================================================ */
 
-const IMG_BASE = "http://localhost:8000";
+const IMG_BASE = process.env.REACT_APP_STORAGE_URL || "http://localhost:8000";
 
 /**
  * Normalizuj URL slike:

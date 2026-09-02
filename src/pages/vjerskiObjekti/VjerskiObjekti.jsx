@@ -10,6 +10,7 @@ import dzimrije1 from '../../assets/vjerskiObjekti/dzimrije1.jpg';
 import pjenovac1 from '../../assets/vjerskiObjekti/pjenovac3.jpg';
 import pjenovac2 from '../../assets/vjerskiObjekti/pjenovac2.jpg';
 import nevacka1 from '../../assets/vjerskiObjekti/nevacka1.jpg';
+import Seo from "../../components/Seo";
 
 const objektiSlike = [
   [
@@ -52,6 +53,7 @@ function VjerskiObjekti() {
 
   return (
     <section className="vo">
+      <Seo title={t("vjerski_objekti.meta_title")} description={t("vjerski_objekti.meta_description")} />
 
       {/* ===== HERO ===== */}
       <div className="vo__hero">

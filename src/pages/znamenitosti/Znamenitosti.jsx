@@ -8,6 +8,7 @@ import vraniKamen from "../../assets/manifestacije/vk4.jpg";
 import g3 from "../../assets/velikiZep.jpg";
 import spomenikBrdo from "../../assets/Znamenitosti/spomenikBorackoBrdo.jpg";
 import hajduk from "../../assets/Znamenitosti/hajduk.jpg";
+import Seo from "../../components/Seo";
 
 const slike = [spomenikBrdo, vraniKamen, g3, hajduk, posijak2, null];
 
@@ -52,7 +53,7 @@ function ZnamenitostSegment({ z, index }) {
       <div className={`ZNA_segment__media${z.mapaUrl ? "" : " ZNA_segment__media--samo-slika"}`}>
         <div className="ZNA_segment__slika-wrap">
           {z.slika
-            ? <img src={z.slika} alt={z.naziv} className="ZNA_segment__slika" />
+            ? <img src={z.slika} alt={z.naziv} className="ZNA_segment__slika" loading="lazy" />
             : <div className="ZNA_segment__slika-placeholder" />
           }
         </div>
@@ -89,6 +90,7 @@ function Znamenitosti() {
 
   return (
     <section className="ZNA_section">
+      <Seo title={t("znamenitosti.meta_title")} description={t("znamenitosti.meta_description")} />
 
       {/* ── 1. HERO ── */}
       <div className="ZNA_hero">
@@ -100,7 +102,7 @@ function Znamenitosti() {
       <div className="ZNA_dvorac-wrap">
         <div ref={dvoracRef} className="ZNA_dvorac ZNA_reveal">
           <div className="ZNA_dvorac__slika-wrap">
-            <img src={dvorac} className="ZNA_dvorac__slika" alt={t("znamenitosti.dvorac_alt")} />
+            <img src={dvorac} className="ZNA_dvorac__slika" alt={t("znamenitosti.dvorac_alt")} loading="lazy" />
             <span className="ZNA_dvorac__tip-badge">{t("znamenitosti.dvorac_tip_badge")}</span>
           </div>
           <div className="ZNA_dvorac__info">

@@ -49,946 +49,1065 @@
     "copyright": "Sva prava zadržana."
   },
   "aktivni_odmor": {
-  "naslov": "Aktivni odmor",
-  "podnaslov": "Istražite prirodne ljepote Han Pijeska pješice, planinarenjem ili na biciklu",
-  "tezina_label": "Težina:",
-  "sve": "Sve",
-  "laka": "Lako",
-  "srednja": "Srednje",
-  "teska": "Teško",
-  "tip_pjesacka": "Pješačke staze",
-  "tip_planinska": "Planinarske staze",
-  "tip_biciklisticka": "Biciklističke staze",
-  "broj_staza": "staza",
-  "nema_filter": "Nema staza za odabrani filter.",
-  "nema_staza": "Nema unesenih staza.",
-  "ucitavanje": "Učitavanje...",
-  "greska_ucitavanje": "Greška pri učitavanju staza.",
-  "km": "km",
-  "tip_pjesacka_detalji": "Pješačka staza",
-  "tip_planinska_detalji": "Planinska tura",
-  "tip_biciklisticka_detalji": "Biciklistička ruta",
-  "nije_pronadjena": "Staza nije pronađena",
-  "nije_pronadjena_greska": "Staza nije pronađena.",
-  "nazad": "← Nazad na staze",
-  "duzina": "Dužina",
-  "tezina": "Težina",
-  "vrsta": "Vrsta",
-  "o_stazi": "O stazi",
-  "opis_nije_dodat": "Opis nije dodat.",
-  "mapa_staze": "Mapa staze",
-  "mapa_tekst": "Izaberite željenu lokaciju iz menija kako bi vam se prikazala putanja i detaljan opis staze."
-  }, "blog": {
-  "naslov": "Blog",
-  "podnaslov": "Vijesti, vodiči i priče iz Han Pijeska",
-  "ucitavanje": "Učitavanje...",
-  "greska_ucitavanje": "Greška pri učitavanju bloga.",
-  "nema_objava": "Nema objava u ovoj kategoriji.",
-  "istaknuti_post": "Istaknuti post",
-  "citaj_vise": "Čitaj više →",
-  "default_autor": "TO Han Pijesak",
-  "sve": "Sve",
-  "ostalo": "Ostalo"
-},
-"detalji_blog": {
-  "ucitavanje": "Učitavanje...",
-  "nije_pronadjen": "Post nije pronađen",
-  "nije_pronadjen_greska": "Post nije pronađen.",
-  "nazad": "← Nazad na blog",
-  "nazad_blog": "← Blog"
-},"manifestacije": {
-  "bedz_hero": "Kulturni i sportski život",
-  "naslov": "Manifestacije",
-  "podnaslov": "Kulturne, sportske i turističke manifestacije koje tokom cijele godine obogaćuju život opštine Han Pijesak.",
-  "pogledaj_dogadjaje": "Pogledaj događaje ↓",
-
-  "bedz_organizatori": "Ko stoji iza događaja",
-  "organizatori_naslov": "Organizatori manifestacija",
-  "organizatori_podnaslov": "Institucije i organizacije koje čine kulturni i sportski život Han Pijeska",
-
-  "bedz_predstojeci": "Šta vas čeka",
-  "predstojeci_naslov": "Predstojeći događaji",
-  "predstojeci_podnaslov": "Odaberite datum u kalendaru ili pregledajte sve nadolazeće događaje",
-  "ucitavanje_dogadjaja": "Učitavanje događaja...",
-  "nema_dogadjaja": "Nema događaja za odabrani datum.",
-  "prikazi_sve": "Prikaži sve događaje",
-
-  "bedz_tradicionalne": "Svake godine",
-  "tradicionalne_naslov": "Tradicionalne manifestacije",
-  "tradicionalne_podnaslov": "Manifestacije koje se ponavljaju i obilježavaju ritam života Han Pijeska",
-
-  "cta_naslov": "Posjetite Han Pijesak",
-  "cta_tekst": "Planirajte posjetu tokom neke od naših manifestacija i doživite autentičnu atmosferu planinske opštine.",
-  "cta_smjestaj": "Pronađi smještaj",
-  "cta_kontakt": "Kontaktirajte nas",
-
-  "datum": "Datum:",
-  "do": "Do:",
-  "lokacija": "Lokacija:",
-  "vrijeme": "Vrijeme:",
-  "kontakt": "Kontakt:",
-
-  "ponisti_filter": "✕ Poništi filter",
-  "dan_dogadjaj": "Dan sa događajem",
-  "danas": "Danas",
-  "prethodne_slike": "Prethodne slike",
-  "sljedece_slike": "Sljedeće slike",
-  "pozicija": "Pozicija",
-
-  "dani": ["Po", "Ut", "Sr", "Če", "Pe", "Su", "Ne"],
-  "mjeseci": ["Januar", "Februar", "Mart", "April", "Maj", "Jun", "Jul", "August", "Septembar", "Oktobar", "Novembar", "Decembar"]
-},"gastronomija": {
-  "naslov": "Gastronomija",
-  "podnaslov": "Otkrijte autentične ukuse planinske kuhinje Han Pijeska",
-  "uvod": "Gastronomija Han Pijeska odraz je bogate planinske tradicije i ljubavi prema autentičnoj domaćoj kuhinji. Jela pripremljena od svježih, lokalnih namirnica, uz aromu drveta i planinski vazduh, čine svaki obrok nezaboravnim doživljajem.",
-  "restorani_naslov": "Restorani",
-  "ucitavanje": "Učitavanje...",
-  "greska_ucitavanje": "Greška pri učitavanju restorana.",
-  "sadrzaji": "Sadržaji",
-  "preporucujemo": "Preporučujemo",
-  "kontakt": "Kontakt",
-  "instagram": "Instagram",
-  "facebook": "Facebook",
-  "kajmak_bedz": "🏆 Zaštićeni proizvod",
-  "kajmak_oznaka": "Geografsko porijeklo",
-  "kajmak_naslov": "Romanijski skorup-kajmak",
-  "kajmak_opis_1": "Na manje od dva kilometra od puta Han Pijesak – Karaula, u netaknutoj romanijskoj prirodi, krije se jedno od najcjenjenijih gastronomskih blaga ovog kraja — čuveni <strong>Romanijski skorup-kajmak</strong>. Ovaj jedinstveni mliječni proizvod nastaje po posebnoj lokalnoj tehnologiji koja se prenosi s koljena na koljeno, a ključni dio procesa proizvodnje je dimljenje, što mu daje prepoznatljiv i neponovljiv ukus.",
-  "kajmak_opis_2": "Početkom februara 2017. godine, Institut za intelektualno vlasništvo Bosne i Hercegovine donio je rješenje kojim se zvanično priznaje ime porijekla <em>\"Romanijski skorup-kajmak\"</em> i upisuje u registar imena porijekla.",
-  "kajmak_opis_3": "Udruženje je dobilo i certifikat Međunarodne organizacije za zaštitu intelektualnog vlasništva (WIPO), kojim se priznaje pravo zaštite skorup-kajmaka u <strong>29 zemalja svijeta</strong>, uključujući 9 zemalja članica Evropske unije.",
-  "kajmak_cert_1": "Zaštićeno ime porijekla od 2017. godine",
-  "kajmak_cert_2": "WIPO certifikat — zaštićen u 29 zemalja",
-  "kajmak_cert_3": "Tradicionalna tehnologija dimljenja",
-  "kajmak_cert_4": "Proizvod planine Romanije",
-  "kajmak_poziv": "Posjetite Han Pijesak i kušajte ovaj autentični planinski specijalitet — pravi suvenir koji možete ponijeti kući.",
-  "spec_naslov": "Ukusi koje morate doživjeti",
-  "spec_podnaslov": "Naš predlog je da obavezno probate sljedeće lokalne specijalitete:",
-  "specijaliteti": [
-    { "naziv": "Teletina ispod sača", "opis": "Tradicionalno pripremljena teletina ispod sača — sporo pečena, sočna i aromatična." },
-    { "naziv": "Domaća cicvara", "opis": "Tradicionalno planinsko jelo od kukuruznog brašna, kajmaka i mladog sira, tradicionalni ukus Romanije." },
-    { "naziv": "Domaći sir i kajmak", "opis": "Svježi planinski sir i kajmak od mlijeka lokalnih farmi — pravi ukus Romanije." },
-    { "naziv": "Svinjska koljenica", "opis": "Sporo pečena svinjska koljenica sa hrskavom koricom i sočnim mesom — specijalitet bogatog domaćeg ukusa." },
-    { "naziv": "Pečenje na ražnju", "opis": "Cijeli odojak ili janje pečeno na ražnju — nezaobilazan specijalitet svakog slavlja." },
-    { "naziv": "Domaći med", "opis": "Med sa romanijskih pašnjaka, bogat aromama planinskog cvijeća — idealan suvenir." }
-  ]
-},"smjestaj": {
-  "naslov": "Smještaj",
-  "podnaslov": "Pronađite savršeno mjesto za odmor u srcu vazdušne banje",
-  "uvod": "Han Pijesak nudi autentičan smještaj u srcu planinske prirode — od brvnara do modernih vila, svaki objekat pruža jedinstven doživljaj odmora na čistom planinskom zraku.",
-  "sve": "Sve",
-  "ucitavanje": "Učitavanje...",
-  "greska_ucitavanje": "Greška pri učitavanju podataka.",
-  "naslov_ponuda_one": "Trenutno u ponudi — {{count}} objekat",
-  "naslov_ponuda_few": "Trenutno u ponudi — {{count}} objekta",
-  "naslov_ponuda_other": "Trenutno u ponudi — {{count}} objekata",
-  "pogledaj_detalje": "Pogledaj detalje →",
-  "tip_fallback": "Smještaj",
-  "lokacija_fallback": "Han Pijesak"
-},
-"smjestaj_detalji": {
-  "ucitavanje": "Učitavanje...",
-  "nije_pronadjen_naslov": "Objekat nije pronađen",
-  "nije_pronadjen_greska": "Objekat nije pronađen.",
-  "nazad": "← Nazad na smještaj",
-  "tip_fallback": "Smještaj",
-  "lokacija_fallback": "Han Pijesak",
-  "fotografije": "Fotografije",
-  "o_objektu": "O objektu",
-  "opis_nedostupan": "Opis nije dostupan.",
-  "kapacitet": "Kapacitet",
-  "spavace_sobe": "Spavaće sobe",
-  "lezajevi": "Ležajeva",
-  "sadrzaji": "Sadržaji",
-  "rezervacija_naslov": "Rezervacija i kontakt",
-  "rezervacija_tekst": "Za rezervaciju ili dodatne informacije kontaktirajte vlasnika direktno:",
-  "ili_kontaktirajte_to": "Ili se obratite Turističkoj organizaciji:",
-  "lokacija_naslov": "Lokacija",
-  "lokacija_iframe_title": "Lokacija — {{naziv}}",
-  "pogledaj_sve_slike": "Pogledaj sve slike ({{count}})",
-  "glavna_slika": "Glavna slika",
-  "slika": "Slika {{br}}",
-  "thumbnail": "Thumbnail {{br}}",
-  "zatvori": "Zatvori",
-  "prethodna": "Prethodna",
-  "sljedeca": "Sljedeća"
-},"atrakcije": {
-  "bedz_hero": "Prirodne ljepote",
-  "naslov": "Atrakcije",
-  "podnaslov": "Han Pijesak krije netaknutu prirodu — vodopade, kanjone i pećine koje čekaju da ih otkrijete.",
-  "istrazi": "Istraži ↓",
-  "bedz_atrakcije": "Prirodne atrakcije",
-  "sekcija_naslov": "Otkrijte prirodu Han Pijeska",
-  "sekcija_podnaslov": "Vodopadi, kanjoni i pećine — svaki kutak opštine krije nešto posebno",
-  "bedz_botanika": "Botaničke vrijednosti",
-  "spomenici_naslov": "Prirodni spomenici",
-  "spomenici_podnaslov": "Rijetke i zaštićene biljne vrste koje rastu na prostoru opštine Han Pijesak",
-  "zasticena_vrsta": "Zaštićena vrsta",
-  "cta_naslov": "Istražite kulturno nasljeđe",
-  "cta_tekst": "Pored prirodnih ljepota, Han Pijesak čuva bogato istorijsko i kulturno nasljeđe.",
-  "cta_btn": "Pogledaj znamenitosti"
-},"flora_fauna": {
-  "flora_naslov": "Flora",
-  "flora_opis": "Šume, ljekovito bilje i zaštićene biljne vrste planine Javor",
-  "flora_dugme": "Istraži floru →",
-  "fauna_naslov": "Fauna",
-  "fauna_opis": "Divljač, ptice i zaštićene životinjske vrste planine Javor",
-  "fauna_dugme": "Istraži faunu →",
-
-  "flora_hero_bedz": "Flora",
-  "flora_hero_naslov": "Biljni svijet Han Pijeska",
-  "flora_hero_podnaslov": "Bogata i raznovrsna flora Javor planine",
-
-  "sume_bedz": "Šumski ekosistem",
-  "sume_naslov": "Šume Han Pijeska",
-  "sume_p1": "Više od 70% teritorije opštine Han Pijesak pokriveno je šumama, što ovaj kraj čini jednim od najšumovitijih u Bosni i Hercegovini. Dominiraju mješovite četinarsko-lišćarske šume u kojima prevladavaju smrča, jela, bijeli bor, bukva i hrast.",
-  "sume_p2": "Četinarske šume igraju ključnu ulogu u kvalitetu vazduha — oslobađaju fitoncide, prirodne antibiotike koji pozitivno djeluju na zdravlje čovjeka i doprinose statusu Han Pijeska kao vazdušne banje.",
-
-  "ljekovito_bedz": "Ljekovito bilje",
-  "ljekovito_naslov": "Ljekovito i samoniklo bilje",
-  "ljekovito_p1": "Planinska flora Han Pijeska bogata je ljekovitim i samoraslim biljkama koje su generacijama korišćene u narodnoj medicini. Čist vazduh, planinska klima i netaknuto tlo stvaraju idealne uslove za rast bilja izuzetnih ljekovitih svojstava.",
-  "ljekovito_p2": "Najpoznatije ljekovite biljke ovog kraja su kantarion, divlji luk - srijemuš, hajdučka trava, majčina dušica, divlja malina, divlja kupina, glog, smreka, kičica.",
-
-  "gljive_bedz": "Gljive i lišajevi",
-  "gljive_naslov": "Gljive i lišajevi",
-  "gljive_p1": "Šume Javor planine su pravi raj za ljubitelje gljiva. Zahvaljujući vlažnoj planinskoj klimi i bogatom šumskom tlu, ovdje rastu mnoge jestive vrste — vrganj, lisičarka, smrčak, bukovača, jestiva krasnica, reduša su neke od poznatih delicija.",
-  "gljive_p2": "Berba gljiva popularna je aktivnost počev od proljeća pa sve do rane jeseni kada su šume najplodnije.",
-
-  "biljke_bedz": "Zaštićene vrste",
-  "biljke_naslov": "Rijetke i zaštićene biljne vrste",
-  "biljke_podnaslov": "Han Pijesak je stanište nekoliko rijetkih i zakonski zaštićenih biljnih vrsta",
-
-  "fauna_hero_bedz": "Fauna",
-  "fauna_hero_naslov": "Životinjski svijet Han Pijeska",
-  "fauna_hero_podnaslov": "Bogata fauna romanijskih šuma i planina",
-
-  "divljac_bedz": "Divljač",
-  "divljac_naslov": "Krupna i sitna divljač",
-  "divljac_p1": "Šume Han Pijeska dom su bogatoj populaciji krupne i sitne divljači. Srndać, srna, divlja svinja i zec samo su neke od vrsta koje nastanjuju romanijsko planinsko područje. Prisustvo ovako bogate faune svjedoči o zdravom i nenarušenom ekosistemu.",
-  "divljac_p2": "Lov je regulisan propisima, a Lovačko udruženje \"Studena Gora\" brine o zaštiti i upravljanju populacijama divljači na području opštine Han Pijesak.",
-
-  "ptice_bedz": "Ptice",
-  "ptice_naslov": "Planinske ptice",
-  "ptice_p1": "Područje planine Javor stanište je brojnih ptica, od kojih su mnoge rijetke i zaštićene. Šume i planinski vrhovi idealno su gnijezdilište za planinske oraše, šumske sove, djetliće i ptice grabljivice.",
-  "ptice_p2": "Posmatranje ptica postaje sve popularnija aktivnost — tiha šuma i čist vazduh pružaju savršene uslove za birdwatching.",
-
-  "ribolov_bedz": "Ribolov",
-  "ribolov_naslov": "Rijeke i planinski potoci",
-  "ribolov_p1": "Vode sa ovog područja pripadaju slivovima rijeke Bosne i Drine. Rječice sliva rijeke Bosne su pogodne za mušičarenje, dok su rječice drinskog sliva pogodnije za varaličarenje. To su brze, kristalno čiste planinske rječice i potoci. Ove vode, koje su bogate kiseonikom i hranom, prirodno su stanište potočne pastrmke i njom su isključivo naseljene. Ima dosta i potočnog raka, koji dijeli životni prostor sa pastrmkom.",
-  "ribolov_p2": "Ribolovci iz cijelog regiona dolaze zbog izvrsnih ribolovnih uslova i mira koji pruža planinska priroda.",
-
-  "zivotinje_bedz": "Zaštićene vrste",
-  "zivotinje_naslov": "Zaštićene životinjske vrste",
-  "zivotinje_podnaslov": "Han Pijesak je stanište nekoliko strogo zaštićenih životinjskih vrsta"
-},"lov_ribolov": {
-  "hero_natpis": "Istraži",
-  "hero_naslov": "Lov i ribolov",
-  "hero_podnaslov": "Bogatstvo prirode  za ljubitelje lova i ribolova",
-
-  "tab_lov": "Lovačko udruženje",
-  "tab_ribolov": "Ribolovačko društvo",
-
-  "lov_bedz": "Lovačko udruženje",
-  "lov_logo_tekst": "Logo udruženja",
-  "lov_naslov": "LU „Studena gora\" Han Pijesak",
-  "lov_godina": "Osnovano 1956. godine · Član Lovačkog saveza RS",
-  "lov_tekst": "Udruženje građana u kome se dobrovoljno okupljaju lovci radi zaštite i uzgoja divljači, razvoja i unapređenja lovstva i lovnog turizma, očuvanja prirode i životne sredine, sportskog lova i lične rekreacije. Udruženje niže velike uspjehe u svim oblastima lovstva.",
-
-  "lovište_bedz": "O lovištu",
-  "lovište_naslov": "Han Pijesak — stanište bogate divljači",
-  "lovište_podnaslov": "Povoljna konfiguracija zemljišta, odgovarajuća klima i šumska bogatstva",
-  "lovište_tekst": "Povoljna konfiguracija zemljišta, odgovarajuća klima i šumska bogatstva su osnovni činioci koji Han Pijesak čine izuzetnim lovištem. Lovačko udruženje istražuje i planira odstrjel divljači, ne bi li život u prirodi imao ravnotežu, a brojne životinjske vrste bile sačuvane od prirodnog istrebljenja.",
-  "lovište_alt": "Lovište Han Pijesak",
-
-  "turizam_bedz": "Lovni turizam",
-  "turizam_naslov": "Lov kao turistička atrakcija",
-  "turizam_tekst": "Lovni turizam je jasno diferenciran od ostalih oblika turizma, ali u isto vrijeme komplementaran je sa mnogim drugim djelatnostima. Lovačko udruženje nastoji da svoju turističku ponudu prilagodi lovnim periodima, kako bi se zainteresovani lovci-turisti zadržali i nakon lova te upoznali ostale ljepote opštine Han Pijesak.",
-  "turizam_alt": "Lovni turizam",
-  "citat": "Danas lovstvo dobija novu ulogu — prepoznati prije svega kao zaštitnici prirodne sredine, lovci imaju veliku ulogu u očuvanju biodiverziteta i unapređenju populacije divljači.",
-
-  "riba_bedz": "Ribolovno društvo",
-  "riba_logo_tekst": "Logo društva",
-  "riba_naslov": "SRD „Pištica\" Han Pijesak",
-  "riba_godina": "Osnovano 1961. · Samostalno od 2002. godine",
-  "riba_tekst": "Društvo samostalno gazduje ribolovnim vodama opštine Han Pijesak od 2002. godine, kada se izdvojilo iz lovačkog udruženja „Studena Gora\". Vode ovog područja pripadaju slivovima rijeke Bosne i Drine.",
-
-  "vode_bedz": "Ribolovne vode",
-  "vode_naslov": "Kristalno čiste planinske rječice",
-  "vode_tekst": "To su brze, kristalno čiste planinske rječice i potoci, bogate kiseonikom i hranom — prirodno stanište potočne pastrmke. Rječice sliva rijeke Bosne su pogodne za mušičarenje, dok su rječice drinskog sliva pogodnije za varaličarenje. Ima dosta i potočnog raka, koji dijeli životni prostor sa pastrmkom. Slivu rijeke Drina pripada i vodotok „Rijeka\" koja je ponornica.",
-  "vode_alt": "Rijeke",
-
-  "pravila_naslov": "Pravila ribolova",
-
-  "lov_kartice": [
-    { "naziv": "Šumska lovišta", "tekst": "Bogati šumski kompleksi Javora — prirodno stanište krupne i sitne divljači." },
-    { "naziv": "Krupna divljač", "tekst": "Srna, jelen, divlja svinja i druge vrste krupne divljači karakteristične za ovo područje." },
-    { "naziv": "Lovni turizam", "tekst": "Razvijen komercijalni lov i lovnoturistička ponuda za domaće i strane goste." }
-  ],
-
-  "ribolov_kartice": [
-    { "naziv": "Potočna pastrmka", "tekst": "Jedina vrsta ribe u vodama — minimalna dužina za zadržavanje 25 cm." },
-    { "naziv": "Sezona ribolova", "tekst": "1. marta — 30. septembra · Isključivo na vještačke mamce." },
-    { "naziv": "Dva sliva", "tekst": "Sliv rijeke Bosne (mušičarenje) i sliv Drine (varaličarenje)." }
-  ],
-
-  "pravila_lista": [
-    "Ribolov isključivo na vještačke mamce",
-    "Minimalna dužina ribe za zadržavanje: 25 cm",
-    "Sezona: 1. marta — 30. septembra",
-    "Obavezna ribolovna dozvola"
-  ]
-},"ohp": {
-  "danas_naslov": "Han Pijesak danas",
-  "danas_opis": "Geografija, klima, turizam i institucije",
-  "istorija_naslov": "Han Pijesak kroz istoriju",
-  "istorija_opis": "Vijekovi bogate prošlosti, kulture i tradicije",
-  "istrazi": "Istraži →"
-},
-
-"hpd": {
-  "hero_natpis": "O Han Pijesku",
-  "hero_naslov": "Han Pijesak danas",
-
-  "o_bedz": "O Han Pijesku",
-  "o_naslov": "O Han Pijesku",
-  "o_opis": "Han Pijesak je gradsko naselje i sjedište istoimene opštine koja se nalazi u istočnom dijelu Republike Srpske, Bosne i Hercegovine. Smješten je na razvođu rijeka Stupčanice i Žepe, na nadmorskoj visini od 1.100 metara, što ga čini naseljem sa najvećom nadmorskom visinom u Republici Srpskoj. Na području naselja živi 2.018 stanovnika, dok ukupna populacija opštine iznosi 3.530 stanovnika. Opština se prostire na površini od oko 330–335,8 km² i ubraja se u red manjih opština, sa oko 25 naseljenih mjesta koja su uglavnom mala i razuđena između planinskih predjela.",
-  "naglasak_visina": "nadmorska visina",
-  "naglasak_stanovnici": "stanovnika",
-  "naglasak_povrsina": "površina",
-
-  "geo_bedz": "Geografija",
-  "geo_naslov": "Geografija",
-  "geo_opis": "Ovaj kraj pripada prostoru unutrašnjih Dinarida i ima izražene odlike brdsko-planinskog područja, gdje dominiraju nadmorske visine iznad 1.000 metara. Han Pijesak je okružen planinskim visovima – Velikim Žepom (1.537 m), Javornikom (1.219 m), Studenom Gorom (1.149 m) i Trešnjevcem (1.245 m), kao i prostranim četinarskim i listopadnim šumama. Zahvaljujući izuzetno čistom vazduhu i visokoj koncentraciji ozona, ovo mjesto je prepoznato kao jedna od najznačajnijih klimatskih i vazdušnih banja u Evropi, a početkom novembra 2023. godine cijelo područje opštine i zvanično je proglašeno vazdušnom banjom. Ova činjenica predstavlja snažan temelj za razvoj zdravstvenog i rekreativnog turizma.",
-
-  "klima_bedz": "Klima i voda",
-  "klima_naslov": "Klima",
-  "klima_opis": "Klimatske odlike ovog područja uslovljene su velikom nadmorskom visinom, geografskom širinom i kontinentalnošću. Na ovom prostoru dolazi do sudara polarnog i suptropskog vazduha, što rezultira planinskom klimom sa blagim uticajem kontinentalne. Karakterističan je veći broj vjetrovitih dana, pri čemu dominiraju sjeverni i južni vjetrovi. Takvi prirodni uslovi doprinose izuzetnom kvalitetu vazduha i čine boravak u ovom kraju posebno pogodnim za zdravlje.",
-  "voda_naslov": "Vodni resursi",
-  "voda_opis": "Područje opštine karakterišu i značajni vodni resursi. Han Pijesak se nalazi na vododjelnici između slivova rijeka Drine i Bosne. U slivu Drine nalazi se rječica Rijeka, koja nastaje od više izvora, dok u slivu Bosne izvire nekoliko rječica – Bjesnica, Krivača, Varošnica i Pištica, koje se u selu Pjenovac spajaju i formiraju rijeku Stupčanicu. Posebnu prirodnu atrakciju predstavlja kanjon rijeke Varošnice, dug oko 4 kilometra, kao i izvori u njenoj blizini. Dodatnu vrijednost ovom području daje i potok Skakavac, koji na kratkoj dužini od oko 600 metara savladava visinsku razliku veću od 200 metara, stvarajući jedinstven prirodni ambijent.",
-
-  "turizam_bedz": "Turizam",
-  "turizam_naslov": "Različiti vidovi turizma",
-  "turizam_uvod": "Han Pijesak se nalazi na važnom magistralnom putu koji ga povezuje sa centrima u Republici Srpskoj, Federaciji BiH i šire, što doprinosi njegovoj dostupnosti i turističkoj atraktivnosti. Prirodne karakteristike ovog područja omogućavaju razvoj različitih vidova turizma.",
-  "turizam_kartice": [
-    { "naziv": "Zimski turizam", "opis": "Skijanje i zimski sportovi na planini Javor" },
-    { "naziv": "Planinski turizam", "opis": "Planinarske staze, vidikovci i netaknuta priroda za ljubitelje planinarenja." },
-    { "naziv": "Lov i ribolov", "opis": "Bogata lovna područja i ribolovne vode u okolini opštine." },
-    { "naziv": "Biciklizam", "opis": "Bicilističke staze kroz netaknutu prirodu za ljubitelje brdskog biciklizma" },
-    { "naziv": "Zdravstveni turizam", "opis": "Vazdušna banja i klimatski turizam zahvaljujući izuzetnom kvalitetu zraka." },
-    { "naziv": "Vikend turizam", "opis": "Odmor u prirodi, brvnare i smještajni objekti u mirnom okruženju." }
-  ],
-
-  "kultura_bedz": "Kultura i obrazovanje",
-  "kultura_naslov": "Institucije",
-  "kultura_podnaslov": "Obrazovanje i kultura s korijenima u ranom 20. vijeku",
-  "bib_nagrada": "★ Najbolja biblioteka u RS — 2022.",
-  "bib_naslov": "JU Narodna biblioteka Branko Čučak",
-  "bib_godina": "Osnovana 1923. godine · Ul. Aleksandra Karađorđevića 2",
-  "bib_tekst": "JU Narodna biblioteka Branko Čučak u Han Pijesku smještena je u ulici Aleksandra Karađorđevića 2, u zgradi nekadašnjeg Sokolskog doma koji je tridesetih godina prošlog vijeka narodu poklonio kralj Aleksandar. Biblioteka raspolaže bogatim fondom od preko 33.000 knjiga iz različitih oblasti, kao i vrijednim zbirkama i legatima, među kojima se izdvajaju legat Branka Čučka, dio lične biblioteke akademika Rajka Kuzmanovića, te posebne kolekcije i umjetnički sadržaji. U njenom sastavu nalazi se i spomen-soba posvećena kraljevskoj porodici Karađorđević, kao i značajna dokumentarna i fotografska građa. Sa tradicijom koja traje od 1923. godine, biblioteka danas predstavlja važan kulturni centar, prepoznat i van lokalne zajednice, a njen rad obilježavaju brojne promocije, radionice i manifestacije, među kojima su i Čučkovi književni susreti. Proglašena je za najbolju biblioteku u Republici Srpskoj za 2022. godinu.",
-  "bib_knjiga": "knjiga",
-  "bib_osnivanje": "godina osnivanja",
-  "bib_tradicija": "godina tradicije",
-  "cos_naslov": "Centar za kulturu i sport Pogled",
-  "cos_godina": "Osnovan 2001. godine",
-  "cos_tekst": "Ključna ustanova za organizaciju kulturnih i sportskih događaja u opštini, sa kino dvoranom od 250 mjesta i sportskom dvoranom.",
-  "cos_lista": ["Kino dvorana — 250 mjesta", "Sportska dvorana", "Kreativne radionice i foto-klub", "Galerijski prostor"],
-  "obr_naslov": "Obrazovanje",
-  "obr_godina": "Od 1908. godine",
-  "obr_tekst": "Razvoj obrazovanja započeo je 1908. otvaranjem osnovne škole. Srednjoškolski centar od 1964. obuhvata gimnaziju, šumarsku i saobraćajnu školu.",
-  "obr_lista": ["Osnovna škola od 1908.", "Gimnazija", "Šumarska škola", "Saobraćajna škola"]
-},
-
-"hpi": {
-  "hero_natpis": "O Han Pijesku",
-  "hero_naslov": "Han Pijesak kroz istoriju",
-  "hero_podnaslov": "Od osmanskog karavanskog puta do savremenog doba",
-  "sidebar_naslov": "Historijski periodi",
-  "periodi": [
-    {
-      "id": 1,
-      "naslov": "Osmansko doba",
-      "naslov_en": "Ottoman Era",
-      "period": "do 1878.",
-      "period_en": "until 1878",
-      "bedzTip": "osmanski",
-      "tekst": "Područje Han Pijeska razvijalo se još u vrijeme Osmanskog carstva kao važna tačka na starom karavanskom putu koji je vodio od Sarajeva preko Romanije. Na svakih desetak kilometara nalazili su se hanovi – svratišta za odmor putnika, trgovaca i vojnih karavana. Jedan od tih hanova bio je i Han Pijesak, oko kojeg se kasnije formiralo naselje. Putopisac Evlija Čelebija 1664. godine pominje više hanova na ovom prostoru, poput Han Pijeska, Han Pogleda i drugih, koji su kasnije prerasli u značajnija naselja. Zahvaljujući svom položaju na raskrsnici puteva koji su vodili ka Srebrenici, Zvorniku, Vlasenici i Sarajevu, Han Pijesak je imao veliki strateški i saobraćajni značaj. Posebno se isticao Han Pogled, koji je zbog svog vidikovca i preglednosti terena imao važnu ulogu u vrijeme nesigurnosti i napada na putnike.",
-      "tekst_en": "The Han Pijesak area developed during the Ottoman Empire as an important stop on the old caravan route from Sarajevo across Romanija. Every ten or so kilometres there were hans — inns for the rest of travellers, merchants and military caravans. One such han was Han Pijesak, around which a settlement later formed. The traveller Evliya Çelebi mentioned several hans in this area in 1664, including Han Pijesak, Han Pogled and others that later grew into more significant settlements. Thanks to its position at the crossroads of routes leading to Srebrenica, Zvornik, Vlasenica and Sarajevo, Han Pijesak had great strategic and transport importance. Han Pogled was particularly notable, playing an important role during times of insecurity due to its vantage point and visibility of the terrain.",
-      "zanimljivost": "Prema narodnom predanju, ime Han Pijesak potiče od pritužbi majstora koji su gradili han, jer je pijesak bio loš za gradnju.",
-      "zanimljivost_en": "According to folk tradition, the name Han Pijesak comes from complaints by the craftsmen who built the han, as the sand was poor for construction.",
-      "slikaKey": "osmSlika"
-    },
-    {
-      "id": 2,
-      "naslov": "Austrougarski period",
-      "naslov_en": "Austro-Hungarian Period",
-      "period": "1878. — 1918.",
-      "period_en": "1878 — 1918",
-      "bedzTip": "austrougarski",
-      "tekst": "Veći razvoj počinje dolaskom Austro-Ugarske, kada se grade putevi i željeznička pruga prema Zavidovićima. To dovodi do jačanja značaja ovog mjesta, pa se krajem 19. vijeka (prvi put pomenuto 1895. godine) formira naselje radnika, uglavnom drvosječa. Do Prvog svjetskog rata ovdje gotovo da nije bilo razvijenog naselja, osim hana i nekoliko šumskih baraka.",
-      "tekst_en": "Greater development began with the arrival of Austria-Hungary, when roads and a railway line to Zavidovići were built. This led to the growing importance of the settlement, and at the end of the 19th century (first mentioned in 1895) a workers' settlement was formed, mainly of woodcutters. Until the First World War there was almost no developed settlement here, apart from the han and a few forest barracks.",
-      "zanimljivost": "",
-      "zanimljivost_en": "",
-      "slikaKey": "ausSlika"
-    },
-    {
-      "id": 3,
-      "naslov": "Prvi svjetski rat",
-      "naslov_en": "First World War",
-      "period": "1914. — 1918.",
-      "period_en": "1914 — 1918",
-      "bedzTip": "rat",
-      "tekst": "Tokom Prvog svjetskog rata Han Pijesak i okolina bili su poprište značajnih vojnih operacija u okviru bitke na Drini 1914. godine. Srpska vojska, posebno Užička vojska pod komandom generala Miloša Božanovića, napredovala je preko ovog područja prema Vlasenici. Vođene su teške borbe sa austrougarskim snagama, naročito na područjima kao što su Igrišta, Vran kamen i druga uzvišenja. U tim sukobima poginulo je oko 1.500 srpskih vojnika. Nakon početnih uspjeha, srpska vojska se usljed jakih protivnapada i nepovoljnih uslova povukla preko Drine.",
-      "tekst_en": "During the First World War, Han Pijesak and its surroundings were the scene of significant military operations as part of the Battle of the Drina in 1914. The Serbian army, particularly the Užice Army under General Miloš Božanović, advanced through this area towards Vlasenica. Heavy fighting took place with Austro-Hungarian forces, particularly in areas such as Igrišta, Vran Kamen and other heights. Around 1,500 Serbian soldiers were killed in these battles. After initial successes, the Serbian army withdrew across the Drina due to strong counter-attacks and unfavourable conditions.",
-      "zanimljivost": "Na području planine Javor postoje tri groblja srpskih vojnika iz Prvog svjetskog rata, Vrani kamen, Veliko Igrište i Ružina Voda, na kojima je ukupno sahranjeno više od 1300 vojnika.",
-      "zanimljivost_en": "On Mount Javor there are three cemeteries of Serbian soldiers from the First World War — Vrani Kamen, Veliko Igrište and Ružina Voda — where more than 1,300 soldiers are buried in total.",
-      "slikaKey": "vraniKamen"
-    },
-    {
-      "id": 4,
-      "naslov": "Period Kraljevine Jugoslavije",
-      "naslov_en": "Kingdom of Yugoslavia Period",
-      "period": "1918. — 1941.",
-      "period_en": "1918 — 1941",
-      "bedzTip": "mir",
-      "tekst": "Period Kraljevina Jugoslavija predstavlja vrijeme najvećeg uspona i afirmacije Han Pijesak kao značajnog planinskog i turističkog mjesta. Zahvaljujući izuzetno povoljnoj klimi, velikoj nadmorskoj visini i čistom vazduhu bogatog ozonom, Han Pijesak je u ovom periodu prepoznat kao idealno mjesto za odmor, oporavak i boravak u prirodi. Poseban značaj ovom mjestu daje dolazak i interesovanje kraljevske porodice Karađorđević, koja je u Han Pijesku izgradila svoju ljetnu rezidenciju, poznatu kao Vila Karađorđevića. Ova vila nije bila samo mjesto odmora, već i simbol prestiža i važnosti koje je Han Pijesak imao u tom vremenu. Boravak članova kraljevske porodice doprinio je popularizaciji ovog kraja, pa Han Pijesak postaje okupljalište društvene i političke elite tadašnje države.",
-      "tekst_en": "The Kingdom of Yugoslavia period represents the time of the greatest rise and affirmation of Han Pijesak as a significant mountain and tourist destination. Thanks to its exceptionally favourable climate, high altitude and clean ozone-rich air, Han Pijesak was recognised in this period as an ideal place for rest, recovery and time in nature. Special significance was given to the location by the interest of the Karađorđević royal family, who built their summer residence here, known as the Karađorđević Villa. This villa was not only a place of rest but also a symbol of the prestige and importance that Han Pijesak held at the time. The presence of royal family members contributed to the popularity of the area, and Han Pijesak became a gathering place for the social and political elite of the state.",
-      "zanimljivost": "26. avgusta 1936. godine u Han Pijesku je održana značajna sjednica ekonomsko-finansijskog komiteta ministara u vezi sa rješavanjem pitanja zemljoradničkih dugova.",
-      "zanimljivost_en": "On 26 August 1936, a significant session of the economic and financial ministerial committee was held in Han Pijesak regarding the resolution of agricultural debts.",
-      "slikaKey": "vila"
-    },
-    {
-      "id": 5,
-      "naslov": "Drugi svjetski rat",
-      "naslov_en": "Second World War",
-      "period": "1941. — 1945.",
-      "period_en": "1941 — 1945",
-      "bedzTip": "rat",
-      "tekst": "Period Drugog svjetskog rata donio je nagli prekid razvoja Han Pijesak i potpuno promijenio njegovu dotadašnju ulogu. Nakon kapitulacije Kraljevina Jugoslavija 1941. godine, područje je dospjelo pod okupaciju, što je dovelo do gašenja institucija i prekida turističkog i društvenog života. Mjesto koje je ranije bilo elitno odmaralište postaje dio ratne svakodnevice, uz stagnaciju infrastrukture i teške uslove života. Tokom 1942. Nezavisna Država Hrvatska sprovodila je operacije na području istočne Bosne pod komandom Jure Francetića. Tokom tih operacija mnoge porodice iz Han Pijeska i okolnih sela bile su primorane na bijeg prema Drini, a veliki broj civila stradao je na tom putu, posebno na području Starog Broda. Ovi događaji ostavili su trajne posljedice na stanovništvo i razvoj ovog kraja.",
-      "tekst_en": "The Second World War brought a sudden halt to the development of Han Pijesak and completely changed its previous role. After the capitulation of the Kingdom of Yugoslavia in 1941, the area fell under occupation, which led to the closure of institutions and the interruption of tourist and social life. The place that had previously been an elite resort became part of the wartime everyday, with stagnating infrastructure and harsh living conditions. During 1942, the Independent State of Croatia carried out operations in eastern Bosnia under the command of Jure Francetić. During these operations many families from Han Pijesak and surrounding villages were forced to flee towards the Drina, and a large number of civilians perished along the way, particularly in the Stari Brod area. These events left lasting consequences on the population and development of the region.",
-      "zanimljivost": "Prema dostupnim istorijskim podacima, tokom operacija pod komandom Jure Francetića, ubijeno je više od 6.000 nenaoružanih civila sa šireg područja istočne Bosne, uključujući i stanovništvo iz Han Pijeska i okolnih sela.",
-      "zanimljivost_en": "According to available historical records, during the operations under the command of Jure Francetić, more than 6,000 unarmed civilians from the wider area of eastern Bosnia were killed, including residents of Han Pijesak and surrounding villages.",
-      "slikaKey": "stariBrod"
-    },
-    {
-      "id": 6,
-      "naslov": "Socijalistička Jugoslavija",
-      "naslov_en": "Socialist Yugoslavia",
-      "period": "1945. — 1991.",
-      "period_en": "1945 — 1991",
-      "bedzTip": "soc",
-      "tekst": "Period Socijalističke Federativne Republike Jugoslavije predstavlja fazu obnove i stabilizacije u razvoju Han Pijesak. Okosnicu privrednog razvoja činilo je šumarstvo, zahvaljujući bogatim šumskim kompleksima koji okružuju ovo područje. Organizovano gazdovanje šumama dovelo je do zapošljavanja lokalnog stanovništva i formiranja radničkih zajednica, a Han Pijesak postaje prepoznat kao mjesto povezano sa drvnom industrijom. U ovom periodu posebnu ulogu imala je Jugoslovenska narodna armija, koja je u blizini Han Pijeska izgradila podzemni vojni kompleks Veliki Žep. Ovaj objekat bio je planiran kao strateško komandno mjesto u slučaju globalnog sukoba, što svjedoči o značaju koji je ovom području pridavan u vojnom smislu. Prisustvo vojske dodatno je uticalo na razvoj infrastrukture i značaj Han Pijeska u tadašnjem sistemu.",
-      "tekst_en": "The period of the Socialist Federal Republic of Yugoslavia represents a phase of reconstruction and stabilisation in the development of Han Pijesak. The backbone of economic development was forestry, thanks to the rich forest complexes surrounding the area. Organised forest management led to the employment of the local population and the formation of workers' communities, and Han Pijesak became recognised as a place associated with the timber industry. During this period, a special role was played by the Yugoslav People's Army, which built the underground military complex \"Veliki Žep\" near Han Pijesak. This facility was planned as a strategic command post in the event of a global conflict, testifying to the military significance attached to the area. The military presence further influenced the development of infrastructure and the importance of Han Pijesak in the system of the time.",
-      "zanimljivost": "U Han Pijesku je tokom SFRJ postojala kasarna u kojoj su vojnici iz cijele bivše Jugoslavije služili vojni rok.",
-      "zanimljivost_en": "During the SFRY period, Han Pijesak had a barracks where soldiers from across the former Yugoslavia did their military service.",
-      "slikaKey": "velikiZep"
-    },
-    {
-      "id": 7,
-      "naslov": "Period 1990-ih",
-      "naslov_en": "The 1990s",
-      "period": "1991. — 2000.",
-      "period_en": "1991 — 2000",
-      "bedzTip": "devedesete",
-      "tekst": "Nakon raspada Jugoslavije i ratnih dešavanja 1990-ih nastupa jedna od najtežih faza u novijoj istoriji Han Pijesak. Sa početkom rata u Bosni i Hercegovini 1992. godine, ovo područje dobija izražen strateški značaj, prije svega zbog svoje geografske pozicije i već postojeće vojne infrastrukture. U tom periodu, podzemni vojni kompleks Veliki Žep, izgrađen još u vrijeme SFRJ, postaje sjedište Glavnog štaba Vojske Republike Srpske. Time Han Pijesak postaje jedno od važnih vojno-komandnih mjesta, što dodatno utiče na njegovu ulogu tokom ratnih godina. Ratna dešavanja ostavila su značajne posljedice na lokalno stanovništvo i privredu. Dolazi do smanjenja broja stanovnika, migracija i opšte ekonomske stagnacije. Mnogi privredni tokovi, posebno oni vezani za šumarstvo i lokalnu proizvodnju, bili su otežani ili potpuno prekinuti. Infrastruktura je djelimično zapuštena, a razvoj koji je građen u prethodnim decenijama zaustavljen.",
-      "tekst_en": "After the break-up of Yugoslavia and the war events of the 1990s, one of the most difficult phases in the recent history of Han Pijesak began. With the start of the war in Bosnia and Herzegovina in 1992, the area gained pronounced strategic significance, primarily due to its geographical position and existing military infrastructure. During this period, the underground military complex \"Veliki Žep\", built during the SFRY, became the headquarters of the Main Staff of the Army of Republika Srpska. Han Pijesak thus became one of the important military command locations, further affecting its role during the war years. The war left significant consequences for the local population and economy. There was a decline in population, migrations and general economic stagnation. Many economic activities, particularly those related to forestry and local production, were impeded or completely halted. Infrastructure was partly neglected and the development built up over previous decades was brought to a stop.",
-      "zanimljivost": "",
-      "zanimljivost_en": "",
-      "slikaKey": "hp90"
-    }
-  ]
-},"pocetna": {
-  "hero_naslov": "Dobrodošli u Han Pijesak - vazdušnu banju!",
-
-  "stats_visina_v": "1100 m",
-  "stats_visina_l": "nadmorska visina",
-  "stats_staze_v": "50+ km",
-  "stats_staze_l": "planinarskih staza",
-  "stats_stanovnici_v": "3.530",
-  "stats_stanovnici_l": "stanovnika",
-  "stats_nedostupno": "prognoza nedostupna",
-  "stats_temp": "trenutna temperatura",
-
-  "vrijeme": {
-    "0": "Vedro",
-    "1": "Uglavnom vedro",
-    "2": "Djelimično oblačno",
-    "3": "Oblačno",
-    "45": "Magla",
-    "48": "Magla",
-    "51": "Rosulja",
-    "53": "Rosulja",
-    "61": "Kiša",
-    "63": "Kiša",
-    "71": "Snijeg",
-    "73": "Snijeg",
-    "75": "Snijeg",
-    "80": "Pljuskovi",
-    "95": "Grmljavina",
-    "varijabilno": "Varijabilno"
+    "naslov": "Aktivni odmor",
+    "podnaslov": "Istražite prirodne ljepote Han Pijeska pješice, planinarenjem ili na biciklu",
+    "tezina_label": "Težina:",
+    "sve": "Sve",
+    "laka": "Lako",
+    "srednja": "Srednje",
+    "teska": "Teško",
+    "tip_pjesacka": "Pješačke staze",
+    "tip_planinska": "Planinarske staze",
+    "tip_biciklisticka": "Biciklističke staze",
+    "broj_staza": "staza",
+    "nema_filter": "Nema staza za odabrani filter.",
+    "nema_staza": "Nema unesenih staza.",
+    "ucitavanje": "Učitavanje...",
+    "greska_ucitavanje": "Greška pri učitavanju staza.",
+    "km": "km",
+    "tip_pjesacka_detalji": "Pješačka staza",
+    "tip_planinska_detalji": "Planinska tura",
+    "tip_biciklisticka_detalji": "Biciklistička ruta",
+    "nije_pronadjena": "Staza nije pronađena",
+    "nije_pronadjena_greska": "Staza nije pronađena.",
+    "nazad": "← Nazad na staze",
+    "duzina": "Dužina",
+    "tezina": "Težina",
+    "vrsta": "Vrsta",
+    "o_stazi": "O stazi",
+    "opis_nije_dodat": "Opis nije dodat.",
+    "mapa_staze": "Mapa staze",
+    "mapa_tekst": "Izaberite željenu lokaciju iz menija kako bi vam se prikazala putanja i detaljan opis staze.",
+    "meta_title": "Aktivni odmor",
+    "meta_description": "Planinarske i biciklističke staze, avanture u prirodi Han Pijeska za sve ljubitelje aktivnog odmora."
   },
-
-  "ohp_badge": "Upoznajte",
-  "ohp_naslov": "Vazdušnu banju",
-  "ohp_tekst": "Han Pijesak se nalazi na nadmorskoj visini od 1.100 m, što ga čini gradom (naseljem) sa najvećom nadmorskom visinom u Republici Srpskoj. Okružen je visovima Velikim Žepom 1.537 m, Javornikom 1.219 m, Studenom Gorom 1.149 m i Trešnjevcem 1.245 m, a bujne četinarske i listopadne šume doprinijele su da ovo mjesto postane poznata klimatska i vazdušna banja, jer po količini ozona zauzima jedno od najznačajnijih mjesta u Evropi. Ovo je i zvanično potvrđeno početkom novembra 2023. godine, kada je cijelo područje opštine Han Pijesak proglašeno za vazdušnu banju.",
-  "ohp_btn": "Saznaj više o Han Pijesku →",
-
-  "video_naslov": "Promotivni video",
-  "video_opis": "Pogledajte kratki prikaz prirodnih ljepota i turističkih sadržaja Han Pijeska."
-},"o_to": {
-  "hero_naslov": "O Turističkoj organizaciji opštine Han Pijesak",
-  "hero_podnaslov": "Upoznajte bolje naš rad i djelovanje",
-
-  "stat_2023_opis": "Godina osnivanja",
-  "stat_sajmovi_opis": "Nastupa na sajmovima",
-  "stat_rast_opis": "Rast turizma",
-  "stat_turisti_opis": "Turista u 2024.",
-
-  "misija_naslov": "Misija",
-  "misija_tekst": "Turistička organizacija opštine Han Pijesak osnovana je 2023. godine kao najmlađa javna ustanova na području opštine, a sa radom počela 2024. godine. Njen osnovni cilj je promocija Han Pijeska kao turističke destinacije, razvoj turističke ponude i pozicioniranje opštine kao prepoznatljive vazdušne banje na turističkoj mapi Bosne i Hercegovine.",
-
-  "vizija_naslov": "Vizija",
-  "vizija_tekst": "Han Pijesak kao atraktivna, održiva i prepoznatljiva planinska destinacija koja turistima nudi jedinstven spoj čistog planinskog zraka, netaknute prirode, bogate kulturne baštine i autentičnog gostoprimstva — tokom cijele godine.",
-
-  "rad_naslov": "Šta radimo?",
-  "rad_stavka_1": "Promocija Han Pijeska na sajmovima turizma u regionu",
-  "rad_stavka_2": "Organizacija i podrška kulturno-turističkim manifestacijama",
-  "rad_stavka_3": "Kategorizacija smještajnih objekata",
-  "rad_stavka_4": "Izrada turističkih materijala i brošura",
-  "rad_stavka_5": "Saradnja sa planinarskim i sportskim udruženjima",
-  "rad_stavka_6": "Edukacija i razvoj turističkih kapaciteta",
-
-  "galerija_naslov": "Naše aktivnosti",
-  "galerija_podnaslov": "Pogledajte kako TO Han Pijesak aktivno promoviše destinaciju",
-  "galerija_opis_1": "Sajam zavičaja Novi Sad 2026.",
-  "galerija_opis_2": "Sajam turizma Beograd 2026.",
-  "galerija_opis_3": "Planinarski pohod — Skakavac",
-  "galerija_opis_4": "Kulturno-turistička manifestacija",
-  "galerija_opis_5": "Sajam turizma Novi Sad 2024.",
-  "galerija_opis_6": "Sajam turizma Banja Luka 2026.",
-
-  "partneri_naslov": "Naši partneri",
-  "partner_opstina": "Opština Han Pijesak",
-  "partner_cos": "Centar za omladinu i sport Pogled",
-  "partner_psu_visocnik": "PSU Visočnik",
-  "partner_gorstak": "Gorštak",
-  "partner_psu_javor": "PSU Javor - sunčana planina",
-
-  "kontakt_naslov": "Kontaktirajte nas",
-  "kontakt_alt": "kontakt osoba",
-  "kontakt_ime": "Svjetlana Tomović",
-  "kontakt_titula": "Direktor",
-  "kontakt_kartica_naslov": "Kontakt",
-  "kontakt_adresa": "Adresa: Aleksandra Karađorđevića br. 4",
-  "kontakt_telefon": "Telefon: +387 66 787 850",
-  "kontakt_email": "Email: tohanpijesak@gmail.com"
-},"brze_kartice": {
-  "kartica1_naslov": "Istraži destinaciju",
-  "kartica1_opis": "Upoznaj Han Pijesak — istoriju, kulturu i sve što ovo mjesto čini posebnim.",
-  "kartica1_cta": "Saznaj više",
-  "kartica2_naslov": "Pronađi smještaj",
-  "kartica2_opis": "Od planinarskih domova do privatnih apartmana — nađi savršeno mjesto za odmor.",
-  "kartica2_cta": "Pregledaj smještaj",
-  "kartica3_naslov": "Predstojeći događaji",
-  "kartica3_opis": "Festivali, manifestacije i tradicija — ne propusti ono što Han Pijesak priprema.",
-  "kartica3_cta": "Pogledaj program"
-},
-
-"top_atrakcije": {
-  "naslov": "Top atrakcije",
-  "podnaslov": "Otkrijte zašto Han Pijesak osvaja svakog ko ga posjeti",
-  "cta": "Saznajte više →",
-  "atrakcije": [
-    {
-      "naslov": "Dvorac Karađorđevića",
-      "opis": "Izgrađen početkom 20. vijeka, dvorac Karađorđevića svjedoči o bogatoj istoriji ovog kraja i vremenu kada je Han Pijesak bio omiljeno utočište kraljevske porodice. Danas fascinira svojom arhitekturom i pogledom na romanijsku prirodu.",
-      "tag": "Istorija"
+  "blog": {
+    "naslov": "Blog",
+    "podnaslov": "Vijesti, vodiči i priče iz Han Pijeska",
+    "ucitavanje": "Učitavanje...",
+    "greska_ucitavanje": "Greška pri učitavanju bloga.",
+    "nema_objava": "Nema objava u ovoj kategoriji.",
+    "istaknuti_post": "Istaknuti post",
+    "citaj_vise": "Čitaj više →",
+    "default_autor": "TO Han Pijesak",
+    "sve": "Sve",
+    "ostalo": "Ostalo",
+    "meta_title": "Blog",
+    "meta_description": "Vijesti, priče i savjeti o turizmu u opštini Han Pijesak."
+  },
+  "detalji_blog": {
+    "ucitavanje": "Učitavanje...",
+    "nije_pronadjen": "Post nije pronađen",
+    "nije_pronadjen_greska": "Post nije pronađen.",
+    "nazad": "← Nazad na blog",
+    "nazad_blog": "← Blog"
+  },
+  "manifestacije": {
+    "bedz_hero": "Kulturni i sportski život",
+    "naslov": "Manifestacije",
+    "podnaslov": "Kulturne, sportske i turističke manifestacije koje tokom cijele godine obogaćuju život opštine Han Pijesak.",
+    "pogledaj_dogadjaje": "Pogledaj događaje ↓",
+    "bedz_organizatori": "Ko stoji iza događaja",
+    "organizatori_naslov": "Organizatori manifestacija",
+    "organizatori_podnaslov": "Institucije i organizacije koje čine kulturni i sportski život Han Pijeska",
+    "bedz_predstojeci": "Šta vas čeka",
+    "predstojeci_naslov": "Predstojeći događaji",
+    "predstojeci_podnaslov": "Odaberite datum u kalendaru ili pregledajte sve nadolazeće događaje",
+    "ucitavanje_dogadjaja": "Učitavanje događaja...",
+    "nema_dogadjaja": "Nema događaja za odabrani datum.",
+    "prikazi_sve": "Prikaži sve događaje",
+    "bedz_tradicionalne": "Svake godine",
+    "tradicionalne_naslov": "Tradicionalne manifestacije",
+    "tradicionalne_podnaslov": "Manifestacije koje se ponavljaju i obilježavaju ritam života Han Pijeska",
+    "cta_naslov": "Posjetite Han Pijesak",
+    "cta_tekst": "Planirajte posjetu tokom neke od naših manifestacija i doživite autentičnu atmosferu planinske opštine.",
+    "cta_smjestaj": "Pronađi smještaj",
+    "cta_kontakt": "Kontaktirajte nas",
+    "datum": "Datum:",
+    "do": "Do:",
+    "lokacija": "Lokacija:",
+    "vrijeme": "Vrijeme:",
+    "kontakt": "Kontakt:",
+    "ponisti_filter": "✕ Poništi filter",
+    "dan_dogadjaj": "Dan sa događajem",
+    "danas": "Danas",
+    "prethodne_slike": "Prethodne slike",
+    "sljedece_slike": "Sljedeće slike",
+    "pozicija": "Pozicija",
+    "dani": [
+      "Po",
+      "Ut",
+      "Sr",
+      "Če",
+      "Pe",
+      "Su",
+      "Ne"
+    ],
+    "mjeseci": [
+      "Januar",
+      "Februar",
+      "Mart",
+      "April",
+      "Maj",
+      "Jun",
+      "Jul",
+      "August",
+      "Septembar",
+      "Oktobar",
+      "Novembar",
+      "Decembar"
+    ],
+    "meta_title": "Manifestacije",
+    "meta_description": "Kulturne i sportske manifestacije opštine Han Pijesak tokom cijele godine."
+  },
+  "gastronomija": {
+    "naslov": "Gastronomija",
+    "podnaslov": "Otkrijte autentične ukuse planinske kuhinje Han Pijeska",
+    "uvod": "Gastronomija Han Pijeska odraz je bogate planinske tradicije i ljubavi prema autentičnoj domaćoj kuhinji. Jela pripremljena od svježih, lokalnih namirnica, uz aromu drveta i planinski vazduh, čine svaki obrok nezaboravnim doživljajem.",
+    "restorani_naslov": "Restorani",
+    "ucitavanje": "Učitavanje...",
+    "greska_ucitavanje": "Greška pri učitavanju restorana.",
+    "sadrzaji": "Sadržaji",
+    "preporucujemo": "Preporučujemo",
+    "kontakt": "Kontakt",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "kajmak_bedz": "🏆 Zaštićeni proizvod",
+    "kajmak_oznaka": "Geografsko porijeklo",
+    "kajmak_naslov": "Romanijski skorup-kajmak",
+    "kajmak_opis_1": "Na manje od dva kilometra od puta Han Pijesak – Karaula, u netaknutoj romanijskoj prirodi, krije se jedno od najcjenjenijih gastronomskih blaga ovog kraja — čuveni <strong>Romanijski skorup-kajmak</strong>. Ovaj jedinstveni mliječni proizvod nastaje po posebnoj lokalnoj tehnologiji koja se prenosi s koljena na koljeno, a ključni dio procesa proizvodnje je dimljenje, što mu daje prepoznatljiv i neponovljiv ukus.",
+    "kajmak_opis_2": "Početkom februara 2017. godine, Institut za intelektualno vlasništvo Bosne i Hercegovine donio je rješenje kojim se zvanično priznaje ime porijekla <em>\"Romanijski skorup-kajmak\"</em> i upisuje u registar imena porijekla.",
+    "kajmak_opis_3": "Udruženje je dobilo i certifikat Međunarodne organizacije za zaštitu intelektualnog vlasništva (WIPO), kojim se priznaje pravo zaštite skorup-kajmaka u <strong>29 zemalja svijeta</strong>, uključujući 9 zemalja članica Evropske unije.",
+    "kajmak_cert_1": "Zaštićeno ime porijekla od 2017. godine",
+    "kajmak_cert_2": "WIPO certifikat — zaštićen u 29 zemalja",
+    "kajmak_cert_3": "Tradicionalna tehnologija dimljenja",
+    "kajmak_cert_4": "Proizvod planine Romanije",
+    "kajmak_poziv": "Posjetite Han Pijesak i kušajte ovaj autentični planinski specijalitet — pravi suvenir koji možete ponijeti kući.",
+    "spec_naslov": "Ukusi koje morate doživjeti",
+    "spec_podnaslov": "Naš predlog je da obavezno probate sljedeće lokalne specijalitete:",
+    "specijaliteti": [
+      {
+        "naziv": "Teletina ispod sača",
+        "opis": "Tradicionalno pripremljena teletina ispod sača — sporo pečena, sočna i aromatična."
+      },
+      {
+        "naziv": "Domaća cicvara",
+        "opis": "Tradicionalno planinsko jelo od kukuruznog brašna, kajmaka i mladog sira, tradicionalni ukus Romanije."
+      },
+      {
+        "naziv": "Domaći sir i kajmak",
+        "opis": "Svježi planinski sir i kajmak od mlijeka lokalnih farmi — pravi ukus Romanije."
+      },
+      {
+        "naziv": "Svinjska koljenica",
+        "opis": "Sporo pečena svinjska koljenica sa hrskavom koricom i sočnim mesom — specijalitet bogatog domaćeg ukusa."
+      },
+      {
+        "naziv": "Pečenje na ražnju",
+        "opis": "Cijeli odojak ili janje pečeno na ražnju — nezaobilazan specijalitet svakog slavlja."
+      },
+      {
+        "naziv": "Domaći med",
+        "opis": "Med sa romanijskih pašnjaka, bogat aromama planinskog cvijeća — idealan suvenir."
+      }
+    ],
+    "meta_title": "Gastronomija",
+    "meta_description": "Otkrijte tradicionalnu kuhinju i restorane Han Pijeska — autentični ukusi planinskog kraja."
+  },
+  "smjestaj": {
+    "naslov": "Smještaj",
+    "podnaslov": "Pronađite savršeno mjesto za odmor u srcu vazdušne banje",
+    "uvod": "Han Pijesak nudi autentičan smještaj u srcu planinske prirode — od brvnara do modernih vila, svaki objekat pruža jedinstven doživljaj odmora na čistom planinskom zraku.",
+    "sve": "Sve",
+    "ucitavanje": "Učitavanje...",
+    "greska_ucitavanje": "Greška pri učitavanju podataka.",
+    "naslov_ponuda_one": "Trenutno u ponudi — {{count}} objekat",
+    "naslov_ponuda_few": "Trenutno u ponudi — {{count}} objekta",
+    "naslov_ponuda_other": "Trenutno u ponudi — {{count}} objekata",
+    "pogledaj_detalje": "Pogledaj detalje →",
+    "tip_fallback": "Smještaj",
+    "lokacija_fallback": "Han Pijesak",
+    "meta_title": "Smještaj",
+    "meta_description": "Pregledajte ponudu smještaja u Han Pijesku — hoteli, apartmani i seoska domaćinstva za nezaboravan odmor."
+  },
+  "smjestaj_detalji": {
+    "ucitavanje": "Učitavanje...",
+    "nije_pronadjen_naslov": "Objekat nije pronađen",
+    "nije_pronadjen_greska": "Objekat nije pronađen.",
+    "nazad": "← Nazad na smještaj",
+    "tip_fallback": "Smještaj",
+    "lokacija_fallback": "Han Pijesak",
+    "fotografije": "Fotografije",
+    "o_objektu": "O objektu",
+    "opis_nedostupan": "Opis nije dostupan.",
+    "kapacitet": "Kapacitet",
+    "spavace_sobe": "Spavaće sobe",
+    "lezajevi": "Ležajeva",
+    "sadrzaji": "Sadržaji",
+    "rezervacija_naslov": "Rezervacija i kontakt",
+    "rezervacija_tekst": "Za rezervaciju ili dodatne informacije kontaktirajte vlasnika direktno:",
+    "ili_kontaktirajte_to": "Ili se obratite Turističkoj organizaciji:",
+    "lokacija_naslov": "Lokacija",
+    "lokacija_iframe_title": "Lokacija — {{naziv}}",
+    "pogledaj_sve_slike": "Pogledaj sve slike ({{count}})",
+    "glavna_slika": "Glavna slika",
+    "slika": "Slika {{br}}",
+    "thumbnail": "Thumbnail {{br}}",
+    "zatvori": "Zatvori",
+    "prethodna": "Prethodna",
+    "sljedeca": "Sljedeća"
+  },
+  "atrakcije": {
+    "bedz_hero": "Prirodne ljepote",
+    "naslov": "Atrakcije",
+    "podnaslov": "Han Pijesak krije netaknutu prirodu — vodopade, kanjone i pećine koje čekaju da ih otkrijete.",
+    "istrazi": "Istraži ↓",
+    "bedz_atrakcije": "Prirodne atrakcije",
+    "sekcija_naslov": "Otkrijte prirodu Han Pijeska",
+    "sekcija_podnaslov": "Vodopadi, kanjoni i pećine — svaki kutak opštine krije nešto posebno",
+    "bedz_botanika": "Botaničke vrijednosti",
+    "spomenici_naslov": "Prirodni spomenici",
+    "spomenici_podnaslov": "Rijetke i zaštićene biljne vrste koje rastu na prostoru opštine Han Pijesak",
+    "zasticena_vrsta": "Zaštićena vrsta",
+    "cta_naslov": "Istražite kulturno nasljeđe",
+    "cta_tekst": "Pored prirodnih ljepota, Han Pijesak čuva bogato istorijsko i kulturno nasljeđe.",
+    "cta_btn": "Pogledaj znamenitosti",
+    "meta_title": "Atrakcije",
+    "meta_description": "Prirodne ljepote i turističke atrakcije koje treba posjetiti u Han Pijesku."
+  },
+  "flora_fauna": {
+    "flora_naslov": "Flora",
+    "flora_opis": "Šume, ljekovito bilje i zaštićene biljne vrste planine Javor",
+    "flora_dugme": "Istraži floru →",
+    "fauna_naslov": "Fauna",
+    "fauna_opis": "Divljač, ptice i zaštićene životinjske vrste planine Javor",
+    "fauna_dugme": "Istraži faunu →",
+    "flora_hero_bedz": "Flora",
+    "flora_hero_naslov": "Biljni svijet Han Pijeska",
+    "flora_hero_podnaslov": "Bogata i raznovrsna flora Javor planine",
+    "sume_bedz": "Šumski ekosistem",
+    "sume_naslov": "Šume Han Pijeska",
+    "sume_p1": "Više od 70% teritorije opštine Han Pijesak pokriveno je šumama, što ovaj kraj čini jednim od najšumovitijih u Bosni i Hercegovini. Dominiraju mješovite četinarsko-lišćarske šume u kojima prevladavaju smrča, jela, bijeli bor, bukva i hrast.",
+    "sume_p2": "Četinarske šume igraju ključnu ulogu u kvalitetu vazduha — oslobađaju fitoncide, prirodne antibiotike koji pozitivno djeluju na zdravlje čovjeka i doprinose statusu Han Pijeska kao vazdušne banje.",
+    "ljekovito_bedz": "Ljekovito bilje",
+    "ljekovito_naslov": "Ljekovito i samoniklo bilje",
+    "ljekovito_p1": "Planinska flora Han Pijeska bogata je ljekovitim i samoraslim biljkama koje su generacijama korišćene u narodnoj medicini. Čist vazduh, planinska klima i netaknuto tlo stvaraju idealne uslove za rast bilja izuzetnih ljekovitih svojstava.",
+    "ljekovito_p2": "Najpoznatije ljekovite biljke ovog kraja su kantarion, divlji luk - srijemuš, hajdučka trava, majčina dušica, divlja malina, divlja kupina, glog, smreka, kičica.",
+    "gljive_bedz": "Gljive i lišajevi",
+    "gljive_naslov": "Gljive i lišajevi",
+    "gljive_p1": "Šume Javor planine su pravi raj za ljubitelje gljiva. Zahvaljujući vlažnoj planinskoj klimi i bogatom šumskom tlu, ovdje rastu mnoge jestive vrste — vrganj, lisičarka, smrčak, bukovača, jestiva krasnica, reduša su neke od poznatih delicija.",
+    "gljive_p2": "Berba gljiva popularna je aktivnost počev od proljeća pa sve do rane jeseni kada su šume najplodnije.",
+    "biljke_bedz": "Zaštićene vrste",
+    "biljke_naslov": "Rijetke i zaštićene biljne vrste",
+    "biljke_podnaslov": "Han Pijesak je stanište nekoliko rijetkih i zakonski zaštićenih biljnih vrsta",
+    "fauna_hero_bedz": "Fauna",
+    "fauna_hero_naslov": "Životinjski svijet Han Pijeska",
+    "fauna_hero_podnaslov": "Bogata fauna romanijskih šuma i planina",
+    "divljac_bedz": "Divljač",
+    "divljac_naslov": "Krupna i sitna divljač",
+    "divljac_p1": "Šume Han Pijeska dom su bogatoj populaciji krupne i sitne divljači. Srndać, srna, divlja svinja i zec samo su neke od vrsta koje nastanjuju romanijsko planinsko područje. Prisustvo ovako bogate faune svjedoči o zdravom i nenarušenom ekosistemu.",
+    "divljac_p2": "Lov je regulisan propisima, a Lovačko udruženje \"Studena Gora\" brine o zaštiti i upravljanju populacijama divljači na području opštine Han Pijesak.",
+    "ptice_bedz": "Ptice",
+    "ptice_naslov": "Planinske ptice",
+    "ptice_p1": "Područje planine Javor stanište je brojnih ptica, od kojih su mnoge rijetke i zaštićene. Šume i planinski vrhovi idealno su gnijezdilište za planinske oraše, šumske sove, djetliće i ptice grabljivice.",
+    "ptice_p2": "Posmatranje ptica postaje sve popularnija aktivnost — tiha šuma i čist vazduh pružaju savršene uslove za birdwatching.",
+    "ribolov_bedz": "Ribolov",
+    "ribolov_naslov": "Rijeke i planinski potoci",
+    "ribolov_p1": "Vode sa ovog područja pripadaju slivovima rijeke Bosne i Drine. Rječice sliva rijeke Bosne su pogodne za mušičarenje, dok su rječice drinskog sliva pogodnije za varaličarenje. To su brze, kristalno čiste planinske rječice i potoci. Ove vode, koje su bogate kiseonikom i hranom, prirodno su stanište potočne pastrmke i njom su isključivo naseljene. Ima dosta i potočnog raka, koji dijeli životni prostor sa pastrmkom.",
+    "ribolov_p2": "Ribolovci iz cijelog regiona dolaze zbog izvrsnih ribolovnih uslova i mira koji pruža planinska priroda.",
+    "zivotinje_bedz": "Zaštićene vrste",
+    "zivotinje_naslov": "Zaštićene životinjske vrste",
+    "zivotinje_podnaslov": "Han Pijesak je stanište nekoliko strogo zaštićenih životinjskih vrsta",
+    "meta_title": "Flora i fauna",
+    "meta_description": "Upoznajte bogatstvo biljnog i životinjskog svijeta na području opštine Han Pijesak."
+  },
+  "lov_ribolov": {
+    "hero_natpis": "Istraži",
+    "hero_naslov": "Lov i ribolov",
+    "hero_podnaslov": "Bogatstvo prirode  za ljubitelje lova i ribolova",
+    "tab_lov": "Lovačko udruženje",
+    "tab_ribolov": "Ribolovačko društvo",
+    "lov_bedz": "Lovačko udruženje",
+    "lov_logo_tekst": "Logo udruženja",
+    "lov_naslov": "LU „Studena gora\" Han Pijesak",
+    "lov_godina": "Osnovano 1956. godine · Član Lovačkog saveza RS",
+    "lov_tekst": "Udruženje građana u kome se dobrovoljno okupljaju lovci radi zaštite i uzgoja divljači, razvoja i unapređenja lovstva i lovnog turizma, očuvanja prirode i životne sredine, sportskog lova i lične rekreacije. Udruženje niže velike uspjehe u svim oblastima lovstva.",
+    "lovište_bedz": "O lovištu",
+    "lovište_naslov": "Han Pijesak — stanište bogate divljači",
+    "lovište_podnaslov": "Povoljna konfiguracija zemljišta, odgovarajuća klima i šumska bogatstva",
+    "lovište_tekst": "Povoljna konfiguracija zemljišta, odgovarajuća klima i šumska bogatstva su osnovni činioci koji Han Pijesak čine izuzetnim lovištem. Lovačko udruženje istražuje i planira odstrjel divljači, ne bi li život u prirodi imao ravnotežu, a brojne životinjske vrste bile sačuvane od prirodnog istrebljenja.",
+    "lovište_alt": "Lovište Han Pijesak",
+    "turizam_bedz": "Lovni turizam",
+    "turizam_naslov": "Lov kao turistička atrakcija",
+    "turizam_tekst": "Lovni turizam je jasno diferenciran od ostalih oblika turizma, ali u isto vrijeme komplementaran je sa mnogim drugim djelatnostima. Lovačko udruženje nastoji da svoju turističku ponudu prilagodi lovnim periodima, kako bi se zainteresovani lovci-turisti zadržali i nakon lova te upoznali ostale ljepote opštine Han Pijesak.",
+    "turizam_alt": "Lovni turizam",
+    "citat": "Danas lovstvo dobija novu ulogu — prepoznati prije svega kao zaštitnici prirodne sredine, lovci imaju veliku ulogu u očuvanju biodiverziteta i unapređenju populacije divljači.",
+    "riba_bedz": "Ribolovno društvo",
+    "riba_logo_tekst": "Logo društva",
+    "riba_naslov": "SRD „Pištica\" Han Pijesak",
+    "riba_godina": "Osnovano 1961. · Samostalno od 2002. godine",
+    "riba_tekst": "Društvo samostalno gazduje ribolovnim vodama opštine Han Pijesak od 2002. godine, kada se izdvojilo iz lovačkog udruženja „Studena Gora\". Vode ovog područja pripadaju slivovima rijeke Bosne i Drine.",
+    "vode_bedz": "Ribolovne vode",
+    "vode_naslov": "Kristalno čiste planinske rječice",
+    "vode_tekst": "To su brze, kristalno čiste planinske rječice i potoci, bogate kiseonikom i hranom — prirodno stanište potočne pastrmke. Rječice sliva rijeke Bosne su pogodne za mušičarenje, dok su rječice drinskog sliva pogodnije za varaličarenje. Ima dosta i potočnog raka, koji dijeli životni prostor sa pastrmkom. Slivu rijeke Drina pripada i vodotok „Rijeka\" koja je ponornica.",
+    "vode_alt": "Rijeke",
+    "pravila_naslov": "Pravila ribolova",
+    "lov_kartice": [
+      {
+        "naziv": "Šumska lovišta",
+        "tekst": "Bogati šumski kompleksi Javora — prirodno stanište krupne i sitne divljači."
+      },
+      {
+        "naziv": "Krupna divljač",
+        "tekst": "Srna, jelen, divlja svinja i druge vrste krupne divljači karakteristične za ovo područje."
+      },
+      {
+        "naziv": "Lovni turizam",
+        "tekst": "Razvijen komercijalni lov i lovnoturistička ponuda za domaće i strane goste."
+      }
+    ],
+    "ribolov_kartice": [
+      {
+        "naziv": "Potočna pastrmka",
+        "tekst": "Jedina vrsta ribe u vodama — minimalna dužina za zadržavanje 25 cm."
+      },
+      {
+        "naziv": "Sezona ribolova",
+        "tekst": "1. marta — 30. septembra · Isključivo na vještačke mamce."
+      },
+      {
+        "naziv": "Dva sliva",
+        "tekst": "Sliv rijeke Bosne (mušičarenje) i sliv Drine (varaličarenje)."
+      }
+    ],
+    "pravila_lista": [
+      "Ribolov isključivo na vještačke mamce",
+      "Minimalna dužina ribe za zadržavanje: 25 cm",
+      "Sezona: 1. marta — 30. septembra",
+      "Obavezna ribolovna dozvola"
+    ],
+    "meta_title": "Lov i ribolov",
+    "meta_description": "Otkrijte lovišta i ribolovna područja opštine Han Pijesak, idealna za ljubitelje prirode."
+  },
+  "ohp": {
+    "danas_naslov": "Han Pijesak danas",
+    "danas_opis": "Geografija, klima, turizam i institucije",
+    "istorija_naslov": "Han Pijesak kroz istoriju",
+    "istorija_opis": "Vijekovi bogate prošlosti, kulture i tradicije",
+    "istrazi": "Istraži →",
+    "meta_title": "O Han Pijesku",
+    "meta_description": "Sve o opštini Han Pijesak — istorija, geografija i savremeni život u srcu Republike Srpske."
+  },
+  "hpd": {
+    "hero_natpis": "O Han Pijesku",
+    "hero_naslov": "Han Pijesak danas",
+    "o_bedz": "O Han Pijesku",
+    "o_naslov": "O Han Pijesku",
+    "o_opis": "Han Pijesak je gradsko naselje i sjedište istoimene opštine koja se nalazi u istočnom dijelu Republike Srpske, Bosne i Hercegovine. Smješten je na razvođu rijeka Stupčanice i Žepe, na nadmorskoj visini od 1.100 metara, što ga čini naseljem sa najvećom nadmorskom visinom u Republici Srpskoj. Na području naselja živi 2.018 stanovnika, dok ukupna populacija opštine iznosi 3.530 stanovnika. Opština se prostire na površini od oko 330–335,8 km² i ubraja se u red manjih opština, sa oko 25 naseljenih mjesta koja su uglavnom mala i razuđena između planinskih predjela.",
+    "naglasak_visina": "nadmorska visina",
+    "naglasak_stanovnici": "stanovnika",
+    "naglasak_povrsina": "površina",
+    "geo_bedz": "Geografija",
+    "geo_naslov": "Geografija",
+    "geo_opis": "Ovaj kraj pripada prostoru unutrašnjih Dinarida i ima izražene odlike brdsko-planinskog područja, gdje dominiraju nadmorske visine iznad 1.000 metara. Han Pijesak je okružen planinskim visovima – Velikim Žepom (1.537 m), Javornikom (1.219 m), Studenom Gorom (1.149 m) i Trešnjevcem (1.245 m), kao i prostranim četinarskim i listopadnim šumama. Zahvaljujući izuzetno čistom vazduhu i visokoj koncentraciji ozona, ovo mjesto je prepoznato kao jedna od najznačajnijih klimatskih i vazdušnih banja u Evropi, a početkom novembra 2023. godine cijelo područje opštine i zvanično je proglašeno vazdušnom banjom. Ova činjenica predstavlja snažan temelj za razvoj zdravstvenog i rekreativnog turizma.",
+    "klima_bedz": "Klima i voda",
+    "klima_naslov": "Klima",
+    "klima_opis": "Klimatske odlike ovog područja uslovljene su velikom nadmorskom visinom, geografskom širinom i kontinentalnošću. Na ovom prostoru dolazi do sudara polarnog i suptropskog vazduha, što rezultira planinskom klimom sa blagim uticajem kontinentalne. Karakterističan je veći broj vjetrovitih dana, pri čemu dominiraju sjeverni i južni vjetrovi. Takvi prirodni uslovi doprinose izuzetnom kvalitetu vazduha i čine boravak u ovom kraju posebno pogodnim za zdravlje.",
+    "voda_naslov": "Vodni resursi",
+    "voda_opis": "Područje opštine karakterišu i značajni vodni resursi. Han Pijesak se nalazi na vododjelnici između slivova rijeka Drine i Bosne. U slivu Drine nalazi se rječica Rijeka, koja nastaje od više izvora, dok u slivu Bosne izvire nekoliko rječica – Bjesnica, Krivača, Varošnica i Pištica, koje se u selu Pjenovac spajaju i formiraju rijeku Stupčanicu. Posebnu prirodnu atrakciju predstavlja kanjon rijeke Varošnice, dug oko 4 kilometra, kao i izvori u njenoj blizini. Dodatnu vrijednost ovom području daje i potok Skakavac, koji na kratkoj dužini od oko 600 metara savladava visinsku razliku veću od 200 metara, stvarajući jedinstven prirodni ambijent.",
+    "turizam_bedz": "Turizam",
+    "turizam_naslov": "Različiti vidovi turizma",
+    "turizam_uvod": "Han Pijesak se nalazi na važnom magistralnom putu koji ga povezuje sa centrima u Republici Srpskoj, Federaciji BiH i šire, što doprinosi njegovoj dostupnosti i turističkoj atraktivnosti. Prirodne karakteristike ovog područja omogućavaju razvoj različitih vidova turizma.",
+    "turizam_kartice": [
+      {
+        "naziv": "Zimski turizam",
+        "opis": "Skijanje i zimski sportovi na planini Javor"
+      },
+      {
+        "naziv": "Planinski turizam",
+        "opis": "Planinarske staze, vidikovci i netaknuta priroda za ljubitelje planinarenja."
+      },
+      {
+        "naziv": "Lov i ribolov",
+        "opis": "Bogata lovna područja i ribolovne vode u okolini opštine."
+      },
+      {
+        "naziv": "Biciklizam",
+        "opis": "Bicilističke staze kroz netaknutu prirodu za ljubitelje brdskog biciklizma"
+      },
+      {
+        "naziv": "Zdravstveni turizam",
+        "opis": "Vazdušna banja i klimatski turizam zahvaljujući izuzetnom kvalitetu zraka."
+      },
+      {
+        "naziv": "Vikend turizam",
+        "opis": "Odmor u prirodi, brvnare i smještajni objekti u mirnom okruženju."
+      }
+    ],
+    "kultura_bedz": "Kultura i obrazovanje",
+    "kultura_naslov": "Institucije",
+    "kultura_podnaslov": "Obrazovanje i kultura s korijenima u ranom 20. vijeku",
+    "bib_nagrada": "★ Najbolja biblioteka u RS — 2022.",
+    "bib_naslov": "JU Narodna biblioteka Branko Čučak",
+    "bib_godina": "Osnovana 1923. godine · Ul. Aleksandra Karađorđevića 2",
+    "bib_tekst": "JU Narodna biblioteka Branko Čučak u Han Pijesku smještena je u ulici Aleksandra Karađorđevića 2, u zgradi nekadašnjeg Sokolskog doma koji je tridesetih godina prošlog vijeka narodu poklonio kralj Aleksandar. Biblioteka raspolaže bogatim fondom od preko 33.000 knjiga iz različitih oblasti, kao i vrijednim zbirkama i legatima, među kojima se izdvajaju legat Branka Čučka, dio lične biblioteke akademika Rajka Kuzmanovića, te posebne kolekcije i umjetnički sadržaji. U njenom sastavu nalazi se i spomen-soba posvećena kraljevskoj porodici Karađorđević, kao i značajna dokumentarna i fotografska građa. Sa tradicijom koja traje od 1923. godine, biblioteka danas predstavlja važan kulturni centar, prepoznat i van lokalne zajednice, a njen rad obilježavaju brojne promocije, radionice i manifestacije, među kojima su i Čučkovi književni susreti. Proglašena je za najbolju biblioteku u Republici Srpskoj za 2022. godinu.",
+    "bib_knjiga": "knjiga",
+    "bib_osnivanje": "godina osnivanja",
+    "bib_tradicija": "godina tradicije",
+    "cos_naslov": "Centar za kulturu i sport Pogled",
+    "cos_godina": "Osnovan 2001. godine",
+    "cos_tekst": "Ključna ustanova za organizaciju kulturnih i sportskih događaja u opštini, sa kino dvoranom od 250 mjesta i sportskom dvoranom.",
+    "cos_lista": [
+      "Kino dvorana — 250 mjesta",
+      "Sportska dvorana",
+      "Kreativne radionice i foto-klub",
+      "Galerijski prostor"
+    ],
+    "obr_naslov": "Obrazovanje",
+    "obr_godina": "Od 1908. godine",
+    "obr_tekst": "Razvoj obrazovanja započeo je 1908. otvaranjem osnovne škole. Srednjoškolski centar od 1964. obuhvata gimnaziju, šumarsku i saobraćajnu školu.",
+    "obr_lista": [
+      "Osnovna škola od 1908.",
+      "Gimnazija",
+      "Šumarska škola",
+      "Saobraćajna škola"
+    ],
+    "meta_title": "Han Pijesak danas",
+    "meta_description": "Saznajte kako izgleda savremeni Han Pijesak — razvoj, privreda i svakodnevni život opštine."
+  },
+  "hpi": {
+    "hero_natpis": "O Han Pijesku",
+    "hero_naslov": "Han Pijesak kroz istoriju",
+    "hero_podnaslov": "Od osmanskog karavanskog puta do savremenog doba",
+    "sidebar_naslov": "Historijski periodi",
+    "periodi": [
+      {
+        "id": 1,
+        "naslov": "Osmansko doba",
+        "naslov_en": "Ottoman Era",
+        "period": "do 1878.",
+        "period_en": "until 1878",
+        "bedzTip": "osmanski",
+        "tekst": "Područje Han Pijeska razvijalo se još u vrijeme Osmanskog carstva kao važna tačka na starom karavanskom putu koji je vodio od Sarajeva preko Romanije. Na svakih desetak kilometara nalazili su se hanovi – svratišta za odmor putnika, trgovaca i vojnih karavana. Jedan od tih hanova bio je i Han Pijesak, oko kojeg se kasnije formiralo naselje. Putopisac Evlija Čelebija 1664. godine pominje više hanova na ovom prostoru, poput Han Pijeska, Han Pogleda i drugih, koji su kasnije prerasli u značajnija naselja. Zahvaljujući svom položaju na raskrsnici puteva koji su vodili ka Srebrenici, Zvorniku, Vlasenici i Sarajevu, Han Pijesak je imao veliki strateški i saobraćajni značaj. Posebno se isticao Han Pogled, koji je zbog svog vidikovca i preglednosti terena imao važnu ulogu u vrijeme nesigurnosti i napada na putnike.",
+        "tekst_en": "The Han Pijesak area developed during the Ottoman Empire as an important stop on the old caravan route from Sarajevo across Romanija. Every ten or so kilometres there were hans — inns for the rest of travellers, merchants and military caravans. One such han was Han Pijesak, around which a settlement later formed. The traveller Evliya Çelebi mentioned several hans in this area in 1664, including Han Pijesak, Han Pogled and others that later grew into more significant settlements. Thanks to its position at the crossroads of routes leading to Srebrenica, Zvornik, Vlasenica and Sarajevo, Han Pijesak had great strategic and transport importance. Han Pogled was particularly notable, playing an important role during times of insecurity due to its vantage point and visibility of the terrain.",
+        "zanimljivost": "Prema narodnom predanju, ime Han Pijesak potiče od pritužbi majstora koji su gradili han, jer je pijesak bio loš za gradnju.",
+        "zanimljivost_en": "According to folk tradition, the name Han Pijesak comes from complaints by the craftsmen who built the han, as the sand was poor for construction.",
+        "slikaKey": "osmSlika"
+      },
+      {
+        "id": 2,
+        "naslov": "Austrougarski period",
+        "naslov_en": "Austro-Hungarian Period",
+        "period": "1878. — 1918.",
+        "period_en": "1878 — 1918",
+        "bedzTip": "austrougarski",
+        "tekst": "Veći razvoj počinje dolaskom Austro-Ugarske, kada se grade putevi i željeznička pruga prema Zavidovićima. To dovodi do jačanja značaja ovog mjesta, pa se krajem 19. vijeka (prvi put pomenuto 1895. godine) formira naselje radnika, uglavnom drvosječa. Do Prvog svjetskog rata ovdje gotovo da nije bilo razvijenog naselja, osim hana i nekoliko šumskih baraka.",
+        "tekst_en": "Greater development began with the arrival of Austria-Hungary, when roads and a railway line to Zavidovići were built. This led to the growing importance of the settlement, and at the end of the 19th century (first mentioned in 1895) a workers' settlement was formed, mainly of woodcutters. Until the First World War there was almost no developed settlement here, apart from the han and a few forest barracks.",
+        "zanimljivost": "",
+        "zanimljivost_en": "",
+        "slikaKey": "ausSlika"
+      },
+      {
+        "id": 3,
+        "naslov": "Prvi svjetski rat",
+        "naslov_en": "First World War",
+        "period": "1914. — 1918.",
+        "period_en": "1914 — 1918",
+        "bedzTip": "rat",
+        "tekst": "Tokom Prvog svjetskog rata Han Pijesak i okolina bili su poprište značajnih vojnih operacija u okviru bitke na Drini 1914. godine. Srpska vojska, posebno Užička vojska pod komandom generala Miloša Božanovića, napredovala je preko ovog područja prema Vlasenici. Vođene su teške borbe sa austrougarskim snagama, naročito na područjima kao što su Igrišta, Vran kamen i druga uzvišenja. U tim sukobima poginulo je oko 1.500 srpskih vojnika. Nakon početnih uspjeha, srpska vojska se usljed jakih protivnapada i nepovoljnih uslova povukla preko Drine.",
+        "tekst_en": "During the First World War, Han Pijesak and its surroundings were the scene of significant military operations as part of the Battle of the Drina in 1914. The Serbian army, particularly the Užice Army under General Miloš Božanović, advanced through this area towards Vlasenica. Heavy fighting took place with Austro-Hungarian forces, particularly in areas such as Igrišta, Vran Kamen and other heights. Around 1,500 Serbian soldiers were killed in these battles. After initial successes, the Serbian army withdrew across the Drina due to strong counter-attacks and unfavourable conditions.",
+        "zanimljivost": "Na području planine Javor postoje tri groblja srpskih vojnika iz Prvog svjetskog rata, Vrani kamen, Veliko Igrište i Ružina Voda, na kojima je ukupno sahranjeno više od 1300 vojnika.",
+        "zanimljivost_en": "On Mount Javor there are three cemeteries of Serbian soldiers from the First World War — Vrani Kamen, Veliko Igrište and Ružina Voda — where more than 1,300 soldiers are buried in total.",
+        "slikaKey": "vraniKamen"
+      },
+      {
+        "id": 4,
+        "naslov": "Period Kraljevine Jugoslavije",
+        "naslov_en": "Kingdom of Yugoslavia Period",
+        "period": "1918. — 1941.",
+        "period_en": "1918 — 1941",
+        "bedzTip": "mir",
+        "tekst": "Period Kraljevina Jugoslavija predstavlja vrijeme najvećeg uspona i afirmacije Han Pijesak kao značajnog planinskog i turističkog mjesta. Zahvaljujući izuzetno povoljnoj klimi, velikoj nadmorskoj visini i čistom vazduhu bogatog ozonom, Han Pijesak je u ovom periodu prepoznat kao idealno mjesto za odmor, oporavak i boravak u prirodi. Poseban značaj ovom mjestu daje dolazak i interesovanje kraljevske porodice Karađorđević, koja je u Han Pijesku izgradila svoju ljetnu rezidenciju, poznatu kao Vila Karađorđevića. Ova vila nije bila samo mjesto odmora, već i simbol prestiža i važnosti koje je Han Pijesak imao u tom vremenu. Boravak članova kraljevske porodice doprinio je popularizaciji ovog kraja, pa Han Pijesak postaje okupljalište društvene i političke elite tadašnje države.",
+        "tekst_en": "The Kingdom of Yugoslavia period represents the time of the greatest rise and affirmation of Han Pijesak as a significant mountain and tourist destination. Thanks to its exceptionally favourable climate, high altitude and clean ozone-rich air, Han Pijesak was recognised in this period as an ideal place for rest, recovery and time in nature. Special significance was given to the location by the interest of the Karađorđević royal family, who built their summer residence here, known as the Karađorđević Villa. This villa was not only a place of rest but also a symbol of the prestige and importance that Han Pijesak held at the time. The presence of royal family members contributed to the popularity of the area, and Han Pijesak became a gathering place for the social and political elite of the state.",
+        "zanimljivost": "26. avgusta 1936. godine u Han Pijesku je održana značajna sjednica ekonomsko-finansijskog komiteta ministara u vezi sa rješavanjem pitanja zemljoradničkih dugova.",
+        "zanimljivost_en": "On 26 August 1936, a significant session of the economic and financial ministerial committee was held in Han Pijesak regarding the resolution of agricultural debts.",
+        "slikaKey": "vila"
+      },
+      {
+        "id": 5,
+        "naslov": "Drugi svjetski rat",
+        "naslov_en": "Second World War",
+        "period": "1941. — 1945.",
+        "period_en": "1941 — 1945",
+        "bedzTip": "rat",
+        "tekst": "Period Drugog svjetskog rata donio je nagli prekid razvoja Han Pijesak i potpuno promijenio njegovu dotadašnju ulogu. Nakon kapitulacije Kraljevina Jugoslavija 1941. godine, područje je dospjelo pod okupaciju, što je dovelo do gašenja institucija i prekida turističkog i društvenog života. Mjesto koje je ranije bilo elitno odmaralište postaje dio ratne svakodnevice, uz stagnaciju infrastrukture i teške uslove života. Tokom 1942. Nezavisna Država Hrvatska sprovodila je operacije na području istočne Bosne pod komandom Jure Francetića. Tokom tih operacija mnoge porodice iz Han Pijeska i okolnih sela bile su primorane na bijeg prema Drini, a veliki broj civila stradao je na tom putu, posebno na području Starog Broda. Ovi događaji ostavili su trajne posljedice na stanovništvo i razvoj ovog kraja.",
+        "tekst_en": "The Second World War brought a sudden halt to the development of Han Pijesak and completely changed its previous role. After the capitulation of the Kingdom of Yugoslavia in 1941, the area fell under occupation, which led to the closure of institutions and the interruption of tourist and social life. The place that had previously been an elite resort became part of the wartime everyday, with stagnating infrastructure and harsh living conditions. During 1942, the Independent State of Croatia carried out operations in eastern Bosnia under the command of Jure Francetić. During these operations many families from Han Pijesak and surrounding villages were forced to flee towards the Drina, and a large number of civilians perished along the way, particularly in the Stari Brod area. These events left lasting consequences on the population and development of the region.",
+        "zanimljivost": "Prema dostupnim istorijskim podacima, tokom operacija pod komandom Jure Francetića, ubijeno je više od 6.000 nenaoružanih civila sa šireg područja istočne Bosne, uključujući i stanovništvo iz Han Pijeska i okolnih sela.",
+        "zanimljivost_en": "According to available historical records, during the operations under the command of Jure Francetić, more than 6,000 unarmed civilians from the wider area of eastern Bosnia were killed, including residents of Han Pijesak and surrounding villages.",
+        "slikaKey": "stariBrod"
+      },
+      {
+        "id": 6,
+        "naslov": "Socijalistička Jugoslavija",
+        "naslov_en": "Socialist Yugoslavia",
+        "period": "1945. — 1991.",
+        "period_en": "1945 — 1991",
+        "bedzTip": "soc",
+        "tekst": "Period Socijalističke Federativne Republike Jugoslavije predstavlja fazu obnove i stabilizacije u razvoju Han Pijesak. Okosnicu privrednog razvoja činilo je šumarstvo, zahvaljujući bogatim šumskim kompleksima koji okružuju ovo područje. Organizovano gazdovanje šumama dovelo je do zapošljavanja lokalnog stanovništva i formiranja radničkih zajednica, a Han Pijesak postaje prepoznat kao mjesto povezano sa drvnom industrijom. U ovom periodu posebnu ulogu imala je Jugoslovenska narodna armija, koja je u blizini Han Pijeska izgradila podzemni vojni kompleks Veliki Žep. Ovaj objekat bio je planiran kao strateško komandno mjesto u slučaju globalnog sukoba, što svjedoči o značaju koji je ovom području pridavan u vojnom smislu. Prisustvo vojske dodatno je uticalo na razvoj infrastrukture i značaj Han Pijeska u tadašnjem sistemu.",
+        "tekst_en": "The period of the Socialist Federal Republic of Yugoslavia represents a phase of reconstruction and stabilisation in the development of Han Pijesak. The backbone of economic development was forestry, thanks to the rich forest complexes surrounding the area. Organised forest management led to the employment of the local population and the formation of workers' communities, and Han Pijesak became recognised as a place associated with the timber industry. During this period, a special role was played by the Yugoslav People's Army, which built the underground military complex \"Veliki Žep\" near Han Pijesak. This facility was planned as a strategic command post in the event of a global conflict, testifying to the military significance attached to the area. The military presence further influenced the development of infrastructure and the importance of Han Pijesak in the system of the time.",
+        "zanimljivost": "U Han Pijesku je tokom SFRJ postojala kasarna u kojoj su vojnici iz cijele bivše Jugoslavije služili vojni rok.",
+        "zanimljivost_en": "During the SFRY period, Han Pijesak had a barracks where soldiers from across the former Yugoslavia did their military service.",
+        "slikaKey": "velikiZep"
+      },
+      {
+        "id": 7,
+        "naslov": "Period 1990-ih",
+        "naslov_en": "The 1990s",
+        "period": "1991. — 2000.",
+        "period_en": "1991 — 2000",
+        "bedzTip": "devedesete",
+        "tekst": "Nakon raspada Jugoslavije i ratnih dešavanja 1990-ih nastupa jedna od najtežih faza u novijoj istoriji Han Pijesak. Sa početkom rata u Bosni i Hercegovini 1992. godine, ovo područje dobija izražen strateški značaj, prije svega zbog svoje geografske pozicije i već postojeće vojne infrastrukture. U tom periodu, podzemni vojni kompleks Veliki Žep, izgrađen još u vrijeme SFRJ, postaje sjedište Glavnog štaba Vojske Republike Srpske. Time Han Pijesak postaje jedno od važnih vojno-komandnih mjesta, što dodatno utiče na njegovu ulogu tokom ratnih godina. Ratna dešavanja ostavila su značajne posljedice na lokalno stanovništvo i privredu. Dolazi do smanjenja broja stanovnika, migracija i opšte ekonomske stagnacije. Mnogi privredni tokovi, posebno oni vezani za šumarstvo i lokalnu proizvodnju, bili su otežani ili potpuno prekinuti. Infrastruktura je djelimično zapuštena, a razvoj koji je građen u prethodnim decenijama zaustavljen.",
+        "tekst_en": "After the break-up of Yugoslavia and the war events of the 1990s, one of the most difficult phases in the recent history of Han Pijesak began. With the start of the war in Bosnia and Herzegovina in 1992, the area gained pronounced strategic significance, primarily due to its geographical position and existing military infrastructure. During this period, the underground military complex \"Veliki Žep\", built during the SFRY, became the headquarters of the Main Staff of the Army of Republika Srpska. Han Pijesak thus became one of the important military command locations, further affecting its role during the war years. The war left significant consequences for the local population and economy. There was a decline in population, migrations and general economic stagnation. Many economic activities, particularly those related to forestry and local production, were impeded or completely halted. Infrastructure was partly neglected and the development built up over previous decades was brought to a stop.",
+        "zanimljivost": "",
+        "zanimljivost_en": "",
+        "slikaKey": "hp90"
+      }
+    ],
+    "meta_title": "Istorija Han Pijeska",
+    "meta_description": "Istražite bogatu istoriju opštine Han Pijesak kroz vjekove."
+  },
+  "pocetna": {
+    "hero_naslov": "Dobrodošli u Han Pijesak - vazdušnu banju!",
+    "stats_visina_v": "1100 m",
+    "stats_visina_l": "nadmorska visina",
+    "stats_staze_v": "50+ km",
+    "stats_staze_l": "planinarskih staza",
+    "stats_stanovnici_v": "3.530",
+    "stats_stanovnici_l": "stanovnika",
+    "stats_nedostupno": "prognoza nedostupna",
+    "stats_temp": "trenutna temperatura",
+    "vrijeme": {
+      "0": "Vedro",
+      "1": "Uglavnom vedro",
+      "2": "Djelimično oblačno",
+      "3": "Oblačno",
+      "45": "Magla",
+      "48": "Magla",
+      "51": "Rosulja",
+      "53": "Rosulja",
+      "61": "Kiša",
+      "63": "Kiša",
+      "71": "Snijeg",
+      "73": "Snijeg",
+      "75": "Snijeg",
+      "80": "Pljuskovi",
+      "95": "Grmljavina",
+      "varijabilno": "Varijabilno"
     },
-    {
-      "naslov": "Vodopad Skakavac",
-      "opis": "Okružen gustom šumom i netaknutom prirodom, Vodopad Skakavac je jedno od najljepših prirodnih čuda ovog kraja. Savršena polazna tačka za planinske šetnje i izlete koji ostavljaju neizbrisiv utisak.",
-      "tag": "Priroda"
-    },
-    {
-      "naslov": "Vazdušna banja",
-      "opis": "Zahvaljujući jedinstvenoj klimi i čistom planinskom vazduhu, Han Pijesak s ponosom nosi naziv vazdušne banje. Idealno odredište za odmor i oporavak — čist zrak i blaga planinska klima čekaju te tokom cijele godine.",
-      "tag": "Zdravlje"
-    }
-  ]
-},"sport_rekreacija": {
-  "hero_naslov": "Sport i rekreacija u Han Pijesku",
-  "hero_podnaslov": "Planine, šume i čist planinski vazduh — savršeni uslovi za sport, rekreaciju i aktivni odmor tokom cijele godine.",
-  "hero_dugme": "Istraži aktivnosti ↓",
-
-  "uvod_bedz": "Prirodni uslovi",
-  "uvod_naslov": "Han Pijesak — prirodna arena za sport",
-  "uvod_p1": "Smješten na nadmorskoj visini od oko 1.100 metara, Han Pijesak pruža izuzetne prirodne uslove za sport i rekreaciju tokom cijele godine. Prostrane planinske šume, čist vazduh čine ovo područje idealnim za sve koji traže aktivan odmor u prirodi.",
-  "uvod_p2": "Od skijanja zimi do planinarenja i biciklizma ljeti — priroda Han Pijeska nudi raznovrsne mogućnosti za sve uzrasne kategorije, uz podršku lokalnih sportskih organizacija.",
-  "uvod_p3": "Čist planinski vazduh, minimalna buka i netaknuta priroda čine sport i rekreaciju ovdje posebnim i nezaboravnim iskustvom.",
-
-  "uvod_kartice": [
-    { "naziv": "Planinarenje i pješačenje", "opis": "15+ označenih staza za sve nivoe" },
-    { "naziv": "Biciklizam", "opis": "MTB i rekreativne rute kroz šume" },
-    { "naziv": "Zimski sportovi", "opis": "Skijanje na obroncima Javora" },
-    { "naziv": "Lov i ribolov", "opis": "Bogati reviri uz rijeke i jezera" }
-  ],
-
-  "org_bedz": "Lokalni sportski klubovi",
-  "org_naslov": "Sportske organizacije",
-  "org_podnaslov": "Han Pijesak ima bogatu sportsku tradiciju kroz aktivne klubove i udruženja",
-
-  "org_lista": [
-    {
-      "naziv": "PSU Visočnik",
-      "opis": "Planinarsko sportsko udruženje Visočnik organizuje pohode, takmičenja i edukacije u planinarenju. Aktivni tokom cijele godine na stazama Javora i okolnih planina.",
-      "slikeOpisi": ["Vrani Kamen 2025", "Musala - krov Balkana", "Vrhovima Romanije", "Bregoč, vrh Zelengore"]
-    },
-    {
-      "naziv": "PSU Javor — sunčana planina",
-      "opis": "Udruženje posvećeno promociji planinarstva i aktivnog boravka u prirodi. Organizuju godišnje pohode i saradnju sa školama i turističkom organizacijom.",
-      "slikeOpisi": ["Veliki Žep", "Trebević", "Komić", "Velika Sikira"]
-    },
-    {
-      "naziv": "OK Han Pijesak",
-      "opis": "Sportsko udruženje Gorštak aktivno djeluje u oblasti planinskih sportova i rekreacije. Posebno poznati po organizaciji pohoda za sve uzrasne kategorije.",
-      "slikeOpisi": ["Pohod u šumi", "Vršni uspon", "Rekreacija", "Takmičenje"]
-    },
-    {
-      "naziv": "FK Omladinac Han Pijesak",
-      "opis": "Fudbalski klub sa dugom tradicijom koji okuplja mlade i iskusne igrače opštine. Aktivno učestvuje u regionalnim ligama i organizuje lokalne turnire.",
-      "slikeOpisi": []
-    },
-    {
-      "naziv": "KK Han Pijesak",
-      "opis": "Košarkaški klub Han Pijesak okuplja mlade sportiste i promoviše košarku kao sport u opštini. Aktivno učestvuje u regionalnim takmičenjima.",
-      "slikeOpisi": []
-    },
-    {
-      "naziv": "Taekwon-do klub Ozon Han Pijesak",
-      "opis": "Taekwondo klub Ozon Han Pijesak okuplja mlade sportiste i promoviše zdrav način života kroz treninge, disciplinu i sportski duh. Klub redovno učestvuje na domaćim i regionalnim takmičenjima, predstavljajući Han Pijesak i ostvarujući zapažene rezultate u taekwondou.",
-      "slikeOpisi": []
-    },
-    {
-      "naziv": "KUD \"Sveti Pantelejmon\"",
-      "opis": "Kulturno-umjetničko društvo koje njeguje tradiciju, folklor i običaje ovog kraja. Organizuje nastupe i događaje koji čuvaju kulturno nasljeđe.",
-      "slikeOpisi": []
-    }
-  ],
-
-  "ski_bedz": "Zimski sportovi",
-  "ski_naslov": "Ski centar Igrišta",
-  "ski_podnaslov": "Ski centar Igrista, smješten u neposrednoj blizini Han Pijeska, predstavlja jedno od najatraktivnijih mjesta za zimski turizam u ovom dijelu Republike Srpske. Okružen netaknutom prirodom, gustim šumama i planinskim pejzažima, ovaj centar pruža idealne uslove za skijanje, sankanje i boravak na svježem planinskom vazduhu. Centar raspolaže uređenim ski-stazama srednje dužine, pogodnim kako za početnike, tako i za rekreativne skijaše. Staze su blagog do umjerenog nagiba, što ih čini sigurnim i prijatnim za vožnju, dok prirodni snijeg i uređena podloga omogućavaju kvalitetno skijanje tokom sezone. Idealno je mjesto za opušten zimski odmor, daleko od gužve i buke većih ski centara.",
-
-  "ski_info": [
-    { "vrijednost": "1.400 m", "labela": "Maks. nadmorska visina" },
-    { "vrijednost": "3 km", "labela": "Ukupna dužina staza" },
-    { "vrijednost": "9 km", "labela": "Udaljenost od Han Pijeska" },
-    { "vrijednost": "2", "labela": "Ski staze" },
-    { "vrijednost": "1", "labela": "Ski lift" },
-    { "vrijednost": "Dec — Mar", "labela": "Sezona" }
-  ],
-
-  "ski_slike_opisi": ["Ski staza", "Ski lift", "Zimska panorama", "Skijaši na stazi", "Noćno skijanje"],
-
-  "dogadjaji_bedz": "Tradicionalne manifestacije",
-  "dogadjaji_naslov": "Sportski događaji",
-  "dogadjaji_podnaslov": "Takmičenja i manifestacije koje tokom godine okupljaju sportiste i ljubitelje prirode",
-
-  "dogadjaji": [
-    { "naziv": "Odbojkaške utakmice tokom godine", "opis": "Odbojkaške utakmice koje se održavaju tokom godine, na kojima učestvuju klubovi iz različitih dijelova države.", "period": "Tokom godine" },
-    { "naziv": "Lokalni fudbalski turnir", "opis": "Tradicionalni ljetnji turnir u malom fudbalu koji okuplja ekipe iz Han Pijeska i okolnih opština.", "period": "Juli — Avgust" },
-    { "naziv": "Planinarski pohod — Skakavac", "opis": "Organizovani pohod na jedno od najljepših izletišta u okolini, uz vođenje iskusnih planinara.", "period": "April" },
-    { "naziv": "MTB", "opis": "Rekreativna tura kroz označene biciklističke staze opštine, otvorena za sve uzraste.", "period": "Avgust — Septembar" }
-  ],
-
-  "cta_naslov": "Doživite aktivnu prirodu",
-  "cta_tekst": "Han Pijesak vas čeka tokom cijele godine — pronađite smještaj, odaberite aktivnost i krenite u avanturu u srcu Romanije.",
-  "cta_staze": "Pogledaj staze",
-  "cta_kontakt": "Kontaktirajte nas"
-}, "vjerski_objekti": {
-  "hero_naslov": "Vjerski objekti",
-  "hero_podnaslov": "na području opštine Han Pijesak",
-
-  "uvod_naslov": "Vjerska baština Han Pijeska",
-  "uvod_tekst": "Područje Han Pijeska karakteriše bogata, iako brojčano skromna, vjerska baština koja svjedoči o dugoj istoriji i suživotu različitih kultura i religija. Na teritoriji opštine nalaze se pravoslavni i islamski vjerski objekti, kao i značajni religijski lokaliteti koji imaju istorijsku i kulturnu vrijednost.",
-
-  "pogledaj_na_mapi": "Pogledaj na mapi",
-
-  "objekat_1_naziv": "Crkva Svetog velikomučenika Pantelejmona",
-  "objekat_1_tip": "Pravoslavni vjerski objekat",
-  "objekat_1_opis": "Crkva Svetog velikomučenika Pantelejmona je hram Srpske pravoslavne crkve koji se nalazi u Han Pijesku u Republici Srpskoj. Pripada eparhiji zvorničko-tuzlanskoj, sjedište je parohije. Prvobitna crkva u Han Pijesku sagrađena je 1923. godine, a kumovao joj je lično kralj Aleksandar Prvi Karađorđević koji je često boravio u svojoj rezidenciji u Han Pijesku. Stari hram su avionima bombardovale i porušile ustaše 1942. godine, a od nekadašnjeg hrama sačuvana su samo tri zvona. Gradnja novog jednobrodnog hrama počela je 1972. godine i završena 1979. godine.",
-  "objekat_1_alt_1": "Crkva Svetog Pantelejmona — Han Pijesak",
-  "objekat_1_alt_2": "Crkva Svetog Pantelejmona",
-
-  "objekat_2_naziv": "Hram Svetog cara Konstantina i carice Jelene",
-  "objekat_2_tip": "Pravoslavni vjerski objekat",
-  "objekat_2_opis": "Između Prvog i Drugog svjetskog rata, u selu Džimrije postojala je crkva brvnara posvećena Sv. caru Konstantinu i carici Jeleni. Obnova i zidanje crkve započeta je jula 2000. godine, a radovi su završeni 2002. godine. Zemljište za gradnju hrama darovala je porodica Mandić iz Han Pijeska. Crkvu je osvetio episkop zvorničko-tuzlanski gospodin Vasilije i episkop američki gospodin Longin, uoči dana hramovne slave 2. juna 2002. godine.",
-  "objekat_2_alt_1": "Hram u Džimrijama",
-
-  "objekat_3_naziv": "Manastir Pjenovac",
-  "objekat_3_tip": "Pravoslavni vjerski objekat",
-  "objekat_3_opis": "Manastir u Pjenovcu posvećen je Usjekovanju glave Svetog Jovana Krstitelja. Građen je od početka maja 2001. do početka juna 2002. godine. Gradnju su finansirali vjernici i privredni subjekti sa prostora opštine Han Pijesak i opština širom Republike Srpske, kao i dijaspore. Ikonostas, ikone i živopis radio je akademski slikar Nikolić Milan iz Šapca. Nedaleko od današnjeg manastira postojao je mali manastir koji je srušen dolaskom Turaka.",
-  "objekat_3_alt_1": "Manastir Pjenovac",
-  "objekat_3_alt_2": "Manastir Pjenovac — detalj",
-
-  "objekat_4_naziv": "Džamija u Nevačkoj",
-  "objekat_4_tip": "Islamski vjerski objekat",
-  "objekat_4_opis": "Jedan od najstarijih islamskih objekata na ovom području datira još iz 19. vijeka. Nakon razaranja tokom ratnih dešavanja, džamija je obnovljena i danas ponovo služi svojoj namjeni, predstavljajući važan simbol povratka i obnove života u ovom kraju.",
-  "objekat_4_alt_1": "Džamija u Nevačkoj"
-},"zdravstveni_turizam": {
-  "hero_bedz": "Vazdušna banja",
-  "hero_naslov": "Udahni pravi planinski vazduh",
-  "hero_podnaslov": "Han Pijesak — mjesto gdje priroda liječi, a planinski vazduh obnavlja tijelo i dušu.",
-  "hero_dugme": "Istraži više ↓",
-
-  "stat_sume": "površine pod šumom",
-  "stat_visina": "nadmorska visina",
-  "stat_proglasenje": "godina proglašenja vazdušnom banjom",
-  "stat_centar": "prosječna nadmorska visina centra",
-
-  "zasto_bedz": "Zvanično proglašenje",
-  "zasto_naslov": "Zašto je Han Pijesak vazdušna banja?",
-  "zasto_p1": "Zvanično proglašenje Han Pijeska vazdušnom banjom doneseno je 2023. godine od strane Vlade Republike Srpske — zasnovano na višegodišnjim stručnim analizama i institucionalnim procjenama.",
-  "zasto_p2": "Ključni razlozi su postojanje prirodnog ljekovitog faktora, dugogodišnja reputacija klimatskog lječilišta te naučno potvrđeni rezultati o kvalitetu vazduha i klime. Sistemskim mjerenjima prije više od 100 godina utvrđeno je da ovo područje ima kvalitete kakve nije imalo nijedno planninsko mjesto u tadašnjoj Austro-Ugarskoj carevini.",
-  "zasto_akcenat": "Godina zvaničnog proglašenja od strane Vlade RS",
-
-  "institucije_bedz": "Naučna potvrda",
-  "institucije_naslov": "Institucije koje su učestvovale",
-  "institucija_1": "Institut za zaštitu i ekologiju Republike Srpske",
-  "institucija_2": "Ministarstvo poljoprivrede, šumarstva i vodoprivrede RS",
-  "institucija_3": "Republički hidrometeorološki zavod RS",
-  "institucija_4": "Institut za javno zdravstvo Republike Srpske",
-  "institucije_napomena": "Ove institucije su kroz izvještaje i stručna mišljenja potvrdile da Han Pijesak posjeduje klimatske i vazdušne karakteristike pogodne za liječenje i prevenciju bolesti.",
-
-  "slider_naslov": "Han Pijesak u slikama",
-  "slider_podnaslov": "Priroda koja poziva na odmor i obnovu",
-  "slajd_1_opis": "Han Pijesak — zimski pejzaž",
-  "slajd_2_opis": "Planinska priroda Han Pijeska",
-  "slajd_3_opis": "Vazdušna banja Han Pijesak",
-  "slajd_4_opis": "Han Pijesak — panorama",
-  "slajd_5_opis": "Šume Han Pijeska",
-  "slajd_6_opis": "Han Pijesak — ljeto",
-  "slajd_7_opis": "Planinski pejzaž",
-  "slajd_8_opis": "Han Pijesak — jesen",
-  "slajd_9_opis": "Priroda Han Pijeska",
-  "slajd_10_opis": "Han Pijesak — proljeće",
-  "slajd_11_opis": "Šetnice Han Pijeska",
-  "slajd_12_opis": "Han Pijesak — vidikovac",
-  "slajd_13_opis": "Han Pijesak — centar",
-
-  "kvalitet_bedz": "Čistoća vazduha",
-  "kvalitet_naslov": "Kvalitet vazduha Han Pijeska",
-  "kvalitet_uvod": "Područje Han Pijeska karakteriše minimalno prisustvo zagađivača — rezultat potpune odsutnosti teške industrije i velike udaljenosti od urbanih centara.",
-  "kvalitet_sume_naslov": "Šume",
-  "kvalitet_sume_tekst": "Dominacija četinarskih šuma — bora, jele i smrče — oslobađa fitoncide, biološki aktivne supstance sa dokazanim antibakterijskim djelovanjem koje jačaju imunitet i smanjuju respiratorne tegobe.",
-  "kvalitet_ozon_naslov": "Ozon",
-  "kvalitet_ozon_tekst": "Han Pijesak je prepoznat kao područje sa povišenom koncentracijom ozona u prizemnim slojevima vazduha, što mu daje svježinu i čistoću te pozitivno djeluje na respiratorni sistem.",
-  "kvalitet_kiseonik_naslov": "Kiseonik",
-  "kvalitet_kiseonik_tekst": "Na nadmorskoj visini od 1.100 m, uz gustu vegetaciju, vazduh je bogat kiseonikom i izuzetno pogodan za disanje — poboljšava rad pluća i doprinosi fizičkoj izdržljivosti.",
-
-  "uticaj_naslov": "Uticaj na zdravlje",
-  "uticaj_podnaslov": "Naučno potvrđene dobrobiti boravka u planinskoj vazdušnoj banji",
-  "uticaj_1_naslov": "Disajni sistem",
-  "uticaj_1_opis": "Boravak u Han Pijesku ima izuzetno povoljan uticaj na respiratorni sistem. Čist vazduh, povećana koncentracija kiseonika i prisustvo fitoncida iz četinarskih šuma doprinose lakšem disanju i smanjenju iritacija disajnih puteva. Ovakvi uslovi posebno pogoduju osobama koje imaju problema sa astmom, bronhitisom i alergijama.",
-  "uticaj_2_naslov": "Cirkulacija",
-  "uticaj_2_opis": "Planinska nadmorska visina od oko 1.100 metara stimuliše rad kardiovaskularnog sistema. Organizam se prirodno prilagođava takvim uslovima, što dovodi do bolje cirkulacije i efikasnije distribucije kiseonika kroz tijelo. Redovan boravak može doprinijeti jačanju srca i povećanju fizičke izdržljivosti.",
-  "uticaj_3_naslov": "Smanjenje stresa",
-  "uticaj_3_opis": "Prirodno okruženje Han Pijeska, uz mir, tišinu i odsustvo urbanih uticaja, ima snažan umirujući efekat na organizam. Boravak u šumi i na svježem vazduhu smanjuje nivo hormona stresa, doprinosi opuštanju i vraća osjećaj unutrašnje ravnoteže.",
-  "uticaj_4_naslov": "Kvalitet sna",
-  "uticaj_4_opis": "Svjež planinski vazduh i prirodan dnevni ritam pozitivno utiču na kvalitet sna. Veća količina kiseonika u organizmu doprinosi dubljem i mirnijem snu, dok odsustvo buke i zagađenja omogućava potpun odmor i osjećaj odmornosti nakon buđenja.",
-  "uticaj_5_naslov": "Imunitet",
-  "uticaj_5_opis": "Zahvaljujući kombinaciji čistog vazduha, fitoncida i povoljne klime, boravak u Han Pijesku doprinosi jačanju imunološkog sistema. Organizam se lakše bori protiv infekcija, dok prirodni uslovi podstiču njegovu otpornost i regeneraciju.",
-  "uticaj_6_naslov": "Mentalno zdravlje",
-  "uticaj_6_opis": "Kontakt sa prirodom ima direktan pozitivan uticaj na mentalno zdravlje. Boravak u zelenom okruženju smanjuje anksioznost, poboljšava raspoloženje i povećava koncentraciju. Han Pijesak pruža idealne uslove za mentalni reset i bijeg od svakodnevnog stresa.",
-
-  "aktivnosti_naslov": "Aktivnosti u prirodi",
-  "aktivnosti_podnaslov": "Otkrijte što sve Han Pijesak nudi",
-  "aktivnost_1_naziv": "Planinarenje",
-  "aktivnost_1_opis": "Staze kroz romanijsku šumu za sve nivoe kondicije — od lakih šetnji do zahtjevnih uspona.",
-  "aktivnost_2_naziv": "Biciklizam",
-  "aktivnost_2_opis": "Preko 40 km označenih biciklističkih staza kroz netaknutu prirodu Han Pijeska.",
-  "aktivnost_3_naziv": "Šetnje kroz šumu",
-  "aktivnost_3_opis": "Uživajte u mirnim šetnjama kroz četinarske šume bogate fitoncidima i svježim vazduhom.",
-  "aktivnost_4_naziv": "Odmor u prirodi",
-  "aktivnost_4_opis": "Han Pijesak nudi idealne uslove za potpun odmor i regeneraciju u netaknutom planinskom ambijentu.",
-  "saznaj_vise": "Saznaj više →",
-
-  "cta_naslov": "Posjetite Han Pijesak",
-  "cta_tekst": "Planinska vazdušna banja čeka vas tokom cijele godine — pronađite smještaj i počnite planirati nezaboravan boravak u srcu Romanije.",
-  "cta_smjestaj": "Pronađi smještaj",
-  "cta_kontakt": "Kontaktirajte nas"
-},"znamenitosti": {
-  "hero_naslov": "Znamenitosti opštine Han Pijesak",
-  "hero_podnaslov": "Upoznajte historijsko i kulturno nasljeđe koje čuva vjekove prošlosti",
-
-  "dvorac_alt": "Dvorac Karađorđevića",
-  "dvorac_tip_badge": "Kraljevska rezidencija",
-  "dvorac_bedz": "Najznačajniji lokalitet",
-  "dvorac_naslov": "Dvorac Karađorđevića",
-  "dvorac_opis_1": "Impozantna kraljevska rezidencija izgrađena između 1919. i 1924. godine za kralja Aleksandra Karađorđevića. Smještena na visini od 1.100 metara, dvorac je bio poznat po izuzetnom kvalitetu planinskog vazduha i miru koji je pružao kraljevskoj porodici.",
-  "dvorac_opis_2": "Nakon decenija zapuštenosti i požara 2005. godine, objekat je u procesu obnove koja će mu vratiti nekadašnji sjaj i otvoriti ga za posjetioce kao kulturno-turistički centar.",
-  "dvorac_dugme": "Saznaj više o dvorcu →",
-
-  "ostale_bedz": "Historijski lokaliteti",
-  "ostale_naslov": "Ostale znamenitosti",
-  "ostale_podnaslov": "Han Pijesak čuva tragove različitih civilizacija i epoha — svaki lokalitet nosi svoju jedinstvenu priču",
-
-  "z1_naziv": "Spomen-kosturnica na Boračkom brdu",
-  "z1_tip": "Memorijalni kompleks",
-  "z1_opis": "Spomen-kosturnica na Boračkom brdu jedno je od najznačajnijih memorijalnih obilježja na području Han Pijeska. U njoj počivaju posmrtni ostaci 256 palih boraca Narodnooslobodilačkog rata, čime ovo mjesto ima poseban istorijski i simbolički značaj. Monumentalna forma spomenika svjedoči o vremenu kada su memorijalni kompleksi građeni kao mjesta kolektivnog sjećanja i poštovanja prema žrtvama rata. Smještena na uzvišenju, kosturnica pruža miran ambijent koji podstiče na razmišljanje i odavanje počasti.",
-
-  "z2_naziv": "Srpsko vojničko groblje Vrani Kamen",
-  "z2_tip": "Spomen-obilježje",
-  "z2_opis": "Na lokalitetu Vrani Kamen nalazi se jedno od najznačajnijih vojničkih grobalja iz Prvog svjetskog rata na području planine Javor. Pretpostavlja se da je ovdje sahranjeno oko 1.000 vojnika Šumadijske divizije Drugog poziva, stradalih tokom borbi 1914. godine. Ovo mjesto predstavlja tihi spomenik hrabrosti, žrtvi i istorijskom nasljeđu ovog kraja. Okruženo netaknutom prirodom i planinskim pejzažima, groblje danas ima poseban memorijalni i duhovni značaj.",
-
-  "z3_naziv": "Podzemni vojni objekat G3",
-  "z3_tip": "Vojno-istorijski lokalitet",
-  "z3_opis": "Podzemni vojni objekat G3, smješten na vrhu Mala Igrišta, jedan je od najintrigantnijih lokaliteta na području Han Pijeska. Izgrađen pedesetih godina prošlog vijeka kao dio tajne vojne infrastrukture bivše Jugoslavije, služio je kao komunikacijsko i komandno čvorište. Sistem podzemnih hodnika i prostorija prostire se na procijenjenih 500 do 700 metara, što ovom objektu daje poseban mistični karakter. Danas predstavlja izuzetno zanimljivu destinaciju za ljubitelje vojne istorije, avanturizma i istraživanja skrivenih lokacija.",
-
-  "z4_naziv": "Grob Jovana Tandarića",
-  "z4_tip": "Istorijsko-spomen obilježje",
-  "z4_opis": "Grob Jovana Tandarića, poznatijeg kao Jovo Tandarija, nalazi se u selu Bobica i predstavlja jedinstveno mjesto vezano za hajdučku istoriju Romanije. Jovan Tandarić smatra se posljednjim hajdukom ovog kraja, čovjekom čije je ime ostalo zapisano u lokalnim predanjima i narodnim pričama. Njegov život simbolizuje duh slobode, otpora i legendarnu hajdučku tradiciju po kojoj je Romanija nadaleko poznata. Ovo mjesto danas predstavlja spoj istorije, legende i kolektivnog sjećanja Romanijskog područja.",
-
-  "z5_naziv": "Stari grad Pošijak",
-  "z5_tip": "Istorijski lokalitet",
-  "z5_opis": "Stari grad Pošijak predstavlja jedno od najstarijih poznatih utvrđenja na području Han Pijeska i značajan je svjedok srednjovjekovne istorije ovog kraja. Smatra se da je podignut između 11. i 12. vijeka na strateški važnoj lokaciji nedaleko od Pjenovca. Njegov položaj omogućavao je nadzor nad širim područjem i kontrolu važnih pravaca kretanja kroz planinski prostor istočne Bosne. Iako su danas sačuvani samo ostaci nekadašnjeg utvrđenja, lokalitet i dalje nosi snažan istorijski pečat i privlači ljubitelje arheologije, istorije i kulturne baštine.",
-
-  "z6_naziv": "Nekropole stećaka",
-  "z6_tip": "Kulturno-istorijsko nasljeđe",
-  "z6_opis": "Nekropole stećaka na lokalitetima Pokajnica (Mramorje) i Podgroblje (Luka) u selu Nevačka predstavljaju jedno od najznačajnijih srednjovjekovnih nasljeđa opštine Han Pijesak. Na ovim lokalitetima nalazi se ukupno 37 stećaka, kamenih nadgrobnih spomenika karakterističnih za prostor Bosne i Hercegovine. Ovi monumentalni kameni biljezi svjedoče o životu, vjerovanjima i umjetničkom izrazu srednjovjekovnog stanovništva. Zbog svoje kulturne i istorijske vrijednosti, nekropole su proglašene nacionalnim spomenikom Bosne i Hercegovine.",
-
-  "film_bedz": "Zanimljivost",
-  "film_naslov": "Han Pijesak na velikom platnu",
-  "film_p1": "Malo ko zna da je Han Pijesak bio kulisa jednog od najpoznatijih jugoslovenskih ratnih filmova — Partizanske eskadrile, snimljene 1979. godine.",
-  "film_p2": "Film je prikazivao borbu partizanskih pilota tokom Drugog svjetskog rata, a netaknuta priroda i tereni oko Han Pijeska pružili su savršenu scenografiju za epske akcione scene. Planine, šume i otvoreni prostori opštine bili su idealni za snimanje vazduhoplovnih sekvenci.",
-  "film_p3": "Partizanska eskadrila ostaje jedna od najskupljih i najambicioznijih jugoslovenskih filmskih produkcija svog doba, a Han Pijesak ponosi se činjenicom da je bio dio te historije.",
-  "film_detalj_film_labela": "Film",
-  "film_detalj_film_vrijednost": "Partizanska eskadrila",
-  "film_detalj_godina_labela": "Godina",
-  "film_detalj_godina_vrijednost": "1979.",
-  "film_detalj_zanr_labela": "Žanr",
-  "film_detalj_zanr_vrijednost": "Ratni / Akcija",
-  "film_detalj_lokacija_labela": "Lokacija snimanja",
-  "film_detalj_lokacija_vrijednost": "Han Pijesak i okolina",
-  "film_poster_naziv": "Partizanska\neskadrila"
-},
-
-"dvorac": {
-  "hero_alt": "Dvorac Karađorđevića",
-  "hero_bedz": "Kraljevska rezidencija",
-  "hero_naslov": "Dvorac Karađorđevića",
-  "hero_podnaslov": "Impozantna svjedočanstvo kraljevske prošlosti Han Pijeska, izgrađena 1919–1924. godine za kralja Aleksandra.",
-  "hero_nazad": "← Znamenitosti",
-
-  "o_bedz": "O objektu",
-  "o_naslov": "Istorija i značaj",
-  "o_p1": "Dvorac Karađorđevića jedna je od najznačajnijih istorijskih građevina na prostoru opštine Han Pijesak. Izgrađen između 1919. i 1924. godine kao ljetnja rezidencija kralja Aleksandra Karađorđevića, dvorac je bio poznat po izuzetnom kvalitetu planinskog vazduha i visokoj koncentraciji ozona.",
-  "o_p2": "Smješten na nadmorskoj visini od oko 1.100 metara, pružao je savršeno mjesto za odmor i državne poslove daleko od gradske vreve. Tokom svog zlatnog doba bio je centar društvenog i diplomatskog života kraljevske Jugoslavije.",
-  "o_p3": "Nakon Drugog svjetskog rata promijenio je namjenu i koristio ga je Josip Broz Tito. Tragični požar 2005. godine uništio je veliki dio originalnih unutrašnjih elemenata, ali zidine svjedoče o nekadašnjoj veličanstvenosti objekta.",
-
-  "info_izgradnja_labela": "Godina izgradnje",
-  "info_izgradnja_vrijednost": "1919–1924.",
-  "info_narucilac_labela": "Naručilac",
-  "info_narucilac_vrijednost": "Kralj Aleksandar Karađorđević",
-  "info_visina_labela": "Nadmorska visina",
-  "info_visina_vrijednost": "~1.100 m",
-  "info_stil_labela": "Stil gradnje",
-  "info_stil_vrijednost": "Austrougarski romantizam",
-  "info_znacaj_labela": "Turistički značaj",
-  "info_znacaj_vrijednost": "Kulturno-istorijski spomenik",
-
-  "hist_bedz": "Kroz vjekove",
-  "hist_naslov": "Istorija dvorca",
-  "hist_podnaslov": "Sto godina burne istorije kroz ratove, vladare i promjene",
-
-  "hist_1_godina": "1919–1924",
-  "hist_1_naslov": "Izgradnja dvorca",
-  "hist_1_tekst": "Krajem 19. i početkom 20. vijeka područje Han Pijeska privuklo je pažnju austrougarskih stručnjaka koji su vršili mjerenja kvaliteta vazduha. Utvrđeno je da ovaj kraj ima izuzetno visoku koncentraciju ozona, zbog čega je smatran prirodnom vazdušnom banjom i idealnim mjestom za odmor i oporavak.\n\nNa osnovu tih saznanja donijeta je odluka da se na ovom prostoru izgradi kraljevska rezidencija. Gradnja dvorca započela je 1919. godine po nalogu kralja Aleksandra Karađorđevića, a završena već nakon dvije godine.\n\nDo 1924. godine kompletiran je i širi kompleks sa pratećim objektima, čime je stvoren reprezentativan prostor za boravak kraljevske porodice i visokih državnih zvaničnika.",
-
-  "hist_2_godina": "1920–1941",
-  "hist_2_naslov": "Zlatno doba",
-  "hist_2_tekst": "U periodu između dva svjetska rata dvorac je bio jedno od najvažnijih mjesta okupljanja političke i društvene elite tadašnje države. Kralj Aleksandar Karađorđević često je boravio ovdje sa porodicom, koristeći dvorac kako za odmor, tako i za obavljanje državničkih poslova.\n\nRezidenciju su posjećivali brojni ministri, generali i strani državnici. Među značajnim gostima bio je i Kemal Ataturk, kao i turski premijer Ismet Inönü, što govori o međunarodnom značaju ovog mjesta.\n\nDvorac je u tom periodu predstavljao simbol prestiža, političke moći i razvoja Han Pijeska kao elitne destinacije.",
-
-  "hist_3_godina": "1941–1945",
-  "hist_3_naslov": "Drugi svjetski rat",
-  "hist_3_tekst": "Tokom Drugog svjetskog rata dvorac je dobio potpuno drugačiju ulogu i našao se u središtu ratnih dešavanja. U vrijeme Aprilskog rata 1941. godine, kralj Petar II Karađorđević boravio je u dvorcu tokom povlačenja zajedno sa pratnjom i dijelom državnog aparata.\n\nZbog svog značaja i položaja objekat je ubrzo postao meta neprijateljskih snaga. Lokacija dvorca je otkrivena, nakon čega je uslijedio napad njemačke avijacije.\n\nU tim dramatičnim okolnostima kraljevska porodica bila je primorana na hitno napuštanje objekta, koristeći tajni izlaz i tunel u neposrednoj blizini dvorca. Nakon bijega nastavili su put prema sigurnijim područjima.\n\nSam dvorac je tokom rata pretrpio značajna oštećenja, a njegova prvobitna funkcija kraljevske rezidencije potpuno je prekinuta.",
-
-  "hist_4_godina": "1945–1991",
-  "hist_4_naslov": "Titovo doba",
-  "hist_4_tekst": "Nakon završetka rata dvorac je obnovljen 1946. godine i prilagođen novim društveno-političkim okolnostima. U periodu socijalističke Jugoslavije objekat dobija novu namjenu i postaje poznat kao 'Titov dvorac'.\n\nIako više nije imao kraljevsku funkciju, dvorac je i dalje zadržao određeni značaj kao reprezentativni objekat. Koristio se za boravak političkih i vojnih zvaničnika, ali i kao mjesto za odmor i povremene sastanke.\n\nVremenom je značaj dvorca počeo da opada. Promjene u društvu i nedovoljno ulaganje u održavanje doveli su do postepenog zapuštanja objekta.\n\nIako je formalno bio u funkciji, izgubio je dio svog nekadašnjeg sjaja i prestižne uloge koju je imao u prethodnom periodu.",
-
-  "hist_5_godina": "2005",
-  "hist_5_naslov": "Požar",
-  "hist_5_tekst": "Jedan od najtežih trenutaka u istoriji dvorca dogodio se 2005. godine, kada je kompleks zahvatio veliki požar. U tom događaju objekat je gotovo u potpunosti uništen, a veliki dio njegove strukture i unutrašnjosti nepovratno izgubljen.\n\nPožar je ostavio dubok trag ne samo na samom objektu, već i u svijesti lokalne zajednice. Dvorac, koji je decenijama bio simbol istorije i identiteta ovog kraja, pretvoren je u ruševinu.\n\nNakon požara objekat je dugi niz godina ostao zapušten i bez adekvatne zaštite, ali je uprkos tome sačuvan njegov istorijski značaj i potencijal za obnovu.",
-
-  "hist_6_godina": "2020–danas",
-  "hist_6_naslov": "Početak obnove",
-  "hist_6_tekst": "U posljednjim godinama pokrenut je proces obnove dvorca sa ciljem da mu se vrati nekadašnji izgled i značaj. Radovi se izvode uz nadzor institucija za zaštitu kulturno-istorijskog nasljeđa.\n\nRekonstrukcija je koncipirana tako da što vjernije prati originalni izgled iz vremena Karađorđevića, uz minimalne prilagodbe savremenim standardima.\n\nPlanirano je da dvorac dobije višestruku funkciju, uključujući muzej, reprezentativne apartmane, vinski podrum i prostor za održavanje događaja.\n\nObnova ovog kompleksa predstavlja važan korak ka očuvanju kulturne baštine i značajan potencijal za razvoj turizma u regionu.",
-
-  "bud_bedz": "Obnova i razvoj",
-  "bud_naslov": "Danas i budućnost",
-  "bud_podnaslov": "Dvorac ulazi u novu eru — planirani sadržaji koji će ga pretvoriti u kulturno-turistički centar regije",
-  "bud_1_naziv": "Muzej",
-  "bud_1_opis": "Stalna postavka o istoriji dvoraca i kraljevske porodice Karađorđević.",
-  "bud_2_naziv": "Vinska podrumska",
-  "bud_2_opis": "Degustacioni centar lokalnih vina i rakija u autentičnom ambijentu.",
-  "bud_3_naziv": "Apartmani",
-  "bud_3_opis": "Luksuzni smještaj u obnovljenim krilima dvorca za posebna iskustva.",
-  "bud_4_naziv": "Event prostor",
-  "bud_4_opis": "Svečana dvorana za konferencije, vjenčanja i kulturne manifestacije.",
-
-  "cta_naslov": "Posjetite Han Pijesak",
-  "cta_tekst": "Planirajte posjetu i uronite u bogatu istoriju ove planinske opštine.",
-  "cta_smjestaj": "Pronađi smještaj",
-  "cta_nazad": "← Sve znamenitosti"
-},"kontakt": {
-  "hero_naslov": "Kontaktirajte nas",
-  "hero_podnaslov": "Tu smo da odgovorimo na sva vaša pitanja",
-
-  "info_naslov": "Kontakt podaci",
-  "adresa": "Aleksandra Karađorđevića 4, Han Pijesak",
-  "telefon": "+387 66 787 850",
-  "email": "tohanpijesak@gmail.com",
-
-  "radno_naslov": "Radno vrijeme",
-  "radno_vrijeme": [
-    { "dan": "Ponedjeljak – Petak", "vrijeme": "07:00 – 15:00" },
-    { "dan": "Subota",              "vrijeme": "Zatvoreno" },
-    { "dan": "Nedjelja",            "vrijeme": "Zatvoreno" }
-  ],
-  "zatvoreno": "Zatvoreno",
-  "mapa_title": "Lokacija Turističke organizacije Han Pijesak",
-
-  "forma_naslov": "Pošaljite nam poruku",
-  "ime_label": "Ime i prezime",
-  "ime_placeholder": "npr. Marija Petrović",
-  "email_label": "Email adresa",
-  "email_placeholder": "npr. marija@email.com",
-  "telefon_label": "Broj telefona",
-  "telefon_placeholder": "npr. +387 61 123 456",
-  "tip_label": "Tip upita",
-  "tip_placeholder": "-- Odaberite tip upita --",
-  "tipovi_upita": [
-    "Opšti upit",
-    "Smještaj",
-    "Manifestacije",
-    "Planinarski turizam",
-    "Zdravstveni turizam",
-    "Mediji i press",
-    "Ostalo"
-  ],
-  "naslov_label": "Naslov poruke",
-  "naslov_placeholder": "Kratki opis vaše poruke",
-  "poruka_label": "Poruka",
-  "poruka_placeholder": "Napišite vašu poruku ovdje...",
-  "dugme_posalji": "Pošalji poruku →",
-
-  "validacija_ime": "Ime i prezime su obavezni.",
-  "validacija_email": "Email adresa je obavezna.",
-  "validacija_email_format": "Email adresa nije ispravna.",
-  "validacija_tip": "Odaberite tip upita.",
-  "validacija_naslov": "Naslov poruke je obavezan.",
-  "validacija_poruka": "Poruka ne može biti prazna.",
-
-  "uspjeh_naslov": "Poruka poslana!",
-  "uspjeh_tekst": "Hvala vam na poruci. Odgovorićemo vam u najkraćem mogućem roku.",
-  "uspjeh_dugme": "Pošalji novu poruku"
-}
+    "ohp_badge": "Upoznajte",
+    "ohp_naslov": "Vazdušnu banju",
+    "ohp_tekst": "Han Pijesak se nalazi na nadmorskoj visini od 1.100 m, što ga čini gradom (naseljem) sa najvećom nadmorskom visinom u Republici Srpskoj. Okružen je visovima Velikim Žepom 1.537 m, Javornikom 1.219 m, Studenom Gorom 1.149 m i Trešnjevcem 1.245 m, a bujne četinarske i listopadne šume doprinijele su da ovo mjesto postane poznata klimatska i vazdušna banja, jer po količini ozona zauzima jedno od najznačajnijih mjesta u Evropi. Ovo je i zvanično potvrđeno početkom novembra 2023. godine, kada je cijelo područje opštine Han Pijesak proglašeno za vazdušnu banju.",
+    "ohp_btn": "Saznaj više o Han Pijesku →",
+    "video_naslov": "Promotivni video",
+    "video_opis": "Pogledajte kratki prikaz prirodnih ljepota i turističkih sadržaja Han Pijeska.",
+    "meta_title": "Početna",
+    "meta_description": "Turistička platforma opštine Han Pijesak — otkrijte smještaj, gastronomiju, aktivni odmor, znamenitosti i prirodne ljepote vazdušne banje."
+  },
+  "o_to": {
+    "hero_naslov": "O Turističkoj organizaciji opštine Han Pijesak",
+    "hero_podnaslov": "Upoznajte bolje naš rad i djelovanje",
+    "stat_2023_opis": "Godina osnivanja",
+    "stat_sajmovi_opis": "Nastupa na sajmovima",
+    "stat_rast_opis": "Rast turizma",
+    "stat_turisti_opis": "Turista u 2024.",
+    "misija_naslov": "Misija",
+    "misija_tekst": "Turistička organizacija opštine Han Pijesak osnovana je 2023. godine kao najmlađa javna ustanova na području opštine, a sa radom počela 2024. godine. Njen osnovni cilj je promocija Han Pijeska kao turističke destinacije, razvoj turističke ponude i pozicioniranje opštine kao prepoznatljive vazdušne banje na turističkoj mapi Bosne i Hercegovine.",
+    "vizija_naslov": "Vizija",
+    "vizija_tekst": "Han Pijesak kao atraktivna, održiva i prepoznatljiva planinska destinacija koja turistima nudi jedinstven spoj čistog planinskog zraka, netaknute prirode, bogate kulturne baštine i autentičnog gostoprimstva — tokom cijele godine.",
+    "rad_naslov": "Šta radimo?",
+    "rad_stavka_1": "Promocija Han Pijeska na sajmovima turizma u regionu",
+    "rad_stavka_2": "Organizacija i podrška kulturno-turističkim manifestacijama",
+    "rad_stavka_3": "Kategorizacija smještajnih objekata",
+    "rad_stavka_4": "Izrada turističkih materijala i brošura",
+    "rad_stavka_5": "Saradnja sa planinarskim i sportskim udruženjima",
+    "rad_stavka_6": "Edukacija i razvoj turističkih kapaciteta",
+    "galerija_naslov": "Naše aktivnosti",
+    "galerija_podnaslov": "Pogledajte kako TO Han Pijesak aktivno promoviše destinaciju",
+    "galerija_opis_1": "Sajam zavičaja Novi Sad 2026.",
+    "galerija_opis_2": "Sajam turizma Beograd 2026.",
+    "galerija_opis_3": "Planinarski pohod — Skakavac",
+    "galerija_opis_4": "Kulturno-turistička manifestacija",
+    "galerija_opis_5": "Sajam turizma Novi Sad 2024.",
+    "galerija_opis_6": "Sajam turizma Banja Luka 2026.",
+    "partneri_naslov": "Naši partneri",
+    "partner_opstina": "Opština Han Pijesak",
+    "partner_cos": "Centar za omladinu i sport Pogled",
+    "partner_psu_visocnik": "PSU Visočnik",
+    "partner_gorstak": "Gorštak",
+    "partner_psu_javor": "PSU Javor - sunčana planina",
+    "kontakt_naslov": "Kontaktirajte nas",
+    "kontakt_alt": "kontakt osoba",
+    "kontakt_ime": "Svjetlana Tomović",
+    "kontakt_titula": "Direktor",
+    "kontakt_kartica_naslov": "Kontakt",
+    "kontakt_adresa": "Adresa: Aleksandra Karađorđevića br. 4",
+    "kontakt_telefon": "Telefon: +387 66 787 850",
+    "kontakt_email": "Email: tohanpijesak@gmail.com",
+    "meta_title": "O Turističkoj organizaciji",
+    "meta_description": "Saznajte više o Turističkoj organizaciji opštine Han Pijesak i njenoj misiji promocije turizma."
+  },
+  "brze_kartice": {
+    "kartica1_naslov": "Istraži destinaciju",
+    "kartica1_opis": "Upoznaj Han Pijesak — istoriju, kulturu i sve što ovo mjesto čini posebnim.",
+    "kartica1_cta": "Saznaj više",
+    "kartica2_naslov": "Pronađi smještaj",
+    "kartica2_opis": "Od planinarskih domova do privatnih apartmana — nađi savršeno mjesto za odmor.",
+    "kartica2_cta": "Pregledaj smještaj",
+    "kartica3_naslov": "Predstojeći događaji",
+    "kartica3_opis": "Festivali, manifestacije i tradicija — ne propusti ono što Han Pijesak priprema.",
+    "kartica3_cta": "Pogledaj program"
+  },
+  "top_atrakcije": {
+    "naslov": "Top atrakcije",
+    "podnaslov": "Otkrijte zašto Han Pijesak osvaja svakog ko ga posjeti",
+    "cta": "Saznajte više →",
+    "atrakcije": [
+      {
+        "naslov": "Dvorac Karađorđevića",
+        "opis": "Izgrađen početkom 20. vijeka, dvorac Karađorđevića svjedoči o bogatoj istoriji ovog kraja i vremenu kada je Han Pijesak bio omiljeno utočište kraljevske porodice. Danas fascinira svojom arhitekturom i pogledom na romanijsku prirodu.",
+        "tag": "Istorija"
+      },
+      {
+        "naslov": "Vodopad Skakavac",
+        "opis": "Okružen gustom šumom i netaknutom prirodom, Vodopad Skakavac je jedno od najljepših prirodnih čuda ovog kraja. Savršena polazna tačka za planinske šetnje i izlete koji ostavljaju neizbrisiv utisak.",
+        "tag": "Priroda"
+      },
+      {
+        "naslov": "Vazdušna banja",
+        "opis": "Zahvaljujući jedinstvenoj klimi i čistom planinskom vazduhu, Han Pijesak s ponosom nosi naziv vazdušne banje. Idealno odredište za odmor i oporavak — čist zrak i blaga planinska klima čekaju te tokom cijele godine.",
+        "tag": "Zdravlje"
+      }
+    ]
+  },
+  "sport_rekreacija": {
+    "hero_naslov": "Sport i rekreacija u Han Pijesku",
+    "hero_podnaslov": "Planine, šume i čist planinski vazduh — savršeni uslovi za sport, rekreaciju i aktivni odmor tokom cijele godine.",
+    "hero_dugme": "Istraži aktivnosti ↓",
+    "uvod_bedz": "Prirodni uslovi",
+    "uvod_naslov": "Han Pijesak — prirodna arena za sport",
+    "uvod_p1": "Smješten na nadmorskoj visini od oko 1.100 metara, Han Pijesak pruža izuzetne prirodne uslove za sport i rekreaciju tokom cijele godine. Prostrane planinske šume, čist vazduh čine ovo područje idealnim za sve koji traže aktivan odmor u prirodi.",
+    "uvod_p2": "Od skijanja zimi do planinarenja i biciklizma ljeti — priroda Han Pijeska nudi raznovrsne mogućnosti za sve uzrasne kategorije, uz podršku lokalnih sportskih organizacija.",
+    "uvod_p3": "Čist planinski vazduh, minimalna buka i netaknuta priroda čine sport i rekreaciju ovdje posebnim i nezaboravnim iskustvom.",
+    "uvod_kartice": [
+      {
+        "naziv": "Planinarenje i pješačenje",
+        "opis": "15+ označenih staza za sve nivoe"
+      },
+      {
+        "naziv": "Biciklizam",
+        "opis": "MTB i rekreativne rute kroz šume"
+      },
+      {
+        "naziv": "Zimski sportovi",
+        "opis": "Skijanje na obroncima Javora"
+      },
+      {
+        "naziv": "Lov i ribolov",
+        "opis": "Bogati reviri uz rijeke i jezera"
+      }
+    ],
+    "org_bedz": "Lokalni sportski klubovi",
+    "org_naslov": "Sportske organizacije",
+    "org_podnaslov": "Han Pijesak ima bogatu sportsku tradiciju kroz aktivne klubove i udruženja",
+    "org_lista": [
+      {
+        "naziv": "PSU Visočnik",
+        "opis": "Planinarsko sportsko udruženje Visočnik organizuje pohode, takmičenja i edukacije u planinarenju. Aktivni tokom cijele godine na stazama Javora i okolnih planina.",
+        "slikeOpisi": [
+          "Vrani Kamen 2025",
+          "Musala - krov Balkana",
+          "Vrhovima Romanije",
+          "Bregoč, vrh Zelengore"
+        ]
+      },
+      {
+        "naziv": "PSU Javor — sunčana planina",
+        "opis": "Udruženje posvećeno promociji planinarstva i aktivnog boravka u prirodi. Organizuju godišnje pohode i saradnju sa školama i turističkom organizacijom.",
+        "slikeOpisi": [
+          "Veliki Žep",
+          "Trebević",
+          "Komić",
+          "Velika Sikira"
+        ]
+      },
+      {
+        "naziv": "OK Han Pijesak",
+        "opis": "Sportsko udruženje Gorštak aktivno djeluje u oblasti planinskih sportova i rekreacije. Posebno poznati po organizaciji pohoda za sve uzrasne kategorije.",
+        "slikeOpisi": [
+          "Pohod u šumi",
+          "Vršni uspon",
+          "Rekreacija",
+          "Takmičenje"
+        ]
+      },
+      {
+        "naziv": "FK Omladinac Han Pijesak",
+        "opis": "Fudbalski klub sa dugom tradicijom koji okuplja mlade i iskusne igrače opštine. Aktivno učestvuje u regionalnim ligama i organizuje lokalne turnire.",
+        "slikeOpisi": []
+      },
+      {
+        "naziv": "KK Han Pijesak",
+        "opis": "Košarkaški klub Han Pijesak okuplja mlade sportiste i promoviše košarku kao sport u opštini. Aktivno učestvuje u regionalnim takmičenjima.",
+        "slikeOpisi": []
+      },
+      {
+        "naziv": "Taekwon-do klub Ozon Han Pijesak",
+        "opis": "Taekwondo klub Ozon Han Pijesak okuplja mlade sportiste i promoviše zdrav način života kroz treninge, disciplinu i sportski duh. Klub redovno učestvuje na domaćim i regionalnim takmičenjima, predstavljajući Han Pijesak i ostvarujući zapažene rezultate u taekwondou.",
+        "slikeOpisi": []
+      },
+      {
+        "naziv": "KUD \"Sveti Pantelejmon\"",
+        "opis": "Kulturno-umjetničko društvo koje njeguje tradiciju, folklor i običaje ovog kraja. Organizuje nastupe i događaje koji čuvaju kulturno nasljeđe.",
+        "slikeOpisi": []
+      }
+    ],
+    "ski_bedz": "Zimski sportovi",
+    "ski_naslov": "Ski centar Igrišta",
+    "ski_podnaslov": "Ski centar Igrista, smješten u neposrednoj blizini Han Pijeska, predstavlja jedno od najatraktivnijih mjesta za zimski turizam u ovom dijelu Republike Srpske. Okružen netaknutom prirodom, gustim šumama i planinskim pejzažima, ovaj centar pruža idealne uslove za skijanje, sankanje i boravak na svježem planinskom vazduhu. Centar raspolaže uređenim ski-stazama srednje dužine, pogodnim kako za početnike, tako i za rekreativne skijaše. Staze su blagog do umjerenog nagiba, što ih čini sigurnim i prijatnim za vožnju, dok prirodni snijeg i uređena podloga omogućavaju kvalitetno skijanje tokom sezone. Idealno je mjesto za opušten zimski odmor, daleko od gužve i buke većih ski centara.",
+    "ski_info": [
+      {
+        "vrijednost": "1.400 m",
+        "labela": "Maks. nadmorska visina"
+      },
+      {
+        "vrijednost": "3 km",
+        "labela": "Ukupna dužina staza"
+      },
+      {
+        "vrijednost": "9 km",
+        "labela": "Udaljenost od Han Pijeska"
+      },
+      {
+        "vrijednost": "2",
+        "labela": "Ski staze"
+      },
+      {
+        "vrijednost": "1",
+        "labela": "Ski lift"
+      },
+      {
+        "vrijednost": "Dec — Mar",
+        "labela": "Sezona"
+      }
+    ],
+    "ski_slike_opisi": [
+      "Ski staza",
+      "Ski lift",
+      "Zimska panorama",
+      "Skijaši na stazi",
+      "Noćno skijanje"
+    ],
+    "dogadjaji_bedz": "Tradicionalne manifestacije",
+    "dogadjaji_naslov": "Sportski događaji",
+    "dogadjaji_podnaslov": "Takmičenja i manifestacije koje tokom godine okupljaju sportiste i ljubitelje prirode",
+    "dogadjaji": [
+      {
+        "naziv": "Odbojkaške utakmice tokom godine",
+        "opis": "Odbojkaške utakmice koje se održavaju tokom godine, na kojima učestvuju klubovi iz različitih dijelova države.",
+        "period": "Tokom godine"
+      },
+      {
+        "naziv": "Lokalni fudbalski turnir",
+        "opis": "Tradicionalni ljetnji turnir u malom fudbalu koji okuplja ekipe iz Han Pijeska i okolnih opština.",
+        "period": "Juli — Avgust"
+      },
+      {
+        "naziv": "Planinarski pohod — Skakavac",
+        "opis": "Organizovani pohod na jedno od najljepših izletišta u okolini, uz vođenje iskusnih planinara.",
+        "period": "April"
+      },
+      {
+        "naziv": "MTB",
+        "opis": "Rekreativna tura kroz označene biciklističke staze opštine, otvorena za sve uzraste.",
+        "period": "Avgust — Septembar"
+      }
+    ],
+    "cta_naslov": "Doživite aktivnu prirodu",
+    "cta_tekst": "Han Pijesak vas čeka tokom cijele godine — pronađite smještaj, odaberite aktivnost i krenite u avanturu u srcu Romanije.",
+    "cta_staze": "Pogledaj staze",
+    "cta_kontakt": "Kontaktirajte nas",
+    "meta_title": "Sport i rekreacija",
+    "meta_description": "Sportski tereni, rekreativni sadržaji i aktivnosti na otvorenom u Han Pijesku."
+  },
+  "vjerski_objekti": {
+    "hero_naslov": "Vjerski objekti",
+    "hero_podnaslov": "na području opštine Han Pijesak",
+    "uvod_naslov": "Vjerska baština Han Pijeska",
+    "uvod_tekst": "Područje Han Pijeska karakteriše bogata, iako brojčano skromna, vjerska baština koja svjedoči o dugoj istoriji i suživotu različitih kultura i religija. Na teritoriji opštine nalaze se pravoslavni i islamski vjerski objekti, kao i značajni religijski lokaliteti koji imaju istorijsku i kulturnu vrijednost.",
+    "pogledaj_na_mapi": "Pogledaj na mapi",
+    "objekat_1_naziv": "Crkva Svetog velikomučenika Pantelejmona",
+    "objekat_1_tip": "Pravoslavni vjerski objekat",
+    "objekat_1_opis": "Crkva Svetog velikomučenika Pantelejmona je hram Srpske pravoslavne crkve koji se nalazi u Han Pijesku u Republici Srpskoj. Pripada eparhiji zvorničko-tuzlanskoj, sjedište je parohije. Prvobitna crkva u Han Pijesku sagrađena je 1923. godine, a kumovao joj je lično kralj Aleksandar Prvi Karađorđević koji je često boravio u svojoj rezidenciji u Han Pijesku. Stari hram su avionima bombardovale i porušile ustaše 1942. godine, a od nekadašnjeg hrama sačuvana su samo tri zvona. Gradnja novog jednobrodnog hrama počela je 1972. godine i završena 1979. godine.",
+    "objekat_1_alt_1": "Crkva Svetog Pantelejmona — Han Pijesak",
+    "objekat_1_alt_2": "Crkva Svetog Pantelejmona",
+    "objekat_2_naziv": "Hram Svetog cara Konstantina i carice Jelene",
+    "objekat_2_tip": "Pravoslavni vjerski objekat",
+    "objekat_2_opis": "Između Prvog i Drugog svjetskog rata, u selu Džimrije postojala je crkva brvnara posvećena Sv. caru Konstantinu i carici Jeleni. Obnova i zidanje crkve započeta je jula 2000. godine, a radovi su završeni 2002. godine. Zemljište za gradnju hrama darovala je porodica Mandić iz Han Pijeska. Crkvu je osvetio episkop zvorničko-tuzlanski gospodin Vasilije i episkop američki gospodin Longin, uoči dana hramovne slave 2. juna 2002. godine.",
+    "objekat_2_alt_1": "Hram u Džimrijama",
+    "objekat_3_naziv": "Manastir Pjenovac",
+    "objekat_3_tip": "Pravoslavni vjerski objekat",
+    "objekat_3_opis": "Manastir u Pjenovcu posvećen je Usjekovanju glave Svetog Jovana Krstitelja. Građen je od početka maja 2001. do početka juna 2002. godine. Gradnju su finansirali vjernici i privredni subjekti sa prostora opštine Han Pijesak i opština širom Republike Srpske, kao i dijaspore. Ikonostas, ikone i živopis radio je akademski slikar Nikolić Milan iz Šapca. Nedaleko od današnjeg manastira postojao je mali manastir koji je srušen dolaskom Turaka.",
+    "objekat_3_alt_1": "Manastir Pjenovac",
+    "objekat_3_alt_2": "Manastir Pjenovac — detalj",
+    "objekat_4_naziv": "Džamija u Nevačkoj",
+    "objekat_4_tip": "Islamski vjerski objekat",
+    "objekat_4_opis": "Jedan od najstarijih islamskih objekata na ovom području datira još iz 19. vijeka. Nakon razaranja tokom ratnih dešavanja, džamija je obnovljena i danas ponovo služi svojoj namjeni, predstavljajući važan simbol povratka i obnove života u ovom kraju.",
+    "objekat_4_alt_1": "Džamija u Nevačkoj",
+    "meta_title": "Vjerski objekti",
+    "meta_description": "Posjetite crkve i vjerske objekte na području opštine Han Pijesak."
+  },
+  "zdravstveni_turizam": {
+    "hero_bedz": "Vazdušna banja",
+    "hero_naslov": "Udahni pravi planinski vazduh",
+    "hero_podnaslov": "Han Pijesak — mjesto gdje priroda liječi, a planinski vazduh obnavlja tijelo i dušu.",
+    "hero_dugme": "Istraži više ↓",
+    "stat_sume": "površine pod šumom",
+    "stat_visina": "nadmorska visina",
+    "stat_proglasenje": "godina proglašenja vazdušnom banjom",
+    "stat_centar": "prosječna nadmorska visina centra",
+    "zasto_bedz": "Zvanično proglašenje",
+    "zasto_naslov": "Zašto je Han Pijesak vazdušna banja?",
+    "zasto_p1": "Zvanično proglašenje Han Pijeska vazdušnom banjom doneseno je 2023. godine od strane Vlade Republike Srpske — zasnovano na višegodišnjim stručnim analizama i institucionalnim procjenama.",
+    "zasto_p2": "Ključni razlozi su postojanje prirodnog ljekovitog faktora, dugogodišnja reputacija klimatskog lječilišta te naučno potvrđeni rezultati o kvalitetu vazduha i klime. Sistemskim mjerenjima prije više od 100 godina utvrđeno je da ovo područje ima kvalitete kakve nije imalo nijedno planninsko mjesto u tadašnjoj Austro-Ugarskoj carevini.",
+    "zasto_akcenat": "Godina zvaničnog proglašenja od strane Vlade RS",
+    "institucije_bedz": "Naučna potvrda",
+    "institucije_naslov": "Institucije koje su učestvovale",
+    "institucija_1": "Institut za zaštitu i ekologiju Republike Srpske",
+    "institucija_2": "Ministarstvo poljoprivrede, šumarstva i vodoprivrede RS",
+    "institucija_3": "Republički hidrometeorološki zavod RS",
+    "institucija_4": "Institut za javno zdravstvo Republike Srpske",
+    "institucije_napomena": "Ove institucije su kroz izvještaje i stručna mišljenja potvrdile da Han Pijesak posjeduje klimatske i vazdušne karakteristike pogodne za liječenje i prevenciju bolesti.",
+    "slider_naslov": "Han Pijesak u slikama",
+    "slider_podnaslov": "Priroda koja poziva na odmor i obnovu",
+    "slajd_1_opis": "Han Pijesak — zimski pejzaž",
+    "slajd_2_opis": "Planinska priroda Han Pijeska",
+    "slajd_3_opis": "Vazdušna banja Han Pijesak",
+    "slajd_4_opis": "Han Pijesak — panorama",
+    "slajd_5_opis": "Šume Han Pijeska",
+    "slajd_6_opis": "Han Pijesak — ljeto",
+    "slajd_7_opis": "Planinski pejzaž",
+    "slajd_8_opis": "Han Pijesak — jesen",
+    "slajd_9_opis": "Priroda Han Pijeska",
+    "slajd_10_opis": "Han Pijesak — proljeće",
+    "slajd_11_opis": "Šetnice Han Pijeska",
+    "slajd_12_opis": "Han Pijesak — vidikovac",
+    "slajd_13_opis": "Han Pijesak — centar",
+    "kvalitet_bedz": "Čistoća vazduha",
+    "kvalitet_naslov": "Kvalitet vazduha Han Pijeska",
+    "kvalitet_uvod": "Područje Han Pijeska karakteriše minimalno prisustvo zagađivača — rezultat potpune odsutnosti teške industrije i velike udaljenosti od urbanih centara.",
+    "kvalitet_sume_naslov": "Šume",
+    "kvalitet_sume_tekst": "Dominacija četinarskih šuma — bora, jele i smrče — oslobađa fitoncide, biološki aktivne supstance sa dokazanim antibakterijskim djelovanjem koje jačaju imunitet i smanjuju respiratorne tegobe.",
+    "kvalitet_ozon_naslov": "Ozon",
+    "kvalitet_ozon_tekst": "Han Pijesak je prepoznat kao područje sa povišenom koncentracijom ozona u prizemnim slojevima vazduha, što mu daje svježinu i čistoću te pozitivno djeluje na respiratorni sistem.",
+    "kvalitet_kiseonik_naslov": "Kiseonik",
+    "kvalitet_kiseonik_tekst": "Na nadmorskoj visini od 1.100 m, uz gustu vegetaciju, vazduh je bogat kiseonikom i izuzetno pogodan za disanje — poboljšava rad pluća i doprinosi fizičkoj izdržljivosti.",
+    "uticaj_naslov": "Uticaj na zdravlje",
+    "uticaj_podnaslov": "Naučno potvrđene dobrobiti boravka u planinskoj vazdušnoj banji",
+    "uticaj_1_naslov": "Disajni sistem",
+    "uticaj_1_opis": "Boravak u Han Pijesku ima izuzetno povoljan uticaj na respiratorni sistem. Čist vazduh, povećana koncentracija kiseonika i prisustvo fitoncida iz četinarskih šuma doprinose lakšem disanju i smanjenju iritacija disajnih puteva. Ovakvi uslovi posebno pogoduju osobama koje imaju problema sa astmom, bronhitisom i alergijama.",
+    "uticaj_2_naslov": "Cirkulacija",
+    "uticaj_2_opis": "Planinska nadmorska visina od oko 1.100 metara stimuliše rad kardiovaskularnog sistema. Organizam se prirodno prilagođava takvim uslovima, što dovodi do bolje cirkulacije i efikasnije distribucije kiseonika kroz tijelo. Redovan boravak može doprinijeti jačanju srca i povećanju fizičke izdržljivosti.",
+    "uticaj_3_naslov": "Smanjenje stresa",
+    "uticaj_3_opis": "Prirodno okruženje Han Pijeska, uz mir, tišinu i odsustvo urbanih uticaja, ima snažan umirujući efekat na organizam. Boravak u šumi i na svježem vazduhu smanjuje nivo hormona stresa, doprinosi opuštanju i vraća osjećaj unutrašnje ravnoteže.",
+    "uticaj_4_naslov": "Kvalitet sna",
+    "uticaj_4_opis": "Svjež planinski vazduh i prirodan dnevni ritam pozitivno utiču na kvalitet sna. Veća količina kiseonika u organizmu doprinosi dubljem i mirnijem snu, dok odsustvo buke i zagađenja omogućava potpun odmor i osjećaj odmornosti nakon buđenja.",
+    "uticaj_5_naslov": "Imunitet",
+    "uticaj_5_opis": "Zahvaljujući kombinaciji čistog vazduha, fitoncida i povoljne klime, boravak u Han Pijesku doprinosi jačanju imunološkog sistema. Organizam se lakše bori protiv infekcija, dok prirodni uslovi podstiču njegovu otpornost i regeneraciju.",
+    "uticaj_6_naslov": "Mentalno zdravlje",
+    "uticaj_6_opis": "Kontakt sa prirodom ima direktan pozitivan uticaj na mentalno zdravlje. Boravak u zelenom okruženju smanjuje anksioznost, poboljšava raspoloženje i povećava koncentraciju. Han Pijesak pruža idealne uslove za mentalni reset i bijeg od svakodnevnog stresa.",
+    "aktivnosti_naslov": "Aktivnosti u prirodi",
+    "aktivnosti_podnaslov": "Otkrijte što sve Han Pijesak nudi",
+    "aktivnost_1_naziv": "Planinarenje",
+    "aktivnost_1_opis": "Staze kroz romanijsku šumu za sve nivoe kondicije — od lakih šetnji do zahtjevnih uspona.",
+    "aktivnost_2_naziv": "Biciklizam",
+    "aktivnost_2_opis": "Preko 40 km označenih biciklističkih staza kroz netaknutu prirodu Han Pijeska.",
+    "aktivnost_3_naziv": "Šetnje kroz šumu",
+    "aktivnost_3_opis": "Uživajte u mirnim šetnjama kroz četinarske šume bogate fitoncidima i svježim vazduhom.",
+    "aktivnost_4_naziv": "Odmor u prirodi",
+    "aktivnost_4_opis": "Han Pijesak nudi idealne uslove za potpun odmor i regeneraciju u netaknutom planinskom ambijentu.",
+    "saznaj_vise": "Saznaj više →",
+    "cta_naslov": "Posjetite Han Pijesak",
+    "cta_tekst": "Planinska vazdušna banja čeka vas tokom cijele godine — pronađite smještaj i počnite planirati nezaboravan boravak u srcu Romanije.",
+    "cta_smjestaj": "Pronađi smještaj",
+    "cta_kontakt": "Kontaktirajte nas",
+    "meta_title": "Zdravstveni turizam",
+    "meta_description": "Han Pijesak — poznata vazdušna banja idealna za odmor i oporavak u čistoj planinskoj prirodi."
+  },
+  "znamenitosti": {
+    "hero_naslov": "Znamenitosti opštine Han Pijesak",
+    "hero_podnaslov": "Upoznajte historijsko i kulturno nasljeđe koje čuva vjekove prošlosti",
+    "dvorac_alt": "Dvorac Karađorđevića",
+    "dvorac_tip_badge": "Kraljevska rezidencija",
+    "dvorac_bedz": "Najznačajniji lokalitet",
+    "dvorac_naslov": "Dvorac Karađorđevića",
+    "dvorac_opis_1": "Impozantna kraljevska rezidencija izgrađena između 1919. i 1924. godine za kralja Aleksandra Karađorđevića. Smještena na visini od 1.100 metara, dvorac je bio poznat po izuzetnom kvalitetu planinskog vazduha i miru koji je pružao kraljevskoj porodici.",
+    "dvorac_opis_2": "Nakon decenija zapuštenosti i požara 2005. godine, objekat je u procesu obnove koja će mu vratiti nekadašnji sjaj i otvoriti ga za posjetioce kao kulturno-turistički centar.",
+    "dvorac_dugme": "Saznaj više o dvorcu →",
+    "ostale_bedz": "Historijski lokaliteti",
+    "ostale_naslov": "Ostale znamenitosti",
+    "ostale_podnaslov": "Han Pijesak čuva tragove različitih civilizacija i epoha — svaki lokalitet nosi svoju jedinstvenu priču",
+    "z1_naziv": "Spomen-kosturnica na Boračkom brdu",
+    "z1_tip": "Memorijalni kompleks",
+    "z1_opis": "Spomen-kosturnica na Boračkom brdu jedno je od najznačajnijih memorijalnih obilježja na području Han Pijeska. U njoj počivaju posmrtni ostaci 256 palih boraca Narodnooslobodilačkog rata, čime ovo mjesto ima poseban istorijski i simbolički značaj. Monumentalna forma spomenika svjedoči o vremenu kada su memorijalni kompleksi građeni kao mjesta kolektivnog sjećanja i poštovanja prema žrtvama rata. Smještena na uzvišenju, kosturnica pruža miran ambijent koji podstiče na razmišljanje i odavanje počasti.",
+    "z2_naziv": "Srpsko vojničko groblje Vrani Kamen",
+    "z2_tip": "Spomen-obilježje",
+    "z2_opis": "Na lokalitetu Vrani Kamen nalazi se jedno od najznačajnijih vojničkih grobalja iz Prvog svjetskog rata na području planine Javor. Pretpostavlja se da je ovdje sahranjeno oko 1.000 vojnika Šumadijske divizije Drugog poziva, stradalih tokom borbi 1914. godine. Ovo mjesto predstavlja tihi spomenik hrabrosti, žrtvi i istorijskom nasljeđu ovog kraja. Okruženo netaknutom prirodom i planinskim pejzažima, groblje danas ima poseban memorijalni i duhovni značaj.",
+    "z3_naziv": "Podzemni vojni objekat G3",
+    "z3_tip": "Vojno-istorijski lokalitet",
+    "z3_opis": "Podzemni vojni objekat G3, smješten na vrhu Mala Igrišta, jedan je od najintrigantnijih lokaliteta na području Han Pijeska. Izgrađen pedesetih godina prošlog vijeka kao dio tajne vojne infrastrukture bivše Jugoslavije, služio je kao komunikacijsko i komandno čvorište. Sistem podzemnih hodnika i prostorija prostire se na procijenjenih 500 do 700 metara, što ovom objektu daje poseban mistični karakter. Danas predstavlja izuzetno zanimljivu destinaciju za ljubitelje vojne istorije, avanturizma i istraživanja skrivenih lokacija.",
+    "z4_naziv": "Grob Jovana Tandarića",
+    "z4_tip": "Istorijsko-spomen obilježje",
+    "z4_opis": "Grob Jovana Tandarića, poznatijeg kao Jovo Tandarija, nalazi se u selu Bobica i predstavlja jedinstveno mjesto vezano za hajdučku istoriju Romanije. Jovan Tandarić smatra se posljednjim hajdukom ovog kraja, čovjekom čije je ime ostalo zapisano u lokalnim predanjima i narodnim pričama. Njegov život simbolizuje duh slobode, otpora i legendarnu hajdučku tradiciju po kojoj je Romanija nadaleko poznata. Ovo mjesto danas predstavlja spoj istorije, legende i kolektivnog sjećanja Romanijskog područja.",
+    "z5_naziv": "Stari grad Pošijak",
+    "z5_tip": "Istorijski lokalitet",
+    "z5_opis": "Stari grad Pošijak predstavlja jedno od najstarijih poznatih utvrđenja na području Han Pijeska i značajan je svjedok srednjovjekovne istorije ovog kraja. Smatra se da je podignut između 11. i 12. vijeka na strateški važnoj lokaciji nedaleko od Pjenovca. Njegov položaj omogućavao je nadzor nad širim područjem i kontrolu važnih pravaca kretanja kroz planinski prostor istočne Bosne. Iako su danas sačuvani samo ostaci nekadašnjeg utvrđenja, lokalitet i dalje nosi snažan istorijski pečat i privlači ljubitelje arheologije, istorije i kulturne baštine.",
+    "z6_naziv": "Nekropole stećaka",
+    "z6_tip": "Kulturno-istorijsko nasljeđe",
+    "z6_opis": "Nekropole stećaka na lokalitetima Pokajnica (Mramorje) i Podgroblje (Luka) u selu Nevačka predstavljaju jedno od najznačajnijih srednjovjekovnih nasljeđa opštine Han Pijesak. Na ovim lokalitetima nalazi se ukupno 37 stećaka, kamenih nadgrobnih spomenika karakterističnih za prostor Bosne i Hercegovine. Ovi monumentalni kameni biljezi svjedoče o životu, vjerovanjima i umjetničkom izrazu srednjovjekovnog stanovništva. Zbog svoje kulturne i istorijske vrijednosti, nekropole su proglašene nacionalnim spomenikom Bosne i Hercegovine.",
+    "film_bedz": "Zanimljivost",
+    "film_naslov": "Han Pijesak na velikom platnu",
+    "film_p1": "Malo ko zna da je Han Pijesak bio kulisa jednog od najpoznatijih jugoslovenskih ratnih filmova — Partizanske eskadrile, snimljene 1979. godine.",
+    "film_p2": "Film je prikazivao borbu partizanskih pilota tokom Drugog svjetskog rata, a netaknuta priroda i tereni oko Han Pijeska pružili su savršenu scenografiju za epske akcione scene. Planine, šume i otvoreni prostori opštine bili su idealni za snimanje vazduhoplovnih sekvenci.",
+    "film_p3": "Partizanska eskadrila ostaje jedna od najskupljih i najambicioznijih jugoslovenskih filmskih produkcija svog doba, a Han Pijesak ponosi se činjenicom da je bio dio te historije.",
+    "film_detalj_film_labela": "Film",
+    "film_detalj_film_vrijednost": "Partizanska eskadrila",
+    "film_detalj_godina_labela": "Godina",
+    "film_detalj_godina_vrijednost": "1979.",
+    "film_detalj_zanr_labela": "Žanr",
+    "film_detalj_zanr_vrijednost": "Ratni / Akcija",
+    "film_detalj_lokacija_labela": "Lokacija snimanja",
+    "film_detalj_lokacija_vrijednost": "Han Pijesak i okolina",
+    "film_poster_naziv": "Partizanska\neskadrila",
+    "meta_title": "Znamenitosti",
+    "meta_description": "Kulturno-istorijske znamenitosti opštine Han Pijesak, uključujući Dvorac Karađorđevića."
+  },
+  "dvorac": {
+    "hero_alt": "Dvorac Karađorđevića",
+    "hero_bedz": "Kraljevska rezidencija",
+    "hero_naslov": "Dvorac Karađorđevića",
+    "hero_podnaslov": "Impozantna svjedočanstvo kraljevske prošlosti Han Pijeska, izgrađena 1919–1924. godine za kralja Aleksandra.",
+    "hero_nazad": "← Znamenitosti",
+    "o_bedz": "O objektu",
+    "o_naslov": "Istorija i značaj",
+    "o_p1": "Dvorac Karađorđevića jedna je od najznačajnijih istorijskih građevina na prostoru opštine Han Pijesak. Izgrađen između 1919. i 1924. godine kao ljetnja rezidencija kralja Aleksandra Karađorđevića, dvorac je bio poznat po izuzetnom kvalitetu planinskog vazduha i visokoj koncentraciji ozona.",
+    "o_p2": "Smješten na nadmorskoj visini od oko 1.100 metara, pružao je savršeno mjesto za odmor i državne poslove daleko od gradske vreve. Tokom svog zlatnog doba bio je centar društvenog i diplomatskog života kraljevske Jugoslavije.",
+    "o_p3": "Nakon Drugog svjetskog rata promijenio je namjenu i koristio ga je Josip Broz Tito. Tragični požar 2005. godine uništio je veliki dio originalnih unutrašnjih elemenata, ali zidine svjedoče o nekadašnjoj veličanstvenosti objekta.",
+    "info_izgradnja_labela": "Godina izgradnje",
+    "info_izgradnja_vrijednost": "1919–1924.",
+    "info_narucilac_labela": "Naručilac",
+    "info_narucilac_vrijednost": "Kralj Aleksandar Karađorđević",
+    "info_visina_labela": "Nadmorska visina",
+    "info_visina_vrijednost": "~1.100 m",
+    "info_stil_labela": "Stil gradnje",
+    "info_stil_vrijednost": "Austrougarski romantizam",
+    "info_znacaj_labela": "Turistički značaj",
+    "info_znacaj_vrijednost": "Kulturno-istorijski spomenik",
+    "hist_bedz": "Kroz vjekove",
+    "hist_naslov": "Istorija dvorca",
+    "hist_podnaslov": "Sto godina burne istorije kroz ratove, vladare i promjene",
+    "hist_1_godina": "1919–1924",
+    "hist_1_naslov": "Izgradnja dvorca",
+    "hist_1_tekst": "Krajem 19. i početkom 20. vijeka područje Han Pijeska privuklo je pažnju austrougarskih stručnjaka koji su vršili mjerenja kvaliteta vazduha. Utvrđeno je da ovaj kraj ima izuzetno visoku koncentraciju ozona, zbog čega je smatran prirodnom vazdušnom banjom i idealnim mjestom za odmor i oporavak.\n\nNa osnovu tih saznanja donijeta je odluka da se na ovom prostoru izgradi kraljevska rezidencija. Gradnja dvorca započela je 1919. godine po nalogu kralja Aleksandra Karađorđevića, a završena već nakon dvije godine.\n\nDo 1924. godine kompletiran je i širi kompleks sa pratećim objektima, čime je stvoren reprezentativan prostor za boravak kraljevske porodice i visokih državnih zvaničnika.",
+    "hist_2_godina": "1920–1941",
+    "hist_2_naslov": "Zlatno doba",
+    "hist_2_tekst": "U periodu između dva svjetska rata dvorac je bio jedno od najvažnijih mjesta okupljanja političke i društvene elite tadašnje države. Kralj Aleksandar Karađorđević često je boravio ovdje sa porodicom, koristeći dvorac kako za odmor, tako i za obavljanje državničkih poslova.\n\nRezidenciju su posjećivali brojni ministri, generali i strani državnici. Među značajnim gostima bio je i Kemal Ataturk, kao i turski premijer Ismet Inönü, što govori o međunarodnom značaju ovog mjesta.\n\nDvorac je u tom periodu predstavljao simbol prestiža, političke moći i razvoja Han Pijeska kao elitne destinacije.",
+    "hist_3_godina": "1941–1945",
+    "hist_3_naslov": "Drugi svjetski rat",
+    "hist_3_tekst": "Tokom Drugog svjetskog rata dvorac je dobio potpuno drugačiju ulogu i našao se u središtu ratnih dešavanja. U vrijeme Aprilskog rata 1941. godine, kralj Petar II Karađorđević boravio je u dvorcu tokom povlačenja zajedno sa pratnjom i dijelom državnog aparata.\n\nZbog svog značaja i položaja objekat je ubrzo postao meta neprijateljskih snaga. Lokacija dvorca je otkrivena, nakon čega je uslijedio napad njemačke avijacije.\n\nU tim dramatičnim okolnostima kraljevska porodica bila je primorana na hitno napuštanje objekta, koristeći tajni izlaz i tunel u neposrednoj blizini dvorca. Nakon bijega nastavili su put prema sigurnijim područjima.\n\nSam dvorac je tokom rata pretrpio značajna oštećenja, a njegova prvobitna funkcija kraljevske rezidencije potpuno je prekinuta.",
+    "hist_4_godina": "1945–1991",
+    "hist_4_naslov": "Titovo doba",
+    "hist_4_tekst": "Nakon završetka rata dvorac je obnovljen 1946. godine i prilagođen novim društveno-političkim okolnostima. U periodu socijalističke Jugoslavije objekat dobija novu namjenu i postaje poznat kao 'Titov dvorac'.\n\nIako više nije imao kraljevsku funkciju, dvorac je i dalje zadržao određeni značaj kao reprezentativni objekat. Koristio se za boravak političkih i vojnih zvaničnika, ali i kao mjesto za odmor i povremene sastanke.\n\nVremenom je značaj dvorca počeo da opada. Promjene u društvu i nedovoljno ulaganje u održavanje doveli su do postepenog zapuštanja objekta.\n\nIako je formalno bio u funkciji, izgubio je dio svog nekadašnjeg sjaja i prestižne uloge koju je imao u prethodnom periodu.",
+    "hist_5_godina": "2005",
+    "hist_5_naslov": "Požar",
+    "hist_5_tekst": "Jedan od najtežih trenutaka u istoriji dvorca dogodio se 2005. godine, kada je kompleks zahvatio veliki požar. U tom događaju objekat je gotovo u potpunosti uništen, a veliki dio njegove strukture i unutrašnjosti nepovratno izgubljen.\n\nPožar je ostavio dubok trag ne samo na samom objektu, već i u svijesti lokalne zajednice. Dvorac, koji je decenijama bio simbol istorije i identiteta ovog kraja, pretvoren je u ruševinu.\n\nNakon požara objekat je dugi niz godina ostao zapušten i bez adekvatne zaštite, ali je uprkos tome sačuvan njegov istorijski značaj i potencijal za obnovu.",
+    "hist_6_godina": "2020–danas",
+    "hist_6_naslov": "Početak obnove",
+    "hist_6_tekst": "U posljednjim godinama pokrenut je proces obnove dvorca sa ciljem da mu se vrati nekadašnji izgled i značaj. Radovi se izvode uz nadzor institucija za zaštitu kulturno-istorijskog nasljeđa.\n\nRekonstrukcija je koncipirana tako da što vjernije prati originalni izgled iz vremena Karađorđevića, uz minimalne prilagodbe savremenim standardima.\n\nPlanirano je da dvorac dobije višestruku funkciju, uključujući muzej, reprezentativne apartmane, vinski podrum i prostor za održavanje događaja.\n\nObnova ovog kompleksa predstavlja važan korak ka očuvanju kulturne baštine i značajan potencijal za razvoj turizma u regionu.",
+    "bud_bedz": "Obnova i razvoj",
+    "bud_naslov": "Danas i budućnost",
+    "bud_podnaslov": "Dvorac ulazi u novu eru — planirani sadržaji koji će ga pretvoriti u kulturno-turistički centar regije",
+    "bud_1_naziv": "Muzej",
+    "bud_1_opis": "Stalna postavka o istoriji dvoraca i kraljevske porodice Karađorđević.",
+    "bud_2_naziv": "Vinska podrumska",
+    "bud_2_opis": "Degustacioni centar lokalnih vina i rakija u autentičnom ambijentu.",
+    "bud_3_naziv": "Apartmani",
+    "bud_3_opis": "Luksuzni smještaj u obnovljenim krilima dvorca za posebna iskustva.",
+    "bud_4_naziv": "Event prostor",
+    "bud_4_opis": "Svečana dvorana za konferencije, vjenčanja i kulturne manifestacije.",
+    "cta_naslov": "Posjetite Han Pijesak",
+    "cta_tekst": "Planirajte posjetu i uronite u bogatu istoriju ove planinske opštine.",
+    "cta_smjestaj": "Pronađi smještaj",
+    "cta_nazad": "← Sve znamenitosti",
+    "meta_title": "Dvorac Karađorđevića",
+    "meta_description": "Istorija i posjeta Dvorcu Karađorđevića u Han Pijesku — jednom od najvažnijih spomenika kulture."
+  },
+  "kontakt": {
+    "hero_naslov": "Kontaktirajte nas",
+    "hero_podnaslov": "Tu smo da odgovorimo na sva vaša pitanja",
+    "info_naslov": "Kontakt podaci",
+    "adresa": "Aleksandra Karađorđevića 4, Han Pijesak",
+    "telefon": "+387 66 787 850",
+    "email": "tohanpijesak@gmail.com",
+    "radno_naslov": "Radno vrijeme",
+    "radno_vrijeme": [
+      {
+        "dan": "Ponedjeljak – Petak",
+        "vrijeme": "07:00 – 15:00"
+      },
+      {
+        "dan": "Subota",
+        "vrijeme": "Zatvoreno"
+      },
+      {
+        "dan": "Nedjelja",
+        "vrijeme": "Zatvoreno"
+      }
+    ],
+    "zatvoreno": "Zatvoreno",
+    "mapa_title": "Lokacija Turističke organizacije Han Pijesak",
+    "forma_naslov": "Pošaljite nam poruku",
+    "ime_label": "Ime i prezime",
+    "ime_placeholder": "npr. Marija Petrović",
+    "email_label": "Email adresa",
+    "email_placeholder": "npr. marija@email.com",
+    "telefon_label": "Broj telefona",
+    "telefon_placeholder": "npr. +387 61 123 456",
+    "tip_label": "Tip upita",
+    "tip_placeholder": "-- Odaberite tip upita --",
+    "tipovi_upita": [
+      "Opšti upit",
+      "Smještaj",
+      "Manifestacije",
+      "Planinarski turizam",
+      "Zdravstveni turizam",
+      "Mediji i press",
+      "Ostalo"
+    ],
+    "naslov_label": "Naslov poruke",
+    "naslov_placeholder": "Kratki opis vaše poruke",
+    "poruka_label": "Poruka",
+    "poruka_placeholder": "Napišite vašu poruku ovdje...",
+    "dugme_posalji": "Pošalji poruku →",
+    "validacija_ime": "Ime i prezime su obavezni.",
+    "validacija_email": "Email adresa je obavezna.",
+    "validacija_email_format": "Email adresa nije ispravna.",
+    "validacija_tip": "Odaberite tip upita.",
+    "validacija_naslov": "Naslov poruke je obavezan.",
+    "validacija_poruka": "Poruka ne može biti prazna.",
+    "uspjeh_naslov": "Poruka poslana!",
+    "uspjeh_tekst": "Hvala vam na poruci. Odgovorićemo vam u najkraćem mogućem roku.",
+    "uspjeh_dugme": "Pošalji novu poruku",
+    "meta_title": "Kontakt",
+    "meta_description": "Kontaktirajte Turističku organizaciju opštine Han Pijesak — adresa, telefon i email za sve informacije."
+  }
 }

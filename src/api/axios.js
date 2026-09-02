@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+// Adresa backend API-ja se čita iz environment varijable (.env fajl),
+// umjesto da bude fiksno upisana u kod. Ovo omogućava da se ista
+// aplikacija ponaša drugačije lokalno (localhost) i na produkciji
+// (pravi domen), bez izmjene koda — samo se mijenja .env fajl.
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:8000/api',
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json',

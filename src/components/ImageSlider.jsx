@@ -31,7 +31,7 @@ function ImageSlider({ slajdovi = [], visina = '460px', interval = 4000 }) {
 
       
       {trenutni.slika
-        ? <img src={trenutni.slika} className="img-slider__slika" />
+        ? <img src={trenutni.slika} className="img-slider__slika" loading="lazy" />
         : <div className="img-slider__placeholder" />
       }
 

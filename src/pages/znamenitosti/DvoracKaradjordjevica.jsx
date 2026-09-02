@@ -11,6 +11,7 @@ import dvorac6 from "../../assets/Znamenitosti/dvorac6.jpg";
 import { MdOutlineMuseum } from "react-icons/md";
 import { FaWineGlassAlt, FaTheaterMasks } from "react-icons/fa";
 import { IoMdBed } from "react-icons/io";
+import Seo from "../../components/Seo";
 
 const historijaSlike = [dvorac1, dvorac2, dvorac3, dvorac4, dvorac5, dvorac6];
 
@@ -45,6 +46,7 @@ function DvoracKaradjordjevica() {
 
   return (
     <section className="DVR_section">
+      <Seo title={t("dvorac.meta_title")} description={t("dvorac.meta_description")} />
 
       {/* ── 1. HERO ── */}
       <div className="DVR_hero">
@@ -108,7 +110,7 @@ function DvoracKaradjordjevica() {
                   src={historijaStavke[aktivnaHistorija].slika}
                   alt={historijaStavke[aktivnaHistorija].naslov}
                   className="DVR_timeline__slika"
-                />
+                loading="lazy" />
               </div>
               <div className="DVR_timeline__info">
                 <span className="DVR_timeline__godina">{historijaStavke[aktivnaHistorija].godina}</span>

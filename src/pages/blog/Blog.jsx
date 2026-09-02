@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { API_URL } from "../adminPage/context/AuthContext";
 import { tf } from "../../utils/translateField";
+import Seo from "../../components/Seo";
 
 const kategorijaBoja = {
   Priroda:         { bg: "#eaf3de", tekst: "#3a5a40" },
@@ -29,7 +30,7 @@ function BlogKartica({ blog, istaknuta }) {
       <Link to={linkTo} className="BLG_istaknuta">
         <div className="BLG_istaknuta__slika">
           {slika
-            ? <img src={slika} alt={naslov} className="BLG_istaknuta__slika-img" />
+            ? <img src={slika} alt={naslov} className="BLG_istaknuta__slika-img" loading="lazy" />
             : <div className="BLG_istaknuta__slika-placeholder" />
           }
           <span className="BLG_kat" style={{ background: boja.bg, color: boja.tekst }}>
@@ -54,7 +55,7 @@ function BlogKartica({ blog, istaknuta }) {
     <Link to={linkTo} className="BLG_kartica">
       <div className="BLG_kartica__slika-wrap">
         {slika
-          ? <img src={slika} alt={naslov} className="BLG_kartica__slika" />
+          ? <img src={slika} alt={naslov} className="BLG_kartica__slika" loading="lazy" />
           : <div className="BLG_kartica__slika-placeholder" />
         }
         <span className="BLG_kat" style={{ background: boja.bg, color: boja.tekst }}>
@@ -110,6 +111,7 @@ function Blog() {
 
   return (
     <section className="BLG_section">
+      <Seo title={t("blog.meta_title")} description={t("blog.meta_description")} />
 
       <div className="BLG_hero">
         <h1>{t('blog.naslov')}</h1>

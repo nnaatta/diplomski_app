@@ -8,6 +8,7 @@ import { LuCalendarDays,  LuWaves } from "react-icons/lu";
 import rijeke from "../../assets/stupcanica.jpg"
 import lov1 from "../../assets/lov1.jpg"
 import lov2 from "../../assets/lov2.jpg"
+import Seo from "../../components/Seo";
 
 const lovIkone = [<GiForest/>, <GiPolarBear/>, <FaAward/>];
 const ribolovIkone = [<IoFishSharp/>, <LuCalendarDays/>, <LuWaves/>];
@@ -22,6 +23,7 @@ function LovRibolov() {
 
   return (
     <section className="lr">
+      <Seo title={t("lov_ribolov.meta_title")} description={t("lov_ribolov.meta_description")} />
 
       {/* ===== HERO ===== */}
       <div className="lr__hero">
@@ -94,7 +96,7 @@ function LovRibolov() {
                   {t('lov_ribolov.lovište_tekst')}
                 </p>
                 <div className="lr__foto lr__foto--lov">
-                   <img src={lov1} alt={t('lov_ribolov.lovište_alt')} /> 
+                   <img src={lov1} alt={t('lov_ribolov.lovište_alt')} loading="lazy" /> 
                 </div>
               </div>
 
@@ -122,7 +124,7 @@ function LovRibolov() {
                 {t('lov_ribolov.turizam_tekst')}
               </p>
               <div className="lr__foto lr__foto--lov">
-                <img src={lov2} alt={t('lov_ribolov.turizam_alt')} /> 
+                <img src={lov2} alt={t('lov_ribolov.turizam_alt')} loading="lazy" /> 
               </div>
             </div>
 
@@ -175,7 +177,7 @@ function LovRibolov() {
                   {t('lov_ribolov.vode_tekst')}
                 </p>
                 <div className="lr__foto lr__foto--riba">
-                  <img src={rijeke} alt={t('lov_ribolov.vode_alt')} />
+                  <img src={rijeke} alt={t('lov_ribolov.vode_alt')} loading="lazy" />
                 </div>
               </div>
 

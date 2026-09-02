@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Kontakt.css';
 import { useTranslation } from 'react-i18next';
 import { FaLocationDot, FaPhone, FaRegEnvelope, FaClock } from 'react-icons/fa6';
+import Seo from "../../components/Seo";
 
 const pocetnoStanje = {
   ime:     '',
@@ -51,6 +52,7 @@ function Kontakt() {
 
   return (
     <section className="kontakt">
+      <Seo title={t("kontakt.meta_title")} description={t("kontakt.meta_description")} />
 
       {/* ===== HERO ===== */}
       <div className="kontakt__hero">

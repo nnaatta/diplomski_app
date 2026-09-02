@@ -41,6 +41,7 @@ import kud1 from "../../assets/sportRekreacija/kud1.jpg";
 import kud2 from "../../assets/sportRekreacija/kud2.jpg";
 import kud3 from "../../assets/sportRekreacija/kud3.jpg";
 import kud4 from "../../assets/sportRekreacija/kud4.jpg";
+import Seo from "../../components/Seo";
 
 // Slike po indeksu organizacije (redosljed mora odgovarati org_lista u translation.json)
 const orgSlike = [
@@ -94,7 +95,7 @@ function OrgCard({ org, logo, slike }) {
       <div className="SR_org__header">
         <div className="SR_org__logo">
           {logo ? (
-            <img src={logo} alt={org.naziv} className="SR_org__logo-img" />
+            <img src={logo} alt={org.naziv} className="SR_org__logo-img" loading="lazy" />
           ) : (
             <span className="SR_org__logo-placeholder">🏆</span>
           )}
@@ -112,7 +113,7 @@ function OrgCard({ org, logo, slike }) {
                 src={slika}
                 alt={org.slikeOpisi?.[i] || ""}
                 className="SR_org__slika"
-              />
+              loading="lazy" />
             ) : (
               <div className="SR_org__slika-placeholder" />
             )}
@@ -135,6 +136,7 @@ function SportRekreacija() {
 
   return (
     <section className="SR_section">
+      <Seo title={t("sport_rekreacija.meta_title")} description={t("sport_rekreacija.meta_description")} />
       {/* ── 1. HERO ── */}
       <div className="SR_hero">
         <h1 className="SR_hero__naslov">{t("sport_rekreacija.hero_naslov")}</h1>
@@ -218,7 +220,7 @@ function SportRekreacija() {
                     src={slika}
                     alt={skiSlikeOpisi[i] || ""}
                     className="SR_ski__slika"
-                  />
+                  loading="lazy" />
                 ) : (
                   <div className="SR_ski__slika-placeholder" />
                 )}

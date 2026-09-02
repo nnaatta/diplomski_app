@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { API_URL } from '../adminPage/context/AuthContext';
 import { tf } from '../../utils/translateField';
+import Seo from "../../components/Seo";
 
 // Mapiranje tip_sadrzaja.naziv -> interni ključ
 const NAZIV_NA_TIP = {
@@ -150,6 +151,7 @@ export default function AktivniOdmor() {
 
   return (
     <section className="AO_section">
+      <Seo title={t("aktivni_odmor.meta_title")} description={t("aktivni_odmor.meta_description")} />
       <div className="AO_hero">
         <h1>{t('aktivni_odmor.naslov')}</h1>
         <p>{t('aktivni_odmor.podnaslov')}</p>

@@ -17,6 +17,7 @@ import { CiRuler } from "react-icons/ci";
 import { MdPhotoCamera } from "react-icons/md";
 
 import podaci from "../../data/atrakcijeData.json";
+import Seo from "../../components/Seo";
 
 // Mapiranje slika
 const slike = {
@@ -82,7 +83,7 @@ function AtrakcijaPar({ atrakcija, index }) {
             src={slike[atrakcija.slikaKey]}
             className="ATR_par__slika-placeholder"
             alt={naziv}
-          />
+          loading="lazy" />
           <div className="ATR_par__slika-overlay" />
           <span className="ATR_par__tip">{tip}</span>
           {/* Dekorativni krug */}
@@ -155,6 +156,7 @@ function Atrakcije() {
 
   return (
     <section className="ATR_section">
+      <Seo title={t("atrakcije.meta_title")} description={t("atrakcije.meta_description")} />
 
       {/* ── 1. HERO ── */}
       <div className="ATR_hero">

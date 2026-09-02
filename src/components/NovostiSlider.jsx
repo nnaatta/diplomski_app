@@ -53,7 +53,7 @@ function NovostiSlider() {
          
           <div className="novosti__slika-wrap">
             {post.slika
-              ? <img src={post.slika} alt={post.naslov} className="novosti__slika" />
+              ? <img src={post.slika} alt={post.naslov} className="novosti__slika" loading="lazy" />
               : <div className="novosti__placeholder" />
             }
           </div>

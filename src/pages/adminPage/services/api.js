@@ -1,4 +1,4 @@
-const BASE = "http://localhost:8000/api";
+const BASE = process.env.REACT_APP_API_URL || "http://localhost:8000/api";
 
 function getToken() {
   return localStorage.getItem("admin_token");

@@ -44,6 +44,7 @@ import vidra from "../../assets/floraFauna/vidra.jpg";
 import lasica from "../../assets/floraFauna/lasica.jpg";
 
 import podaci from "../../data/floraFaunaData.json";
+import Seo from "../../components/Seo";
 
 // Mapiranje ključeva slika na importovane slike
 const slike = {
@@ -87,6 +88,7 @@ function FloraFauna() {
 
   return (
     <section className="ff">
+      <Seo title={t("flora_fauna.meta_title")} description={t("flora_fauna.meta_description")} />
    {/* ===== SPLIT SCREEN ===== */}
 <div className="ff__split">
 

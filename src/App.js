@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import "./App.css";
 import { AuthProvider } from "./pages/adminPage/context/AuthContext";
 
@@ -34,7 +35,8 @@ import Galerija from "./pages/galerija/Galerija";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
       <AuthProvider>
         <Routes>
 
@@ -81,7 +83,8 @@ function App() {
 
         </Routes>
       </AuthProvider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

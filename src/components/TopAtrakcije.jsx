@@ -48,7 +48,7 @@ function TopAtrakcije() {
                 src={atrakcijeSlike[i]}
                 alt={a.naslov}
                 className="top-atrakcija__slika"
-              />
+              loading="lazy" />
             </div>
 
             <div className="top-atrakcija__tekst">

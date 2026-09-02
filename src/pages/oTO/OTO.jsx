@@ -13,6 +13,7 @@ import pohodSkakavac from "../../assets/TOSkakavac.jpg";
 import manifestacija from "../../assets/TOManifestacija.jpg";
 import sajam2024 from "../../assets/sajam2024.jpg";
 import psuJavor from "../../assets/psuJavor.jpg";
+import Seo from "../../components/Seo";
 
 function OTO() {
   const { t } = useTranslation();
@@ -36,6 +37,7 @@ function OTO() {
 
   return (
     <section className="OTO_section">
+      <Seo title={t("o_to.meta_title")} description={t("o_to.meta_description")} />
 
       {/* ===== HERO ===== */}
       <div className="OTO_hero">
@@ -75,7 +77,7 @@ function OTO() {
             <div key={i} className="OTO_galerija_item">
               <div className="OTO_galerija_slika_wrap">
                 {g.slika
-                  ? <img src={g.slika} alt={t(`o_to.${g.opisKey}`)} className="OTO_galerija_slika" />
+                  ? <img src={g.slika} alt={t(`o_to.${g.opisKey}`)} className="OTO_galerija_slika" loading="lazy" />
                   : <div className="OTO_galerija_placeholder" />
                 }
               </div>
@@ -92,7 +94,7 @@ function OTO() {
           {partneri.map((p) => (
             <div key={p.nazivKey} className="OTO_partner">
               <div className="OTO_partner_logo">
-                <img src={p.logo} alt={t(`o_to.${p.nazivKey}`)} />
+                <img src={p.logo} alt={t(`o_to.${p.nazivKey}`)} loading="lazy" />
               </div>
               <p className="OTO_partner_naziv">{t(`o_to.${p.nazivKey}`)}</p>
             </div>
@@ -105,7 +107,7 @@ function OTO() {
         <h2 className="OTO_kontakt_naslov">{t("o_to.kontakt_naslov")}</h2>
         <div className="OTO_kontakt_grid">
           <div className="OTO_kontakt_osoba">
-            <img src="" alt={t("o_to.kontakt_alt")} />
+            <img src="" alt={t("o_to.kontakt_alt")} loading="lazy" />
             <span className="ime">{t("o_to.kontakt_ime")}</span>
             <span className="titula">{t("o_to.kontakt_titula")}</span>
           </div>

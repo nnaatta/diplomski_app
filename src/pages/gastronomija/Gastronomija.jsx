@@ -10,6 +10,7 @@ import teletina from "../../assets/gastronomija/teletina.jpg";
 import cicvara from "../../assets/gastronomija/cicvara.jpg";
 import koljenica from "../../assets/gastronomija/butkica.jpg";
 import pecenje from "../../assets/gastronomija/jagnje.jpg";
+import Seo from "../../components/Seo";
 
 // Slike za specijalitete — tekst (naziv/opis) dolazi iz translation.json
 const specijalitetiSlike = [teletina, cicvara, "", koljenica, pecenje, ""];
@@ -28,7 +29,7 @@ function RestoranSlider({ slike, alt }) {
   const sljedeci  = (e) => { e.preventDefault(); setAktivan(p => p === slike.length - 1 ? 0 : p + 1); };
   return (
     <div className="restoran__slider">
-      <img src={slikaUrl(slike[aktivan].url)} alt={alt} className="restoran__slika" />
+      <img src={slikaUrl(slike[aktivan].url)} alt={alt} className="restoran__slika" loading="lazy" />
       {slike.length > 1 && (
         <>
           <button className="restoran__strelica restoran__strelica--lijevo" onClick={prethodni}><FaChevronLeft /></button>
@@ -64,6 +65,7 @@ function Gastronomija() {
 
   return (
     <section className="gastro">
+      <Seo title={t("gastronomija.meta_title")} description={t("gastronomija.meta_description")} />
 
       {/* HERO */}
       <div className="gastro__hero">
@@ -198,7 +200,7 @@ function Gastronomija() {
       <div className="gastro__kajmak">
         <div className="gastro__kajmak-grid">
           <div className="gastro__kajmak-slika-wrap">
-            <img src={kajmak} alt={t('gastronomija.kajmak_naslov')} className="gastro__kajmak-slika" />
+            <img src={kajmak} alt={t('gastronomija.kajmak_naslov')} className="gastro__kajmak-slika" loading="lazy" />
             <span className="gastro__kajmak-bedz">{t('gastronomija.kajmak_bedz')}</span>
           </div>
           <div className="gastro__kajmak-tekst">
@@ -233,7 +235,7 @@ function Gastronomija() {
             <div key={s.naziv} className="gastro__spec-kartica">
               <div className="gastro__spec-slika-wrap">
                 {specijalitetiSlike[i]
-                  ? <img src={specijalitetiSlike[i]} alt={s.naziv} className="gastro__spec-slika" />
+                  ? <img src={specijalitetiSlike[i]} alt={s.naziv} className="gastro__spec-slika" loading="lazy" />
                   : <div className="gastro__spec-placeholder" />
                 }
               </div>

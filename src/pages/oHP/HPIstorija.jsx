@@ -8,6 +8,7 @@ import vila from '../../assets/dvoracKaradjordjevica.jpeg';
 import stariBrod from '../../assets/stari_brod.jpg';
 import velikiZep from '../../assets/velikiZep.jpg';
 import hp90 from '../../assets/hp90.jpg';
+import Seo from "../../components/Seo";
 
 const slikeMap = {
   osmSlika, ausSlika, vraniKamen, vila, stariBrod, velikiZep, hp90,
@@ -47,6 +48,7 @@ function HPIstorija() {
 
   return (
     <section className="hpi">
+      <Seo title={t("hpi.meta_title")} description={t("hpi.meta_description")} />
       {/* ===== HERO ===== */}
       <div className="hpi__hero">
         <p className="hpi__hero-natpis">{t('hpi.hero_natpis')}</p>
@@ -108,7 +110,7 @@ function HPIstorija() {
 
                 <div className="hpi__period-sadrzaj">
                   <p className="hpi__period-tekst">{tekst}</p>
-                  <img src={slikeMap[p.slikaKey]} alt={naslov} className="hpi__period-foto" />
+                  <img src={slikeMap[p.slikaKey]} alt={naslov} className="hpi__period-foto" loading="lazy" />
                 </div>
 
                 {zanimljivost && (

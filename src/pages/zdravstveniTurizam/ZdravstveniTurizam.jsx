@@ -26,6 +26,7 @@ import slika11 from "../../assets/ZdravstveniTurizam/slika11.jpg";
 import slika12 from "../../assets/ZdravstveniTurizam/slika12.jpg";
 import slika13 from "../../assets/oHP.jpg";
 import ImageSlider from "../../components/ImageSlider";
+import Seo from "../../components/Seo";
 
 const slajdoviSlike = [
   slika12, slika5, slika1, slika13, heroSlika,
@@ -57,6 +58,7 @@ function ZdravstveniTurizam() {
 
   return (
     <section className="ZT_section">
+      <Seo title={t("zdravstveni_turizam.meta_title")} description={t("zdravstveni_turizam.meta_description")} />
 
       {/* 1. HERO */}
       <div className="ZT_hero">

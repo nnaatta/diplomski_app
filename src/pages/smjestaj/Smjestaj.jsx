@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import heroSlika2 from '../../assets/smjestajPozadina2.jpg';
 import { API_URL } from '../adminPage/context/AuthContext';
 import { tf } from '../../utils/translateField';
+import Seo from "../../components/Seo";
 
 function Zvjezdice({ broj }) {
   return (
@@ -64,6 +65,7 @@ function Smjestaj() {
 
   return (
     <section className="smjestaj-section">
+      <Seo title={t("smjestaj.meta_title")} description={t("smjestaj.meta_description")} />
 
       <div className="smjestaj-hero">
         <img src={heroSlika2} alt={t('smjestaj.naslov')} className="smjestaj-hero__img" />
@@ -107,7 +109,7 @@ function Smjestaj() {
               <Link to={`/smjestaj/${s.id}`} key={s.id} className="smjestaj-kartica">
                 <div className="smjestaj-kartica__slika-wrap">
                   {glavnaSlika(s)
-                    ? <img src={glavnaSlika(s)} alt={naziv} className="smjestaj-kartica__slika" />
+                    ? <img src={glavnaSlika(s)} alt={naziv} className="smjestaj-kartica__slika" loading="lazy" />
                     : <div className="smjestaj-kartica__placeholder" />
                   }
                   <span className="smjestaj-kartica__tag">{tipNaziv}</span>

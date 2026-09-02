@@ -15,7 +15,7 @@ function Lightbox({ slike, aktivan, onZatvori, onPrethodni, onSljedeci, t }) {
       <span className="lightbox__brojac">{aktivan + 1} / {slike.length}</span>
       <button className="lightbox__strelica lightbox__strelica--lijevo" onClick={(e) => { e.stopPropagation(); onPrethodni(); }} aria-label={t('smjestaj_detalji.prethodna')}><FaChevronLeft /></button>
       <div className="lightbox__slika-wrap" onClick={(e) => e.stopPropagation()}>
-        <img src={slike[aktivan]} alt={t('smjestaj_detalji.slika', { br: aktivan + 1 })} className="lightbox__slika" />
+        <img src={slike[aktivan]} alt={t('smjestaj_detalji.slika', { br: aktivan + 1 })} className="lightbox__slika" loading="lazy" />
       </div>
       <button className="lightbox__strelica lightbox__strelica--desno" onClick={(e) => { e.stopPropagation(); onSljedeci(); }} aria-label={t('smjestaj_detalji.sljedeca')}><FaChevronRight /></button>
       <div className="lightbox__thumbnails" onClick={(e) => e.stopPropagation()}>
@@ -23,6 +23,7 @@ function Lightbox({ slike, aktivan, onZatvori, onPrethodni, onSljedeci, t }) {
           <img key={i} src={s} alt={t('smjestaj_detalji.thumbnail', { br: i + 1 })}
             className={`lightbox__thumbnail${i === aktivan ? ' lightbox__thumbnail--aktivan' : ''}`}
             onClick={() => onPrethodni(i)}
+            loading="lazy"
           />
         ))}
       </div>
@@ -43,7 +44,7 @@ function GalerijaKomponenta({ slike, onKlik, t }) {
         <div className="galerija__grid">
           {slike.slice(1, 5).map((s, i) => (
             <div key={i} className="galerija__mala" onClick={() => onKlik(i + 1)}>
-              <img src={s} alt={t('smjestaj_detalji.slika', { br: i + 2 })} className="galerija__slika" />
+              <img src={s} alt={t('smjestaj_detalji.slika', { br: i + 2 })} className="galerija__slika" loading="lazy" />
               {i === 3 && slike.length > 5 && <div className="galerija__vise">+{slike.length - 5}</div>}
             </div>
           ))}

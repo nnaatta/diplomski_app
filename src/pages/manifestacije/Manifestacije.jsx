@@ -66,6 +66,7 @@ import vid6 from "../../assets/manifestacije/vid6.jpg";
 import op1 from "../../assets/manifestacije/op1.jpg";
 import op2 from "../../assets/manifestacije/op2.jpg";
 import op3 from "../../assets/manifestacije/op3.jpg";
+import Seo from "../../components/Seo";
 
 const logoMap = {
   opstinaLogo, toLogo, biblLogo, cosLogo, visLogo, javorLogo, kudLogo, vrticLogo,
@@ -205,7 +206,7 @@ function EventKartica({ dogadjaj }) {
     <div className="MAN_event">
       <div className="MAN_event__slika-wrap">
         {slika ? (
-          <img src={slika} alt={naslov} className="MAN_event__slika" />
+          <img src={slika} alt={naslov} className="MAN_event__slika" loading="lazy" />
         ) : (
           <div className="MAN_event__slika-placeholder" />
         )}
@@ -281,7 +282,7 @@ function TradSlider({ slike, slikeOpisi }) {
           return (
             <div key={idx} className="MAN_trad__slika-item">
               {slika ? (
-                <img src={slika} alt={slikeOpisi[idx] ?? ""} className="MAN_trad__slika" />
+                <img src={slika} alt={slikeOpisi[idx] ?? ""} className="MAN_trad__slika" loading="lazy" />
               ) : (
                 <div className="MAN_trad__slika-placeholder" />
               )}
@@ -361,6 +362,7 @@ function Manifestacije() {
 
   return (
     <section className="MAN_section">
+      <Seo title={t("manifestacije.meta_title")} description={t("manifestacije.meta_description")} />
       <div className="MAN_hero">
         <img src={manHero} className="MAN_hero__img MAN_hero__img--placeholder" alt="Manifestacije" />
         <div className="MAN_hero__overlay" />
@@ -393,7 +395,7 @@ function Manifestacije() {
                 <div key={org.naziv} className="MAN_org">
                   <div className="MAN_org__logo">
                     {logoMap[org.logoKey] ? (
-                      <img src={logoMap[org.logoKey]} alt={naziv} className="MAN_org__logo-img" />
+                      <img src={logoMap[org.logoKey]} alt={naziv} className="MAN_org__logo-img" loading="lazy" />
                     ) : (
                       <span className="MAN_org__logo-placeholder">🏛️</span>
                     )}

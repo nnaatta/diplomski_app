@@ -14,6 +14,7 @@ import {
   TiWeatherSnow,
   TiWeatherStormy,
 } from "react-icons/ti";
+import Seo from "../../components/Seo";
 
 const WEATHER_URL =
   "https://api.open-meteo.com/v1/forecast?latitude=44.0812&longitude=18.9506&current=temperature_2m,weathercode&wind_speed_unit=kmh&timezone=Europe%2FBelgrade";
@@ -104,6 +105,7 @@ function Pocetna() {
 
   return (
     <>
+      <Seo title={t("pocetna.meta_title")} description={t("pocetna.meta_description")} />
       <section id="pocetna" className="pocetna-hero">
         <img
           src={slika}

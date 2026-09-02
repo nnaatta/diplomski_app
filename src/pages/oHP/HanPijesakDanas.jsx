@@ -14,6 +14,7 @@ import { FaSkiing, FaMountain, FaHome } from "react-icons/fa";
 import { GiFishing } from "react-icons/gi";
 import { IoBicycleOutline } from "react-icons/io5";
 import { RiMentalHealthFill } from "react-icons/ri";
+import Seo from "../../components/Seo";
 
 const turizamIkone = [
   <FaSkiing/>, <FaMountain/>, <GiFishing/>,
@@ -28,6 +29,7 @@ function HanPijesakDanas() {
 
   return (
     <section className="hpd">
+      <Seo title={t("hpd.meta_title")} description={t("hpd.meta_description")} />
       {/* ===== HERO ===== */}
       <div className="hpd__hero">
         <p className="hpd__hero-natpis">{t('hpd.hero_natpis')}</p>
@@ -50,8 +52,8 @@ function HanPijesakDanas() {
             </div>
           </div>
           <div className="hpd_slike">
-            <img src={oHP1} className="hpd__foto hpd__foto--mjesto" alt="" />
-            <img src={oHP2} className="hpd__foto hpd__foto--mjesto" alt="" />
+            <img src={oHP1} className="hpd__foto hpd__foto--mjesto" alt="" loading="lazy" />
+            <img src={oHP2} className="hpd__foto hpd__foto--mjesto" alt="" loading="lazy" />
           </div>
         </div>
       </div>
@@ -74,7 +76,7 @@ function HanPijesakDanas() {
               <Naglasak broj="1.149 m" tekst="Studena Gora" />
             </div>
           </div>
-          <img src={geo} className="hpd__foto hpd__foto--planine" alt="" />
+          <img src={geo} className="hpd__foto hpd__foto--planine" alt="" loading="lazy" />
         </div>
       </div>
 
@@ -90,7 +92,7 @@ function HanPijesakDanas() {
             <h3 className="hpd__blok-naslov">{t('hpd.klima_naslov')}</h3>
             <p className="hpd__blok-opis">{t('hpd.klima_opis')}</p>
           </div>
-          <img src={klima} className="hpd__foto hpd__foto--klima" alt="" />
+          <img src={klima} className="hpd__foto hpd__foto--klima" alt="" loading="lazy" />
         </div>
 
         <div className="hpd__blok hpd__blok--obrnuto">
@@ -99,8 +101,8 @@ function HanPijesakDanas() {
             <p className="hpd__blok-opis">{t('hpd.voda_opis')}</p>
           </div>
           <div className="hpd_slike">
-            <img src={voda1} className="hpd__foto hpd__foto--voda" alt="" />
-            <img src={voda2} className="hpd__foto hpd__foto--voda" alt="" />
+            <img src={voda1} className="hpd__foto hpd__foto--voda" alt="" loading="lazy" />
+            <img src={voda2} className="hpd__foto hpd__foto--voda" alt="" loading="lazy" />
           </div>
         </div>
       </div>
