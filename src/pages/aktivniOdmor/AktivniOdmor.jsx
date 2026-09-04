@@ -20,12 +20,12 @@ const NAZIV_NA_TIP = {
 
 const tezineRed = ["sve", "laka", "srednja", "teska"];
 
-function slikaUrl(url) {
+/*function slikaUrl(url) {
   if (!url) return null;
   if (url.startsWith('http')) return url;
   const base = API_URL.replace(/\/api.*$/, '');
   return base + url;
-}
+}*/
 
 function StazaRed({ staza }) {
   const navigate = useNavigate();

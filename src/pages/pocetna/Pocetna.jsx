@@ -3,7 +3,6 @@ import "./Pocetna.css";
 import slika from "../../assets/pocetnaSlika.jpg";
 import BrzeKartice from "../../components/BrzeKartice";
 import TopAtrakcije from "../../components/TopAtrakcije";
-import NovostiSlider from "../../components/NovostiSlider";
 import { useTranslation } from "react-i18next";
 import {
   TiWeatherPartlySunny,

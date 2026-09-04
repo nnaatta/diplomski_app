@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Galerija.css";
 import slika1 from "../../assets/vazdusnaBanja.jpg";
-import heroSlika from "../../assets/ZdravstveniTurizam/pozadina.jpg";
 import slika3 from "../../assets/ZdravstveniTurizam/slika2.jpg";
 import slika4 from "../../assets/ZdravstveniTurizam/slika3.jpg";
 import slika5 from "../../assets/ZdravstveniTurizam/slika5.jpg";

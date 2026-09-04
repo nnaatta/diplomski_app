@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Gastronomija.css';
 import { useTranslation, Trans } from 'react-i18next';
-import { FaLocationDot, FaPhone, FaEnvelope, FaGlobe, FaInstagram, FaFacebook, FaChevronLeft, FaChevronRight, FaClock, FaCheck } from 'react-icons/fa6';
+import { FaLocationDot, FaPhone, FaEnvelope, FaGlobe, FaInstagram, FaFacebook, FaChevronLeft, FaChevronRight, FaClock,  } from 'react-icons/fa6';
 import kajmak from "../../assets/Kajmak.jpg";
 import pozadina from "../../assets/GastronomijaPozadina.jpg";
 import { API_URL } from '../adminPage/context/AuthContext';

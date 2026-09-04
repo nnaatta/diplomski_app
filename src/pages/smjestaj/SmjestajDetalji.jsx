@@ -98,7 +98,7 @@ function SmjestajDetalji() {
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [lightboxAktivan]);
+  }, [lightboxAktivan, prethodnaSlika, sljedeцaSlika]);
 
   if (loading) return <div className="detalji__loading">{t('smjestaj_detalji.ucitavanje')}</div>;
   if (greska || !smjestaj) return (
