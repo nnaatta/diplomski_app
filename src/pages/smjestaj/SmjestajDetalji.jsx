@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './SmjestajDetalji.css';
 import { FaLocationDot, FaPhone, FaArrowLeft, FaChevronLeft, FaChevronRight, FaXmark } from 'react-icons/fa6';
@@ -82,12 +82,13 @@ function SmjestajDetalji() {
 
   const otvoriLightbox  = (i) => setLightboxAktivan(i);
   const zatvoriLightbox = () => setLightboxAktivan(null);
-  const prethodnaSlika  = (i) => {
+  const prethodnaSlika  = useCallback((i) => {
     if (typeof i === 'number') { setLightboxAktivan(i); return; }
     setLightboxAktivan(prev => (prev === 0 ? urlSlike.length - 1 : prev - 1));
-  };
-  const sljedeцaSlika = () =>
-    setLightboxAktivan(prev => (prev === urlSlike.length - 1 ? 0 : prev + 1));
+  }, [urlSlike.length]);
+  const sljedeцaSlika = useCallback(() =>
+    setLightboxAktivan(prev => (prev === urlSlike.length - 1 ? 0 : prev + 1)),
+  [urlSlike.length]);
 
   useEffect(() => {
     if (lightboxAktivan === null) return;

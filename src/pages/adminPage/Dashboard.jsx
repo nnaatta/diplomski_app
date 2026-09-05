@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { api } from "./services/api";
 import { Loading } from "../../components/adminComponents/UI";
-import { IoHome, IoPersonOutline, IoBed, IoRestaurantOutline, IoCalendarOutline, IoImages, IoLogOut } from "react-icons/io5";
-import { MdNordicWalking, MdEmail, MdWallet } from "react-icons/md";
-import { LuNotebookText, LuSettings2 } from "react-icons/lu";
+import { IoBed, IoRestaurantOutline, IoCalendarOutline } from "react-icons/io5";
+import { MdNordicWalking } from "react-icons/md";
+import { LuNotebookText } from "react-icons/lu";
 
 export default function Dashboard({ setPage }) {
   const [stats, setStats]   = useState(null);

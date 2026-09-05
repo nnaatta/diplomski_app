@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useAuth } from "./context/AuthContext";
 import { api } from "./services/api";
 import { Modal, Loading, Pagination } from "../../components/adminComponents/UI";
@@ -109,14 +109,14 @@ export function Poruke({ addToast }) {
   const [loading, setLoading]   = useState(true);
   const [selected, setSelected] = useState(null);
 
-  const load = () => {
+  const load = useCallback(() => {
     setLoading(true);
     api.get(`/poruke?page=${page}`)
       .then((d) => { setPoruke(d.data ?? []); setMeta(d.meta ?? null); })
       .finally(() => setLoading(false));
-  };
+  }, [page]);
 
-  useEffect(() => { load(); }, [page]);
+  useEffect(() => { load(); }, [load]);
 
   const promijeniStatus = async (id, status) => {
     try {

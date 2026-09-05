@@ -745,7 +745,7 @@ export function SmjestajForm({ initial, onSubmit }) {
   const [form, setForm] = useState({
     naziv: "", opis: "", br_soba: "", br_lezajeva: "",
     aktivan: true, lokacija_id: "", tip_smjestaja_id: "",
-    kontakt_osoba_id: "", pogodnosti: [],
+    kontakt_osoba_id: "",
     ...initial,
     pogodnosti: initial?.pogodnosti?.map(p => p.id ?? p) ?? [],
   });
@@ -872,7 +872,6 @@ export function RestoranForm({ initial, onSubmit }) {
   const [form, setForm] = useState({
     naziv: "", opis: "", radno_vrijeme: "",
     aktivan: true, lokacija_id: "", kontakt_osoba_id: "",
-    pogodnosti: [], preporuke_hrane: [],
     ...initial,
     pogodnosti:      initial?.pogodnosti?.map(p => p.id ?? p) ?? [],
     preporuke_hrane: initial?.preporuke_hrane ?? [],
@@ -984,8 +983,6 @@ export function RestoranForm({ initial, onSubmit }) {
 export function TuristickiSadrzajForm({ initial, onSubmit }) {
   const [form, setForm] = useState({
     naslov: "", opis: "", aktivan: true,
-    lokacija_id:     String(initial?.lokacija_id     ?? ""),
-    tip_sadrzaja_id: String(initial?.tip_sadrzaja_id ?? ""),
     duzina_staze:    initial?.duzina_staze ?? "",
     tezina:          initial?.tezina       ?? "",
     ...initial,
@@ -1142,7 +1139,6 @@ export function DogadjajForm({ initial, onSubmit }) {
 export function BlogPostForm({ initial, onSubmit }) {
   const [form, setForm] = useState({
     naslov: "", tekst: "",
-    aktivan: Boolean(initial?.aktivan ?? false),
     blog_kategorija_id: "",
     ...initial,
     aktivan: Boolean(initial?.aktivan ?? false),

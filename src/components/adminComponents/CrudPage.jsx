@@ -53,7 +53,7 @@ export default function CrudPage({
       })
       .catch(() => addToast?.("Greška pri učitavanju podataka.", "error"))
       .finally(() => setLoading(false));
-  }, [endpoint, page]);
+  }, [endpoint, page, addToast]);
 
   useEffect(() => { load(); }, [load]);
 

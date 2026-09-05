@@ -11,9 +11,9 @@ import { Profil, Poruke } from "./ProfilPoruke";
 import Dashboard from "./Dashboard";
 import Login from "./Login";
 import "./Admin.css";
-import { IoHome, IoPersonOutline, IoBed, IoRestaurantOutline, IoCalendarOutline, IoImages, IoLogOut } from "react-icons/io5";
-import { MdNordicWalking, MdEmail } from "react-icons/md";
-import { LuNotebookText, LuSettings2 } from "react-icons/lu";
+import { IoBed, IoRestaurantOutline, IoCalendarOutline, IoImages } from "react-icons/io5";
+import { MdNordicWalking } from "react-icons/md";
+import { LuNotebookText } from "react-icons/lu";
 
 /* ===== TOAST HOOK ===== */
 function useToast() {
