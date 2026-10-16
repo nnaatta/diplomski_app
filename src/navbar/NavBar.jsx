@@ -70,6 +70,9 @@ function MyNavbar() {
               <NavDropdown.Item as={NavLink} to="/gastronomija">
                 {t("nav.gastronomija")}
               </NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/ugostiteljski-objekti">
+                {t("nav.ugostiteljski_objekti")}
+              </NavDropdown.Item>
               <NavDropdown.Item as={NavLink} to="/manifestacije">
                 {t("nav.manifestacije")}
               </NavDropdown.Item>

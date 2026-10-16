@@ -16,6 +16,7 @@
     "turisticki_servisi": "Turistički servisi",
     "smjestaj": "Smještaj",
     "gastronomija": "Gastronomija",
+    "ugostiteljski_objekti": "Ugostiteljski objekti",
     "manifestacije": "Manifestacije",
     "blog": "Blog",
     "galerija": "Galerija",
@@ -36,6 +37,7 @@
     "servisi": "Servisi",
     "smjestaj": "Smještaj",
     "gastronomija": "Gastronomija",
+    "ugostiteljski_objekti": "Ugostiteljski objekti",
     "manifestacije": "Manifestacije",
     "ostalo": "Ostalo",
     "o_to": "O Turističkoj org.",
@@ -164,14 +166,6 @@
     "naslov": "Gastronomija",
     "podnaslov": "Otkrijte autentične ukuse planinske kuhinje Han Pijeska",
     "uvod": "Gastronomija Han Pijeska odraz je bogate planinske tradicije i ljubavi prema autentičnoj domaćoj kuhinji. Jela pripremljena od svježih, lokalnih namirnica, uz aromu drveta i planinski vazduh, čine svaki obrok nezaboravnim doživljajem.",
-    "restorani_naslov": "Restorani",
-    "ucitavanje": "Učitavanje...",
-    "greska_ucitavanje": "Greška pri učitavanju restorana.",
-    "sadrzaji": "Sadržaji",
-    "preporucujemo": "Preporučujemo",
-    "kontakt": "Kontakt",
-    "instagram": "Instagram",
-    "facebook": "Facebook",
     "kajmak_bedz": "🏆 Zaštićeni proizvod",
     "kajmak_oznaka": "Geografsko porijeklo",
     "kajmak_naslov": "Romanijski skorup-kajmak",
@@ -212,7 +206,27 @@
       }
     ],
     "meta_title": "Gastronomija",
-    "meta_description": "Otkrijte tradicionalnu kuhinju i restorane Han Pijeska — autentični ukusi planinskog kraja."
+    "meta_description": "Otkrijte tradicionalnu kuhinju Han Pijeska — romanijski skorup-kajmak i autentični planinski specijaliteti.",
+    "objekti_cta_naslov": "Gdje jesti u Han Pijesku?",
+    "objekti_poziv": "Tražite mjesto za ručak, večeru ili kafu? Pogledajte restorane i ostale ugostiteljske objekte u Han Pijesku.",
+    "objekti_dugme": "Ugostiteljski objekti"
+  },
+  "ugostiteljski": {
+    "naslov": "Ugostiteljski objekti",
+    "podnaslov": "Restorani i ugostiteljski objekti Han Pijeska",
+    "uvod": "Han Pijesak nudi ugostiteljske objekte za svaki ukus — od tradicionalnih restorana s domaćom planinskom kuhinjom do ugodnih mjesta za kratak odmor tokom posjete. Ovdje možete pronaći osnovne informacije, radno vrijeme i kontakt podatke.",
+    "ucitavanje": "Učitavanje...",
+    "greska_ucitavanje": "Greška pri učitavanju ugostiteljskih objekata.",
+    "nema_objekata": "Trenutno nema objavljenih ugostiteljskih objekata.",
+    "sadrzaji": "Sadržaji",
+    "preporucujemo": "Preporučujemo",
+    "kontakt": "Kontakt",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "meta_title": "Ugostiteljski objekti",
+    "meta_description": "Restorani i ugostiteljski objekti u Han Pijesku — radno vrijeme, preporuke i kontakt podaci.",
+    "lokacija": "Lokacija",
+    "mapa_title": "Mapa — {{naziv}}"
   },
   "smjestaj": {
     "naslov": "Smještaj",
@@ -1108,6 +1122,8 @@
     "uspjeh_tekst": "Hvala vam na poruci. Odgovorićemo vam u najkraćem mogućem roku.",
     "uspjeh_dugme": "Pošalji novu poruku",
     "meta_title": "Kontakt",
-    "meta_description": "Kontaktirajte Turističku organizaciju opštine Han Pijesak — adresa, telefon i email za sve informacije."
+    "meta_description": "Kontaktirajte Turističku organizaciju opštine Han Pijesak — adresa, telefon i email za sve informacije.",
+    "greska_slanje": "Slanje poruke nije uspjelo. Pokušajte ponovo ili nas kontaktirajte putem emaila.",
+    "dugme_saljem": "Slanje..."
   }
 }

@@ -17,6 +17,7 @@ use App\Http\Controllers\TuristickiSadrzajController;
 use App\Http\Controllers\DogadjajController;
 use App\Http\Controllers\BlogPostController;
 use App\Http\Controllers\GalerijaController;
+use App\Http\Controllers\TradicionalnaManifestacijaController;
 use App\Http\Controllers\PorukaController;
 use App\Http\Controllers\SlikaController;
 
@@ -52,6 +53,9 @@ Route::get('/blog-postovi/{id}', [BlogPostController::class, 'show']);
 
 Route::get('/galerije', [GalerijaController::class, 'index']);
 Route::get('/galerije/{id}', [GalerijaController::class, 'show']);
+
+Route::get('/tradicionalne-manifestacije', [TradicionalnaManifestacijaController::class, 'index']);
+Route::get('/tradicionalne-manifestacije/{id}', [TradicionalnaManifestacijaController::class, 'show']);
 
 // javni šifarnici — potrebni za filtere na javnom dijelu sajta
 Route::get('/tipovi-smjestaja', [TipSmjestajaController::class, 'index']);
@@ -123,10 +127,17 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::patch('/galerije/{id}', [GalerijaController::class, 'update']);
     Route::delete('/galerije/{id}', [GalerijaController::class, 'destroy']);
 
+    // tradicionalne manifestacije
+    Route::post('/tradicionalne-manifestacije', [TradicionalnaManifestacijaController::class, 'store']);
+    Route::put('/tradicionalne-manifestacije/{id}', [TradicionalnaManifestacijaController::class, 'update']);
+    Route::patch('/tradicionalne-manifestacije/{id}', [TradicionalnaManifestacijaController::class, 'update']);
+    Route::delete('/tradicionalne-manifestacije/{id}', [TradicionalnaManifestacijaController::class, 'destroy']);
+
     // poruke — admin čita i upravlja, slanje je javno
     Route::get('/poruke', [PorukaController::class, 'index']);
     Route::get('/poruke/{id}', [PorukaController::class, 'show']);
     Route::patch('/poruke/{id}/status', [PorukaController::class, 'promijeniStatus']);
+    Route::post('/poruke/{id}/posalji-ponovo', [PorukaController::class, 'posaljiPonovo']);
     Route::delete('/poruke/{id}', [PorukaController::class, 'destroy']);
 
     // slike — upload i upravljanje

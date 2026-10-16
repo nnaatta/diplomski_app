@@ -1,6 +1,6 @@
 import { useAuth } from "../../pages/adminPage/context/AuthContext";
 import "./AdminSidebar.css";
-import { IoHome, IoPersonOutline, IoBed, IoRestaurantOutline, IoCalendarOutline, IoImages, IoLogOut } from "react-icons/io5";
+import { IoHome, IoPersonOutline, IoBed, IoRestaurantOutline, IoCalendarOutline, IoImages, IoRibbonOutline, IoLogOut } from "react-icons/io5";
 import { MdNordicWalking, MdEmail } from "react-icons/md";
 import { LuNotebookText, LuSettings2 } from "react-icons/lu";
 
@@ -19,6 +19,7 @@ const NAV = [
       { icon: <IoRestaurantOutline/>, label: "Restorani",        page: "restorani"          },
       { icon: <MdNordicWalking/>, label: "Turističke staze", page: "turisticki-sadrzaj" },
       { icon: <IoCalendarOutline/>, label: "Događaji",         page: "dogadjaji"          },
+      { icon: <IoRibbonOutline/>, label: "Trad. manifestacije", page: "tradicionalne"   },
       { icon: <LuNotebookText/>, label: "Blog",             page: "blog"               },
       { icon: <IoImages/>, label: "Galerija",         page: "galerija"           },
     ],

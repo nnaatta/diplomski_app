@@ -19,9 +19,13 @@ class RestoranController extends Controller
             $query->where('aktivan', $request->aktivan);
         }
 
+        // per_page: javna stranica traži sve objekte odjednom (max 100),
+        // admin panel i dalje koristi podrazumijevanih 10 po stranici
+        $perPage = min(max((int) $request->input('per_page', 10), 1), 100);
+
         // FIX: vraćamo direktno bez response()->json() wrappera
         // Tako Laravel automatski generiše meta.total koji koristi Dashboard
-        return RestoranResource::collection($query->paginate(10));
+        return RestoranResource::collection($query->paginate($perPage));
     }
 
     public function store(Request $request)

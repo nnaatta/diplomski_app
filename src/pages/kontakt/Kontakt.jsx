@@ -3,6 +3,7 @@ import './Kontakt.css';
 import { useTranslation } from 'react-i18next';
 import { FaLocationDot, FaPhone, FaRegEnvelope, FaClock } from 'react-icons/fa6';
 import Seo from "../../components/Seo";
+import { API_URL } from "../adminPage/context/AuthContext";
 
 const pocetnoStanje = {
   ime:     '',
@@ -14,9 +15,10 @@ const pocetnoStanje = {
 };
 
 function Kontakt() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [forma, setForma]     = useState(pocetnoStanje);
   const [poslano, setPoslano] = useState(false);
+  const [saljem, setSaljem]   = useState(false);
   const [greska, setGreska]   = useState('');
 
   const radnoVrijeme  = t('kontakt.radno_vrijeme',  { returnObjects: true });
@@ -37,17 +39,50 @@ function Kontakt() {
     return '';
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (saljem) return;
+
     const poruka = validiraj();
     if (poruka) {
       setGreska(poruka);
       return;
     }
     setGreska('');
-    console.log('Forma data:', forma);
-    setPoslano(true);
-    setForma(pocetnoStanje);
+    setSaljem(true);
+
+    // Forma ima jedno polje za ime i prezime — dijelimo na prvu riječ i ostatak
+    const [ime, ...ostatak] = forma.ime.trim().split(/\s+/);
+
+    // Tip upita šaljemo na srpskom (bez obzira na jezik sajta)
+    const idx = tipoviUpita.indexOf(forma.tip);
+    const tipoviSr = i18n.getFixedT('sr')('kontakt.tipovi_upita', { returnObjects: true });
+    const tipUpita = Array.isArray(tipoviSr) && idx >= 0 ? tipoviSr[idx] : null;
+
+    try {
+      const res = await fetch(`${API_URL}/poruke`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          ime,
+          prezime: ostatak.join(' ') || null,
+          email: forma.email.trim(),
+          br_tel: forma.telefon.trim() || null,
+          tip_upita: tipUpita,
+          naslov: forma.naslov.trim(),
+          tekst: forma.poruka.trim(),
+        }),
+      });
+
+      if (!res.ok) throw new Error('Slanje nije uspjelo');
+
+      setPoslano(true);
+      setForma(pocetnoStanje);
+    } catch {
+      setGreska(t('kontakt.greska_slanje'));
+    } finally {
+      setSaljem(false);
+    }
   };
 
   return (
@@ -219,8 +254,8 @@ function Kontakt() {
                 />
               </div>
 
-              <button type="submit" className="kontakt__btn">
-                {t('kontakt.dugme_posalji')}
+              <button type="submit" className="kontakt__btn" disabled={saljem}>
+                {saljem ? t('kontakt.dugme_saljem') : t('kontakt.dugme_posalji')}
               </button>
             </form>
           )}

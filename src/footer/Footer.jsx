@@ -39,6 +39,7 @@ function MyFooter() {
                 <ul className="list-unstyled">
                   <li><a href="/smještaj">{t("footer.smjestaj")}</a></li>
                   <li><a href="/gastronomija">{t("footer.gastronomija")}</a></li>
+                  <li><a href="/ugostiteljski-objekti">{t("footer.ugostiteljski_objekti")}</a></li>
                   <li><a href="/manifestacije">{t("footer.manifestacije")}</a></li>
                 </ul>
               </div>

@@ -5,7 +5,7 @@ import "./CrudePage.css";
 
 /**
  * Mapiranje endpoint → entitet_tip koji backend očekuje u SlikaController
- * Pivot tabele:  smjestaj, restoran, blog, galerija  → više slika (UploadSlike)
+ * Pivot tabele:  smjestaj, restoran, blog, galerija, tradicionalna  → više slika (UploadSlike)
  * Direktan FK:   dogadjaj, turisticki_sadrzaj         → jedna slika (UploadJednaSlike)
  */
 const ENDPOINT_TIP_MAP = {
@@ -13,12 +13,13 @@ const ENDPOINT_TIP_MAP = {
   "restorani":            "restoran",
   "blog-postovi":         "blog",
   "galerije":             "galerija",
+  "tradicionalne-manifestacije": "tradicionalna",
   "dogadjaji":            "dogadjaj",
   "turisticki-sadrzaji":  "turisticki_sadrzaj",
 };
 
 // Da li entitet koristi pivot tabelu (više slika) ili direktan FK (jedna slika)
-const PIVOT_TIPOVI = new Set(["smjestaj", "restoran", "blog", "galerija"]);
+const PIVOT_TIPOVI = new Set(["smjestaj", "restoran", "blog", "galerija", "tradicionalna"]);
 
 export default function CrudPage({
   title,
@@ -93,7 +94,7 @@ export default function CrudPage({
         const jePivot = PIVOT_TIPOVI.has(tip);
 
         if (jePivot) {
-          // ── PIVOT TIP (smjestaj, restoran, blog, galerija) ──────────
+          // ── PIVOT TIP (smjestaj, restoran, blog, galerija, tradicionalna) ──
 
           // 2a. Obriši označene slike
           const zaObrisati = slike.filter((s) => s._delete && s.id);

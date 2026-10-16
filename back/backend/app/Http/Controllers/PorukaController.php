@@ -3,13 +3,32 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\PorukaResource;
+use App\Mail\NovaPorukaMail;
 use App\Models\Poruka;
+use App\Models\Tip_poruke;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 
 class PorukaController extends Controller
 {
+    /**
+     * Tipovi upita sa kontakt forme (srpski nazivi).
+     * Pri prvoj poruci određenog tipa automatski se pravi i u tabeli tipovi_poruke.
+     */
+    private const TIPOVI_UPITA = [
+        'Opšti upit',
+        'Smještaj',
+        'Manifestacije',
+        'Planinarski turizam',
+        'Zdravstveni turizam',
+        'Mediji i press',
+        'Ostalo',
+    ];
+
     public function index(Request $request)
     {
         $query = Poruka::with(['tip_poruke']);
@@ -36,12 +55,13 @@ class PorukaController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'ime'          => 'required|string|max:100',
-            'prezime'      => 'required|string|max:100',
+            'prezime'      => 'nullable|string|max:100',
             'email'        => 'required|email|max:250',
-            'br_tel'       => 'nullable|string|max:20',
+            'br_tel'       => 'nullable|string|max:30',
             'naslov'       => 'required|string|max:250',
             'tekst'        => 'required|string',
             'tip_poruke_id' => 'nullable|exists:tipovi_poruke,id',
+            'tip_upita'    => ['nullable', 'string', Rule::in(self::TIPOVI_UPITA)],
         ]);
 
         if ($validator->fails()) {
@@ -51,24 +71,28 @@ class PorukaController extends Controller
             ], 422);
         }
 
-        // automatski postavljamo datum i status
         $data = $validator->validated();
+
+        // forma ima jedno polje za ime i prezime — prezime može biti prazno
+        $data['prezime'] = $data['prezime'] ?? '';
+
+        // tip upita (tekst sa forme) -> tip_poruke_id
+        $tipUpita = $data['tip_upita'] ?? null;
+        unset($data['tip_upita']);
+        if ($tipUpita && empty($data['tip_poruke_id'])) {
+            $data['tip_poruke_id'] = Tip_poruke::firstOrCreate(['naziv' => $tipUpita])->id;
+        }
+
+        // automatski postavljamo datum i status
         $data['datum']  = now()->toDateString();
         $data['status'] = 'novo';
 
+        // 1) poruka se UVIJEK prvo snima u bazu
         $poruka = Poruka::create($data);
 
-        // email notifikacija adminu
-        Mail::raw(
-            "Nova poruka od: {$poruka->ime} {$poruka->prezime}\n" .
-            "Email: {$poruka->email}\n" .
-            "Naslov: {$poruka->naslov}\n\n" .
-            "{$poruka->tekst}",
-            function ($message) use ($poruka) {
-                $message->to(config('mail.admin_email'))
-                        ->subject("Nova poruka: {$poruka->naslov}");
-            }
-        );
+        // 2) email obavještenje — ako ne uspije, posjetilac svejedno dobija potvrdu,
+        //    a admin u panelu vidi da mejl nije poslan i može ga poslati ponovo
+        $this->posaljiMejl($poruka);
 
         return response()->json([
             'message' => 'Poruka je uspjesno poslana'
@@ -106,6 +130,24 @@ class PorukaController extends Controller
         ], 200);
     }
 
+    // admin ponovo šalje poruku na email turističke organizacije
+    public function posaljiPonovo(string $id)
+    {
+        $poruka = Poruka::with('tip_poruke')->findOrFail($id);
+
+        if ($this->posaljiMejl($poruka)) {
+            return response()->json([
+                'message' => 'Poruka je ponovo poslana na email.',
+                'poruka'  => new PorukaResource($poruka->fresh('tip_poruke')),
+            ], 200);
+        }
+
+        return response()->json([
+            'message' => 'Slanje emaila nije uspjelo: ' . $poruka->fresh()->email_greska,
+            'poruka'  => new PorukaResource($poruka->fresh('tip_poruke')),
+        ], 502);
+    }
+
     public function destroy(string $id)
     {
         $poruka = Poruka::findOrFail($id);
@@ -114,5 +156,40 @@ class PorukaController extends Controller
         return response()->json([
             'message' => 'Uspjesno brisanje poruke'
         ], 200);
+    }
+
+    /**
+     * Šalje poruku na ADMIN_EMAIL i pamti ishod u bazi.
+     * Nikad ne baca izuzetak — vraća true/false.
+     */
+    private function posaljiMejl(Poruka $poruka): bool
+    {
+        $primalac = config('mail.admin_email');
+
+        if (!$primalac) {
+            $poruka->update([
+                'email_poslan_at' => null,
+                'email_greska'    => 'ADMIN_EMAIL nije podešen u .env fajlu.',
+            ]);
+            return false;
+        }
+
+        try {
+            Mail::to($primalac)->send(new NovaPorukaMail($poruka->loadMissing('tip_poruke')));
+
+            $poruka->update([
+                'email_poslan_at' => now(),
+                'email_greska'    => null,
+            ]);
+            return true;
+        } catch (\Throwable $e) {
+            Log::error('Slanje emaila (poruka #' . $poruka->id . ') nije uspjelo: ' . $e->getMessage());
+
+            $poruka->update([
+                'email_poslan_at' => null,
+                'email_greska'    => Str::limit($e->getMessage(), 480),
+            ]);
+            return false;
+        }
     }
 }

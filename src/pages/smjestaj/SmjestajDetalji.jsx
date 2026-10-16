@@ -5,6 +5,7 @@ import { FaLocationDot, FaPhone, FaArrowLeft, FaChevronLeft, FaChevronRight, FaX
 import { useTranslation } from 'react-i18next';
 import { API_URL } from '../adminPage/context/AuthContext';
 import { tf } from '../../utils/translateField';
+import { mapaEmbedUrl } from '../../utils/mapaUrl';
 
 // ===== LIGHTBOX =====
 function Lightbox({ slike, aktivan, onZatvori, onPrethodni, onSljedeci, t }) {
@@ -207,13 +208,13 @@ function SmjestajDetalji() {
             </a>
           </div>
 
-          {smjestaj.lokacija?.lat && smjestaj.lokacija?.lng && (
+          {mapaEmbedUrl(smjestaj.lokacija) && (
             <div className="detalji__mapa-wrap">
               <h2 className="detalji__blok-naslov">{t('smjestaj_detalji.lokacija_naslov')}</h2>
               <div className="detalji__mapa">
                 <iframe
                   title={t('smjestaj_detalji.lokacija_iframe_title', { naziv })}
-                  src={`https://www.google.com/maps?q=${smjestaj.lokacija.lat},${smjestaj.lokacija.lng}&z=15&output=embed`}
+                  src={mapaEmbedUrl(smjestaj.lokacija)}
                   allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>

@@ -5,13 +5,13 @@ import { Toast, StatusBadge } from "../../components/adminComponents/UI";
 import CrudPage from "../../components/adminComponents/CrudPage";
 import {
   SmjestajForm, RestoranForm, TuristickiSadrzajForm,
-  DogadjajForm, BlogPostForm, GalerijaForm, SimpleForm
+  DogadjajForm, BlogPostForm, GalerijaForm, TradicionalnaManifestacijaForm, SimpleForm
 } from "../../components/adminComponents/Forms";
 import { Profil, Poruke } from "./ProfilPoruke";
 import Dashboard from "./Dashboard";
 import Login from "./Login";
 import "./Admin.css";
-import { IoBed, IoRestaurantOutline, IoCalendarOutline, IoImages } from "react-icons/io5";
+import { IoBed, IoRestaurantOutline, IoCalendarOutline, IoImages, IoRibbonOutline } from "react-icons/io5";
 import { MdNordicWalking } from "react-icons/md";
 import { LuNotebookText } from "react-icons/lu";
 
@@ -178,6 +178,23 @@ function getPages(addToast) {
             { key: "lokacija",   label: "Lokacija",   render: (r) => r.lokacija?.naziv ?? "—" },
             { key: "kategorija", label: "Kategorija", render: (r) => r.kategorija?.naziv ?? "—" },
             { key: "aktivan",    label: "Status",     render: (r) => <StatusBadge aktivan={r.aktivan} /> },
+          ]}
+        />
+      ),
+    },
+    tradicionalne: {
+      title: "Tradicionalne manifestacije", subtitle: "Tekstovi i slike tradicionalnih manifestacija",
+      component: () => (
+        <CrudPage
+          title="Tradicionalne manifestacije" icon={<IoRibbonOutline />} endpoint="/tradicionalne-manifestacije"
+          addToast={addToast} FormComponent={TradicionalnaManifestacijaForm}
+          emptyMessage="Nema tradicionalnih manifestacija"
+          columns={[
+            { key: "redoslijed", label: "Red.",   render: (r) => r.redoslijed ?? "—" },
+            { key: "naslov",     label: "Naslov" },
+            { key: "period",     label: "Period", render: (r) => r.period ?? "—" },
+            { key: "slike",      label: "Slika",  render: (r) => r.slike?.length ?? 0 },
+            { key: "aktivan",    label: "Status", render: (r) => <StatusBadge aktivan={r.aktivan} /> },
           ]}
         />
       ),

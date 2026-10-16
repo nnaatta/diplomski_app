@@ -11,7 +11,7 @@ class PorukaResource extends JsonResource
     {
         return [
             'id'          => $this->id,
-            'ime_prezime' => $this->ime . ' ' . $this->prezime,
+            'ime_prezime' => trim($this->ime . ' ' . $this->prezime),
             'ime'         => $this->ime,
             'prezime'     => $this->prezime,
             'email'       => $this->email,
@@ -21,6 +21,11 @@ class PorukaResource extends JsonResource
             'datum'       => $this->datum?->format('d.m.Y'),
             'status'      => $this->status,
             'je_procitana' => $this->status !== 'novo',
+
+            // status email obavještenja
+            'email_poslan'    => $this->email_poslan_at !== null,
+            'email_poslan_at' => $this->email_poslan_at?->format('d.m.Y H:i'),
+            'email_greska'    => $this->email_greska,
 
             // relacije
             'tip_poruke' => new TipPorukeResource($this->whenLoaded('tip_poruke')),

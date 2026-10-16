@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\LokacijaResource;
 use App\Models\Lokacija;
+use App\Services\GoogleMapsLinkParser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -34,6 +35,7 @@ class LokacijaController extends Controller
             'adresa' => 'required|string|max:250',
             'lat' => 'nullable|numeric|between:-90,90',
             'lng' => 'nullable|numeric|between:-180,180',
+            'google_maps_link' => 'nullable|string|max:2000',
             'aktivan' => 'nullable|boolean'
 
         ]);
@@ -46,6 +48,13 @@ class LokacijaController extends Controller
         }
 
         $data = $validator -> validated();
+
+        // Google Maps link -> automatski lat/lng
+        $greska = $this->primijeniGoogleMapsLink($data);
+        if ($greska) {
+            return $greska;
+        }
+
         $lokacija = Lokacija::create($data);
 
         return response()->json(
@@ -74,6 +83,7 @@ class LokacijaController extends Controller
             'adresa' => 'required|string|max:250',
             'lat' => 'nullable|numeric|between:-90,90',
             'lng' => 'nullable|numeric|between:-180,180',
+            'google_maps_link' => 'nullable|string|max:2000',
             'aktivan' => 'nullable|boolean'
 
         ]);
@@ -86,6 +96,13 @@ class LokacijaController extends Controller
         }
 
         $data = $validator -> validated();
+
+        // Google Maps link -> automatski lat/lng
+        $greska = $this->primijeniGoogleMapsLink($data);
+        if ($greska) {
+            return $greska;
+        }
+
         $lokacija->update($data);
 
         return response()->json(
@@ -105,5 +122,38 @@ class LokacijaController extends Controller
         return response()->json([
             'message' => 'Objekat je uspjesno obrisan'
         ], 200);
+    }
+
+    /**
+     * Ako je poslat google_maps_link, iz njega izvlači koordinate i upisuje ih
+     * u $data kao lat/lng. Ako link nije prepoznat, vraća 422 odgovor.
+     * Ako link nije poslat, lat/lng ostaju kakvi jesu.
+     */
+    private function primijeniGoogleMapsLink(array &$data)
+    {
+        $link = $data['google_maps_link'] ?? null;
+        unset($data['google_maps_link']);
+
+        if (!filled($link)) {
+            return null;
+        }
+
+        $koordinate = (new GoogleMapsLinkParser())->parse($link);
+
+        if (!$koordinate) {
+            return response()->json([
+                'message' => 'Neuspjesna validacija',
+                'errors'  => [
+                    'google_maps_link' => [
+                        'Link nije prepoznat. Kopiraj link iz Google Maps (adresna traka ili dugme Dijeli).',
+                    ],
+                ],
+            ], 422);
+        }
+
+        $data['lat'] = $koordinate['lat'];
+        $data['lng'] = $koordinate['lng'];
+
+        return null;
     }
 }

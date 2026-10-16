@@ -15,6 +15,7 @@ import Kontakt from "./pages/kontakt/Kontakt";
 import Smjestaj from "./pages/smjestaj/Smjestaj";
 import SmjestajDetalji from "./pages/smjestaj/SmjestajDetalji";
 import Gastronomija from "./pages/gastronomija/Gastronomija";
+import UgostiteljskiObjekti from "./pages/ugostiteljskiObjekti/UgostiteljskiObjekti";
 import ZdravstveniTurizam from "./pages/zdravstveniTurizam/ZdravstveniTurizam";
 import FloraFauna from "./pages/floraFauna/FloraFauna";
 import VjerskiObjekti from "./pages/vjerskiObjekti/VjerskiObjekti";
@@ -57,6 +58,7 @@ function App() {
                     <Route path="/smjestaj" element={<Smjestaj />} />
                     <Route path="/smjestaj/:id" element={<SmjestajDetalji />} />
                     <Route path="/gastronomija" element={<Gastronomija />} />
+                    <Route path="/ugostiteljski-objekti" element={<UgostiteljskiObjekti />} />
                     <Route path="/zdravstveni-turizam" element={<ZdravstveniTurizam />} />
                     <Route path="/flora-i-fauna" element={<FloraFauna />} />
                     <Route path="/vjerski-objekti" element={<VjerskiObjekti />} />

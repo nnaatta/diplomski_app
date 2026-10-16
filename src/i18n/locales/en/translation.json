@@ -16,6 +16,7 @@
     "turisticki_servisi": "Tourist Services",
     "smjestaj": "Accommodation",
     "gastronomija": "Gastronomy",
+    "ugostiteljski_objekti": "Hospitality Venues",
     "manifestacije": "Events",
     "blog": "Blog",
     "galerija": "Gallery",
@@ -36,6 +37,7 @@
     "servisi": "Services",
     "smjestaj": "Accommodation",
     "gastronomija": "Gastronomy",
+    "ugostiteljski_objekti": "Hospitality Venues",
     "manifestacije": "Events",
     "ostalo": "Other",
     "o_to": "About the Tourist Org.",
@@ -164,14 +166,6 @@
     "naslov": "Gastronomy",
     "podnaslov": "Discover the authentic flavors of Han Pijesak's mountain cuisine",
     "uvod": "The gastronomy of Han Pijesak reflects a rich mountain tradition and a love for authentic home cooking. Dishes prepared from fresh, local ingredients, with the aroma of wood smoke and mountain air, make every meal an unforgettable experience.",
-    "restorani_naslov": "Restaurants",
-    "ucitavanje": "Loading...",
-    "greska_ucitavanje": "Error loading restaurants.",
-    "sadrzaji": "Amenities",
-    "preporucujemo": "We recommend",
-    "kontakt": "Contact",
-    "instagram": "Instagram",
-    "facebook": "Facebook",
     "kajmak_bedz": "🏆 Protected product",
     "kajmak_oznaka": "Geographical origin",
     "kajmak_naslov": "Romanija skorup-kajmak",
@@ -212,7 +206,27 @@
       }
     ],
     "meta_title": "Gastronomy",
-    "meta_description": "Discover the traditional cuisine and restaurants of Han Pijesak — authentic flavors of the mountain region."
+    "meta_description": "Discover the traditional cuisine of Han Pijesak — Romanija skorup-kajmak and authentic mountain specialties.",
+    "objekti_cta_naslov": "Where to eat in Han Pijesak?",
+    "objekti_poziv": "Looking for a place to have lunch, dinner or coffee? Browse the restaurants and other hospitality venues in Han Pijesak.",
+    "objekti_dugme": "Hospitality Venues"
+  },
+  "ugostiteljski": {
+    "naslov": "Hospitality Venues",
+    "podnaslov": "Restaurants and hospitality venues in Han Pijesak",
+    "uvod": "Han Pijesak offers hospitality venues for every taste — from traditional restaurants serving home-style mountain cuisine to pleasant spots for a short break during your visit. Here you can find basic information, opening hours and contact details.",
+    "ucitavanje": "Loading...",
+    "greska_ucitavanje": "Error loading hospitality venues.",
+    "nema_objekata": "There are currently no published hospitality venues.",
+    "sadrzaji": "Amenities",
+    "preporucujemo": "We recommend",
+    "kontakt": "Contact",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "meta_title": "Hospitality Venues",
+    "meta_description": "Restaurants and hospitality venues in Han Pijesak — opening hours, recommendations and contact details.",
+    "lokacija": "Location",
+    "mapa_title": "Map — {{naziv}}"
   },
   "smjestaj": {
     "naslov": "Accommodation",
@@ -1014,6 +1028,8 @@
     "uspjeh_tekst": "Thank you for your message. We will get back to you as soon as possible.",
     "uspjeh_dugme": "Send Another Message",
     "meta_title": "Contact",
-    "meta_description": "Contact the Tourism Organization of Han Pijesak — address, phone and email for all information."
+    "meta_description": "Contact the Tourism Organization of Han Pijesak — address, phone and email for all information.",
+    "greska_slanje": "Sending the message failed. Please try again or contact us by email.",
+    "dugme_saljem": "Sending..."
   }
 }

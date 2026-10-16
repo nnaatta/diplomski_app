@@ -15,75 +15,19 @@ import kudLogo from "../../assets/manifestacije/kudLogo.jpg";
 import vrticLogo from "../../assets/manifestacije/vrticLogo.jpg";
 import opstinaLogo from "../../assets/OpstinaLogo.png";
 import manHero from "../../assets/manifestacije/manHero.jpg";
-import cd1 from "../../assets/manifestacije/cd1.jpg";
-import cd5 from "../../assets/manifestacije/cd5.jpg";
-import cd4 from "../../assets/manifestacije/cd4.jpg";
-import cd3 from "../../assets/manifestacije/cd3.jpg";
-import cd6 from "../../assets/manifestacije/cd6.jpg";
-import cd2 from "../../assets/manifestacije/cd2.jpg";
-import lile1 from "../../assets/manifestacije/lile1.jpg";
-import lile2 from "../../assets/manifestacije/lile2.jpg";
-import lile3 from "../../assets/manifestacije/lile3.jpg";
-import lile4 from "../../assets/manifestacije/lile4.jpg";
-import lile5 from "../../assets/manifestacije/lile5.jpg";
-import lile6 from "../../assets/manifestacije/lile6.jpg";
-import slet1 from "../../assets/manifestacije/slet1.jpg";
-import slet2 from "../../assets/manifestacije/slet2.jpg";
-import slet3 from "../../assets/manifestacije/slet3.jpg";
-import slet4 from "../../assets/manifestacije/slet4.jpg";
-import g1 from "../../assets/manifestacije/gulasijada1.jpg";
-import g2 from "../../assets/manifestacije/gulasijada2.jpg";
-import g3 from "../../assets/manifestacije/gulasijada3.jpg";
-import g4 from "../../assets/manifestacije/gulasijada4.jpg";
-import g5 from "../../assets/manifestacije/gulasijada5.jpg";
-import g6 from "../../assets/manifestacije/gulasijada6.jpg";
-import mtb1 from "../../assets/manifestacije/mtb1.jpg";
-import mtb2 from "../../assets/manifestacije/mtb2.jpg";
-import mtb3 from "../../assets/manifestacije/mtb3.jpg";
-import mtb4 from "../../assets/manifestacije/mtb4.jpg";
-import mtb5 from "../../assets/manifestacije/mtb5.jpg";
-import vk1 from "../../assets/manifestacije/vk1.jpg";
-import vk2 from "../../assets/manifestacije/vk2.jpg";
-import vk3 from "../../assets/manifestacije/vk3.jpg";
-import vk4 from "../../assets/manifestacije/vk4.jpg";
-import b1 from "../../assets/manifestacije/bazar1.jpg";
-import b2 from "../../assets/manifestacije/bazar2.jpg";
-import b3 from "../../assets/manifestacije/bazar3.jpg";
-import b4 from "../../assets/manifestacije/bazar4.jpg";
-import b5 from "../../assets/manifestacije/bazar5.jpg";
-import b6 from "../../assets/manifestacije/bazar6.jpg";
-import dj2 from "../../assets/manifestacije/djeram2.jpg";
-import dj3 from "../../assets/manifestacije/djeram3.jpg";
-import dj4 from "../../assets/manifestacije/djeram4.jpg";
-import dj5 from "../../assets/manifestacije/djeram5.jpg";
-import dj6 from "../../assets/manifestacije/djeram6.jpg";
-import vid1 from "../../assets/manifestacije/vid1.jpg";
-import vid2 from "../../assets/manifestacije/vid2.jpg";
-import vid3 from "../../assets/manifestacije/vid3.jpg";
-import vid4 from "../../assets/manifestacije/vid4.jpg";
-import vid5 from "../../assets/manifestacije/vid5.jpg";
-import vid6 from "../../assets/manifestacije/vid6.jpg";
-import op1 from "../../assets/manifestacije/op1.jpg";
-import op2 from "../../assets/manifestacije/op2.jpg";
-import op3 from "../../assets/manifestacije/op3.jpg";
 import Seo from "../../components/Seo";
+
+// Slike tradicionalnih manifestacija dolaze iz baze (/storage/slike/...)
+const STORAGE_BASE = API_URL.replace(/\/api.*$/, "");
+function slikaUrl(url) {
+  if (!url) return "";
+  return url.startsWith("http") ? url : STORAGE_BASE + url;
+}
 
 const logoMap = {
   opstinaLogo, toLogo, biblLogo, cosLogo, visLogo, javorLogo, kudLogo, vrticLogo,
 };
 
-const slikeMap = {
-  cd1, cd2, cd3, cd4, cd5, cd6,
-  lile1, lile2, lile3, lile4, lile5, lile6,
-  slet1, slet2, slet3, slet4,
-  g1, g2, g3, g4, g5, g6,
-  mtb1, mtb2, mtb3, mtb4, mtb5,
-  vk1, vk2, vk3, vk4,
-  b1, b2, b3, b4, b5, b6,
-  dj2, dj3, dj4, dj5, dj6,
-  vid1, vid2, vid3, vid4, vid5, vid6,
-  op1, op2, op3,
-};
 
 // ── Kalendar ──────────────────────────────────────────────────────────────────
 function Kalendar({ dogadjaji, odabraniDatum, onOdaberiDatum }) {
@@ -322,10 +266,10 @@ function TradSegment({ man }) {
   const { i18n } = useTranslation();
   const lang = i18n.language;
 
-  const naslov = lang === "en" ? man.naslov_en : man.naslov;
-  const opis   = lang === "en" ? man.opis_en   : man.opis;
-  const period = lang === "en" ? man.period_en  : man.period;
-  const slike  = man.slikeKeys.map((k) => slikeMap[k]);
+  const naslov = tf(man, "naslov", lang);
+  const opis   = tf(man, "opis", lang);
+  const period = tf(man, "period", lang);
+  const slike  = (man.slike ?? []).map((sl) => slikaUrl(sl.url));
 
   return (
     <div className="MAN_trad">
@@ -346,6 +290,14 @@ function Manifestacije() {
   const [dogadjaji, setDogadjaji] = useState([]);
   const [odabraniDatum, setOdabraniDatum] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [tradicionalne, setTradicionalne] = useState([]);
+
+  useEffect(() => {
+    fetch(`${API_URL}/tradicionalne-manifestacije?aktivan=1&per_page=100`)
+      .then((r) => r.json())
+      .then((data) => setTradicionalne(data.data ?? []))
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     fetch(`${API_URL}/dogadjaji?aktivan=1&per_page=100`)
@@ -453,24 +405,26 @@ function Manifestacije() {
         </div>
       </div>
 
-      <div className="MAN_tradicionalne">
-        <div className="MAN_tradicionalne__wrap">
-          <span className="MAN_bedz--zeleni MAN_bedz--centar">
-            {t("manifestacije.bedz_tradicionalne")}
-          </span>
-          <h2 className="MAN_tradicionalne__naslov">
-            {t("manifestacije.tradicionalne_naslov")}
-          </h2>
-          <p className="MAN_tradicionalne__podnaslov">
-            {t("manifestacije.tradicionalne_podnaslov")}
-          </p>
-          <div className="MAN_tradicionalne__lista">
-            {podaci.tradicionalneManifestacije.map((m, i) => (
-              <TradSegment key={i} man={m} />
-            ))}
+      {tradicionalne.length > 0 && (
+        <div className="MAN_tradicionalne">
+          <div className="MAN_tradicionalne__wrap">
+            <span className="MAN_bedz--zeleni MAN_bedz--centar">
+              {t("manifestacije.bedz_tradicionalne")}
+            </span>
+            <h2 className="MAN_tradicionalne__naslov">
+              {t("manifestacije.tradicionalne_naslov")}
+            </h2>
+            <p className="MAN_tradicionalne__podnaslov">
+              {t("manifestacije.tradicionalne_podnaslov")}
+            </p>
+            <div className="MAN_tradicionalne__lista">
+              {tradicionalne.map((m) => (
+                <TradSegment key={m.id} man={m} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       <div className="MAN_cta">
         <h2 className="MAN_cta__naslov">{t("manifestacije.cta_naslov")}</h2>

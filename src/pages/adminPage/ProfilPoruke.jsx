@@ -129,6 +129,18 @@ export function Poruke({ addToast }) {
     }
   };
 
+  const posaljiPonovo = async (id) => {
+    try {
+      const res = await api.post(`/poruke/${id}/posalji-ponovo`);
+      addToast(res?.message ?? "Poruka je ponovo poslana na email.", "success");
+      if (selected?.id === id && res?.poruka?.data) setSelected(res.poruka.data);
+    } catch (err) {
+      addToast(err?.message ?? "Slanje emaila nije uspjelo.", "error");
+    } finally {
+      load();
+    }
+  };
+
   const obrisi = async (id) => {
     try {
       await api.delete(`/poruke/${id}`);
@@ -156,7 +168,7 @@ export function Poruke({ addToast }) {
               <table>
                 <thead>
                   <tr>
-                    <th>Od</th><th>Naslov</th><th>Datum</th><th>Status</th><th>Akcije</th>
+                    <th>Od</th><th>Naslov</th><th>Datum</th><th>Status</th><th>Email</th><th>Akcije</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -170,9 +182,20 @@ export function Poruke({ addToast }) {
                       <td style={{ whiteSpace: "nowrap" }}>{p.datum}</td>
                       <td><span className={`badge badge-${p.status}`}>{p.status}</span></td>
                       <td>
+                        <span
+                          title={p.email_poslan ? `Primljeno: ${p.email_poslan_at}` : (p.email_greska ?? "Email nije primljen")}
+                          style={{ fontSize: "0.8rem", fontWeight: 600, color: p.email_poslan ? "#3a7d44" : "#b3261e", whiteSpace: "nowrap" }}
+                        >
+                          {p.email_poslan ? "✓ primljen" : "✗ nije primljen"}
+                        </span>
+                      </td>
+                      <td>
                         <div style={{ display: "flex", gap: "0.4rem" }}>
                           <button className="btn btn-outline btn-sm" onClick={() => setSelected(p)}>
                             👁️ Vidi
+                          </button>
+                          <button className="btn btn-outline btn-sm" title="Pošalji ponovo na email" onClick={() => posaljiPonovo(p.id)}>
+                            ✉️
                           </button>
                           <button className="btn btn-danger btn-sm" onClick={() => obrisi(p.id)}>
                             🗑️
@@ -203,6 +226,16 @@ export function Poruke({ addToast }) {
               padding: "1rem", fontSize: "0.9rem", lineHeight: 1.7,
             }}>
               {selected.tekst}
+            </div>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap", fontSize: "0.85rem" }}>
+              <span style={{ color: selected.email_poslan ? "#3a7d44" : "#b3261e" }}>
+                {selected.email_poslan
+                  ? `✓ Email primljen (${selected.email_poslan_at})`
+                  : `✗ Email nije primljen${selected.email_greska ? ` — ${selected.email_greska}` : ""}`}
+              </span>
+              <button className="btn btn-outline btn-sm" onClick={() => posaljiPonovo(selected.id)}>
+                ✉️ Pošalji ponovo na email
+              </button>
             </div>
             <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
               {["novo", "procitano", "odgovoreno"].map((s) => (

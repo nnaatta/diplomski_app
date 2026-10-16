@@ -179,18 +179,23 @@ function QuickAddKontakt({ onClose, onSaved }) {
 }
 
 function QuickAddLokacija({ onClose, onSaved }) {
-  const [form, setForm] = useState({ naziv: "", adresa: "", lat: "", lng: "" });
+  const [form, setForm] = useState({ naziv: "", adresa: "", google_maps_link: "" });
   const [saving, setSaving] = useState(false);
+  const [greska, setGreska] = useState("");
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSaving(true);
+    setGreska("");
     try {
       const result = await api.post("/lokacije", { ...form, aktivan: true });
       onSaved(result?.data ?? result);
       onClose();
-    } catch { setSaving(false); }
+    } catch (err) {
+      setGreska(err?.errors?.google_maps_link?.[0] ?? err?.message ?? "Greška pri čuvanju lokacije.");
+      setSaving(false);
+    }
   };
 
   return (
@@ -201,19 +206,29 @@ function QuickAddLokacija({ onClose, onSaved }) {
           <input className="form-control" value={form.naziv} onChange={set("naziv")} required autoFocus />
         </div>
         <div className="form-group">
-          <label className="form-label">Adresa</label>
-          <input className="form-control" value={form.adresa} onChange={set("adresa")} />
+          <label className="form-label">Adresa <span>*</span></label>
+          <input
+            className="form-control"
+            value={form.adresa}
+            onChange={set("adresa")}
+            placeholder="npr. Aleksandra Karađorđevića 4, Han Pijesak"
+            required
+          />
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-          <div className="form-group" style={{ marginBottom: 0 }}>
-            <label className="form-label">Lat</label>
-            <input type="number" step="any" className="form-control" value={form.lat} onChange={set("lat")} />
-          </div>
-          <div className="form-group" style={{ marginBottom: 0 }}>
-            <label className="form-label">Lng</label>
-            <input type="number" step="any" className="form-control" value={form.lng} onChange={set("lng")} />
-          </div>
+        <div className="form-group">
+          <label className="form-label">Google Maps link</label>
+          <input
+            className="form-control"
+            value={form.google_maps_link}
+            onChange={set("google_maps_link")}
+            placeholder="https://www.google.com/maps/place/..."
+          />
+          <small style={{ color: "#6b7c6c" }}>
+            U Google Maps pronađi objekat, kopiraj link iz adresne trake (ili preko dugmeta Dijeli) i zalijepi ovdje.
+            Ako ostaviš prazno, mapa se traži prema adresi.
+          </small>
         </div>
+        {greska && <div style={{ color: "#b3261e", fontSize: "0.85rem" }}>{greska}</div>}
         <div style={{ display: "flex", justifyContent: "flex-end", gap: "0.5rem", marginTop: "1rem" }}>
           <button type="button" className="btn btn-outline btn-sm" onClick={onClose}>Odustani</button>
           <button type="submit" className="btn btn-primary btn-sm" disabled={saving}>{saving ? "Čuvanje..." : "Sačuvaj"}</button>
@@ -296,9 +311,11 @@ function QuickEditKontakt({ id, onClose, onSaved }) {
 }
 
 function QuickEditLokacija({ id, onClose, onSaved }) {
-  const [form, setForm] = useState({ naziv: "", adresa: "", lat: "", lng: "" });
+  const [form, setForm] = useState({ naziv: "", adresa: "", google_maps_link: "" });
+  const [imaMapu, setImaMapu] = useState(false);
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [greska, setGreska] = useState("");
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
   useEffect(() => {
@@ -308,9 +325,9 @@ function QuickEditLokacija({ id, onClose, onSaved }) {
         setForm({
           naziv:  d.naziv  ?? "",
           adresa: d.adresa ?? "",
-          lat:    d.lat    ?? "",
-          lng:    d.lng    ?? "",
+          google_maps_link: "",
         });
+        setImaMapu(Boolean(d.lat && d.lng));
       })
       .finally(() => setLoading(false));
   }, [id]);
@@ -318,11 +335,15 @@ function QuickEditLokacija({ id, onClose, onSaved }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSaving(true);
+    setGreska("");
     try {
       const result = await api.put(`/lokacije/${id}`, { ...form, aktivan: true });
       onSaved(result?.data ?? result);
       onClose();
-    } catch { setSaving(false); }
+    } catch (err) {
+      setGreska(err?.errors?.google_maps_link?.[0] ?? err?.message ?? "Greška pri čuvanju lokacije.");
+      setSaving(false);
+    }
   };
 
   return (
@@ -336,19 +357,30 @@ function QuickEditLokacija({ id, onClose, onSaved }) {
             <input className="form-control" value={form.naziv} onChange={set("naziv")} required autoFocus />
           </div>
           <div className="form-group">
-            <label className="form-label">Adresa</label>
-            <input className="form-control" value={form.adresa} onChange={set("adresa")} />
+            <label className="form-label">Adresa <span>*</span></label>
+            <input
+              className="form-control"
+              value={form.adresa}
+              onChange={set("adresa")}
+              placeholder="npr. Aleksandra Karađorđevića 4, Han Pijesak"
+              required
+            />
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
-            <div className="form-group" style={{ marginBottom: 0 }}>
-              <label className="form-label">Lat</label>
-              <input type="number" step="any" className="form-control" value={form.lat} onChange={set("lat")} />
-            </div>
-            <div className="form-group" style={{ marginBottom: 0 }}>
-              <label className="form-label">Lng</label>
-              <input type="number" step="any" className="form-control" value={form.lng} onChange={set("lng")} />
-            </div>
+          <div className="form-group">
+            <label className="form-label">Google Maps link</label>
+            <input
+              className="form-control"
+              value={form.google_maps_link}
+              onChange={set("google_maps_link")}
+              placeholder="https://www.google.com/maps/place/..."
+            />
+            <small style={{ color: "#6b7c6c" }}>
+              {imaMapu
+                ? "Tačna lokacija je već sačuvana. Zalijepi novi link samo ako želiš da je promijeniš."
+                : "U Google Maps pronađi objekat, kopiraj link iz adresne trake (ili preko dugmeta Dijeli) i zalijepi ovdje. Ako ostaviš prazno, mapa se traži prema adresi."}
+            </small>
           </div>
+          {greska && <div style={{ color: "#b3261e", fontSize: "0.85rem" }}>{greska}</div>}
           <div style={{ display: "flex", justifyContent: "flex-end", gap: "0.5rem", marginTop: "1rem" }}>
             <button type="button" className="btn btn-outline btn-sm" onClick={onClose}>Odustani</button>
             <button type="submit" className="btn btn-primary btn-sm" disabled={saving}>{saving ? "Čuvanje..." : "Sačuvaj"}</button>
@@ -454,7 +486,7 @@ function parseSlike(res) {
 }
 
 /* ================================================================
-   UPLOAD VIŠE SLIKA — smjestaj, restoran, blog, galerija
+   UPLOAD VIŠE SLIKA — smjestaj, restoran, blog, galerija, tradicionalna
 
    NOVA LOGIKA (ispravlja sve bugove):
    - Slike se prikazuju odmah pri otvaranju uredi modala (parseSlike iz GET)
@@ -481,6 +513,7 @@ export function UploadSlike({ entitetId, entitetTip, slike, setSlike }) {
       restoran: (id) => `/restorani/${id}`,
       blog:     (id) => `/blog-postovi/${id}`,
       galerija: (id) => `/galerije/${id}`,
+      tradicionalna: (id) => `/tradicionalne-manifestacije/${id}`,
     };
     const ep = endpointMap[entitetTip]?.(entitetId);
     if (!ep) return;
@@ -874,7 +907,8 @@ export function RestoranForm({ initial, onSubmit }) {
     aktivan: true, lokacija_id: "", kontakt_osoba_id: "",
     ...initial,
     pogodnosti:      initial?.pogodnosti?.map(p => p.id ?? p) ?? [],
-    preporuke_hrane: initial?.preporuke_hrane ?? [],
+    // API vraća objekte {id, naziv, naziv_en}, a forma radi sa običnim tekstom
+    preporuke_hrane: (initial?.preporuke_hrane ?? []).map(p => (typeof p === "string" ? p : p?.naziv ?? "")).filter(Boolean),
   });
   const [lokacije, setLokacije]     = useState([]);
   const [kontakti, setKontakti]     = useState([]);
@@ -1221,6 +1255,56 @@ export function GalerijaForm({ initial, onSubmit }) {
       </form>
       {showAddKat && <QuickAddModal title="➕ Nova kategorija galerije" endpoint="/galerija-kategorije" onClose={() => setShowAddKat(false)} onSaved={(n) => { loadData(); setForm((f) => ({ ...f, kategorija_id: n.id })); }} />}
     </>
+  );
+}
+
+/* ================================================================
+   TRADICIONALNA MANIFESTACIJA FORMA
+   Tekstovi (naslov, period, opis) + više slika. Engleski prevod
+   backend pravi automatski.
+================================================================ */
+
+export function TradicionalnaManifestacijaForm({ initial, onSubmit }) {
+  const [form, setForm] = useState({
+    naslov: initial?.naslov ?? "",
+    period: initial?.period ?? "",
+    opis: initial?.opis ?? "",
+    redoslijed: initial?.redoslijed ?? "",
+    aktivan: initial?.aktivan ?? true,
+  });
+  const [slike, setSlike] = useState([]);
+  const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await onSubmit(
+      { ...form, redoslijed: form.redoslijed === "" ? null : Number(form.redoslijed) },
+      slike
+    );
+  };
+
+  return (
+    <form id="crud-form" onSubmit={handleSubmit}>
+      <div className="form-section-title">Osnovni podaci</div>
+      <Field label="Naslov" required>
+        <input className="form-control" value={form.naslov} onChange={set("naslov")} required />
+      </Field>
+      <div className="form-grid">
+        <Field label="Period održavanja">
+          <input className="form-control" placeholder="npr. Mart, Jul – Avgust" value={form.period} onChange={set("period")} />
+        </Field>
+        <Field label="Redoslijed prikaza">
+          <input type="number" min="0" className="form-control" placeholder="1, 2, 3..." value={form.redoslijed} onChange={set("redoslijed")} />
+        </Field>
+      </div>
+      <Field label="Opis">
+        <textarea className="form-control" rows={4} value={form.opis} onChange={set("opis")} />
+      </Field>
+      <Field label="Status">
+        <Select value={form.aktivan ? "1" : "0"} onChange={(e) => setForm((f) => ({ ...f, aktivan: e.target.value === "1" }))} options={[{ value: "1", label: "Aktivna" }, { value: "0", label: "Neaktivna" }]} />
+      </Field>
+      <UploadSlike entitetId={initial?.id ?? null} entitetTip="tradicionalna" slike={slike} setSlike={setSlike} />
+    </form>
   );
 }
 

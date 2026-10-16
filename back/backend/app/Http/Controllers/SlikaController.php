@@ -14,7 +14,7 @@ class SlikaController extends Controller
     /**
      * Sve pivot tabele u kojima slika_id može biti referenciran.
      */
-    private const PIVOT_TABELE = ['smjestaj_slike', 'restoran_slike', 'blog_slike', 'galerija_slike'];
+    private const PIVOT_TABELE = ['smjestaj_slike', 'restoran_slike', 'blog_slike', 'galerija_slike', 'tradicionalne_slike'];
 
     /**
      * Upload jedne ili više slika i poveži ih s entitetom.
@@ -23,6 +23,7 @@ class SlikaController extends Controller
      * restoran  → pivot restoran_slike  (restoran_id, slika_id, glavna, aktivan)
      * blog      → pivot blog_slike      (blog_id,     slika_id, glavna, aktivan)
      * galerija  → pivot galerija_slike  (galerija_id, slika_id, glavna, aktivan)
+     * tradicionalna → pivot tradicionalne_slike (tradicionalna_id, slika_id, glavna, aktivan)
      * dogadjaj            → FK dogadjaji.slika_id
      * turisticki_sadrzaj  → FK turisticki_sadrzaji.slika_id
      *
@@ -35,7 +36,7 @@ class SlikaController extends Controller
         $validator = Validator::make($request->all(), [
             'slike'        => 'required|array|min:1',
             'slike.*'      => 'required|image|mimes:jpg,jpeg,png,webp,gif|max:5120',
-            'entitet_tip'  => 'required|in:smjestaj,restoran,blog,galerija,dogadjaj,turisticki_sadrzaj',
+            'entitet_tip'  => 'required|in:smjestaj,restoran,blog,galerija,tradicionalna,dogadjaj,turisticki_sadrzaj',
             'entitet_id'   => 'required|integer|min:1',
             'glavna_index' => 'nullable|integer|min:-1',
         ]);
@@ -90,7 +91,7 @@ class SlikaController extends Controller
     public function postaviGlavnu(Request $request, int $id)
     {
         $validator = Validator::make($request->all(), [
-            'entitet_tip' => 'required|in:smjestaj,restoran,blog,galerija',
+            'entitet_tip' => 'required|in:smjestaj,restoran,blog,galerija,tradicionalna',
             'entitet_id'  => 'required|integer|min:1',
         ]);
 
@@ -110,7 +111,7 @@ class SlikaController extends Controller
 
     /**
      * Brisanje slike:
-     * - Pivot entiteti (smjestaj, restoran, blog, galerija): briše se VEZA (pivot red).
+     * - Pivot entiteti (smjestaj, restoran, blog, galerija, tradicionalna): briše se VEZA (pivot red).
      *   Ako je bila glavna — sljedeća preostala postaje glavna.
      * - FK entiteti (dogadjaj, turisticki_sadrzaj): postavi slika_id=NULL na entitetu.
      *
@@ -141,7 +142,7 @@ class SlikaController extends Controller
                 ->where('slika_id', $id)
                 ->update(['slika_id' => null]);
 
-        } elseif (in_array($tip, ['smjestaj', 'restoran', 'blog', 'galerija'])) {
+        } elseif (in_array($tip, ['smjestaj', 'restoran', 'blog', 'galerija', 'tradicionalna'])) {
             $tabela = $this->pivotTabela($tip);
             $kolona = "{$tip}_id";
 
@@ -218,6 +219,14 @@ class SlikaController extends Controller
                 'created_at'  => now(),
                 'updated_at'  => now(),
             ]),
+            'tradicionalna' => DB::table('tradicionalne_slike')->insert([
+                'tradicionalna_id' => $entId,
+                'slika_id'         => $slika->id,
+                'glavna'           => $jeGlavna,
+                'aktivan'          => 1,
+                'created_at'       => now(),
+                'updated_at'       => now(),
+            ]),
             'dogadjaj' => DB::table('dogadjaji')
                 ->where('id', $entId)
                 ->update(['slika_id' => $slika->id]),
@@ -234,6 +243,7 @@ class SlikaController extends Controller
             'restoran' => 'restoran_slike',
             'blog'     => 'blog_slike',
             'galerija' => 'galerija_slike',
+            'tradicionalna' => 'tradicionalne_slike',
             default    => throw new \InvalidArgumentException("Nepoznat pivot tip: {$tip}"),
         };
     }

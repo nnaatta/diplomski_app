@@ -1,0 +1,619 @@
+/* =====================================================================
+   UGOSTITELJSKI OBJEKTI
+   Paleta: #344e41 (tamna) · #588157 (srednja) · #a3b18a (svijetla) · krem pozadina
+   ===================================================================== */
+
+.ugo {
+  --ugo-tamna: #344e41;
+  --ugo-srednja: #588157;
+  --ugo-svijetla: #a3b18a;
+  --ugo-mint: #eaf3de;
+  --ugo-krem: #f6f4ec;
+  --ugo-linija: #e4e0d8;
+  --ugo-tekst: #5f5e5a;
+
+  width: 100%;
+  background-color: var(--ugo-krem);
+}
+
+/* ===== HERO (bez slike — stil kao na stranici O TO, uz malo detalja) ===== */
+.ugo__hero {
+  background-color: var(--ugo-tamna);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem 5.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ugo__hero::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  top: -120px;
+  right: -90px;
+}
+
+.ugo__hero::after {
+  content: '';
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background-color: rgba(163, 177, 138, 0.14);
+  bottom: -100px;
+  left: 6%;
+}
+
+.ugo__hero-ikona {
+  position: relative;
+  z-index: 1;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--ugo-svijetla);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 1.25rem;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.04);
+}
+
+.ugo__hero h1 {
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.ugo__hero p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  opacity: 0.85;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== UVOD ===== */
+.ugo__uvod {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 0.5rem;
+  text-align: center;
+}
+
+.ugo__uvod p {
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: var(--ugo-tekst);
+  margin: 0;
+}
+
+/* ukrasna linija ispod uvoda */
+.ugo__uvod::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 2px;
+  margin: 2.25rem auto 0;
+  background: linear-gradient(90deg, transparent, var(--ugo-svijetla), transparent);
+}
+
+/* ===== LISTA OBJEKATA ===== */
+.ugo__objekti {
+  padding: 2rem 1.5rem 5rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.ugo__objekti-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-top: 1.5rem;
+  counter-reset: objekat;
+}
+
+/* ===== KARTICA ===== */
+.restoran {
+  position: relative;
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  align-items: stretch;
+  background-color: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 34px rgba(52, 78, 65, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: ugoUlaz 0.7s ease both;
+}
+
+.restoran:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 46px rgba(52, 78, 65, 0.18);
+}
+
+/* Svaka parna kartica — slika desno */
+.restoran:nth-child(even) {
+  grid-template-columns: 1fr 440px;
+  direction: rtl;
+}
+
+.restoran:nth-child(even) > * {
+  direction: ltr;
+}
+
+/* Redni broj na uglu slike */
+.restoran::before {
+  counter-increment: objekat;
+  content: counter(objekat, decimal-leading-zero);
+  position: absolute;
+  top: 1.1rem;
+  left: 1.1rem;
+  z-index: 6;
+  min-width: 46px;
+  height: 46px;
+  padding: 0 0.6rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: rgba(52, 78, 65, 0.82);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.restoran:nth-child(even)::before {
+  left: auto;
+  right: 1.1rem;
+}
+
+/* ===== SLIDER ===== */
+.restoran__slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+/* tamniji prelaz pri dnu radi tačkica */
+.restoran__slider::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent);
+  pointer-events: none;
+}
+
+.restoran__slika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.restoran:hover .restoran__slika {
+  transform: scale(1.06);
+}
+
+.restoran__placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  background:
+    radial-gradient(rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px) 0 0 / 22px 22px,
+    linear-gradient(135deg, #a3b18a 0%, #588157 50%, #344e41 100%);
+}
+
+/* Strelice — vidljive na hover (na touch uređajima uvijek) */
+.restoran__strelica {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  color: var(--ugo-tamna);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.25s ease, background-color 0.2s ease, color 0.2s ease;
+  z-index: 5;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.restoran__slider:hover .restoran__strelica,
+.restoran__strelica:focus-visible {
+  opacity: 1;
+}
+
+.restoran__strelica:hover {
+  background-color: var(--ugo-srednja);
+  color: #ffffff;
+}
+
+.restoran__strelica--lijevo { left: 0.85rem; }
+.restoran__strelica--desno { right: 0.85rem; }
+
+@media (hover: none) {
+  .restoran__strelica { opacity: 1; }
+}
+
+/* Tačkice */
+.restoran__dots {
+  position: absolute;
+  bottom: 0.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+  z-index: 5;
+}
+
+.restoran__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.25s ease, width 0.25s ease;
+}
+
+.restoran__dot--aktivan {
+  background-color: #ffffff;
+  width: 22px;
+}
+
+/* ===== INFO ===== */
+.restoran__info {
+  padding: 2.4rem 2.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaf6 100%);
+}
+
+.restoran__info-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+}
+
+.restoran__naziv {
+  position: relative;
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  font-weight: 700;
+  color: var(--ugo-tamna);
+  margin: 0;
+  padding-bottom: 0.7rem;
+}
+
+/* akcentna crta ispod naziva */
+.restoran__naziv::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--ugo-srednja), var(--ugo-svijetla));
+  transition: width 0.4s ease;
+}
+
+.restoran:hover .restoran__naziv::after {
+  width: 96px;
+}
+
+/* radno vrijeme kao značka */
+.restoran__radno {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ugo-srednja);
+  background-color: var(--ugo-mint);
+  border: 1px solid #cfdcbd;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.restoran__opis {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--ugo-tekst);
+  margin: 0;
+}
+
+/* Naslovi blokova (Preporučujemo, Kontakt, Lokacija) */
+.restoran__blok-label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ugo-srednja);
+  margin-bottom: 0.7rem;
+}
+
+.restoran__blok-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--ugo-linija);
+}
+
+/* ===== PREPORUKE — čipovi ===== */
+.restoran__preporuke {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.restoran__preporuka {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--ugo-tamna);
+  background-color: var(--ugo-mint);
+  border: 1px solid #d3e2c1;
+  padding: 0.38rem 0.95rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.restoran__preporuka::before {
+  content: '✦';
+  font-size: 0.65rem;
+  color: var(--ugo-srednja);
+  transition: color 0.2s ease;
+}
+
+.restoran__preporuka:hover {
+  background-color: var(--ugo-srednja);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.restoran__preporuka:hover::before {
+  color: #ffffff;
+}
+
+/* ===== KONTAKT — ikone u krugovima ===== */
+.restoran__kontakt {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.7rem 1rem;
+}
+
+.restoran__kontakt-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.9rem;
+  color: var(--ugo-tamna);
+  text-decoration: none;
+  word-break: break-word;
+  transition: color 0.2s ease;
+}
+
+.restoran__kontakt-item svg {
+  box-sizing: content-box;
+  flex-shrink: 0;
+  width: 0.95rem;
+  height: 0.95rem;
+  padding: 0.55rem;
+  border-radius: 50%;
+  color: var(--ugo-srednja);
+  background-color: var(--ugo-mint);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+a.restoran__kontakt-item:hover {
+  color: var(--ugo-srednja);
+  text-decoration: none;
+}
+
+a.restoran__kontakt-item:hover svg {
+  background-color: var(--ugo-srednja);
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+/* ===== DRUŠTVENE MREŽE ===== */
+.restoran__drustvene {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.restoran__drustvena {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.restoran__drustvena:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.restoran__drustvena--instagram {
+  background: linear-gradient(45deg, #f09433 0%, #dc2743 55%, #bc1888 100%);
+}
+
+.restoran__drustvena--facebook {
+  background-color: #1877f2;
+}
+
+/* ===== MAPA — preko cijele širine kartice ===== */
+.restoran__mapa-blok {
+  grid-column: 1 / -1;
+  padding: 0.5rem 2.6rem 2.4rem;
+  background-color: #fbfaf6;
+}
+
+.restoran__mapa {
+  width: 100%;
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--ugo-linija);
+  box-shadow: 0 6px 18px rgba(52, 78, 65, 0.1);
+}
+
+.restoran__mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* ===== STANJA (učitavanje / greška / prazno) ===== */
+.ugo__loading,
+.ugo__greska,
+.ugo__prazno {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--ugo-tekst);
+  padding: 2rem 0;
+}
+
+.ugo__greska {
+  color: #b3261e;
+}
+
+/* ===== ANIMACIJA ULASKA ===== */
+@keyframes ugoUlaz {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gdje browser podržava — kartica se pojavljuje tek kad se skroluje do nje */
+@supports (animation-timeline: view()) {
+  .restoran {
+    animation: ugoUlaz linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 40%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .restoran,
+  .restoran:hover,
+  .restoran__slika,
+  .restoran:hover .restoran__slika {
+    animation: none;
+    transition: none;
+    transform: none;
+  }
+}
+
+/* ===== RESPONZIVNO ===== */
+@media (max-width: 900px) {
+  .restoran,
+  .restoran:nth-child(even) {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+
+  .restoran__slider,
+  .restoran__placeholder {
+    min-height: 280px;
+  }
+
+  .restoran__info {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .restoran__mapa-blok {
+    padding: 0.25rem 1.5rem 1.75rem;
+  }
+
+  .restoran__mapa {
+    height: 240px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ugo__hero {
+    padding: 3.5rem 1.5rem 4rem;
+  }
+
+  .ugo__objekti {
+    padding: 1.5rem 1rem 4rem;
+  }
+
+  .ugo__objekti-lista {
+    gap: 2.5rem;
+  }
+
+  .restoran {
+    border-radius: 18px;
+  }
+
+  .restoran__kontakt {
+    grid-template-columns: 1fr;
+  }
+
+  .restoran__mapa {
+    height: 210px;
+  }
+}
