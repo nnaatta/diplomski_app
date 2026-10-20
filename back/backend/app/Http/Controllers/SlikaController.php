@@ -6,6 +6,7 @@ use App\Models\Slika;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 
@@ -122,61 +123,71 @@ class SlikaController extends Controller
      */
     public function destroy(Request $request, int $id)
     {
-        $slika = Slika::find($id);
-        if (!$slika) {
-            return response()->json(['success' => false, 'message' => 'Slika nije pronađena.'], 404);
-        }
+        try {
+            $slika = Slika::find($id);
+            if (!$slika) {
+                return response()->json(['success' => false, 'message' => 'Slika nije pronađena.'], 404);
+            }
 
-        $tip   = $request->query('entitet_tip');
-        $entId = (int) $request->query('entitet_id', 0);
+            $tip   = $request->query('entitet_tip');
+            $entId = (int) $request->query('entitet_id', 0);
 
-        if ($tip === 'dogadjaj' && $entId) {
-            DB::table('dogadjaji')
-                ->where('id', $entId)
-                ->where('slika_id', $id)
-                ->update(['slika_id' => null]);
+            if ($tip === 'dogadjaj' && $entId) {
+                DB::table('dogadjaji')
+                    ->where('id', $entId)
+                    ->where('slika_id', $id)
+                    ->update(['slika_id' => null]);
 
-        } elseif ($tip === 'turisticki_sadrzaj' && $entId) {
-            DB::table('turisticki_sadrzaji')
-                ->where('id', $entId)
-                ->where('slika_id', $id)
-                ->update(['slika_id' => null]);
+            } elseif ($tip === 'turisticki_sadrzaj' && $entId) {
+                DB::table('turisticki_sadrzaji')
+                    ->where('id', $entId)
+                    ->where('slika_id', $id)
+                    ->update(['slika_id' => null]);
 
-        } elseif (in_array($tip, ['smjestaj', 'restoran', 'blog', 'galerija', 'tradicionalna'])) {
-            $tabela = $this->pivotTabela($tip);
-            $kolona = "{$tip}_id";
+            } elseif (in_array($tip, ['smjestaj', 'restoran', 'blog', 'galerija', 'tradicionalna'])) {
+                $tabela = $this->pivotTabela($tip);
+                $kolona = "{$tip}_id";
 
-            // Provjeri da li je bila glavna
-            $bilGlavna = (bool) DB::table($tabela)
-                ->where($kolona, $entId)
-                ->where('slika_id', $id)
-                ->value('glavna');
-
-            // Stvarno brišemo vezu (ne samo aktivan=0)
-            DB::table($tabela)
-                ->where($kolona, $entId)
-                ->where('slika_id', $id)
-                ->delete();
-
-            // Ako je bila glavna — promoviši sljedeću preostalu
-            if ($bilGlavna) {
-                $sljedeca = DB::table($tabela)
+                // Provjeri da li je bila glavna
+                $bilGlavna = (bool) DB::table($tabela)
                     ->where($kolona, $entId)
-                    ->where('aktivan', 1)
-                    ->orderBy('id')
-                    ->first();
+                    ->where('slika_id', $id)
+                    ->value('glavna');
 
-                if ($sljedeca) {
-                    DB::table($tabela)
-                        ->where('id', $sljedeca->id)
-                        ->update(['glavna' => 1]);
+                // Stvarno brišemo vezu (ne samo aktivan=0)
+                DB::table($tabela)
+                    ->where($kolona, $entId)
+                    ->where('slika_id', $id)
+                    ->delete();
+
+                // Ako je bila glavna — promoviši sljedeću preostalu
+                if ($bilGlavna) {
+                    $sljedeca = DB::table($tabela)
+                        ->where($kolona, $entId)
+                        ->where('aktivan', 1)
+                        ->orderBy('id')
+                        ->first();
+
+                    if ($sljedeca) {
+                        DB::table($tabela)
+                            ->where('id', $sljedeca->id)
+                            ->update(['glavna' => 1]);
+                    }
                 }
             }
+
+            $this->obrisiSlikuAkoOsirotjela($id);
+
+            return response()->json(['success' => true]);
+        } catch (\Throwable $e) {
+            Log::error('Brisanje slike #' . $id . ' nije uspjelo: ' . $e->getMessage());
+
+            // Ruta je zaštićena (samo admin), pa je bezbjedno vratiti poruku radi lakšeg otkrivanja uzroka
+            return response()->json([
+                'success' => false,
+                'message' => 'Brisanje slike nije uspjelo: ' . $e->getMessage(),
+            ], 500);
         }
-
-        $this->obrisiSlikuAkoOsirotjela($id);
-
-        return response()->json(['success' => true]);
     }
 
     // ─── Privatne helper metode ──────────────────────────────────────────────
@@ -277,8 +288,13 @@ class SlikaController extends Controller
         // url je oblika ".../storage/slike/ime-fajla.jpg" — skidamo dio prije "storage/"
         // da dobijemo putanju relativnu za 'public' disk (npr. "slike/ime-fajla.jpg")
         $relativnaPutanja = Str::after($slika->url, '/storage/');
-        if ($relativnaPutanja && Storage::disk('public')->exists($relativnaPutanja)) {
-            Storage::disk('public')->delete($relativnaPutanja);
+        try {
+            if ($relativnaPutanja && Storage::disk('public')->exists($relativnaPutanja)) {
+                Storage::disk('public')->delete($relativnaPutanja);
+            }
+        } catch (\Throwable $e) {
+            // Fajl se nije mogao obrisati (npr. prava na disku) — nastavljamo, red u bazi se ipak briše
+            Log::warning('Fajl slike #' . $slikaId . ' nije obrisan: ' . $e->getMessage());
         }
 
         $slika->delete();
