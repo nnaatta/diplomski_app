@@ -59,10 +59,6 @@ function LovRibolov() {
           {/* Kartica udruženja */}
           <div className="lr__sekcija">
             <div className="lr__drustvo-kartica">
-              <div className="lr__drustvo-logo lr__drustvo-logo--lov">
-                <span className="lr__drustvo-logo-ikona">🦌</span>
-                <span className="lr__drustvo-logo-tekst">{t('lov_ribolov.lov_logo_tekst')}</span>
-              </div>
               <div className="lr__drustvo-info">
                 <span className="lr__bedz lr__bedz--lov">{t('lov_ribolov.lov_bedz')}</span>
                 <h2 className="lr__drustvo-naslov">
@@ -145,10 +141,6 @@ function LovRibolov() {
           {/* Kartica društva */}
           <div className="lr__sekcija">
             <div className="lr__drustvo-kartica">
-             <div className="lr__drustvo-logo lr__drustvo-logo--riba">
-               <span className="lr__drustvo-logo-ikona">🎣</span>
-                <span className="lr__drustvo-logo-tekst">{t('lov_ribolov.riba_logo_tekst')}</span>
-              </div>
               <div className="lr__drustvo-info">
                 <span className="lr__bedz lr__bedz--riba">{t('lov_ribolov.riba_bedz')}</span>
                 <h2 className="lr__drustvo-naslov">{t('lov_ribolov.riba_naslov')}</h2>

@@ -87,7 +87,7 @@ function OTO() {
         </div>
       </div>
 
-      {/* ===== PARTNERI ===== */}
+      {/* ===== PARTNERI ===== 
       <div className="OTO_partneri">
         <h2 className="OTO_partneri_naslov">{t("o_to.partneri_naslov")}</h2>
         <div className="OTO_partneri_grid">
@@ -100,7 +100,7 @@ function OTO() {
             </div>
           ))}
         </div>
-      </div>
+      </div>*/}
 
       {/* ===== KONTAKT ===== */}
       <div className="OTO_kontakt">

@@ -50,26 +50,27 @@ function ZnamenitostSegment({ z, index }) {
       </div>
       <h3 className="ZNA_segment__naziv">{z.naziv}</h3>
       <p className="ZNA_segment__opis">{z.opis}</p>
-      <div className={`ZNA_segment__media${z.mapaUrl ? "" : " ZNA_segment__media--samo-slika"}`}>
-        <div className="ZNA_segment__slika-wrap">
-          {z.slika
-            ? <img src={z.slika} alt={z.naziv} className="ZNA_segment__slika" loading="lazy" />
-            : <div className="ZNA_segment__slika-placeholder" />
-          }
+      {(z.slika || z.mapaUrl) && (
+        <div className={`ZNA_segment__media${z.slika && z.mapaUrl ? "" : " ZNA_segment__media--samo-slika"}`}>
+          {z.slika && (
+            <div className="ZNA_segment__slika-wrap">
+              <img src={z.slika} alt={z.naziv} className="ZNA_segment__slika" loading="lazy" />
+            </div>
+          )}
+          {z.mapaUrl && (
+            <div className="ZNA_segment__mapa-wrap">
+              <iframe
+                src={z.mapaUrl}
+                title={`Lokacija — ${z.naziv}`}
+                className="ZNA_segment__mapa"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          )}
         </div>
-        {z.mapaUrl && (
-          <div className="ZNA_segment__mapa-wrap">
-            <iframe
-              src={z.mapaUrl}
-              title={`Lokacija — ${z.naziv}`}
-              className="ZNA_segment__mapa"
-              loading="lazy"
-              allowFullScreen
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        )}
-      </div>
+      )}
     </div>
   );
 }
