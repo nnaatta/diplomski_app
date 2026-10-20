@@ -77,7 +77,7 @@ function NestedModal({ title, onClose, children }) {
           display: "flex", alignItems: "center", justifyContent: "space-between",
         }}>
           <span style={{ fontWeight: 700, color: "#344e41", fontSize: "1rem" }}>{title}</span>
-          <button onClick={onClose} style={{ background: "none", border: "none", fontSize: "1.3rem", cursor: "pointer", color: "#6b7c6c" }}>×</button>
+          <button type="button" onClick={onClose} style={{ background: "none", border: "none", fontSize: "1.3rem", cursor: "pointer", color: "#6b7c6c" }}>×</button>
         </div>
         <div style={{ padding: "1.25rem 1.5rem" }}>{children}</div>
       </div>
@@ -478,10 +478,6 @@ function parseSlike(res) {
     url:    s.url,
     glavna: Boolean(s.glavna),
   }));
-  // DEBUG — ukloni nakon provjere URL-ova
-  if (rezultat.length > 0) {
-    console.log("[UploadSlike] Učitane slike iz baze:", rezultat.map(s => ({ id: s.id, url: s.url, imgUrl: imgUrl(s.url) })));
-  }
   return rezultat;
 }
 
@@ -638,12 +634,14 @@ export function UploadSlike({ entitetId, entitetTip, slike, setSlike }) {
                 <div className="upload-preview__actions">
                   {!s.glavna && (
                     <button
+                      type="button"
                       className="upload-preview__btn"
                       title="Postavi kao glavnu"
                       onClick={() => postaviGlavnu(s._idx)}
                     >⭐</button>
                   )}
                   <button
+                    type="button"
                     className="upload-preview__btn"
                     title="Obriši sliku"
                     onClick={() => oznaciBrisanje(s._idx)}

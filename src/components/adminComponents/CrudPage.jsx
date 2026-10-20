@@ -102,26 +102,28 @@ export default function CrudPage({
             await api.delete(`/slike/${s.id}?entitet_tip=${tip}&entitet_id=${entitetId}`);
           }
 
-          // 3a. Uploaduj nove slike
+          // 3a. Uploaduj nove slike — jednu po jednu, da ukupna veličina jednog zahtjeva
+          //     ne pređe limit servera (post_max_size) kad se doda više slika odjednom
           const noveSlika = slike.filter((s) => s._file && !s._delete);
           if (noveSlika.length > 0) {
-            const formData = new FormData();
-            noveSlika.forEach((s) => formData.append("slike[]", s._file));
-            formData.append("entitet_tip", tip);
-            formData.append("entitet_id", String(entitetId));
-
             // Pronađi koja nova slika treba biti glavna
             const glavnaIdx = noveSlika.findIndex((s) => s.glavna);
-            // Postavi glavna_index samo ako treba — inače backend ne dotiče glavna flag
-            // Ako nema ni jedne stare aktivne slike, prva nova treba biti glavna
+            // Ako nema nijedne stare aktivne slike, prva nova treba biti glavna;
+            // inače glavna postaje samo ona koju je korisnik izabrao (ako je izabrana nova)
             const postojeceAktivne = slike.filter((s) => !s._delete && !s._file && s.id);
-            if (postojeceAktivne.length === 0 || glavnaIdx >= 0) {
-              formData.append("glavna_index", String(Math.max(0, glavnaIdx)));
-            } else {
-              // Ne postavljamo ni jednu novu kao glavnu — već postoji glavna
-              formData.append("glavna_index", "-1");
+            const novaGlavnaIdx = (postojeceAktivne.length === 0 || glavnaIdx >= 0)
+              ? Math.max(0, glavnaIdx)
+              : -1;
+
+            for (let i = 0; i < noveSlika.length; i++) {
+              const formData = new FormData();
+              formData.append("slike[]", noveSlika[i]._file);
+              formData.append("entitet_tip", tip);
+              formData.append("entitet_id", String(entitetId));
+              // glavna_index se odnosi na redni broj fajla UNUTAR zahtjeva (ovdje je uvijek 0)
+              formData.append("glavna_index", i === novaGlavnaIdx ? "0" : "-1");
+              await api.upload("/slike/upload", formData);
             }
-            await api.upload("/slike/upload", formData);
           }
 
           // 4a. Ažuriraj glavna za postojeće slike ako se promijenila
