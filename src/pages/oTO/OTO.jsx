@@ -1,10 +1,10 @@
 import React from "react";
 import "./OTO.css";
 import { useTranslation } from "react-i18next";
-import opstinaLogo from "../../assets/OpstinaLogo.png";
-import COSLogo from "../../assets/COSPogledLogp.png";
-import PedVisocnikLogo from "../../assets/PedVisocnikLogo.jpg";
-import GorstakLogo from "../../assets/GorstakLogo.png";
+//import opstinaLogo from "../../assets/OpstinaLogo.png";
+//import COSLogo from "../../assets/COSPogledLogp.png";
+//import PedVisocnikLogo from "../../assets/PedVisocnikLogo.jpg";
+//import GorstakLogo from "../../assets/GorstakLogo.png";
 import OTOStatistike from "../../components/OTOStatistike";
 import sajamBG2026 from "../../assets/TOSajam.jpg";
 import sajamBG2025 from "../../assets/TOSajam1.jpg";
@@ -12,7 +12,7 @@ import sajamNS2026 from "../../assets/SajamZavicaja.jpg";
 import pohodSkakavac from "../../assets/TOSkakavac.jpg";
 import manifestacija from "../../assets/TOManifestacija.jpg";
 import sajam2024 from "../../assets/sajam2024.jpg";
-import psuJavor from "../../assets/psuJavor.jpg";
+//import psuJavor from "../../assets/psuJavor.jpg";
 import Seo from "../../components/Seo";
 
 function OTO() {
