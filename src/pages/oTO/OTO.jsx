@@ -18,13 +18,13 @@ import Seo from "../../components/Seo";
 function OTO() {
   const { t } = useTranslation();
 
-  const partneri = [
+ /* const partneri = [
     { nazivKey: "partner_opstina", logo: opstinaLogo },
     { nazivKey: "partner_cos",     logo: COSLogo },
     { nazivKey: "partner_psu_visocnik", logo: PedVisocnikLogo },
     { nazivKey: "partner_gorstak", logo: GorstakLogo },
     { nazivKey: "partner_psu_javor", logo: psuJavor },
-  ];
+  ];*/
 
   const galerija = [
     { slika: sajamNS2026, opisKey: "galerija_opis_1" },
