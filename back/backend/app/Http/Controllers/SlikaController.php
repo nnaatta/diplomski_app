@@ -297,4 +297,5 @@ class SlikaController extends Controller
 
         $slika->delete();
     }
+    
 }
